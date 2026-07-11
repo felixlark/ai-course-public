@@ -5,7 +5,7 @@ const base = process.env.VITEPRESS_BASE || '/'
 const repositoryUrl = process.env.VITEPRESS_REPOSITORY_URL || 'https://github.com/felixlark/ai-course-public'
 
 export default defineConfig({
-  title: '陈龙彪教授团队人工智能公开课',
+  title: '陈龙彪团队人工智能公开课',
   description: '从人工智能概述、AI 智能体、具身智能到行业应用的公开 Web 课程',
   lang: 'zh-CN',
   base,
@@ -26,7 +26,7 @@ export default defineConfig({
   },
   head: [
     ['meta', { name: 'theme-color', content: '#0b4ea2' }],
-    ['meta', { name: 'author', content: '陈龙彪教授团队' }],
+    ['meta', { name: 'author', content: '陈龙彪团队' }],
     [
       'meta',
       {
@@ -71,7 +71,7 @@ export default defineConfig({
     ],
     footer: {
       message: '公开课程内容持续校订，重要事实请以所附一手来源为准。',
-      copyright: 'Copyright © 2026 陈龙彪教授团队'
+      copyright: 'Copyright © 2026 陈龙彪团队'
     }
   }
 })
