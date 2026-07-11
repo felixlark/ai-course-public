@@ -1,0 +1,24 @@
+{
+  "name": "ai-course-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "陈龙彪团队人工智能公开课：VitePress 讲义、原生 Web PPT 与原创 PPTX",
+  "type": "module",
+  "packageManager": "pnpm@10.29.2",
+  "scripts": {
+    "decks:verify": "node scripts/verify-public-decks.mjs",
+    "generate": "node scripts/build-web-course.mjs",
+    "dev": "npm run generate && vitepress dev docs",
+    "build": "npm run generate && npm run decks:verify && vitepress build docs",
+    "preview": "vitepress preview docs",
+    "verify": "npm run generate && npm run decks:verify && node scripts/verify-web-course.mjs && node scripts/audit-course-language.mjs && node scripts/audit-course-content.mjs && vitepress build docs",
+    "release:verify": "node scripts/verify-release-readiness.mjs && npm run verify"
+  },
+  "dependencies": {
+    "vitepress": "2.0.0-alpha.16",
+    "vue": "^3.5.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

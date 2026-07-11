@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <rect width="1200" height="675" fill="#ffffff"/>
+  <rect y="0" width="1200" height="12" fill="#0B4EA2"/>
+  <rect y="560" width="1200" height="115" fill="#eaf2ff"/>
+  <path d="M0 528 C120 500 190 555 300 520 C420 482 480 522 590 492 C700 460 780 504 890 468 C1010 430 1080 458 1200 420 L1200 560 L0 560 Z" fill="#dbeafe"/>
+  <circle cx="950" cy="190" r="118" fill="#D6A33A" opacity="0.12"/>
+  <circle cx="1010" cy="240" r="68" fill="#0B4EA2" opacity="0.12"/>
+  <text x="80" y="170" font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial" font-size="58" font-weight="700" fill="#0b3f86">AI</text>
+  <text x="80" y="270" font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial" font-size="42" font-weight="700" fill="#0b3f86">陈龙彪团队</text>
+  <text x="80" y="330" font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial" font-size="38" fill="#334155">人工智能公开课</text>
+  <g transform="translate(835,268)">
+    <rect x="0" y="0" width="250" height="154" rx="18" fill="#ffffff" stroke="#d9e2f2" stroke-width="2"/>
+    <rect x="24" y="28" width="90" height="12" rx="6" fill="#0B4EA2"/>
+    <rect x="24" y="58" width="190" height="10" rx="5" fill="#cbd5e1"/>
+    <rect x="24" y="84" width="154" height="10" rx="5" fill="#cbd5e1"/>
+    <circle cx="188" cy="118" r="22" fill="#D6A33A"/>
+  </g>
+  <text x="80" y="632" font-family="PingFang SC, Noto Sans CJK SC, Microsoft YaHei, Arial" font-size="20" font-weight="700" fill="#0B4EA2">OPEN AI COURSE · 2026</text>
+</svg>

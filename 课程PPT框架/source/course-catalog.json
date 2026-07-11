@@ -1,0 +1,681 @@
+{
+  "schema_version": 1,
+  "catalog_id": "chen-longbiao-ai-open-course",
+  "course_title": "陈龙彪团队人工智能公开课",
+  "description": "从人工智能基础、AI 智能体与具身智能出发，走向教育、政务、制造、交通、应急、海洋与文旅等真实行业场景。",
+  "status_definition": {
+    "source_ready": "课程主题已有可定位、可读取的来源材料。",
+    "deck_ready": "已完成课程级选页、必要清洗和最终 Web PPT 产物。",
+    "notes_ready": "已完成可直接供学习者阅读的 Markdown 讲义。",
+    "fact_checked": "时效性事实、数字、案例和引用已经核验。",
+    "rights_cleared": "公开使用的文字、图片、视频和图表已经完成版权或授权审阅。",
+    "browser_verified": "讲义、Web PPT、媒体和导航已经在实际预览页面验收。",
+    "publish_ready": "本节所有前置状态完成，可以进入公开发布版本。"
+  },
+  "modules": [
+    {
+      "id": "stage-1",
+      "order": 1,
+      "title": "人工智能概述",
+      "summary": "从人工智能的基本循环、发展历程和机器学习基础进入大模型、生成式 AI 与负责任使用。",
+      "lessons": [
+        {
+          "id": "OV-001",
+          "slug": "what-is-ai",
+          "title": "什么是人工智能：感知、思考与行动",
+          "summary": "用现实案例和感知—思考—行动闭环建立人工智能的第一幅全景图。",
+          "content_sources": [
+            "AI-001",
+            "EMB-001"
+          ],
+          "freshness": "稳定理论；案例每年复核",
+          "learning_outcomes": [
+            "解释人工智能系统如何感知环境、形成判断并采取行动。",
+            "区分纯软件模型、智能体与具身智能体的能力边界。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "OV-002",
+          "slug": "ai-history-and-society",
+          "title": "人工智能发展与社会影响",
+          "summary": "沿关键技术转折理解人工智能的兴衰，并讨论它如何改变工作、组织和社会分工。",
+          "content_sources": [
+            "AI-001",
+            "AI-004"
+          ],
+          "freshness": "历史部分稳定；社会影响案例需季度更新",
+          "learning_outcomes": [
+            "说出规则系统、机器学习、深度学习和大模型阶段的关键变化。",
+            "分析 AI 对岗位任务和组织流程的具体影响，而非笼统判断职业取代。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "OV-003",
+          "slug": "machine-learning-and-deep-learning",
+          "title": "机器学习与深度学习基础",
+          "summary": "从数据、模型、损失和泛化进入神经网络、反向传播与卷积网络。",
+          "content_sources": [
+            "AI-002"
+          ],
+          "freshness": "稳定理论",
+          "learning_outcomes": [
+            "区分监督学习、训练数据、测试数据、过拟合和泛化。",
+            "用直观语言解释神经网络、梯度下降、反向传播和卷积的作用。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "OV-004",
+          "slug": "llm-transformer-and-boundaries",
+          "title": "大模型概述、Transformer 与能力边界",
+          "summary": "解释 token、注意力、Transformer、预训练与推理，并建立大模型能力边界。",
+          "content_sources": [
+            "LLM-001",
+            "AI-003"
+          ],
+          "freshness": "原理稳定；模型能力与产品示例需季度更新",
+          "learning_outcomes": [
+            "解释注意力机制和 Transformer 为什么适合处理上下文。",
+            "判断大模型适合生成、推理或辅助决策的场景及其限制。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "OV-005",
+          "slug": "deepseek-and-open-models",
+          "title": "DeepSeek 与开源模型生态",
+          "summary": "从推理模型、开源生态和本地部署理解 DeepSeek 带来的技术与应用选择。",
+          "content_sources": [
+            "LLM-002"
+          ],
+          "freshness": "需实时更新",
+          "learning_outcomes": [
+            "说明开源模型、闭源 API 和本地部署的主要取舍。",
+            "根据任务、数据安全、成本和运维条件选择模型方案。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "OV-006",
+          "slug": "prompt-aigc-and-multimodal",
+          "title": "提示词、AIGC 与多模态工作流",
+          "summary": "把提示词、文本生成、图像和视频生成组织成可复用、可复核的内容工作流。",
+          "content_sources": [
+            "LLM-003",
+            "LLM-004"
+          ],
+          "freshness": "需季度更新",
+          "learning_outcomes": [
+            "写出包含任务、背景、约束、示例和验收标准的提示词。",
+            "设计从生成、选择、编辑到事实与版权检查的多模态工作流。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "OV-007",
+          "slug": "hallucination-safety-and-responsible-ai",
+          "title": "幻觉、安全与负责任 AI",
+          "summary": "从事实幻觉、提示注入、权限边界和责任链建立可执行的负责任 AI 使用框架。",
+          "content_sources": [
+            "LLM-006",
+            "AI-003"
+          ],
+          "freshness": "治理原则稳定；事件、法规和攻击案例需实时更新",
+          "learning_outcomes": [
+            "识别事实幻觉、提示注入、越权调用和责任链断裂。",
+            "为具体场景设计权限限制、证据引用、人工确认与审计记录。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "stage-2",
+      "order": 2,
+      "title": "AI 智能体",
+      "summary": "从 Agent Loop 进入工具、记忆、规划、多智能体、AI Coding 与可靠性工程。",
+      "lessons": [
+        {
+          "id": "AG-001",
+          "slug": "agent-loop-and-react",
+          "title": "Agent Loop 与 ReAct",
+          "summary": "理解智能体如何在观察、推理、行动和反馈之间循环推进任务。",
+          "content_sources": [
+            "AGT-001"
+          ],
+          "freshness": "稳定机制；框架示例需季度更新",
+          "learning_outcomes": [
+            "画出 Observe—Reason—Act—Evaluate 循环并解释停止条件。",
+            "区分单次模型调用、确定性工作流和自主智能体。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "AG-002",
+          "slug": "tools-mcp-memory-and-planning",
+          "title": "工具调用、MCP、记忆与规划",
+          "summary": "解释智能体如何通过稳定工具契约、分层上下文和可更新记忆完成长任务。",
+          "content_sources": [
+            "AGT-002",
+            "AGT-001"
+          ],
+          "freshness": "机制稳定；协议与框架示例需季度更新",
+          "learning_outcomes": [
+            "为工具定义清晰的输入、输出、权限和失败处理。",
+            "区分任务状态、短期上下文、长期记忆和规划。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "AG-003",
+          "slug": "multi-agent-collaboration",
+          "title": "多智能体协作",
+          "summary": "用角色、交接、共享状态、冲突处理和整体验收理解多智能体系统。",
+          "content_sources": [
+            "AGT-006"
+          ],
+          "freshness": "需季度更新",
+          "learning_outcomes": [
+            "判断任务何时值得拆成多个智能体。",
+            "为多智能体任务定义角色、输入输出、交接和冲突规则。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "AG-004",
+          "slug": "ai-coding-and-vibe-coding",
+          "title": "AI Coding 与 Vibe Coding",
+          "summary": "把需求、生成、运行、观察、修复、测试和审阅组织成可验收的开发循环。",
+          "content_sources": [
+            "AGT-003"
+          ],
+          "freshness": "需实时更新",
+          "learning_outcomes": [
+            "执行一次从任务描述到运行验证的 AI Coding 闭环。",
+            "识别只看生成结果、不运行测试和缺少版本控制的风险。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "AG-005",
+          "slug": "observability-evaluation-and-human-review",
+          "title": "可观测性、评测与 Human-in-the-loop",
+          "summary": "从 trace、任务评测、权限和人工断点建立可运营、可恢复的智能体系统。",
+          "content_sources": [
+            "AGT-005",
+            "AGT-002"
+          ],
+          "freshness": "评测原则稳定；工具与基准需季度更新",
+          "learning_outcomes": [
+            "为智能体任务设计结果、过程和运营三层评测。",
+            "在外发、删除、授权和低置信度步骤设置人工确认与恢复点。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "stage-3",
+      "order": 3,
+      "title": "具身智能",
+      "summary": "从感知、决策、行动和反馈进入人形机器人、控制、强化学习、实训与群体具身智能。",
+      "lessons": [
+        {
+          "id": "EM-001",
+          "slug": "embodied-ai-loop",
+          "title": "具身智能：感知、决策、行动与反馈",
+          "summary": "建立具身智能的闭环模型，理解物理世界中的不确定性、实时性和安全约束。",
+          "content_sources": [
+            "EMB-001"
+          ],
+          "freshness": "稳定理论；案例需年度更新",
+          "learning_outcomes": [
+            "解释感知、决策、行动和反馈如何构成具身闭环。",
+            "说明具身任务相较文本问答增加的实时、安全和环境约束。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "EM-002",
+          "slug": "humanoid-and-unitree",
+          "title": "人形机器人与 Unitree 生态",
+          "summary": "从四足与人形机器人产品理解硬件、运动能力、应用形态和产业边界。",
+          "content_sources": [
+            "EMB-002"
+          ],
+          "freshness": "需季度更新",
+          "learning_outcomes": [
+            "比较四足机器人和人形机器人的形态、任务与成本。",
+            "区分产品演示能力、工程能力和真实规模化应用。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "EM-003",
+          "slug": "multimodal-perception-and-environment",
+          "title": "多模态感知与环境理解",
+          "summary": "讲清视觉、深度、激光雷达和状态估计如何共同形成可供决策使用的环境表示。",
+          "content_sources": [
+            "EM-003"
+          ],
+          "freshness": "稳定机制；传感器型号需季度复核",
+          "learning_outcomes": [
+            "说明相机、深度相机、激光雷达和本体状态分别提供什么信息。",
+            "设计从传感器数据到目标、障碍和机器人状态的感知链路。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "EM-004",
+          "slug": "motion-control-rl-and-sim-to-real",
+          "title": "运动控制、强化学习与 Sim-to-Real",
+          "summary": "从状态、动作和奖励进入策略训练、仿真验证与真实机器人部署。",
+          "content_sources": [
+            "EM-004"
+          ],
+          "freshness": "稳定机制；实现框架需季度更新",
+          "learning_outcomes": [
+            "解释状态、动作、奖励和策略如何形成机器人强化学习任务。",
+            "说明域随机化、安全约束和分阶段测试如何降低 Sim-to-Real 风险。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "EM-005",
+          "slug": "g1-go2-and-ros2-lab",
+          "title": "G1、Go2 与 ROS2 实训",
+          "summary": "从安全检查、ROS2 节点和话题进入基础动作、状态读取与异常排查。",
+          "content_sources": [
+            "EMB-004"
+          ],
+          "freshness": "接口与设备版本需季度更新",
+          "learning_outcomes": [
+            "识别 ROS2 节点、话题、服务和参数在机器人实训中的作用。",
+            "完成一次安全可控、可记录、可复盘的基础动作实验。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "EM-006",
+          "slug": "crowdverse-and-collective-embodied-ai",
+          "title": "Crowdverse 与群体具身智能",
+          "summary": "用数字孪生训练场理解多智能体任务、群体行为、协同评测与仿真到现实。",
+          "content_sources": [
+            "EMB-005"
+          ],
+          "freshness": "平台能力需季度更新",
+          "learning_outcomes": [
+            "说明群体具身任务为何需要可控、可重复的数字孪生训练场。",
+            "为群体任务定义个体规则、环境变量和整体评测指标。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "stage-4",
+      "order": 4,
+      "title": "行业应用",
+      "summary": "以落地方法为主线，覆盖教育、政务、企业、制造能源、交通、应急、海洋空间和文旅建筑。",
+      "lessons": [
+        {
+          "id": "IN-001",
+          "slug": "industry-ai-and-roi",
+          "title": "行业 AI 落地方法与 ROI",
+          "summary": "从业务问题、数据基础、系统集成、评测和投入产出判断行业 AI 是否值得落地。",
+          "content_sources": [
+            "IN-001",
+            "LLM-005"
+          ],
+          "freshness": "方法稳定；成本和案例数据需季度更新",
+          "learning_outcomes": [
+            "把行业需求写成可评测的业务任务、数据和流程。",
+            "用基线成本、收益指标、风险和推广条件计算试点 ROI。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "IN-002",
+          "slug": "higher-education-and-research",
+          "title": "高校教学与科研",
+          "summary": "分析 AI 在备课、学习反馈、文献检索、科研写作和知识管理中的价值与边界。",
+          "content_sources": [
+            "AI-004"
+          ],
+          "freshness": "需季度更新",
+          "learning_outcomes": [
+            "设计一个包含 AI 辅助和教师或研究者复核的教学科研流程。",
+            "识别学术诚信、事实引用、隐私和过度依赖风险。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "IN-003",
+          "slug": "government-services-and-rural-revitalization",
+          "title": "政务服务与乡村振兴",
+          "summary": "用公共服务、基层治理和乡村振兴案例理解 AI 的流程价值、责任边界与可追溯要求。",
+          "content_sources": [
+            "AI-006"
+          ],
+          "freshness": "政策和案例需实时更新",
+          "learning_outcomes": [
+            "区分政务咨询辅助与高风险行政决策。",
+            "为乡村产业、公共服务或基层治理设计小范围可验证试点。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "IN-004",
+          "slug": "enterprise-office-knowledge-and-aigc",
+          "title": "企业办公、知识管理与 AIGC",
+          "summary": "把文档、会议、知识库和多模态内容生产连接成可复用、可审批的企业工作流。",
+          "content_sources": [
+            "AI-004",
+            "LLM-004"
+          ],
+          "freshness": "需季度更新",
+          "learning_outcomes": [
+            "把企业办公任务拆成输入、AI 处理、人工审批和交付。",
+            "为知识库内容设置来源、有效期、权限和责任人。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "IN-005",
+          "slug": "manufacturing-energy-and-supply-chain",
+          "title": "制造、能源与供应链",
+          "summary": "从工业数据、设备运行、生产质量、能源管理和供应链协同理解行业 AI 的闭环价值。",
+          "content_sources": [
+            "IN-005"
+          ],
+          "freshness": "需季度更新",
+          "learning_outcomes": [
+            "把制造或能源场景拆成数据采集、预测诊断、优化控制和人工处置。",
+            "为质量、停机、能耗和交付定义可量化指标与安全约束。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "IN-006",
+          "slug": "transportation-and-smart-airport",
+          "title": "交通与智慧机场",
+          "summary": "用多模态交通大模型案例解释机场运行数据、知识服务、智慧运维和应急场景的系统集成。",
+          "content_sources": [
+            "IN-006",
+            "LLM-005"
+          ],
+          "freshness": "项目数据和系统状态需季度更新",
+          "learning_outcomes": [
+            "说明交通场景中的文本、图像、设备和运行数据如何进入统一服务。",
+            "为机场知识问答、运维或应急任务设计独立评测和人工确认点。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "IN-007",
+          "slug": "emergency-and-fire-investigation",
+          "title": "应急管理与火灾调查",
+          "summary": "以火灾调查辅助专家模型为例，理解证据链、法规知识、专业判断和责任边界。",
+          "content_sources": [
+            "IN-007",
+            "LLM-005"
+          ],
+          "freshness": "法规、项目状态和案例需实时更新",
+          "learning_outcomes": [
+            "说明现场材料、法规知识、专家经验和模型推理如何形成辅助证据链。",
+            "区分线索整理、辅助分析和必须由专业人员签署的最终结论。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "IN-008",
+          "slug": "ocean-and-geospatial-intelligence",
+          "title": "海洋与地理空间",
+          "summary": "连接卫星遥感、浮标、船舶、时空模型和智能体工作流，形成可追溯的海洋空间服务。",
+          "content_sources": [
+            "AGT-004"
+          ],
+          "freshness": "数据源、模型和平台能力需季度更新",
+          "learning_outcomes": [
+            "把海洋空间任务拆成数据、模型、工具、报告和专家复核。",
+            "在结果中保留数据来源、时间、空间范围、模型假设和不确定性。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        },
+        {
+          "id": "IN-009",
+          "slug": "tourism-exhibition-and-smart-building",
+          "title": "文旅、展厅与智慧建筑",
+          "summary": "从导览机器人和数字工科大楼理解空间建模、路线、问答、数字孪生与长期运维。",
+          "content_sources": [
+            "EMB-007"
+          ],
+          "freshness": "项目与产品状态需季度更新",
+          "learning_outcomes": [
+            "设计包含地图、路线、讲解内容、问答和人工接管的空间服务。",
+            "说明充电、网络、内容更新、日志和现场人员如何支撑长期运营。"
+          ],
+          "status": {
+            "source_ready": true,
+            "deck_ready": true,
+            "notes_ready": true,
+            "fact_checked": true,
+            "rights_cleared": true,
+            "browser_verified": true,
+            "publish_ready": true
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "policy": "public-original-assets-only",
+  "assets": [
+    {
+      "asset_path": "/course-assets/generated/site-logo.svg",
+      "classification": "team-original",
+      "third_party_media_count": 0,
+      "public_review_required": false,
+      "reviewed_at": "2026-07-11",
+      "reviewed_by": "课程公开重制流程",
+      "notes": "站点标识由课程名称、基础几何图形和团队配色组成，不复用第三方 Logo 或图片。"
+    },
+    {
+      "asset_path": "/course-assets/course-decks/",
+      "classification": "generated-original",
+      "third_party_media_count": 0,
+      "public_review_required": false,
+      "reviewed_at": "2026-07-11",
+      "reviewed_by": "课程公开重制流程",
+      "notes": "27 份 Web PPT 由最终讲义生成，只包含结构化文字与原生 HTML/CSS 图形；不含源 PPT 页面截图、图片或视频。"
+    },
+    {
+      "asset_path": "/course-assets/course-pptx/",
+      "classification": "generated-original",
+      "third_party_media_count": 0,
+      "public_review_required": false,
+      "reviewed_at": "2026-07-11",
+      "reviewed_by": "课程公开重制流程",
+      "notes": "27 个 PPTX 与 Web PPT 共用内容模型，使用可编辑原生文字和形状生成；PPTX 包内不含媒体文件。"
+    }
+  ]
+}

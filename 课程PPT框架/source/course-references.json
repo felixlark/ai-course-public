@@ -1,0 +1,88 @@
+{
+  "OV-001": [
+    {
+      "title": "Large Language Models Pass the Turing Test",
+      "url": "https://arxiv.org/abs/2503.23674",
+      "note": "2025 年预注册三方图灵测试研究；用于把实验结论与“机器已经获得人类智能”区分开。",
+      "checked_on": "2026-07-11"
+    }
+  ],
+  "OV-003": [
+    {
+      "title": "MIT 6.S191 Introduction to Deep Learning",
+      "url": "https://introtodeeplearning.com/",
+      "note": "神经网络、深度学习与生成模型的公开课程。",
+      "checked_on": "2026-07-11"
+    }
+  ],
+  "OV-004": [
+    {
+      "title": "Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "note": "Transformer 架构的原始论文。",
+      "checked_on": "2026-07-11"
+    },
+    {
+      "title": "Language Models are Few-Shot Learners",
+      "url": "https://arxiv.org/abs/2005.14165",
+      "note": "GPT-3 论文；用于理解规模化预训练与上下文学习。",
+      "checked_on": "2026-07-11"
+    }
+  ],
+  "OV-005": [
+    {
+      "title": "DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2501.12948",
+      "note": "DeepSeek-R1 官方技术论文；模型版本与评测数字以论文为准。",
+      "checked_on": "2026-07-11"
+    }
+  ],
+  "OV-007": [
+    {
+      "title": "NIST AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "note": "识别、衡量与治理 AI 风险的官方框架。",
+      "checked_on": "2026-07-11"
+    }
+  ],
+  "AG-001": [
+    {
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "url": "https://arxiv.org/abs/2210.03629",
+      "note": "把推理轨迹与环境行动交错组织的代表性工作。",
+      "checked_on": "2026-07-11"
+    }
+  ],
+  "AG-002": [
+    {
+      "title": "Model Context Protocol Specification 2025-11-25",
+      "url": "https://modelcontextprotocol.io/specification/2025-11-25",
+      "note": "截至 2026 年 7 月的稳定版规范；课程不把候选规范写成已发布标准。",
+      "checked_on": "2026-07-11"
+    }
+  ],
+  "AG-003": [
+    {
+      "title": "Developer’s Guide to AI Agent Protocols",
+      "url": "https://developers.googleblog.com/en/developers-guide-to-ai-agent-protocols/",
+      "note": "Google 对 A2A、MCP 等协议分工的官方实践说明。",
+      "checked_on": "2026-07-11"
+    }
+  ],
+  "AG-005": [
+    {
+      "title": "AgentBench: Evaluating LLMs as Agents",
+      "url": "https://arxiv.org/abs/2308.03688",
+      "note": "在多类交互环境中评测智能体能力的代表性基准。",
+      "checked_on": "2026-07-11"
+    }
+  ],
+  "EM-002": [
+    {
+      "title": "Unitree Robotics",
+      "url": "https://www.unitree.com/",
+      "note": "机器人型号与公开规格以厂商当前页面为准。",
+      "checked_on": "2026-07-11"
+    }
+  ]
+}
