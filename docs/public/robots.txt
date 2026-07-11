@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://felixlark.github.io/ai-course-public/sitemap.xml

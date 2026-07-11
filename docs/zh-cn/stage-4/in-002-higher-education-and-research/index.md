@@ -5,12 +5,12 @@ lesson_id: 'IN-002'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-002/deck.json'
 authored: true
-deck_revision: '47a2b71dc76ecf7465e005f19a1219ca7fb5c6d92b8c03843dbe723bfe4a4272'
+deck_revision: 'e6cd2088faafaf4bf3a947ba39c94c2933b2bec106d2b0cdfcc9feb851bf16e6'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">4.2</div>
-  <div class="lesson-hero__title">高校教学与科研</div>
+  <h1 class="lesson-hero__title">高校教学与科研</h1>
   <div class="lesson-hero__sub">AI 可以加速准备、检索与反馈，但教学判断和研究责任不能外包。</div>
   <div class="lesson-hero__tags"><span>行业应用</span><span>IN-002</span></div>
 </div>

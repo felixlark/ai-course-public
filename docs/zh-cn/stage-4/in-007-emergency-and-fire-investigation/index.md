@@ -5,12 +5,12 @@ lesson_id: 'IN-007'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-007/deck.json'
 authored: true
-deck_revision: 'b60826aa5db23cbb4f6ba2d5fdf3940b0ce44a3f295ddb13ad285aa326212f0b'
+deck_revision: 'f0aaf9529572f74f51d5504a5282fb0d0afe8a8c07aa5ebff1225b31bea0f3ac'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">4.7</div>
-  <div class="lesson-hero__title">应急管理与火灾调查</div>
+  <h1 class="lesson-hero__title">应急管理与火灾调查</h1>
   <div class="lesson-hero__sub">模型可以整理线索、检索规范和暴露矛盾，但不能代替调查程序和专业定案。</div>
   <div class="lesson-hero__tags"><span>行业应用</span><span>IN-007</span></div>
 </div>

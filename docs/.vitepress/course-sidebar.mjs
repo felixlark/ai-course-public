@@ -13,12 +13,9 @@ export const courseSidebar = {
   "/zh-cn/stage-1/": [
     {
       "text": "第 1 章 · 人工智能概述",
+      "link": "/zh-cn/stage-1/",
       "collapsed": false,
       "items": [
-        {
-          "text": "本章概览",
-          "link": "/zh-cn/stage-1/"
-        },
         {
           "text": "1.1 什么是人工智能：感知、思考与行动",
           "link": "/zh-cn/stage-1/ov-001-what-is-ai/"
@@ -53,12 +50,9 @@ export const courseSidebar = {
   "/zh-cn/stage-2/": [
     {
       "text": "第 2 章 · AI 智能体",
+      "link": "/zh-cn/stage-2/",
       "collapsed": false,
       "items": [
-        {
-          "text": "本章概览",
-          "link": "/zh-cn/stage-2/"
-        },
         {
           "text": "2.1 Agent Loop 与 ReAct",
           "link": "/zh-cn/stage-2/ag-001-agent-loop-and-react/"
@@ -85,12 +79,9 @@ export const courseSidebar = {
   "/zh-cn/stage-3/": [
     {
       "text": "第 3 章 · 具身智能",
+      "link": "/zh-cn/stage-3/",
       "collapsed": false,
       "items": [
-        {
-          "text": "本章概览",
-          "link": "/zh-cn/stage-3/"
-        },
         {
           "text": "3.1 具身智能：感知、决策、行动与反馈",
           "link": "/zh-cn/stage-3/em-001-embodied-ai-loop/"
@@ -121,12 +112,9 @@ export const courseSidebar = {
   "/zh-cn/stage-4/": [
     {
       "text": "第 4 章 · 行业应用",
+      "link": "/zh-cn/stage-4/",
       "collapsed": false,
       "items": [
-        {
-          "text": "本章概览",
-          "link": "/zh-cn/stage-4/"
-        },
         {
           "text": "4.1 行业 AI 落地方法与 ROI",
           "link": "/zh-cn/stage-4/in-001-industry-ai-and-roi/"

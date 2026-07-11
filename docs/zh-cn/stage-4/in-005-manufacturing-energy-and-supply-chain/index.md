@@ -5,12 +5,12 @@ lesson_id: 'IN-005'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-005/deck.json'
 authored: true
-deck_revision: 'be378fcd0aa9122be292e2110067f3d3b43d94e7437563c5aee13ce1fd7ac911'
+deck_revision: 'f6e1a8029ad6b1401d6a188b417cfdc6a0f64ea6906b00e1240c6c0fccc2fb1c'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">4.5</div>
-  <div class="lesson-hero__title">制造、能源与供应链</div>
+  <h1 class="lesson-hero__title">制造、能源与供应链</h1>
   <div class="lesson-hero__sub">让预测进入真实决策，同时把物理约束、安全责任和人工回退写进系统。</div>
   <div class="lesson-hero__tags"><span>行业应用</span><span>IN-005</span></div>
 </div>

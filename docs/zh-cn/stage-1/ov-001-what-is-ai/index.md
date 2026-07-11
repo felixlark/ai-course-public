@@ -5,12 +5,12 @@ authored: true
 lesson_id: 'OV-001'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-001/deck.json'
-deck_revision: '275db6adb151a1e1ae000598169ce04b5e10c0c012cdd94e18911b9dd0519e39'
+deck_revision: 'fbc988eb11d260ae50d109b15905c3cab69cce5c63cc249fc798fad2beb78341'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">1.1</div>
-  <div class="lesson-hero__title">什么是人工智能</div>
+  <h1 class="lesson-hero__title">什么是人工智能</h1>
   <div class="lesson-hero__sub">用真实案例建立直观认识，再讲清 AI 的核心逻辑：感知—思考—行动；最后用一项三方图灵测试研究讨论“像人”与“理解”之间的差别。</div>
   <div class="lesson-hero__tags"><span>案例 · 概念 · 历史</span></div>
 </div>
@@ -21,25 +21,15 @@ deck_revision: '275db6adb151a1e1ae000598169ce04b5e10c0c012cdd94e18911b9dd0519e39
 - 区分计算智能、感知智能和认知智能。
 - 说明图灵测试能观察到什么，以及它不能证明什么。
 
+## Web PPT
+
+<LessonDeck manifest="/course-assets/course-decks/ov-001/deck.json" title="什么是人工智能：感知、思考与行动" />
+
 ## 本节导入
 
 ### 先看几个真实案例
 
 抽象的定义不如具体的画面。先用三个案例，感受"人工智能已经走到哪一步"。
-
-## 案例与图解
-
-### 机器人公民索菲亚
-
-索菲亚由 Hanson Robotics 开发，并因获得沙特阿拉伯公民身份而广为人知。她能进行对话并做出面部表情，更像一个把“类人交互”推到公众面前的展示平台。这个案例抛出的问题很真实：当机器能听、能说、能表演情绪时，我们应该用什么标准判断它是否真的理解？
-
-### 会自主决策的具身大脑
-
-和索菲亚强调类人交互的展示不同，具身系统关注站立、行走和平衡等物理动作。仅凭一次演示不能判断系统的自主决策范围，因此这里把它作为观察具身闭环的入口：传感器读取状态，控制系统生成动作，机器人执行后再根据反馈修正。
-
-### 从仿真到真机的闭环：Crowdverse
-
-团队课件以 Crowdverse 作为具身仿真案例，其中的“全身动作重定向”（Whole-Body Motion Retargeting）把人的动作映射到机器人模型。它的价值，是先在可重复的虚拟环境中检查任务控制、状态反馈与行为评估，再决定哪些结果值得进入真机验证。仿真能够降低真机试错的成本和风险，但不能自动证明策略在现实中同样有效。
 
 ## 核心内容
 
@@ -47,7 +37,7 @@ deck_revision: '275db6adb151a1e1ae000598169ce04b5e10c0c012cdd94e18911b9dd0519e39
 
 三个案例背后是同一套逻辑。人工智能想让一个"系统"变成全能选手，核心是三件事的循环：
 
-<div class="ai-course-native-diagram ai-course-native-diagram--loop" aria-label="感知、思考、行动与反馈组成循环">
+<div class="ai-course-native-diagram ai-course-native-diagram--loop" role="img" aria-label="感知、思考、行动与反馈组成循环">
   <span><b>感知</b><small>读取环境与任务状态</small></span>
   <i>→</i>
   <span><b>思考</b><small>形成判断与行动方案</small></span>
@@ -91,9 +81,19 @@ deck_revision: '275db6adb151a1e1ae000598169ce04b5e10c0c012cdd94e18911b9dd0519e39
 
 2025 年一项预注册三方图灵测试研究报告：在特定的人设提示与五分钟对话条件下，GPT-4.5 被参与者判断为“人类”的比例达到 73%。这说明语言模型已经能在短时对话中呈现很强的拟人表现，但研究结果并不能单独证明模型拥有意识、常识或稳定的现实行动能力。判断 AI 时，仍要回到任务、证据、环境和后果。
 
-## Web PPT
+## 案例与图解
 
-<LessonDeck manifest="/course-assets/course-decks/ov-001/deck.json" title="什么是人工智能：感知、思考与行动" />
+### 机器人公民索菲亚
+
+索菲亚由 Hanson Robotics 开发，并因获得沙特阿拉伯公民身份而广为人知。她能进行对话并做出面部表情，更像一个把“类人交互”推到公众面前的展示平台。这个案例抛出的问题很真实：当机器能听、能说、能表演情绪时，我们应该用什么标准判断它是否真的理解？
+
+### 会自主决策的具身大脑
+
+和索菲亚强调类人交互的展示不同，具身系统关注站立、行走和平衡等物理动作。仅凭一次演示不能判断系统的自主决策范围，因此这里把它作为观察具身闭环的入口：传感器读取状态，控制系统生成动作，机器人执行后再根据反馈修正。
+
+### 从仿真到真机的闭环：Crowdverse
+
+团队课件以 Crowdverse 作为具身仿真案例，其中的“全身动作重定向”（Whole-Body Motion Retargeting）把人的动作映射到机器人模型。它的价值，是先在可重复的虚拟环境中检查任务控制、状态反馈与行为评估，再决定哪些结果值得进入真机验证。仿真能够降低真机试错的成本和风险，但不能自动证明策略在现实中同样有效。
 
 ## 动手实践
 

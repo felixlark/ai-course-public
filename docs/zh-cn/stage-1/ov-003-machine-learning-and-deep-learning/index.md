@@ -5,12 +5,12 @@ authored: true
 lesson_id: 'OV-003'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-003/deck.json'
-deck_revision: 'ed32f763f6643246885a0fef5de2efc369515dfd3a0a106bf033f47fdabfd04b'
+deck_revision: 'ee34f0f1c3c12de48440b5a5759181c94070ed40ed18bb03d4131d1e3112ebc4'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">1.3</div>
-  <div class="lesson-hero__title">机器学习与深度学习基础</div>
+  <h1 class="lesson-hero__title">机器学习与深度学习基础</h1>
   <div class="lesson-hero__sub">从监督学习、泛化与经典模型进入神经网络、反向传播、卷积网络和生成学习。</div>
   <div class="lesson-hero__tags"><span>学习 · 泛化 · 表示</span><span>OV-003</span></div>
 </div>

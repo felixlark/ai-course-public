@@ -5,12 +5,12 @@ lesson_id: 'IN-009'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-009/deck.json'
 authored: true
-deck_revision: '1c3643531bf43d95049a04fd1caf07200bbfe5c2ad465888d095bc0015d51dd9'
+deck_revision: '09d32a5249232df9838a681df74420a29e715c3a3fc5d2c6f3b5da0b0750c967'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">4.9</div>
-  <div class="lesson-hero__title">文旅、展厅与智慧建筑</div>
+  <h1 class="lesson-hero__title">文旅、展厅与智慧建筑</h1>
   <div class="lesson-hero__sub">从一次到访走向长期运营：内容、地图、设备、人员和空间状态必须共同维护。</div>
   <div class="lesson-hero__tags"><span>行业应用</span><span>IN-009</span></div>
 </div>

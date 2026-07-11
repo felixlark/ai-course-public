@@ -5,12 +5,12 @@ authored: true
 lesson_id: 'AG-003'
 module: 'AI 智能体'
 deck_manifest: '/course-assets/course-decks/ag-003/deck.json'
-deck_revision: '9c064fe937170f6e2a173a31e191f1dc0111a3c6aea28782c15c5550e0fb6276'
+deck_revision: 'b53d8ed2fd0a9adb13ceb1bd3a49ad888a5e88226c0f782b52c9e8dc9b4cb746'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">2.3</div>
-  <div class="lesson-hero__title">多智能体协作</div>
+  <h1 class="lesson-hero__title">多智能体协作</h1>
   <div class="lesson-hero__sub">用角色、交接、共享状态、冲突处理和整体验收理解多智能体系统。</div>
   <div class="lesson-hero__tags"><span>AI 智能体</span><span>AG-003</span></div>
 </div>
@@ -21,6 +21,10 @@ deck_revision: '9c064fe937170f6e2a173a31e191f1dc0111a3c6aea28782c15c5550e0fb6276
 - 为协作系统定义角色职责、共享状态、交接契约和最终责任人。
 - 分析并行执行带来的费用、延迟、上下文重复与故障传播。
 - 在低置信度、角色冲突和高影响动作处设计人机协作检查点。
+
+## Web PPT
+
+<LessonDeck manifest="/course-assets/course-decks/ag-003/deck.json" title="多智能体协作" />
 
 ## 本节导入
 
@@ -98,10 +102,6 @@ deck_revision: '9c064fe937170f6e2a173a31e191f1dc0111a3c6aea28782c15c5550e0fb6276
 如果让每个研究角色自行决定指标，最后会得到三篇无法横向比较的文章。正确的共享状态应先固定指标模板，并要求每条结论包含来源、日期、适用范围和不确定性。某行业资料不足时，该角色应标记 `blocked` 或“证据有限”，不能为了与其他章节齐平而补造结论。
 
 相反，如果任务只是查询三个公开数字并填入一张表，单个智能体顺序完成通常更合适。拆分的判断应来自任务结构，而不是来自可用智能体的数量。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/ag-003/deck.json" title="多智能体协作" />
 
 ## 动手实践
 

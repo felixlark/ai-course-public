@@ -5,12 +5,12 @@ lesson_id: 'IN-006'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-006/deck.json'
 authored: true
-deck_revision: 'e961748e058f32edbb88f586f249f01d7c3fdcd9f1d45bd7f2d7596abc6d43bb'
+deck_revision: 'd885c14ebd8bbe1914f744f4148570c8569f1e5628a3212ec89a34baffd0a4f7'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">4.6</div>
-  <div class="lesson-hero__title">交通与智慧机场</div>
+  <h1 class="lesson-hero__title">交通与智慧机场</h1>
   <div class="lesson-hero__sub">让多源数据形成可靠的运行证据，让模型建议始终服从岗位权限和安全程序。</div>
   <div class="lesson-hero__tags"><span>行业应用</span><span>IN-006</span></div>
 </div>

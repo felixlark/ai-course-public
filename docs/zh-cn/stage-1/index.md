@@ -6,7 +6,7 @@ aside: false
 
 <div class="lesson-hero lesson-hero--module">
   <div class="lesson-hero__num">01</div>
-  <div class="lesson-hero__title">人工智能概述</div>
+  <h1 class="lesson-hero__title">人工智能概述</h1>
   <div class="lesson-hero__sub">从人工智能的基本循环、发展历程和机器学习基础进入大模型、生成式 AI 与负责任使用。</div>
   <div class="lesson-hero__tags"><span>7 节</span><span>讲义 + Web PPT</span></div>
 </div>

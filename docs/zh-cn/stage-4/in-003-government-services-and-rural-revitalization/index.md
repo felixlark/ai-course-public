@@ -5,12 +5,12 @@ lesson_id: 'IN-003'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-003/deck.json'
 authored: true
-deck_revision: '8d39630b39142ba80c3cddbeed84d4b1646a13742e3984715a5b46e5a947c14b'
+deck_revision: '4c8c8283256b807ce1c0653e204b6fe7e9dfcdab0830531006e173881715726c'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">4.3</div>
-  <div class="lesson-hero__title">政务服务与乡村振兴</div>
+  <h1 class="lesson-hero__title">政务服务与乡村振兴</h1>
   <div class="lesson-hero__sub">效率必须建立在权威证据、最小权限、人工责任和群众可申诉的基础上。</div>
   <div class="lesson-hero__tags"><span>行业应用</span><span>IN-003</span></div>
 </div>

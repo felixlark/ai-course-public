@@ -5,12 +5,12 @@ authored: true
 lesson_id: 'EM-003'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-003/deck.json'
-deck_revision: 'bc2af8a459f7f4f51e4ff9864e3f898befb31848b06b589e251b673cb2482c19'
+deck_revision: '4d41450074077069ca5ba024f99f1e28d215ae999bc7c1b973d2800e079dfcda'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">3.3</div>
-  <div class="lesson-hero__title">多模态感知与环境理解</div>
+  <h1 class="lesson-hero__title">多模态感知与环境理解</h1>
   <div class="lesson-hero__sub">讲清视觉、深度、激光雷达和状态估计如何共同形成可供决策使用的环境表示。</div>
   <div class="lesson-hero__tags"><span>具身智能</span><span>EM-003</span></div>
 </div>
@@ -101,4 +101,8 @@ Mid-360 等激光雷达通过测量激光回波构建三维点云，适合环境
 ## 资料与延伸
 
 - **团队主课件：**《项目5 人形机器人的感知系统》精选 RGB-D、IMU、激光雷达、仿真和真机接入页。
+- [RealSense D435i 官方规格](https://www.realsenseai.com/products/depth-camera-d435i/)：核对双目深度、IMU、视场与工作范围；深度传感器与 RGB 传感器的快门类型不能混写。（核对日期：2026-07-12）
+- [RealSense 官方 ROS2 wrapper](https://github.com/realsenseai/realsense-ros)：核对话题、TF、外参、IMU 与 RGB-D 发布方式；课程使用迁移后的官方仓库。（核对日期：2026-07-12）
+- [Livox Mid-360 官方规格](https://www.livoxtech.com/mid-360/specs)：核对视场、点率、IMU 与同步能力；量程必须同时说明反射率和环境光条件。（核对日期：2026-07-12）
+- [Livox ROS Driver 2](https://github.com/Livox-SDK/livox_ros_driver2)：核对 Mid-360 与 ROS2 支持；官方将该驱动定位为调试工具，量产系统仍需工程化验证。（核对日期：2026-07-12）
 - 实训时以设备当前官方驱动与 ROS2 发行版文档为准，并记录硬件型号、固件、驱动和标定文件版本。

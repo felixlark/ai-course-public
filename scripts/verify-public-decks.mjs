@@ -20,6 +20,18 @@ const forbiddenKeys = new Set([
 ])
 const failures = []
 
+const relativeLuminance = (hex) => {
+  const channels = [1, 3, 5].map((index) => Number.parseInt(hex.slice(index, index + 2), 16) / 255)
+    .map((value) => value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4)
+  return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2]
+}
+
+const contrastRatio = (foreground, background) => {
+  const first = relativeLuminance(foreground)
+  const second = relativeLuminance(background)
+  return (Math.max(first, second) + 0.05) / (Math.min(first, second) + 0.05)
+}
+
 const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex')
 const readJson = async (file) => JSON.parse(await fs.readFile(file, 'utf8'))
 const fileExists = async (file) => fs.access(file).then(() => true).catch(() => false)
@@ -35,10 +47,11 @@ const walk = (value, visitor, field = '$') => {
 }
 
 const titleIsValid = (title) => {
-  if (typeof title !== 'string' || title.trim().length < 6 || title.trim().length > 34) return false
+  if (typeof title !== 'string' || title.trim().length < 6 || title.trim().length > 28) return false
   if (/[？?…]/.test(title)) return false
   if (/^(?:学习目标|核心内容|案例与图解|动手实践|课后复盘|资料与延伸|Web PPT)$/.test(title)) return false
   if (/(?:课程制作|讲者|组件|\.vue|\/course-assets\/)/i.test(title)) return false
+  if (/(?:、|与|和|或|以及)$/.test(title)) return false
   return true
 }
 
@@ -224,14 +237,25 @@ for (const record of plan.lessons || []) {
   if (deck.schema_version !== 1 || deck.generator_version !== plan.generator_version || deck.aspect_ratio !== '16:9') {
     failures.push(`${lessonId}: spec schema, generator version, or aspect ratio is invalid`)
   }
-  if (!deck.theme || typeof deck.theme !== 'object' || !['accent', 'accentSoft', 'ink', 'surface', 'dark'].every((field) => typeof deck.theme[field] === 'string')) {
+  if (!deck.theme || typeof deck.theme !== 'object' || !['accent', 'accentInk', 'accentSoft', 'ink', 'surface', 'dark'].every((field) => typeof deck.theme[field] === 'string')) {
     failures.push(`${lessonId}: spec theme is incomplete`)
+  } else {
+    if (contrastRatio(deck.theme.accentInk, '#FFFFFF') < 4.5) failures.push(`${lessonId}: accentInk does not meet 4.5:1 on white`)
+    if (contrastRatio(deck.theme.accent, '#0B1F3A') < 4.5) failures.push(`${lessonId}: accent does not meet 4.5:1 on the cover`)
   }
   if (deck.spec_sha256 !== record.spec_sha256) failures.push(`${lessonId}: spec_sha256 does not match the shared content revision`)
   walk(deck, ({ key, value, field }) => {
     if (forbiddenKeys.has(key)) failures.push(`${lessonId}: forbidden private field at ${field}`)
     if (typeof value === 'string' && /<\/?[a-z][^>]*>/i.test(value)) failures.push(`${lessonId}: arbitrary HTML at ${field}`)
     if (typeof value === 'string' && /(?:\/Users\/|\/Volumes\/|飞书导入-|file:\/\/)/.test(value)) failures.push(`${lessonId}: private path or archive marker at ${field}`)
+    if (typeof value === 'string' && /…/.test(value)) failures.push(`${lessonId}: visible slide copy is mechanically truncated at ${field}`)
+    if (typeof value === 'string' && /(?:验收“|必须经过边界验证)/.test(value)) failures.push(`${lessonId}: production-oriented fallback copy leaked at ${field}`)
+    if (typeof value === 'string' && /(?:geometry msgs|task id|step id|in progress|robot state publisher)/i.test(value)) {
+      failures.push(`${lessonId}: technical identifier lost its underscore at ${field}`)
+    }
+    if (typeof value === 'string' && /(?:与此同时|因此|但是|然而|同时|此外|例如|比如|所以|从而|包括|可以包括)$/.test(value.trim())) {
+      failures.push(`${lessonId}: incomplete connective ending at ${field}`)
+    }
   })
   if (deck.render_mode !== 'native-web') failures.push(`${lessonId}: spec render_mode must be native-web`)
   if (deck.lesson_id !== lessonId || deck.title !== record.title) failures.push(`${lessonId}: spec identity does not match plan`)

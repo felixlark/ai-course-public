@@ -171,7 +171,7 @@ deck_revision: '${deckByLessonId.get(lesson.id).spec_sha256}'
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">${moduleNumber}.${lessonNumber}</div>
-  <div class="lesson-hero__title">${html(lesson.title)}</div>
+  <h1 class="lesson-hero__title">${html(lesson.title)}</h1>
   <div class="lesson-hero__sub">${html(lesson.summary)}</div>
   <div class="lesson-hero__tags"><span>${html(lesson.moduleTitle)}</span><span>${lesson.id}</span></div>
 </div>
@@ -234,7 +234,7 @@ aside: false
 
 <div class="lesson-hero lesson-hero--module">
   <div class="lesson-hero__num">0${module.order}</div>
-  <div class="lesson-hero__title">${html(module.title)}</div>
+  <h1 class="lesson-hero__title">${html(module.title)}</h1>
   <div class="lesson-hero__sub">${html(module.summary)}</div>
   <div class="lesson-hero__tags"><span>${module.lessons.length} 节</span><span>讲义 + Web PPT</span></div>
 </div>
@@ -331,9 +331,9 @@ const sidebarFile = () => {
     sidebar[`/zh-cn/${module.id}/`] = [
       {
         text: `第 ${module.order} 章 · ${module.title}`,
+        link: `/zh-cn/${module.id}/`,
         collapsed: false,
         items: [
-          { text: '本章概览', link: `/zh-cn/${module.id}/` },
           ...module.lessons.map((lesson, index) => ({
             text: `${module.order}.${index + 1} ${lesson.title}`,
             link: routeFor({ ...lesson, moduleId: module.id })

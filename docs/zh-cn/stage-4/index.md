@@ -6,7 +6,7 @@ aside: false
 
 <div class="lesson-hero lesson-hero--module">
   <div class="lesson-hero__num">04</div>
-  <div class="lesson-hero__title">行业应用</div>
+  <h1 class="lesson-hero__title">行业应用</h1>
   <div class="lesson-hero__sub">以落地方法为主线，覆盖教育、政务、企业、制造能源、交通、应急、海洋空间和文旅建筑。</div>
   <div class="lesson-hero__tags"><span>9 节</span><span>讲义 + Web PPT</span></div>
 </div>

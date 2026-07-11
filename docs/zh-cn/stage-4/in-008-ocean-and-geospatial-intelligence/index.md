@@ -5,12 +5,12 @@ lesson_id: 'IN-008'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-008/deck.json'
 authored: true
-deck_revision: '201fab97555082267f2618f19b3b44ead617a810cf0aeaf8206cc56205f02475'
+deck_revision: 'e8263643dd3e87bae2ac7ec0253f7f6a00cc7728c88f2145827620d0f568703d'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">4.8</div>
-  <div class="lesson-hero__title">海洋与地理空间</div>
+  <h1 class="lesson-hero__title">海洋与地理空间</h1>
   <div class="lesson-hero__sub">地图和报告不是最终真相；它们必须携带时间、空间、来源、方法和不确定性。</div>
   <div class="lesson-hero__tags"><span>行业应用</span><span>IN-008</span></div>
 </div>

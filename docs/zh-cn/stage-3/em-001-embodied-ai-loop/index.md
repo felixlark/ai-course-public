@@ -5,12 +5,12 @@ authored: true
 lesson_id: 'EM-001'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-001/deck.json'
-deck_revision: 'd002074456873a0c9f1a10c88417e54a30a63c2a5e9cd07605fe17175e4aa9ac'
+deck_revision: '347629982c218fac0d31385f5409450fb902ec67918185dcbf770b0c90c6d018'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">3.1</div>
-  <div class="lesson-hero__title">具身智能：感知、决策、行动与反馈</div>
+  <h1 class="lesson-hero__title">具身智能：感知、决策、行动与反馈</h1>
   <div class="lesson-hero__sub">建立具身智能的闭环模型，理解物理世界中的不确定性、实时性和安全约束。</div>
   <div class="lesson-hero__tags"><span>具身智能</span><span>EM-001</span></div>
 </div>
@@ -125,4 +125,8 @@ deck_revision: 'd002074456873a0c9f1a10c88417e54a30a63c2a5e9cd07605fe17175e4aa9ac
 ## 资料与延伸
 
 - **团队主课件：**《2-具身智能基础》精选感知、推理、执行与平台页。
+- [Rodney Brooks：Intelligence without Representation](https://people.csail.mit.edu/brooks/papers/representation.pdf)：具身与情境化智能的重要早期路线；它不是具身智能的唯一公认定义，也不意味着所有系统都应放弃内部表示。（核对日期：2026-07-12）
+- [Embodied Question Answering](https://openaccess.thecvf.com/content_cvpr_2018/html/Das_Embodied_Question_Answering_CVPR_2018_paper.html)：说明行动会改变后续可获得的信息；证据来自三维仿真任务，不能直接等同于真机能力。（核对日期：2026-07-12）
+- [Google Research：PaLM-E](https://research.google/blog/palm-e-an-embodied-multimodal-language-model/)：观察图像、机器人状态与高层语言计划如何组合；低层实时控制仍由专门策略承担。（核对日期：2026-07-12）
+- [Google DeepMind：RT-2](https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/)：视觉—语言—动作研究系统；展示能力不能外推为开放环境中的通用性或安全保证。（核对日期：2026-07-12）
 - 建议把一个文本智能体和一个移动机器人放在同一张“输入—状态—动作—反馈—失败后果”表中比较，观察身体与环境怎样改变智能问题。

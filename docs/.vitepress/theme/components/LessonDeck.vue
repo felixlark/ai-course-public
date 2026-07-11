@@ -32,6 +32,7 @@ const currentPageLabel = computed(() => `第 ${currentIndex.value + 1} 页`)
 const fullscreenActive = computed(() => isFullscreen.value || isPseudoFullscreen.value)
 const themeStyle = computed(() => ({
   '--native-deck-accent': deck.value?.theme?.accent || '#D6A33A',
+  '--native-deck-accent-ink': deck.value?.theme?.accentInk || '#8A5A00',
   '--native-deck-accent-soft': deck.value?.theme?.accentSoft || '#FFF4D7',
   '--native-deck-ink': deck.value?.theme?.ink || '#102A43',
   '--native-deck-dark': deck.value?.theme?.dark || '#123B67',
@@ -54,7 +55,13 @@ const normalizeManifest = (raw) => {
     throw new Error('deck.json 使用不受支持的公开课件版本')
   }
   if (raw.render_mode !== 'native-web') throw new Error('deck.json 不是公开原生 Web PPT')
-  if (!raw.theme || typeof raw.theme !== 'object') throw new Error('deck.json 缺少课程主题')
+  if (
+    !raw.theme ||
+    typeof raw.theme !== 'object' ||
+    !['accent', 'accentInk', 'accentSoft', 'ink', 'dark', 'surface'].every(
+      (field) => typeof raw.theme[field] === 'string' && /^#[0-9A-F]{6}$/i.test(raw.theme[field])
+    )
+  ) throw new Error('deck.json 缺少完整课程主题')
   const normalizedSlides = raw.slides.map((slide, index) => {
     if (!slide || typeof slide !== 'object') throw new Error(`deck.json 第 ${index + 1} 页格式错误`)
     if (!supportedTypes.has(slide.type)) throw new Error(`deck.json 第 ${index + 1} 页使用未知版式`)
@@ -190,6 +197,20 @@ const next = () => setCurrent(currentIndex.value + 1)
 const retry = () => loadDeck({ force: true })
 const setThumbRef = (element, index) => { if (element) thumbRefs.value[index] = element }
 
+const onThumbKeydown = async (event, index) => {
+  let target = index
+  if (event.key === 'ArrowLeft') target = Math.max(0, index - 1)
+  else if (event.key === 'ArrowRight') target = Math.min(total.value - 1, index + 1)
+  else if (event.key === 'Home') target = 0
+  else if (event.key === 'End') target = total.value - 1
+  else return
+  event.preventDefault()
+  event.stopPropagation()
+  setCurrent(target)
+  await nextTick()
+  thumbRefs.value[target]?.focus?.()
+}
+
 const trapFullscreenFocus = (event) => {
   if (event.key !== 'Tab' || !fullscreenActive.value || !rootRef.value) return false
   const focusable = Array.from(
@@ -296,7 +317,7 @@ onBeforeUnmount(() => {
           <strong>{{ deckTitle }}</strong>
         </div>
         <div class="ai-course-lesson-deck__toolbar-actions">
-          <span v-if="total" class="ai-course-lesson-deck__counter" aria-live="polite">{{ currentIndex + 1 }} / {{ total }}</span>
+          <span v-if="total" class="ai-course-lesson-deck__counter">{{ currentIndex + 1 }} / {{ total }}</span>
           <a v-if="deck?.pptxUrl" :href="deck.pptxUrl" download>下载 PPTX</a>
           <button type="button" @click="toggleFullscreen">{{ fullscreenActive ? '退出全屏' : '全屏播放' }}</button>
           <button type="button" aria-label="关闭本节 Web PPT" @click="closeDeck">关闭</button>
@@ -315,7 +336,15 @@ onBeforeUnmount(() => {
       </div>
 
       <template v-else-if="currentSlide">
-        <div class="ai-course-lesson-deck__stage" :aria-label="`${deckTitle}，${currentPageLabel}`">
+        <p class="ai-course-visually-hidden" aria-live="polite" aria-atomic="true">
+          {{ currentPageLabel }}：{{ currentSlide.title }}
+        </p>
+        <div
+          class="ai-course-lesson-deck__stage"
+          role="group"
+          aria-roledescription="幻灯片"
+          :aria-label="`${deckTitle}，${currentPageLabel}：${currentSlide.title}`"
+        >
           <article class="ai-course-native-slide" :class="`ai-course-native-slide--${currentSlide.type}`">
             <template v-if="currentSlide.type === 'cover'">
               <div class="ai-course-native-slide__cover-rule" />
@@ -364,9 +393,17 @@ onBeforeUnmount(() => {
               </ol>
 
               <div v-else-if="currentSlide.type === 'sources'" class="ai-course-native-slide__sources">
-                <a v-for="(item, index) in currentSlide.items" :key="`${item.label}-${index}`" :href="item.url || undefined" :target="item.url ? '_blank' : undefined" :rel="item.url ? 'noreferrer' : undefined">
+                <component
+                  :is="item.url ? 'a' : 'div'"
+                  v-for="(item, index) in currentSlide.items"
+                  :key="`${item.label}-${index}`"
+                  class="ai-course-native-slide__source"
+                  :href="item.url || undefined"
+                  :target="item.url ? '_blank' : undefined"
+                  :rel="item.url ? 'noreferrer' : undefined"
+                >
                   <b>{{ String(index + 1).padStart(2, '0') }}</b><span>{{ item.label }}</span>
-                </a>
+                </component>
                 <p>{{ currentSlide.note }}</p>
               </div>
             </template>
@@ -396,7 +433,9 @@ onBeforeUnmount(() => {
             type="button"
             :aria-label="`跳转到第 ${index + 1} 页：${slide.title}`"
             :aria-current="index === currentIndex ? 'page' : undefined"
+            :tabindex="index === currentIndex ? 0 : -1"
             @click="setCurrent(index)"
+            @keydown="onThumbKeydown($event, index)"
           >
             <span>{{ index + 1 }}</span>
             <em>{{ slide.title }}</em>

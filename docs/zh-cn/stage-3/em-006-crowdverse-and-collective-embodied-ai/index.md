@@ -5,12 +5,12 @@ authored: true
 lesson_id: 'EM-006'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-006/deck.json'
-deck_revision: '71a0b8d16ebbbe95e17e77a6017335c91c106bcc03a6dbced9766744c3df5c9b'
+deck_revision: 'f2d951e05d63dd462c1fc55462ff8719a281f7e3043c9a0835300173af136a5b'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">3.6</div>
-  <div class="lesson-hero__title">Crowdverse 与群体具身智能</div>
+  <h1 class="lesson-hero__title">Crowdverse 与群体具身智能</h1>
   <div class="lesson-hero__sub">把群体任务变成可重复实验：定义个体、环境与通信，记录涌现行为，再用现实数据校准仿真。</div>
   <div class="lesson-hero__tags"><span>群体智能 · 数字孪生 · 训练场</span><span>EM-006</span></div>
 </div>
@@ -21,6 +21,10 @@ deck_revision: '71a0b8d16ebbbe95e17e77a6017335c91c106bcc03a6dbced9766744c3df5c9b
 - 用个体规则、环境变量、通信拓扑、扰动和指标定义一个可复现实验。
 - 说明大模型在任务描述、角色编排和结果解释中的作用与边界。
 - 区分仿真内成绩、经过现实数据校准的结论和可用于真实决策的证据。
+
+## Web PPT
+
+<LessonDeck manifest="/course-assets/course-decks/em-006/deck.json" title="Crowdverse 与群体具身智能" />
 
 ## 本节导入
 
@@ -35,6 +39,8 @@ Crowdverse 是团队用于群体具身任务建模、仿真与观察的数字孪
 每个智能体可以只有局部观测和简单规则，例如保持距离、朝目标移动、避开障碍、跟随邻居；当许多个体同时行动时，整体可能形成队列、簇、波或拥堵。这样的宏观模式称为涌现行为。
 
 研究群体智能既要看个体是否完成任务，也要看整体效率、公平性、稳定性与安全。平均速度提高可能以少数个体长时间等待为代价；总疏散时间下降也可能伴随局部密度过高。因此指标不能只保留一个总分。
+
+群体涌现、机器人车队调度和异构设备互操作是三类不同问题：前者关注局部规则怎样形成宏观模式，第二类关注任务分配、路线冲突和故障恢复，第三类还要处理不同设备能力与接口。不能把三者统称为一个“群体智能算法”。
 
 ### 数字孪生训练场的四层
 
@@ -81,10 +87,6 @@ Crowdverse 是团队用于群体具身任务建模、仿真与观察的数字孪
 
 多台机器人分区巡检时，可在训练场中注入延迟、丢包和单机失效。系统比较集中式调度、邻居协商和预设分区三种策略，观察覆盖率、重复路径、恢复时间和通信开销。结果帮助团队选择在正常状态高效、故障时仍可降级运行的方案。
 
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/em-006/deck.json" title="Crowdverse 与群体具身智能" />
-
 ## 动手实践
 
 1. 设计一个群体任务，写出环境、个体、交互和实验四层配置。
@@ -103,4 +105,8 @@ Crowdverse 是团队用于群体具身任务建模、仿真与观察的数字孪
 ## 资料与延伸
 
 - **团队主课件：**《群体具身智能训练场》课程节选，覆盖任务、协同、分析与数字孪生。
+- [Reynolds：Flocks, Herds, and Schools](https://www.red3d.com/cwr/papers/1987/SIGGRAPH87.pdf)：局部感知与简单规则产生宏观群体运动的原始计算机动画模型；不能自动证明真实群体机制。（核对日期：2026-07-12）
+- [ARGoS 原论文](https://argos-sim.info/stuff/Pinciroli%3ASI2012.pdf)：面向大规模、异构多机器人实验的模块化仿真系统；性能和精度结论只对具体场景成立。（核对日期：2026-07-12）
+- [ROS2 QoS 官方设计](https://design.ros2.org/articles/qos)：核对可靠性、队列、历史与兼容性；通信失效实验要区分丢包、延迟、消息过期和 QoS 不兼容。（核对日期：2026-07-12）
+- [Open-RMF 多机器人协同架构](https://osrf.github.io/ros2multirobotbook/rmf-core.html)：理解未来行程、冲突检测、路线协商与 fleet adapter；多机器人协作不是复制单机器人节点即可完成。（核对日期：2026-07-12）
 - 复现实验时应保存场景、策略、参数、随机种子、软件版本和原始日志；没有这些证据的演示不作为可比较实验结果。

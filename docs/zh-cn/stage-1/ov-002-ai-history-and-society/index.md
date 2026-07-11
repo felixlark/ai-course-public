@@ -5,12 +5,12 @@ authored: true
 lesson_id: 'OV-002'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-002/deck.json'
-deck_revision: '116dfbefcf0f0f4c0b4f08a5d0e006a957bfada76ca1109419d0f0f98a956c5c'
+deck_revision: 'd02bd9a550b15cf9d0c48bc58c9331d4904b0e7504a8fa3a33b102ad0b05cdbd'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">1.2</div>
-  <div class="lesson-hero__title">人工智能发展与社会影响</div>
+  <h1 class="lesson-hero__title">人工智能发展与社会影响</h1>
   <div class="lesson-hero__sub">AI 为什么会经历多次热潮与低谷？它正在改变哪些工作？一个应用真正落地又需要哪些条件？</div>
   <div class="lesson-hero__tags"><span>历史 · 影响 · 落地</span><span>OV-002</span></div>
 </div>
@@ -21,13 +21,21 @@ deck_revision: '116dfbefcf0f0f4c0b4f08a5d0e006a957bfada76ca1109419d0f0f98a956c5c
 - 把“职业被改变”拆成可以评估的具体任务变化。
 - 从人才、数据、算法算力、反馈和场景五个维度评估 AI 项目的落地条件。
 
+## Web PPT
+
+<LessonDeck manifest="/course-assets/course-decks/ov-002/deck.json" title="人工智能发展与社会影响" />
+
 ## 本节导入
 
 人工智能的发展从来不是一条只由算法推动的直线。规则系统、机器学习、深度学习和大模型依次扩大了机器可处理的任务边界；与此同时，数据、算力、产品入口、组织流程和社会接受度共同决定了技术能否真正进入生活。
 
 ## 核心内容
 
-### 从规则系统到生成与行动
+### 六次转折：能力、资源与预期共同塑造 AI
+
+- **1955/56—1980 年代：学科形成、专家系统与两次寒冬。** 达特茅斯提案让“人工智能”成为明确研究议题；早期高预期随后遭遇组合爆炸、数据和算力限制。专家系统在 1980 年代进入商业应用，但规则库维护成本、系统脆弱性与投资收缩又带来低谷。
+- **1990 年代—2012：统计学习、数据与 GPU 共同积累。** 机器学习逐步从手写规则转向数据驱动；2012 年 AlexNet 的视觉结果成为标志性转折，但突破来自算法、标注数据和计算平台共同成熟，不能归因于单一模型。
+- **2017—2022：Transformer 与对话式生成 AI。** Transformer 改变了序列建模和并行训练方式；2022 年 ChatGPT 把指令跟随与多轮对话带入大众产品入口。产品热潮并不表示通用智能、安全与可靠性问题已经解决。
 
 早期人工智能强调把人的知识写成规则，适合边界清楚的问题，却难以应对开放环境。机器学习把重点转向数据，深度学习进一步让模型自动学习特征；大模型则通过规模化预训练获得通用的语言与多模态能力。今天的新变化，是这些模型开始借助工具和智能体工作流，从“生成答案”走向“执行任务”。
 
@@ -59,10 +67,6 @@ deck_revision: '116dfbefcf0f0f4c0b4f08a5d0e006a957bfada76ca1109419d0f0f98a956c5c
 
 这个例子的启发在于，生物智能能利用有限经验、身体能力和环境反馈完成开放任务。它不能直接证明哪条 AI 技术路线一定正确，却提醒我们：判断智能不能只看训练规模，还要看系统能否在环境中感知、行动、纠错并承担后果。
 
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/ov-002/deck.json" title="人工智能发展与社会影响" />
-
 ## 动手实践
 
 - 列出你所在岗位的 5 项日常工作，逐项判断哪些可以交给 AI、哪些暂时不行，并说明理由。
@@ -77,4 +81,8 @@ deck_revision: '116dfbefcf0f0f4c0b4f08a5d0e006a957bfada76ca1109419d0f0f98a956c5c
 ## 资料与延伸
 
 - **主课件：**《1-人工智能发展概述》精选 21 页，覆盖发展阶段、关键转折与未来议题。
-- 建议把本节的历史阶段表与身边一个 AI 产品对照：它主要依赖规则、学习、生成，还是行动闭环？
+- [英国议会《AI in the UK》历史章节](https://publications.parliament.uk/pa/ld201719/ldselect/ldai/100/10005.htm)：用于核对达特茅斯起点、专家系统与两次 AI 寒冬；历史低谷不能简单归因于一次报告或单一事件。（核对日期：2026-07-12）
+- [AlexNet 原论文](https://papers.neurips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html)：理解数据、GPU 与深层卷积网络共同推动的视觉转折。（核对日期：2026-07-12）
+- [Attention Is All You Need](https://papers.nips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)：Transformer 原论文；证据来自机器翻译任务，不能直接外推为大模型全部能力。（核对日期：2026-07-12）
+- [OpenAI：Introducing ChatGPT](https://openai.com/index/chatgpt/)：核对 2022 年对话式研究预览的产品起点与指令跟随路线。（核对日期：2026-07-12）
+- 建议把本节时间线与身边一个 AI 产品对照：它同时依赖哪些规则、学习、生成和行动能力？

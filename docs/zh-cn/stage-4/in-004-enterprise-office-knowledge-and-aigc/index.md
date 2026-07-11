@@ -5,12 +5,12 @@ lesson_id: 'IN-004'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-004/deck.json'
 authored: true
-deck_revision: '64de0ecd4cafed1a774037cc083e6f5f55d72006dc366f38f234e1acce78b71e'
+deck_revision: 'a256ae4dbe48ffb95ddfeeeed3a3f7146547f34628dd96a305e40fd3b9d10faf'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">4.4</div>
-  <div class="lesson-hero__title">企业办公、知识管理与 AIGC</div>
+  <h1 class="lesson-hero__title">企业办公、知识管理与 AIGC</h1>
   <div class="lesson-hero__sub">从会议与文档出发，把知识抽取、引用、权限、版本、审批和交付连接起来。</div>
   <div class="lesson-hero__tags"><span>行业应用</span><span>IN-004</span></div>
 </div>

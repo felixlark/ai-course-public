@@ -6,7 +6,7 @@ aside: false
 
 <div class="lesson-hero lesson-hero--module">
   <div class="lesson-hero__num">02</div>
-  <div class="lesson-hero__title">AI 智能体</div>
+  <h1 class="lesson-hero__title">AI 智能体</h1>
   <div class="lesson-hero__sub">从 Agent Loop 进入工具、记忆、规划、多智能体、AI Coding 与可靠性工程。</div>
   <div class="lesson-hero__tags"><span>5 节</span><span>讲义 + Web PPT</span></div>
 </div>

@@ -17,6 +17,10 @@ const expectedModules = [
   { id: 'stage-4', order: 4, title: '行业应用', lessonCount: 9, prefix: 'IN' }
 ]
 const expectedLessonCount = 27
+const expectedLessonHeadings = [
+  '学习目标', 'Web PPT', '本节导入', '核心内容',
+  '案例与图解', '动手实践', '课后复盘', '资料与延伸'
+]
 const failures = []
 
 const exists = async (file) => {
@@ -197,6 +201,8 @@ for (const { module, lesson } of lessons) {
     continue
   }
   const text = await fs.readFile(file, 'utf8')
+  const h1Count = [...text.matchAll(/^#\s+.+$/gm)].length + [...text.matchAll(/<h1\b[^>]*>/g)].length
+  if (h1Count !== 1) failures.push(`${lesson.id}: expected exactly one H1, found ${h1Count}`)
   const frontmatter = parseFrontmatter(text, file)
   const expectedFrontmatter = {
     title: lesson.title,
@@ -218,6 +224,12 @@ for (const { module, lesson } of lessons) {
     failures.push(`${lesson.id}: expected exactly one LessonDeck, found ${manifestRefs.length}`)
   } else if (manifestRefs[0] !== manifestUrl) {
     failures.push(`${lesson.id}: LessonDeck manifest ${manifestRefs[0]} != ${manifestUrl}`)
+  }
+  const lessonHeadings = [...text.matchAll(/^##\s+(.+?)\s*$/gm)].map((match) => match[1])
+  if (JSON.stringify(lessonHeadings) !== JSON.stringify(expectedLessonHeadings)) {
+    failures.push(
+      `${lesson.id}: H2 order ${JSON.stringify(lessonHeadings)} != ${JSON.stringify(expectedLessonHeadings)}`
+    )
   }
   for (const legacy of ['sample-2026', '/zh-cn/materials/', '<WebDeck', '<PageSlidesButton']) {
     if (text.includes(legacy)) failures.push(`${lesson.id}: legacy course reference remains: ${legacy}`)
@@ -259,6 +271,14 @@ for (const { module, lesson } of lessons) {
 
 for (const legacyDir of [path.join(zhDir, 'sample-2026'), path.join(zhDir, 'materials')]) {
   if (await exists(legacyDir)) failures.push(`legacy public directory must not exist: ${path.relative(root, legacyDir)}`)
+}
+
+for (const module of expectedModules) {
+  const file = path.join(zhDir, module.id, 'index.md')
+  if (!(await exists(file))) continue
+  const text = await fs.readFile(file, 'utf8')
+  const h1Count = [...text.matchAll(/^#\s+.+$/gm)].length + [...text.matchAll(/<h1\b[^>]*>/g)].length
+  if (h1Count !== 1) failures.push(`${module.id}: expected exactly one H1, found ${h1Count}`)
 }
 
 const actualPages = new Set(await collectIndexPages(zhDir))

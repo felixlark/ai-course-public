@@ -5,12 +5,12 @@ authored: true
 lesson_id: 'AG-002'
 module: 'AI 智能体'
 deck_manifest: '/course-assets/course-decks/ag-002/deck.json'
-deck_revision: '8b245c6ca1c4d586fa5d9d4d019fbe1de12185dba4ff34bfae9e91491eb9eee0'
+deck_revision: 'c1b2b892c91ea99c94f8bd05d8d1b3efd13bd10177d90aeae117e9c091cff7d7'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">2.2</div>
-  <div class="lesson-hero__title">工具调用、MCP、记忆与规划</div>
+  <h1 class="lesson-hero__title">工具调用、MCP、记忆与规划</h1>
   <div class="lesson-hero__sub">解释智能体如何通过稳定工具契约、分层上下文和可更新记忆完成长任务。</div>
   <div class="lesson-hero__tags"><span>AI 智能体</span><span>AG-002</span></div>
 </div>
@@ -21,6 +21,10 @@ deck_revision: '8b245c6ca1c4d586fa5d9d4d019fbe1de12185dba4ff34bfae9e91491eb9eee0
 - 说明 MCP 中 host、client、server 以及 tools、resources、prompts 的职责边界。
 - 区分当前上下文、任务短期状态和长期记忆，并为记忆设置来源、范围和失效条件。
 - 把长任务拆成可验收步骤，并正确处理无权限、工具异常和部分完成。
+
+## Web PPT
+
+<LessonDeck manifest="/course-assets/course-decks/ag-002/deck.json" title="工具调用、MCP、记忆与规划" />
 
 ## 本节导入
 
@@ -102,10 +106,6 @@ MCP server 可以提供三类常见能力：
 5. 评测时对照原文逐条核验，不让长期记忆覆盖当前证据。
 
 这个案例说明：资源提供依据，工具取得动态结果，短期状态保存进度，长期记忆只提供背景，计划则约束它们的使用顺序。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/ag-002/deck.json" title="工具调用、MCP、记忆与规划" />
 
 ## 动手实践
 

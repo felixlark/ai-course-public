@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generator_version": "public-deck-content-v2",
+  "generator_version": "public-deck-content-v3",
   "lesson_id": "EM-004",
   "module_id": "stage-3",
   "module": "具身智能",
@@ -11,6 +11,7 @@
   "theme": {
     "key": "embodied",
     "accent": "#2D9B72",
+    "accentInk": "#0B6B4F",
     "accentSoft": "#E1F6ED",
     "ink": "#12372E",
     "surface": "#F5FBF8",
@@ -36,7 +37,7 @@
       "module": "具身智能",
       "lesson_id": "EM-004",
       "eyebrow": "学习结果",
-      "title": "学完这一节，你能完成这些判断与行动",
+      "title": "运动控制与迁移：2项学习结果",
       "items": [
         "解释状态、动作、奖励和策略如何形成机器人强化学习任务",
         "说明域随机化、安全约束和分阶段测试如何降低 Sim-to-Real 风险"
@@ -87,7 +88,7 @@
       "module": "具身智能",
       "lesson_id": "EM-004",
       "eyebrow": "核心论点 3 / 5",
-      "title": "强化学习中的智能体读取状态或观测，输出动作，环境返回下一状态与奖励",
+      "title": "强化学习把观测、动作与奖励连成控制闭环",
       "blocks": [
         {
           "label": "强化学习：把控制任务写成可优化问题",
@@ -125,11 +126,11 @@
       "module": "具身智能",
       "lesson_id": "EM-004",
       "eyebrow": "核心论点 5 / 5",
-      "title": "典型流程先在 Isaac Gym 等并行仿真环境训练",
+      "title": "典型流程先在 Isaac Lab 等并行仿真环境训练",
       "blocks": [
         {
           "label": "Sim-to-Real：从训练场走向真实机器人",
-          "body": "典型流程先在 Isaac Gym 等并行仿真环境训练，在 Play 阶段观察策略，再用 MuJoCo 等不同仿真器做 Sim2Sim 检查，最后进入真机 Sim2Real…"
+          "body": "典型流程先在 Isaac Lab 等并行仿真环境训练；在 Play 阶段观察策略；再用 MuJoCo 等不同仿真器做 Sim2Sim 检查；最后进入真机 Sim2Real"
         },
         {
           "label": "",
@@ -144,14 +145,14 @@
       "module": "具身智能",
       "lesson_id": "EM-004",
       "eyebrow": "案例与边界 1 / 1",
-      "title": "每次放开新速度或新地形前，都应通过稳定性、温度、电量与急停检查",
+      "title": "真机扩速前必须检查稳定性、温度与急停",
       "cases": [
         {
           "label": "从仿真步态到受控真机试验",
           "rows": [
             {
               "label": "场景",
-              "body": "团队在 unitree rl gym 中训练机器人按照速度指令前进，并准备部署到真实设备"
+              "body": "团队在 unitree_rl_gym 中训练机器人按照速度指令前进，并准备部署到真实设备"
             },
             {
               "label": "问题",
@@ -180,7 +181,7 @@
       "module": "具身智能",
       "lesson_id": "EM-004",
       "eyebrow": "动手实践",
-      "title": "把方法落实为可验证的行动",
+      "title": "运动控制与迁移：一次可验收练习",
       "items": [
         "为匀速前进任务列出观测、动作、五个奖励项和三个终止条件",
         "比较线性倒立摆方法与强化学习方法各自适合解决的问题",
@@ -194,11 +195,11 @@
       "module": "具身智能",
       "lesson_id": "EM-004",
       "eyebrow": "课后复盘",
-      "title": "带走三条可复用的判断原则",
+      "title": "运动控制与迁移：判断时先抓住三点",
       "items": [
         "步行可以分解为支撑相和摆动相",
-        "强化学习中的智能体读取状态或观测，输出动作，环境返回下一状态与奖励",
-        "典型流程先在 Isaac Gym 等并行仿真环境训练"
+        "强化学习把观测、动作与奖励连成控制闭环",
+        "典型流程先在 Isaac Lab 等并行仿真环境训练"
       ],
       "reflection_count": 3
     },
@@ -209,19 +210,31 @@
       "module": "具身智能",
       "lesson_id": "EM-004",
       "eyebrow": "来源与延伸",
-      "title": "从公开重制课件回到可核对的学习资料",
+      "title": "运动控制与迁移：依据、边界与延伸",
       "items": [
         {
           "label": "团队既有课程资料经重新组织、改写与原创视觉重制",
           "url": ""
         },
         {
-          "label": "真机实验必须遵循设备手册与实验室安全制度；课程中的流程用于理解验收顺序，不替代现场指导和风险评估",
-          "url": ""
+          "label": "Proximal Policy Optimization Algorithms：PPO 原论文；裁剪目标限制策略更新幅度，不等于动作限幅、碰撞约束或安全保证。（核对日期：2026-07-12）",
+          "url": "https://arxiv.org/abs/1707.06347"
+        },
+        {
+          "label": "MuJoCo 官方概览：核对关节与接触动力学、控制和机器学习用途；时间步长与数值稳定性仍需按任务验证。（核对日期：2026-07-12）",
+          "url": "https://mujoco.readthedocs.io/en/stable/overview.html"
+        },
+        {
+          "label": "Isaac Lab 官方 Sim-to-Real 指南：核对仿真训练、域随机化、真实观测、执行器响应对齐与 ROS 部署流程。（核对日期：2026-07-12）",
+          "url": "https://isaac-sim.github.io/IsaacLab/main/source/policy_deployment/02_gear_assembly/gear_assembly_policy.html"
+        },
+        {
+          "label": "Domain Randomization 原论文：理解扩大训练分布以缓解 reality gap 的方法；原论文结果不能直接外推为复杂人形步态的通用保证。（核对日期：2026-07-12）",
+          "url": "https://arxiv.org/abs/1703.06907"
         }
       ],
       "note": "公开幻灯片只使用课程原创文字与原生图形；完整论证、链接和事实边界请见本节讲义。"
     }
   ],
-  "spec_sha256": "a0f0a3b42e965b2ae29a6b58e005933c0b90f877558ab06570feabb4a7db0397"
+  "spec_sha256": "ae0fc79bf178144c2d633dd3f171df700bbd61789fe3006d2b6f2708b8979937"
 }

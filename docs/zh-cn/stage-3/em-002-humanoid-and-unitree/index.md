@@ -5,12 +5,12 @@ authored: true
 lesson_id: 'EM-002'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-002/deck.json'
-deck_revision: '6007b0ccc1d711035c91a11274593468ac8e6fbf8ab7b39de4831e02b8afe18e'
+deck_revision: 'bff106d52f04fd2b2eb57f825bbdb9392c885d719e340194935770d5f4d2fd19'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">3.2</div>
-  <div class="lesson-hero__title">人形机器人与 Unitree 生态</div>
+  <h1 class="lesson-hero__title">人形机器人与 Unitree 生态</h1>
   <div class="lesson-hero__sub">从四足与人形机器人产品理解硬件、运动能力、应用形态和产业边界。</div>
   <div class="lesson-hero__tags"><span>具身智能</span><span>EM-002</span></div>
 </div>

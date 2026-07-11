@@ -5,12 +5,12 @@ authored: true
 lesson_id: 'OV-006'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-006/deck.json'
-deck_revision: '80310078af5a4189f2873ab611954b6fd591ccf384b59b1255b6de79537d6515'
+deck_revision: '9eaa76d703d95c6a859d0ee3239f9c2f01d75b1cc33b05c174222847375bbbf6'
 ---
 
 <div class="lesson-hero">
   <div class="lesson-hero__num">1.6</div>
-  <div class="lesson-hero__title">提示词、AIGC 与多模态工作流</div>
+  <h1 class="lesson-hero__title">提示词、AIGC 与多模态工作流</h1>
   <div class="lesson-hero__sub">从“写一句提示词”升级为定义任务、准备素材、生成候选、检验事实、编辑交付和记录来源的完整流程。</div>
   <div class="lesson-hero__tags"><span>Prompt · AIGC · 多模态</span><span>OV-006</span></div>
 </div>
@@ -21,6 +21,10 @@ deck_revision: '80310078af5a4189f2873ab611954b6fd591ccf384b59b1255b6de79537d6515
 - 判断何时使用零样本、少样本、任务分解或多候选一致性检查。
 - 设计覆盖文本、图像与视频的生成—选择—编辑—核验—发布工作流。
 - 识别商品事实、人物一致性、版权、隐私和品牌规范等多模态风险。
+
+## Web PPT
+
+<LessonDeck manifest="/course-assets/course-decks/ov-006/deck.json" title="提示词、AIGC 与多模态工作流" />
 
 ## 本节导入
 
@@ -77,10 +81,6 @@ AIGC 的价值同样不在一次生成。真正可交付的内容通常经历需
 ### 商品短视频的多模态流水线
 
 团队先锁定真实商品图和参数，生成三套分镜草案；选定一套后制作关键帧，再生成短视频候选。编辑者逐镜检查商品外观、文字、手部动作和镜头连续性，并用已授权音乐与配音替换临时素材。发布前由业务负责人核对价格和功效，由品牌负责人核对视觉，由素材管理员保存来源与授权记录。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/ov-006/deck.json" title="提示词、AIGC 与多模态工作流" />
 
 ## 动手实践
 

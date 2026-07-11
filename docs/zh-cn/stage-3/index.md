@@ -6,7 +6,7 @@ aside: false
 
 <div class="lesson-hero lesson-hero--module">
   <div class="lesson-hero__num">03</div>
-  <div class="lesson-hero__title">具身智能</div>
+  <h1 class="lesson-hero__title">具身智能</h1>
   <div class="lesson-hero__sub">从感知、决策、行动和反馈进入人形机器人、控制、强化学习、实训与群体具身智能。</div>
   <div class="lesson-hero__tags"><span>6 节</span><span>讲义 + Web PPT</span></div>
 </div>

@@ -7,6 +7,32 @@
       "checked_on": "2026-07-11"
     }
   ],
+  "OV-002": [
+    {
+      "title": "英国议会 AI in the UK：历史章节",
+      "url": "https://publications.parliament.uk/pa/ld201719/ldselect/ldai/100/10005.htm",
+      "note": "达特茅斯起点、专家系统与两次 AI 寒冬；避免把历史低谷归因于单一事件。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "url": "https://papers.neurips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html",
+      "note": "AlexNet 原论文；用于理解数据、GPU 与深层卷积网络共同推动的视觉转折。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "Attention Is All You Need",
+      "url": "https://papers.nips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html",
+      "note": "Transformer 原论文；证据范围首先是机器翻译任务。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "OpenAI：Introducing ChatGPT",
+      "url": "https://openai.com/index/chatgpt/",
+      "note": "核对 2022 年对话式研究预览的产品起点与指令跟随路线。",
+      "checked_on": "2026-07-12"
+    }
+  ],
   "OV-003": [
     {
       "title": "MIT 6.S191 Introduction to Deep Learning",
@@ -77,12 +103,116 @@
       "checked_on": "2026-07-11"
     }
   ],
+  "EM-001": [
+    {
+      "title": "Intelligence without Representation",
+      "url": "https://people.csail.mit.edu/brooks/papers/representation.pdf",
+      "note": "具身与情境化智能的重要早期路线；不是唯一公认定义。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "Embodied Question Answering",
+      "url": "https://openaccess.thecvf.com/content_cvpr_2018/html/Das_Embodied_Question_Answering_CVPR_2018_paper.html",
+      "note": "说明行动会改变后续可获得的信息；证据来自三维仿真任务。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "Google Research：PaLM-E",
+      "url": "https://research.google/blog/palm-e-an-embodied-multimodal-language-model/",
+      "note": "图像、机器人状态与高层语言计划的组合方式。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "Google DeepMind：RT-2",
+      "url": "https://deepmind.google/blog/rt-2-new-model-translates-vision-and-language-into-action/",
+      "note": "视觉—语言—动作研究系统；不外推为开放环境中的通用安全能力。",
+      "checked_on": "2026-07-12"
+    }
+  ],
   "EM-002": [
     {
       "title": "Unitree Robotics",
       "url": "https://www.unitree.com/",
       "note": "机器人型号与公开规格以厂商当前页面为准。",
       "checked_on": "2026-07-11"
+    }
+  ],
+  "EM-003": [
+    {
+      "title": "RealSense D435i 官方规格",
+      "url": "https://www.realsenseai.com/products/depth-camera-d435i/",
+      "note": "核对双目深度、IMU、视场、工作范围和传感器快门差异。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "RealSense ROS2 wrapper",
+      "url": "https://github.com/realsenseai/realsense-ros",
+      "note": "核对话题、TF、外参、IMU 与 RGB-D 发布方式。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "Livox Mid-360 官方规格",
+      "url": "https://www.livoxtech.com/mid-360/specs",
+      "note": "核对视场、点率、IMU、同步和带条件的量程数据。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "Livox ROS Driver 2",
+      "url": "https://github.com/Livox-SDK/livox_ros_driver2",
+      "note": "核对 Mid-360 与 ROS2 支持以及官方调试工具定位。",
+      "checked_on": "2026-07-12"
+    }
+  ],
+  "EM-004": [
+    {
+      "title": "Proximal Policy Optimization Algorithms",
+      "url": "https://arxiv.org/abs/1707.06347",
+      "note": "PPO 原论文；裁剪目标不等于动作限幅或安全保证。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "MuJoCo 官方概览",
+      "url": "https://mujoco.readthedocs.io/en/stable/overview.html",
+      "note": "关节与接触动力学、控制和机器学习用途，以及数值稳定性边界。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "Isaac Lab 官方 Sim-to-Real 指南",
+      "url": "https://isaac-sim.github.io/IsaacLab/main/source/policy_deployment/02_gear_assembly/gear_assembly_policy.html",
+      "note": "仿真训练、域随机化、真实观测、执行器响应对齐与 ROS 部署。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "Domain Randomization for Transferring Deep Neural Networks",
+      "url": "https://arxiv.org/abs/1703.06907",
+      "note": "通过扩大训练分布缓解 reality gap 的原始研究。",
+      "checked_on": "2026-07-12"
+    }
+  ],
+  "EM-006": [
+    {
+      "title": "Flocks, Herds, and Schools",
+      "url": "https://www.red3d.com/cwr/papers/1987/SIGGRAPH87.pdf",
+      "note": "局部规则产生宏观群体运动的原始计算机动画模型。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "ARGoS: a Modular, Multi-Engine Simulator for Heterogeneous Swarm Robotics",
+      "url": "https://argos-sim.info/stuff/Pinciroli%3ASI2012.pdf",
+      "note": "面向大规模、异构多机器人实验的模块化仿真系统。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "ROS2 QoS 官方设计",
+      "url": "https://design.ros2.org/articles/qos",
+      "note": "可靠性、队列、历史与兼容性；用于区分通信失效类型。",
+      "checked_on": "2026-07-12"
+    },
+    {
+      "title": "Open-RMF 多机器人协同架构",
+      "url": "https://osrf.github.io/ros2multirobotbook/rmf-core.html",
+      "note": "未来行程、冲突检测、路线协商与 fleet adapter。",
+      "checked_on": "2026-07-12"
     }
   ]
 }
