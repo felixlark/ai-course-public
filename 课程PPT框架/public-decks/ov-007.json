@@ -18,6 +18,10 @@
     "dark": "#123B67"
   },
   "pptx_asset": "/course-assets/course-pptx/ov-007.pptx",
+  "source_materials": {
+    "manifest": "/course-assets/source-media/ov-007/deck.json",
+    "label": "原课件"
+  },
   "slides": [
     {
       "slide_id": "OV-007-S01",
@@ -266,8 +270,8 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
-      "note": "公开幻灯片只使用课程原创文字与原生图形；完整论证、链接和事实边界请见本节讲义。"
+      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
     }
   ],
-  "spec_sha256": "c254324172dd1fd6954ff0839e7c3108260e05e6d9829cc715528bab458c8c35"
+  "spec_sha256": "b8d88d8f80371acffb0f3cd551309017f2293dc95b52c7c4cd7d0a3fa7fde463"
 }

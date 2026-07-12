@@ -73,11 +73,12 @@
       "title": "什么是人工智能：感知、思考与行动",
       "slide_count": 12,
       "spec_path": "课程PPT框架/public-decks/ov-001.json",
-      "spec_sha256": "fbc988eb11d260ae50d109b15905c3cab69cce5c63cc249fc798fad2beb78341",
-      "spec_file_sha256": "671ef0c079954210e4d2d95d68ed262cb2ae009596ca867157540a956cc21294",
+      "spec_sha256": "c483c7d09716e329bc8ee7c27f521b19459071f1e03a27b3bf45f0985b58ff14",
+      "spec_file_sha256": "914196be68376e068f644e9305505b71f6637b005a6a3872d2f419e9c7994f69",
       "manifest_url": "/course-assets/course-decks/ov-001/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ov-001/deck.json",
       "pptx_url": "/course-assets/course-pptx/ov-001.pptx",
-      "pptx_sha256": "1b6e466ec37c2ac5701fa3176fafa9feb78e5c218ab306378163e2e55e056b42",
+      "pptx_sha256": "2496e7ae4b574a604c3bf78f70827a407420549fc8be762c0018982895556676",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -86,7 +87,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -96,11 +97,12 @@
       "title": "人工智能发展与社会影响",
       "slide_count": 9,
       "spec_path": "课程PPT框架/public-decks/ov-002.json",
-      "spec_sha256": "d02bd9a550b15cf9d0c48bc58c9331d4904b0e7504a8fa3a33b102ad0b05cdbd",
-      "spec_file_sha256": "fea3a3c2f838c2368b0bfb0087c2a8d70a5f44f527f4928eee29b16656dfeb17",
+      "spec_sha256": "56d4c0a9cd56ecf1374b5ae67eab939d6528cc2b6510cb78c33d41a8f04af77d",
+      "spec_file_sha256": "9e259dd52ea0e59a038fd1c2a93892172140339f319f8bf48238d32bc87745fc",
       "manifest_url": "/course-assets/course-decks/ov-002/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ov-002/deck.json",
       "pptx_url": "/course-assets/course-pptx/ov-002.pptx",
-      "pptx_sha256": "5851964e053e8c3b6a730ce02454318d050fb82a99e9b95e9b7b90673a7a4d69",
+      "pptx_sha256": "fe1410c64b7e468f51eb94b3c494b5aff67c2ec7c7c8f5440636b9d486a8a68d",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -109,7 +111,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -119,11 +121,12 @@
       "title": "机器学习与深度学习基础",
       "slide_count": 14,
       "spec_path": "课程PPT框架/public-decks/ov-003.json",
-      "spec_sha256": "ee34f0f1c3c12de48440b5a5759181c94070ed40ed18bb03d4131d1e3112ebc4",
-      "spec_file_sha256": "7e5cc5de633fdf519a76617bdbfa97aba74bdc423a267dd116bd6774b32b8615",
+      "spec_sha256": "827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d",
+      "spec_file_sha256": "6ffc110bf859a1ce8ceb2443f94a7d74d3c9f592b48ae129534cf4682568bd07",
       "manifest_url": "/course-assets/course-decks/ov-003/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ov-003/deck.json",
       "pptx_url": "/course-assets/course-pptx/ov-003.pptx",
-      "pptx_sha256": "049e9fa0a1fabe8c63397f1c0e0a56c41e70a86ef002b340507f5c52d5948e5c",
+      "pptx_sha256": "f276027e5e74861c9e433ce86bbb144d86457a8658da57bc6b8cfad83c0c0859",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -132,7 +135,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -142,11 +145,12 @@
       "title": "大模型概述、Transformer 与能力边界",
       "slide_count": 14,
       "spec_path": "课程PPT框架/public-decks/ov-004.json",
-      "spec_sha256": "d14a266007d1f19070909ed02ddaac24f5a5e7cb8cd29cde0c9f3b3e84f28a12",
-      "spec_file_sha256": "58e4170e20efddaf17fedff8bf9f31779f3c6dd9ec4a93b21c4c60a563d51925",
+      "spec_sha256": "7b9f6d62fdc4d46fe411135abff230a164bb2acea4680530a9774541e897ecf5",
+      "spec_file_sha256": "7d1f8d275cdf01793c1ab357055303e634202a10b21fe8a93e391f662355e36f",
       "manifest_url": "/course-assets/course-decks/ov-004/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ov-004/deck.json",
       "pptx_url": "/course-assets/course-pptx/ov-004.pptx",
-      "pptx_sha256": "a14a32a1c6d980067dfec90456c3ca1b015da00b4231aade3e077c04d94b9ef8",
+      "pptx_sha256": "704bb6e1f0e5ad14646f471734f69006c9fa5599d017b42b9ced889f21f5fba1",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -155,7 +159,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -165,11 +169,12 @@
       "title": "DeepSeek 与开源模型生态",
       "slide_count": 10,
       "spec_path": "课程PPT框架/public-decks/ov-005.json",
-      "spec_sha256": "70568fee9226e6f29445d573c6cad32784a9cae39020678482dfc717aaab3ac3",
-      "spec_file_sha256": "b3f2c436a61df004a6091eff1dc5e698a381c1fb2a18b8b067718d373b69d40b",
+      "spec_sha256": "d0fc7cd029ee4484bd31155508c94e822c36659b441c5cc3a40d7d8934396182",
+      "spec_file_sha256": "f183da9eecd0426de03a58bc799c0c199adabbc6c12007fcbfee745631307683",
       "manifest_url": "/course-assets/course-decks/ov-005/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ov-005/deck.json",
       "pptx_url": "/course-assets/course-pptx/ov-005.pptx",
-      "pptx_sha256": "ce3290e224f431ce8e8754162bf0d81c5072246eb25236d071b9539cf3fc1ec6",
+      "pptx_sha256": "e8f1eb10ca5caacefcee92dc41818142126dcba0217322a7764b7b7e18852bbe",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -178,7 +183,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -188,11 +193,12 @@
       "title": "提示词、AIGC 与多模态工作流",
       "slide_count": 12,
       "spec_path": "课程PPT框架/public-decks/ov-006.json",
-      "spec_sha256": "9eaa76d703d95c6a859d0ee3239f9c2f01d75b1cc33b05c174222847375bbbf6",
-      "spec_file_sha256": "c74f4764aeea3c164f1c673229e50c90c06c803cbf9ee4714eefcf123bfa8910",
+      "spec_sha256": "b33f3e26d48aa3af6c1421dc2f6a306d2601f7f13e279ae4be4de31f9d54c003",
+      "spec_file_sha256": "e403f2da3c4e958312ab29874ebc8395b81647a60ed334f1fe27efb9d5407bb7",
       "manifest_url": "/course-assets/course-decks/ov-006/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ov-006/deck.json",
       "pptx_url": "/course-assets/course-pptx/ov-006.pptx",
-      "pptx_sha256": "00ae35a2d989449c2b5510623b11c0efa0116cf14b6a60afcafc36e32a1acee3",
+      "pptx_sha256": "8e2ef006c8b986b0e732af0018df182cf93fc2f6b9f05d00a7ce67bc58460eaa",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -201,7 +207,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -211,11 +217,12 @@
       "title": "幻觉、安全与负责任 AI",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/ov-007.json",
-      "spec_sha256": "c254324172dd1fd6954ff0839e7c3108260e05e6d9829cc715528bab458c8c35",
-      "spec_file_sha256": "129b6a62ccbf9f494c7f00af632433410928b320e50c54c2c75cc24939735045",
+      "spec_sha256": "b8d88d8f80371acffb0f3cd551309017f2293dc95b52c7c4cd7d0a3fa7fde463",
+      "spec_file_sha256": "24b4bb2bee5b1d899405d14f1ef4d031ece95cd3c5c2418ac82c88305bc58afc",
       "manifest_url": "/course-assets/course-decks/ov-007/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ov-007/deck.json",
       "pptx_url": "/course-assets/course-pptx/ov-007.pptx",
-      "pptx_sha256": "dbfa984a712854bbf2b72919eeb30ab1ed2af69756d530f286556f510efddc80",
+      "pptx_sha256": "bb5713806a9b82948029aee3455fbd4b24dd1bf08904b2ac42161067a33a1916",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -224,7 +231,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -234,11 +241,12 @@
       "title": "Agent Loop 与 ReAct",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/ag-001.json",
-      "spec_sha256": "0c7f9d534463d94a1e904fb0f1dd0893140716eb0956b26fa33893855e393e8c",
-      "spec_file_sha256": "035014ede5a4f157d805d1d012b0e16a137ac743cb87c1596aed49a2a0b4dbbc",
+      "spec_sha256": "08816f3b5c35d3368290a2fbb7e8e5128665258dc278f1a46b9cf3917b76d8a8",
+      "spec_file_sha256": "aa770b14dc1ab549b6d9be62ec48e50ece053a3817941806b50bf8de43c1e345",
       "manifest_url": "/course-assets/course-decks/ag-001/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ag-001/deck.json",
       "pptx_url": "/course-assets/course-pptx/ag-001.pptx",
-      "pptx_sha256": "fe8bdc31be78ecc1b1f5d034c1a0e4888199b46321a964b81b234978b1f8a7bd",
+      "pptx_sha256": "4d1281ce9170d00d06ea4701636af32d6832303bd34d91a5760a333dbd2df3cd",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -247,7 +255,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -257,11 +265,12 @@
       "title": "工具调用、MCP、记忆与规划",
       "slide_count": 12,
       "spec_path": "课程PPT框架/public-decks/ag-002.json",
-      "spec_sha256": "c1b2b892c91ea99c94f8bd05d8d1b3efd13bd10177d90aeae117e9c091cff7d7",
-      "spec_file_sha256": "69e2cb2b1d9b8b1d2d0dad0de28d23240ece5cf851fbc8c0f3c40484eaed7a8a",
+      "spec_sha256": "cf700ef06d6fb18ce2ba560cecdc2aa347a36b76d2ece5bae17dd974cbc38ef7",
+      "spec_file_sha256": "90e7c2b60babd578fbba267fa7b3dbff055e87405552f32700296d0887eafe51",
       "manifest_url": "/course-assets/course-decks/ag-002/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ag-002/deck.json",
       "pptx_url": "/course-assets/course-pptx/ag-002.pptx",
-      "pptx_sha256": "6aaadc1c58bf81b61b7c0312c35b694a9c4875726b3e2e0be69261756a755d20",
+      "pptx_sha256": "a4a812e2c519895634edf64d3d3b3a3bc2476a4ab6972b47bc48d7029c1685b2",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -270,7 +279,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -280,11 +289,12 @@
       "title": "多智能体协作",
       "slide_count": 12,
       "spec_path": "课程PPT框架/public-decks/ag-003.json",
-      "spec_sha256": "b53d8ed2fd0a9adb13ceb1bd3a49ad888a5e88226c0f782b52c9e8dc9b4cb746",
-      "spec_file_sha256": "343e9577194284521cde12474b7d9975b758add633ab1e7ede0c5e94479990e2",
+      "spec_sha256": "2ca1d80924c5d50af21ed193047e0b9d1d580376d406320efa576f6fd1288364",
+      "spec_file_sha256": "b48af864382c87b774fdcefa637ebcb423ec66ce633cfa32277c19b72d6cf68e",
       "manifest_url": "/course-assets/course-decks/ag-003/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ag-003/deck.json",
       "pptx_url": "/course-assets/course-pptx/ag-003.pptx",
-      "pptx_sha256": "e56b43c2b7cd1558c193bab956fa3020fce99d037126c90d8b331c8d9af2acc3",
+      "pptx_sha256": "198eaf8ae57fdc841ed1f4810524646989393351c3b2a5e589a0b488fc152593",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -293,7 +303,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -303,11 +313,12 @@
       "title": "AI Coding 与 Vibe Coding",
       "slide_count": 12,
       "spec_path": "课程PPT框架/public-decks/ag-004.json",
-      "spec_sha256": "629beb42047a52bb126c98b55f27c6679ace8b222543ee3c25481683a586fde3",
-      "spec_file_sha256": "d1e5eadc6e81e635892bc6bc8d92ae6ca72df5d7915a2da73d9109dcc62f7862",
+      "spec_sha256": "a8f4b236772c62f43c0912091a608a00a74498c5f4c537ea58b35616f9563809",
+      "spec_file_sha256": "d95701c82fd06d0d77537937d6c46108599565a9f4931b0155b09cb2dde20bab",
       "manifest_url": "/course-assets/course-decks/ag-004/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ag-004/deck.json",
       "pptx_url": "/course-assets/course-pptx/ag-004.pptx",
-      "pptx_sha256": "d3a8c3515d3ef78acc40f1d0dcfe6fefa59c5809531ac97610bc6311e34e5e2d",
+      "pptx_sha256": "fcc2a0aab4e54b055283a0aff74f6a6863aea3d001c267221e13c510f19f4351",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -316,7 +327,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -326,11 +337,12 @@
       "title": "可观测性、评测与 Human-in-the-loop",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/ag-005.json",
-      "spec_sha256": "0c48b180f4941e5e8be7b0bc78a2dae58641038c18c8efddb89e0860425ef615",
-      "spec_file_sha256": "1d9f802218dd1ae976c6644a0065f24052407608cb610d2b3330dd4501c6075c",
+      "spec_sha256": "8ca5ae9906d879cacc42190c13bb0b54cec6506285ab1813a13f04c9fe00a7ce",
+      "spec_file_sha256": "00e4310ea798a52b8084c46d5e78e85c4579ee3cbe0cd6ae94f0a380ba52f286",
       "manifest_url": "/course-assets/course-decks/ag-005/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/ag-005/deck.json",
       "pptx_url": "/course-assets/course-pptx/ag-005.pptx",
-      "pptx_sha256": "d33e23f3c3c5440730559705f669ebabe789d9262778cdafe66f6afd2b209ce8",
+      "pptx_sha256": "f7e1aea2475a3793cc1106ea4bd386949f6b14db5c30087e97dd19d7111ddbf0",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -339,7 +351,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -349,11 +361,12 @@
       "title": "具身智能：感知、决策、行动与反馈",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/em-001.json",
-      "spec_sha256": "347629982c218fac0d31385f5409450fb902ec67918185dcbf770b0c90c6d018",
-      "spec_file_sha256": "3a32ea6d8a63ca017d8367ea226ceb2681af4017fc00e8a4727f729f2b71ac17",
+      "spec_sha256": "b19e857bbde60d7f79ed32b3882775dc081aeda17d45cb8d7292ba53894b2c70",
+      "spec_file_sha256": "563f2c694d545d9247ef95e25352a3ec638fd0e5afca85e4f5869856e73ee5ef",
       "manifest_url": "/course-assets/course-decks/em-001/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/em-001/deck.json",
       "pptx_url": "/course-assets/course-pptx/em-001.pptx",
-      "pptx_sha256": "148439f2e7512ea225b01eb8cc096c7140e1d6209319c28666c7bd27d5747cba",
+      "pptx_sha256": "6e58acfdb5d09d7ee55e2dfa566b6d700de641ee7bebe7ddcfab4d1c481973d2",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -362,7 +375,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -372,11 +385,12 @@
       "title": "人形机器人与 Unitree 生态",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/em-002.json",
-      "spec_sha256": "bff106d52f04fd2b2eb57f825bbdb9392c885d719e340194935770d5f4d2fd19",
-      "spec_file_sha256": "f4bb93f7b583ab3f907192000fa82502429a3d4670c6306ac34e7a5324bf7a05",
+      "spec_sha256": "396e159b8073430eca95a514468126cd724b6b67b39cb4df5e87ada422c170f3",
+      "spec_file_sha256": "67b6f60a2ddce4ba749a81bc2e8d8980e0dd79f9ed6d496493c315a59e55cb54",
       "manifest_url": "/course-assets/course-decks/em-002/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/em-002/deck.json",
       "pptx_url": "/course-assets/course-pptx/em-002.pptx",
-      "pptx_sha256": "9d395c5299d2b0d015401965a25f4e2d6df5c9dcdad6c83671482d5879d894cd",
+      "pptx_sha256": "aaa20ad1ee36c67b3719ef9ec7f5af21f3fe7a90b237d500ec0d616809c052e4",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -385,7 +399,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -395,11 +409,12 @@
       "title": "多模态感知与环境理解",
       "slide_count": 11,
       "spec_path": "课程PPT框架/public-decks/em-003.json",
-      "spec_sha256": "4d41450074077069ca5ba024f99f1e28d215ae999bc7c1b973d2800e079dfcda",
-      "spec_file_sha256": "c44c262baf6b84df37ca3274d802f36ec87ed0ade3f1f7aff6f91f0434a724c1",
+      "spec_sha256": "27e197fecff61c012982a9855de4bc83a73801aebd2a7282e6a3ddbfe1cb9814",
+      "spec_file_sha256": "69de8dcba7d4db2540acd0a35ef2fbbe39dd4462eae3d1a1bbc3cd0f4d74d041",
       "manifest_url": "/course-assets/course-decks/em-003/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/em-003/deck.json",
       "pptx_url": "/course-assets/course-pptx/em-003.pptx",
-      "pptx_sha256": "e61f5c0a0ebe0cf125bbfac27a9c140679576290dc18f63f5689ec95c8e13012",
+      "pptx_sha256": "9397f16636b8d149baee91d606500ff057e27b9782d5fb767d0359d884edb971",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -408,7 +423,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -418,11 +433,12 @@
       "title": "运动控制、强化学习与 Sim-to-Real",
       "slide_count": 11,
       "spec_path": "课程PPT框架/public-decks/em-004.json",
-      "spec_sha256": "ae0fc79bf178144c2d633dd3f171df700bbd61789fe3006d2b6f2708b8979937",
-      "spec_file_sha256": "ee759b433bda42b5637f90aafc33bf8f6f8069213e09d163d170c5b5df57d900",
+      "spec_sha256": "5d0eac6134f383bd238f3fea3111c80ddd7ef423e0610cfeb786714bbddbfefb",
+      "spec_file_sha256": "19d237e43e53c9074e1d2b7ce62c7991e315e781e03b7ff2db0f4b2b8c6440fb",
       "manifest_url": "/course-assets/course-decks/em-004/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/em-004/deck.json",
       "pptx_url": "/course-assets/course-pptx/em-004.pptx",
-      "pptx_sha256": "9cb52825b46598021d261dc4232ad6e5e54b509757ef6d5d5959158b986188f9",
+      "pptx_sha256": "d762385a9f9f253b96691e089867ede676425eaad76eae3d4b5ce0146222e4fb",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -431,7 +447,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -441,11 +457,12 @@
       "title": "G1、Go2 与 ROS2 实训",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/em-005.json",
-      "spec_sha256": "53e07802ca64bb59cc96544f5f23a24041a5834c82726e21b2a9794fa0ee8931",
-      "spec_file_sha256": "9f37002d7e641b2338c20fa2b5c8c0eee03aca738bb2a016169204332d79b7ba",
+      "spec_sha256": "dd82501022e42557bd6065d25127c0e271b8068feb9510eeeb9f1fdd37c47d15",
+      "spec_file_sha256": "f009f173ed1b6335470cb380419b4900fbbed83328d42a9013250c528b17057c",
       "manifest_url": "/course-assets/course-decks/em-005/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/em-005/deck.json",
       "pptx_url": "/course-assets/course-pptx/em-005.pptx",
-      "pptx_sha256": "2c505d12151fc4af5c726ec5bc6cf8ce85415bf27defe249da8da118ec0d71fc",
+      "pptx_sha256": "bcf327cf7aa6120f88a51a5600c1ff41309a814b8de934e092d634b845f7c09e",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -454,7 +471,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -464,11 +481,12 @@
       "title": "Crowdverse 与群体具身智能",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/em-006.json",
-      "spec_sha256": "f2d951e05d63dd462c1fc55462ff8719a281f7e3043c9a0835300173af136a5b",
-      "spec_file_sha256": "8b3dfa93863f09ee7730499ea0d192e2cb6b3db8956541cbd3068573353d5371",
+      "spec_sha256": "8fc69598f1136479d4865588f1615049bb88113073d83761c8dc1f6fdb918929",
+      "spec_file_sha256": "ff2917a15c6d5f8ac81698081e8145f3b22bb6c992b06084d15f3e2e247cf379",
       "manifest_url": "/course-assets/course-decks/em-006/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/em-006/deck.json",
       "pptx_url": "/course-assets/course-pptx/em-006.pptx",
-      "pptx_sha256": "23d960989ddaa0238591e950f09475ac23abcab8f5cf53d4684a3e884654fede",
+      "pptx_sha256": "de80737efcda3be49dc2dc1cf87ff4c21f85023ce6ad55a24e1f219b781785ce",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -477,7 +495,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -487,11 +505,12 @@
       "title": "行业 AI 落地方法与 ROI",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/in-001.json",
-      "spec_sha256": "98298f13051922190658d70120ef3cd535f207b5c12f6171e8124426d6982643",
-      "spec_file_sha256": "c519a0f4726476ecb7494986651911fa6ca6d95fde115a2a6546f1373c477d26",
+      "spec_sha256": "ee2d3b42f1130a069d6fbd13c76efb4117ba50e1f5dd62c5aa809f56f8f9d0d8",
+      "spec_file_sha256": "5486e2efdf1195ac0f8d264932a60055646bfd477dad63c91515f999fce52bf6",
       "manifest_url": "/course-assets/course-decks/in-001/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/in-001/deck.json",
       "pptx_url": "/course-assets/course-pptx/in-001.pptx",
-      "pptx_sha256": "72ff8b285ac1fc3d7770136bfa6488a260cfaaf7d0951830df5c71b121d38d92",
+      "pptx_sha256": "1d2923a4f02b814ee20ed73cf4575838d6a3e2b852b72e8643137195de64ea45",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -500,7 +519,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -510,11 +529,12 @@
       "title": "高校教学与科研",
       "slide_count": 12,
       "spec_path": "课程PPT框架/public-decks/in-002.json",
-      "spec_sha256": "e6cd2088faafaf4bf3a947ba39c94c2933b2bec106d2b0cdfcc9feb851bf16e6",
-      "spec_file_sha256": "2fe8ccb36b5c2c751cacd2d3369c0e65516d26cbdb6c54b5140467d414bf93ba",
+      "spec_sha256": "d4ae9c332543916212ac625c191ff3eeceb0eddf74bdabd83e7c38fab8448a26",
+      "spec_file_sha256": "117f9bea9323786dda5e7486af27a8a2bf898fd6b976bccfe9e8ef213908400b",
       "manifest_url": "/course-assets/course-decks/in-002/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/in-002/deck.json",
       "pptx_url": "/course-assets/course-pptx/in-002.pptx",
-      "pptx_sha256": "5337e91bc76836f821b669b6326bee908dee502d2cfa433005ca6378bd562c14",
+      "pptx_sha256": "19f32c2cca067b3679ed37d34b000cd35f72a7c297cea5ed2d2f1221a2f84ca9",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -523,7 +543,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -533,11 +553,12 @@
       "title": "政务服务与乡村振兴",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/in-003.json",
-      "spec_sha256": "4c8c8283256b807ce1c0653e204b6fe7e9dfcdab0830531006e173881715726c",
-      "spec_file_sha256": "2452c4b3d9a9595cf5fe547b84c5080e0aec253867d61adef43b5d763da77eb8",
+      "spec_sha256": "e8df70babe971a1d2af1fe90a3afa281d6216964d398c2d6fbccf33c3629bd20",
+      "spec_file_sha256": "7674ff725fa53617c9c2a2ce058bf9e1ac06a5c6b9e9cf3112aa1ff948ca9128",
       "manifest_url": "/course-assets/course-decks/in-003/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/in-003/deck.json",
       "pptx_url": "/course-assets/course-pptx/in-003.pptx",
-      "pptx_sha256": "f3dd322df9610145e04658b8f6f8565ff428e9d029a413d08fd14d768968b1db",
+      "pptx_sha256": "de87e7e47a01995afa23d6b759d742c86f6e9e367c7033d50dccab14739122dc",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -546,7 +567,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -556,11 +577,12 @@
       "title": "企业办公、知识管理与 AIGC",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/in-004.json",
-      "spec_sha256": "a256ae4dbe48ffb95ddfeeeed3a3f7146547f34628dd96a305e40fd3b9d10faf",
-      "spec_file_sha256": "373d84f08ee54338469ddc50c8819dde07c6e07743f87c1a13df0803a88f4e27",
+      "spec_sha256": "e909e2411c1b93d95739cab8bf53244fda2fdbd0eadea75f71562cbc8214d868",
+      "spec_file_sha256": "f8654f1d12c8763a62bac0e89ef3f72d86bea99bcdefcdd76319030a3b04984f",
       "manifest_url": "/course-assets/course-decks/in-004/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/in-004/deck.json",
       "pptx_url": "/course-assets/course-pptx/in-004.pptx",
-      "pptx_sha256": "c8a3c5a2d52645bffdc3e973482040d261d5ffdca97125c5ea459f4d1fd5d8d3",
+      "pptx_sha256": "cbda1e565327a4b50420bf6410fc852767dd4ddc32ace098fc4dea89ded4683b",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -569,7 +591,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -579,11 +601,12 @@
       "title": "制造、能源与供应链",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/in-005.json",
-      "spec_sha256": "f6e1a8029ad6b1401d6a188b417cfdc6a0f64ea6906b00e1240c6c0fccc2fb1c",
-      "spec_file_sha256": "e81e61999c586c6c76b0e55981fb845ef14139e817f050e8d69756531b78c99f",
+      "spec_sha256": "ce53c2d6ee497a6f6b02b4875450762afcb377150b1859b620d26a3d40ba9b15",
+      "spec_file_sha256": "a69e758b8faac2925fe07cdbe1f13ff23f24967648be9a3d8d603a34cf8f1dd6",
       "manifest_url": "/course-assets/course-decks/in-005/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/in-005/deck.json",
       "pptx_url": "/course-assets/course-pptx/in-005.pptx",
-      "pptx_sha256": "3a9d4c10ef3b81d4e78d683d21be0a36e1668ae98a58a332e344ca38ecf2afb5",
+      "pptx_sha256": "2d43912ef49d0d82ececf1130814aa0bd1696a749d223bd6c0c475f7ba70ab88",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -592,7 +615,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -602,11 +625,12 @@
       "title": "交通与智慧机场",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/in-006.json",
-      "spec_sha256": "d885c14ebd8bbe1914f744f4148570c8569f1e5628a3212ec89a34baffd0a4f7",
-      "spec_file_sha256": "dee2692dc9d8c60b4e38ca448ae337a728ef7c83270188f71de3899bc72f3984",
+      "spec_sha256": "3da7e830fdc200c88b4697986a0c69006ba4f5245fff44ecf0a38bbe3963a305",
+      "spec_file_sha256": "72f1c0ebc7f73d2406d2be4fe4c767e93203a575af594fc0213f8dfbdcb504a4",
       "manifest_url": "/course-assets/course-decks/in-006/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/in-006/deck.json",
       "pptx_url": "/course-assets/course-pptx/in-006.pptx",
-      "pptx_sha256": "06c9185a4b0103d4e0f7017dffa4b1a4cf6586a5c45fb2d071ae397c390255d4",
+      "pptx_sha256": "dc05d495cec59dbb5a7840876738af78dd5272146e5c9878adf6e28944640328",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -615,7 +639,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -625,11 +649,12 @@
       "title": "应急管理与火灾调查",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/in-007.json",
-      "spec_sha256": "f0aaf9529572f74f51d5504a5282fb0d0afe8a8c07aa5ebff1225b31bea0f3ac",
-      "spec_file_sha256": "3ec42552878958a7f68f95b82215f6fcd3a50319eb9b507ae9cc4b725c9c95d8",
+      "spec_sha256": "f3d66ea879aa1dafa143964d6a379ed537402071cc384d4771699bea58d829cb",
+      "spec_file_sha256": "479dd6fb9199b98e7ff26d0158c2b4733314a9e0a1c103f4ace546fe32d3aafd",
       "manifest_url": "/course-assets/course-decks/in-007/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/in-007/deck.json",
       "pptx_url": "/course-assets/course-pptx/in-007.pptx",
-      "pptx_sha256": "ce9bc75afe32a3e71cb9f61e95cc1e113958777983796c9255ef21eb9f13c6ea",
+      "pptx_sha256": "0aa2237d64a7efb438dcc086a0dc1f5fad7d880d5389bd060e997f559149ae31",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -638,7 +663,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -648,11 +673,12 @@
       "title": "海洋与地理空间",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/in-008.json",
-      "spec_sha256": "e8263643dd3e87bae2ac7ec0253f7f6a00cc7728c88f2145827620d0f568703d",
-      "spec_file_sha256": "4e5c73d7082ea2539411bc1a8b6495c58a51552444b2a05d575c189e7b033938",
+      "spec_sha256": "ed06181dd0843521870b562e557431afdafbbe553a409f83735f28a34deeef94",
+      "spec_file_sha256": "f8f3007485efe5c0d7cef4c5a20a5e55f3db599d8a8d429a2916ea02e90968fe",
       "manifest_url": "/course-assets/course-decks/in-008/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/in-008/deck.json",
       "pptx_url": "/course-assets/course-pptx/in-008.pptx",
-      "pptx_sha256": "24e9cf48c4c45c8669324fc17ad8f41716e11cbf90a6fab24e37632f7be213a9",
+      "pptx_sha256": "0177e5a199918b017ba677f5f54119af6ab208f31a81eb9e597ac2b13f820ff9",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -661,7 +687,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     },
     {
@@ -671,11 +697,12 @@
       "title": "文旅、展厅与智慧建筑",
       "slide_count": 13,
       "spec_path": "课程PPT框架/public-decks/in-009.json",
-      "spec_sha256": "09d32a5249232df9838a681df74420a29e715c3a3fc5d2c6f3b5da0b0750c967",
-      "spec_file_sha256": "8962c581abf065db618fdeb242b4530057e5e90c6b38fd676bc4443fe4b1a224",
+      "spec_sha256": "3bbe613732ed9e29e180a4f4b7ef9e979011a88fd777d52b2354bf8e2cffd84a",
+      "spec_file_sha256": "6a718ca3217b7ced88e3a97cf35f298400f7f07088fbb95c9d36975573a04767",
       "manifest_url": "/course-assets/course-decks/in-009/deck.json",
+      "source_media_manifest_url": "/course-assets/source-media/in-009/deck.json",
       "pptx_url": "/course-assets/course-pptx/in-009.pptx",
-      "pptx_sha256": "7c1f71bf122f65dedf1f09e6b0f755a97e1f4c9ed70e7d0dea7bbf8dc6bd9068",
+      "pptx_sha256": "b532158e5c6bbc9b00180cc8f64152dc6f0e42714fc7b5f78e16fedd85a99956",
       "render_mode": "native-web",
       "status": "ready",
       "rights": {
@@ -684,7 +711,7 @@
         "public_review_required": false,
         "reviewed_at": "2026-07-11",
         "reviewed_by": "课程公开重制流程",
-        "notes": "公开版只包含团队课程文字的重新组织、原创排版与原生图形；不发布源 PPT 截图、第三方图片、视频或品牌素材。"
+        "notes": "课程精编版包含团队课程文字、统一排版与原生图形；原课件图片和视频由独立 source-media 清单提供并保留页码来源。"
       }
     }
   ]

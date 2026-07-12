@@ -538,6 +538,41 @@
   letter-spacing: 0.08em;
 }
 
+.ai-course-lesson-deck__modes {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 3px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 9px;
+  padding: 3px;
+  background: var(--vp-c-bg-soft);
+}
+
+.ai-course-lesson-deck__modes button {
+  min-height: 30px;
+  border: 0;
+  border-radius: 6px;
+  padding: 4px 9px;
+  background: transparent;
+  color: var(--vp-c-text-2);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.ai-course-lesson-deck__modes button[aria-pressed="true"] {
+  background: var(--vp-c-bg);
+  color: var(--vp-c-brand-1);
+  box-shadow: 0 1px 4px rgba(15, 23, 42, .12);
+}
+
+.ai-course-lesson-deck__modes small {
+  margin-left: 3px;
+  color: var(--vp-c-text-3);
+  font-size: 9px;
+}
+
 .ai-course-lesson-deck__toolbar-actions {
   display: flex;
   flex: 0 0 auto;
@@ -781,6 +816,14 @@
 
   .ai-course-lesson-deck__toolbar-actions {
     width: 100%;
+  }
+
+  .ai-course-lesson-deck__modes {
+    width: 100%;
+  }
+
+  .ai-course-lesson-deck__modes button {
+    flex: 1 1 50%;
   }
 
   .ai-course-lesson-deck__toolbar-actions button {
@@ -1262,6 +1305,247 @@
   line-height: 1.2;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+.ai-course-source-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #050a12;
+}
+
+.ai-course-source-slide__picture,
+.ai-course-source-slide__picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ai-course-source-slide__picture img {
+  object-fit: contain;
+  background: #050a12;
+}
+
+.ai-course-source-slide__meta {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 3;
+  display: flex;
+  gap: 5px;
+  pointer-events: none;
+}
+
+.ai-course-source-slide__meta span {
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: rgba(5, 10, 18, .78);
+  color: #fff;
+  font-size: clamp(9px, 1.1vw, 12px);
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+}
+
+.ai-course-source-slide__video-actions {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 5;
+  display: flex;
+  gap: 8px;
+  transform: translateX(-50%);
+}
+
+.ai-course-source-slide__video-actions button,
+.ai-course-source-slide__video-stage > button {
+  min-height: 38px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 9px;
+  padding: 7px 13px;
+  background: rgba(7, 17, 31, .9);
+  color: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 750;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.ai-course-source-slide__video-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #050a12;
+}
+
+.ai-course-source-slide__video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ai-course-source-slide__video-stage > button {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 4;
+}
+
+.ai-course-lesson-deck__thumb--source img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ai-course-lesson-deck__thumb--source em {
+  position: absolute;
+  right: 4px;
+  bottom: 5px;
+  max-width: 76px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 4px #000;
+  white-space: nowrap;
+}
+
+.ai-course-lesson-deck:fullscreen .ai-course-source-slide,
+.ai-course-lesson-deck--fullscreen .ai-course-source-slide {
+  width: min(100cqw, calc(100cqh * 16 / 9));
+  max-width: none;
+  height: min(100cqh, calc(100cqw * 9 / 16));
+  max-height: none;
+  aspect-ratio: 16 / 9;
+}
+
+/* ---- SourceMaterialGallery: source PPT evidence in the lesson body ---- */
+.ai-course-source-gallery {
+  margin: 22px 0 30px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-soft);
+}
+
+.ai-course-source-gallery__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--vp-c-brand-1) 10%, var(--vp-c-bg)), var(--vp-c-bg));
+}
+
+.ai-course-source-gallery__header span {
+  color: var(--vp-c-brand-1);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .1em;
+}
+
+.ai-course-source-gallery__header h3 {
+  margin: 3px 0 0;
+  border: 0;
+  padding: 0;
+  font-size: 17px;
+}
+
+.ai-course-source-gallery__stats {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2px 12px;
+  text-align: center;
+}
+
+.ai-course-source-gallery__stats b { color: var(--vp-c-text-1); font-size: 18px; }
+.ai-course-source-gallery__stats span { color: var(--vp-c-text-2); font-size: 10px; letter-spacing: 0; }
+
+.ai-course-source-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 12px;
+}
+
+.ai-course-source-gallery__grid figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 9px;
+  background: var(--vp-c-bg);
+}
+
+.ai-course-source-gallery__grid picture,
+.ai-course-source-gallery__grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.ai-course-source-gallery__grid img { object-fit: contain; background: #fff; }
+
+.ai-course-source-gallery__grid figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 8px;
+  padding: 7px 9px;
+  color: var(--vp-c-text-2);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.ai-course-source-gallery__grid figcaption span { color: var(--vp-c-brand-1); font-weight: 700; }
+
+.ai-course-source-gallery__open {
+  width: calc(100% - 24px);
+  min-height: 44px;
+  margin: 0 12px 12px;
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 9px;
+  background: var(--vp-c-brand-1);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.ai-course-source-gallery__state {
+  display: flex;
+  min-height: 150px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px;
+  color: var(--vp-c-text-2);
+}
+
+.ai-course-source-gallery__state button {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 7px;
+  padding: 6px 10px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .ai-course-source-gallery__header { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .ai-course-source-gallery__stats { width: 100%; }
+  .ai-course-source-gallery__grid { grid-template-columns: 1fr; }
+  .ai-course-source-gallery__grid figure:nth-child(n + 3) { display: none; }
+  .ai-course-source-slide__meta span:nth-child(n + 2) { display: none; }
+  .ai-course-source-slide__video-actions { bottom: 10px; }
 }
 
 .ai-course-lesson-deck:fullscreen .ai-course-native-slide,

@@ -18,6 +18,10 @@
     "dark": "#165642"
   },
   "pptx_asset": "/course-assets/course-pptx/em-003.pptx",
+  "source_materials": {
+    "manifest": "/course-assets/source-media/em-003/deck.json",
+    "label": "原课件"
+  },
   "slides": [
     {
       "slide_id": "EM-003-S01",
@@ -233,8 +237,8 @@
           "url": "https://github.com/Livox-SDK/livox_ros_driver2"
         }
       ],
-      "note": "公开幻灯片只使用课程原创文字与原生图形；完整论证、链接和事实边界请见本节讲义。"
+      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
     }
   ],
-  "spec_sha256": "4d41450074077069ca5ba024f99f1e28d215ae999bc7c1b973d2800e079dfcda"
+  "spec_sha256": "27e197fecff61c012982a9855de4bc83a73801aebd2a7282e6a3ddbfe1cb9814"
 }

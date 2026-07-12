@@ -4,8 +4,9 @@ description: '从业务问题、数据基础、流程改造、风险约束和投
 lesson_id: 'IN-001'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-001/deck.json'
+source_media_manifest: '/course-assets/source-media/in-001/deck.json'
 authored: true
-deck_revision: '98298f13051922190658d70120ef3cd535f207b5c12f6171e8124426d6982643'
+deck_revision: 'ee2d3b42f1130a069d6fbd13c76efb4117ba50e1f5dd62c5aa809f56f8f9d0d8'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: '98298f13051922190658d70120ef3cd535f207b5c12f6171e8124426d6982643
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/in-001/deck.json" title="行业 AI 落地方法与 ROI" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/in-001/deck.json" title="行业 AI 落地方法与 ROI原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

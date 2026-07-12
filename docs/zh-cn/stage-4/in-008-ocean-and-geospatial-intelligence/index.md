@@ -4,8 +4,9 @@ description: '连接遥感、现场观测和时空计算，形成有来源、有
 lesson_id: 'IN-008'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-008/deck.json'
+source_media_manifest: '/course-assets/source-media/in-008/deck.json'
 authored: true
-deck_revision: 'e8263643dd3e87bae2ac7ec0253f7f6a00cc7728c88f2145827620d0f568703d'
+deck_revision: 'ed06181dd0843521870b562e557431afdafbbe553a409f83735f28a34deeef94'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: 'e8263643dd3e87bae2ac7ec0253f7f6a00cc7728c88f2145827620d0f568703d
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/in-008/deck.json" title="海洋与地理空间" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/in-008/deck.json" title="海洋与地理空间原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'OV-004'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-004/deck.json'
-deck_revision: 'd14a266007d1f19070909ed02ddaac24f5a5e7cb8cd29cde0c9f3b3e84f28a12'
+source_media_manifest: '/course-assets/source-media/ov-004/deck.json'
+deck_revision: '7b9f6d62fdc4d46fe411135abff230a164bb2acea4680530a9774541e897ecf5'
 ---
 
 <div class="lesson-hero">
@@ -24,6 +25,12 @@ deck_revision: 'd14a266007d1f19070909ed02ddaac24f5a5e7cb8cd29cde0c9f3b3e84f28a12
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ov-004/deck.json" title="大模型概述、Transformer 与能力边界" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ov-004/deck.json" title="大模型概述、Transformer 与能力边界原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

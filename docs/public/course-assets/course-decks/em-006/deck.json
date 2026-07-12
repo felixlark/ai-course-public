@@ -18,6 +18,10 @@
     "dark": "#165642"
   },
   "pptx_asset": "/course-assets/course-pptx/em-006.pptx",
+  "source_materials": {
+    "manifest": "/course-assets/source-media/em-006/deck.json",
+    "label": "原课件"
+  },
   "slides": [
     {
       "slide_id": "EM-006-S01",
@@ -290,8 +294,8 @@
           "url": "https://osrf.github.io/ros2multirobotbook/rmf-core.html"
         }
       ],
-      "note": "公开幻灯片只使用课程原创文字与原生图形；完整论证、链接和事实边界请见本节讲义。"
+      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
     }
   ],
-  "spec_sha256": "f2d951e05d63dd462c1fc55462ff8719a281f7e3043c9a0835300173af136a5b"
+  "spec_sha256": "8fc69598f1136479d4865588f1615049bb88113073d83761c8dc1f6fdb918929"
 }

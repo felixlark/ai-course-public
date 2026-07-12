@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'EM-002'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-002/deck.json'
-deck_revision: 'bff106d52f04fd2b2eb57f825bbdb9392c885d719e340194935770d5f4d2fd19'
+source_media_manifest: '/course-assets/source-media/em-002/deck.json'
+deck_revision: '396e159b8073430eca95a514468126cd724b6b67b39cb4df5e87ada422c170f3'
 ---
 
 <div class="lesson-hero">
@@ -23,6 +24,12 @@ deck_revision: 'bff106d52f04fd2b2eb57f825bbdb9392c885d719e340194935770d5f4d2fd19
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/em-002/deck.json" title="人形机器人与 Unitree 生态" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/em-002/deck.json" title="人形机器人与 Unitree 生态原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

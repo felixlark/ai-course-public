@@ -12,23 +12,40 @@ const rootRef = ref(null)
 const openButtonRef = ref(null)
 const thumbRefs = ref([])
 const deck = ref(null)
+const sourceDeck = ref(null)
 const currentIndex = ref(0)
+const activeMode = ref('native')
+const activeVideoIndex = ref(-1)
 const isOpen = ref(false)
 const isLoading = ref(false)
+const isSourceLoading = ref(false)
 const isFullscreen = ref(false)
 const isPseudoFullscreen = ref(false)
 const error = ref('')
+const sourceError = ref('')
 
 let loadSequence = 0
 let previousBodyOverflow = ''
 let returnFocus = null
 
 const manifestUrl = computed(() => typeof props.manifest === 'string' ? props.manifest.trim() : '')
-const slides = computed(() => deck.value?.slides || [])
+const nativeSlides = computed(() => deck.value?.slides || [])
+const sourceSlides = computed(() => sourceDeck.value?.slides || [])
+const slides = computed(() => activeMode.value === 'source' ? sourceSlides.value : nativeSlides.value)
 const total = computed(() => slides.value.length)
 const currentSlide = computed(() => slides.value[currentIndex.value] || null)
 const deckTitle = computed(() => deck.value?.title || props.title)
 const currentPageLabel = computed(() => `第 ${currentIndex.value + 1} 页`)
+const playerLoading = computed(() => isLoading.value || (activeMode.value === 'source' && isSourceLoading.value))
+const playerError = computed(() => error.value || (activeMode.value === 'source' ? sourceError.value : ''))
+const sourceManifestUrl = computed(() => deck.value?.sourceMaterials?.manifest || '')
+const sourceSummary = computed(() => sourceDeck.value?.source_media_summary || null)
+const currentSourceVideos = computed(() => activeMode.value === 'source'
+  ? (currentSlide.value?.videos || []).filter((video) => video?.status === 'published')
+  : [])
+const currentSlideTitle = computed(() => activeMode.value === 'source'
+  ? `原课件第 ${currentSlide.value?.source_page || currentIndex.value + 1} 页`
+  : currentSlide.value?.title || '')
 const fullscreenActive = computed(() => isFullscreen.value || isPseudoFullscreen.value)
 const themeStyle = computed(() => ({
   '--native-deck-accent': deck.value?.theme?.accent || '#D6A33A',
@@ -96,8 +113,40 @@ const normalizeManifest = (raw) => {
     ...raw,
     title: raw.title || props.title,
     pptxUrl: applySiteBase(raw.pptx_asset || ''),
+    sourceMaterials: raw.source_materials?.manifest
+      ? { ...raw.source_materials, manifest: applySiteBase(raw.source_materials.manifest) }
+      : null,
     slides: normalizedSlides
   }
+}
+
+const normalizeSourceDeck = (raw) => {
+  if (!raw || typeof raw !== 'object' || raw.schema_version !== 1 || raw.render_mode !== 'full-page') {
+    throw new Error('原课件素材清单格式错误')
+  }
+  if (!Array.isArray(raw.slides) || !raw.slides.length) throw new Error('原课件没有可播放页面')
+  const normalizedSlides = raw.slides.map((slide, index) => {
+    if (!slide || typeof slide !== 'object' || slide.lesson_slide !== index + 1) {
+      throw new Error(`原课件第 ${index + 1} 页顺序错误`)
+    }
+    if (!slide.image?.webp || !slide.image?.jpeg) throw new Error(`原课件第 ${index + 1} 页缺少图片`)
+    const videos = (slide.videos || []).map((video) => ({
+      ...video,
+      src: applySiteBase(video.src || ''),
+      poster: applySiteBase(video.poster || '')
+    }))
+    return {
+      ...slide,
+      title: `原课件第 ${slide.source_page || index + 1} 页`,
+      image: {
+        ...slide.image,
+        webp: applySiteBase(slide.image.webp),
+        jpeg: applySiteBase(slide.image.jpeg)
+      },
+      videos
+    }
+  })
+  return { ...raw, slides: normalizedSlides }
 }
 
 const loadDeck = async ({ force = false } = {}) => {
@@ -132,6 +181,45 @@ const loadDeck = async ({ force = false } = {}) => {
   }
 }
 
+const loadSourceDeck = async ({ force = false } = {}) => {
+  if (sourceDeck.value && !force) return
+  if (!sourceManifestUrl.value) throw new Error('本节尚未关联原课件素材')
+  isSourceLoading.value = true
+  sourceError.value = ''
+  try {
+    const response = await fetch(sourceManifestUrl.value, {
+      cache: 'no-store',
+      headers: { Accept: 'application/json' }
+    })
+    if (!response.ok) throw new Error(`无法读取原课件素材（HTTP ${response.status}）`)
+    sourceDeck.value = normalizeSourceDeck(await response.json())
+  } catch (cause) {
+    sourceDeck.value = null
+    sourceError.value = cause?.message || '原课件素材加载失败'
+    throw cause
+  } finally {
+    isSourceLoading.value = false
+  }
+}
+
+const selectMode = async (mode) => {
+  if (mode === activeMode.value) return
+  activeMode.value = mode
+  currentIndex.value = 0
+  activeVideoIndex.value = -1
+  thumbRefs.value = []
+  if (mode === 'source') {
+    try { await loadSourceDeck() } catch { return }
+  }
+  await nextTick()
+  await focusDeck()
+}
+
+const showSourceVideo = (index) => {
+  activeVideoIndex.value = index
+}
+const showSourcePage = () => { activeVideoIndex.value = -1 }
+
 const focusDeck = async () => {
   await nextTick()
   rootRef.value?.focus?.({ preventScroll: fullscreenActive.value })
@@ -162,7 +250,7 @@ const exitFullscreen = async () => {
   }
 }
 
-const openDeck = async ({ fullscreen = false, focus = true } = {}) => {
+const openDeck = async ({ fullscreen = false, focus = true, mode = 'native' } = {}) => {
   if (typeof document !== 'undefined' && document.activeElement instanceof HTMLElement) {
     returnFocus = document.activeElement === openButtonRef.value ? null : document.activeElement
   }
@@ -171,6 +259,7 @@ const openDeck = async ({ fullscreen = false, focus = true } = {}) => {
   if (fullscreen) await enterFullscreen()
   if (focus) await focusDeck()
   await loadDeck()
+  if (mode === 'source') await selectMode('source')
 }
 
 const closeDeck = async () => {
@@ -195,6 +284,9 @@ const setCurrent = (index) => {
 const previous = () => setCurrent(currentIndex.value - 1)
 const next = () => setCurrent(currentIndex.value + 1)
 const retry = () => loadDeck({ force: true })
+const retryPlayer = () => activeMode.value === 'source'
+  ? loadSourceDeck({ force: true }).catch(() => {})
+  : retry()
 const setThumbRef = (element, index) => { if (element) thumbRefs.value[index] = element }
 
 const onThumbKeydown = async (event, index) => {
@@ -257,18 +349,27 @@ const onFullscreenChange = () => { isFullscreen.value = document.fullscreenEleme
 const onGlobalOpen = (event) => {
   if (event.defaultPrevented) return
   event.preventDefault()
-  void openDeck({ fullscreen: event.detail?.fullscreen !== false, focus: event.detail?.focus !== false })
+  void openDeck({
+    fullscreen: event.detail?.fullscreen !== false,
+    focus: event.detail?.focus !== false,
+    mode: event.detail?.mode === 'source' ? 'source' : 'native'
+  })
 }
 
 watch(currentIndex, async () => {
+  activeVideoIndex.value = -1
   await nextTick()
   thumbRefs.value[currentIndex.value]?.scrollIntoView?.({ behavior: 'smooth', block: 'nearest', inline: 'center' })
 })
 watch(() => props.manifest, () => {
   loadSequence += 1
   deck.value = null
+  sourceDeck.value = null
   currentIndex.value = 0
+  activeMode.value = 'native'
+  activeVideoIndex.value = -1
   error.value = ''
+  sourceError.value = ''
   if (isOpen.value) void loadDeck()
 })
 
@@ -296,7 +397,7 @@ onBeforeUnmount(() => {
     }"
     :style="themeStyle"
     :aria-label="deckTitle"
-    :aria-busy="isLoading"
+    :aria-busy="playerLoading"
     :role="fullscreenActive ? 'dialog' : 'region'"
     :aria-modal="fullscreenActive ? 'true' : undefined"
     tabindex="-1"
@@ -307,7 +408,7 @@ onBeforeUnmount(() => {
         <rect x="3" y="4" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
         <path d="M9 21h6M12 17v4M10 8l5 2.5-5 2.5z" fill="currentColor" />
       </svg>
-      <span>打开本节 Web PPT</span>
+      <span>打开本节 Web PPT（含原课件）</span>
     </button>
 
     <div v-else class="ai-course-lesson-deck__player">
@@ -316,6 +417,19 @@ onBeforeUnmount(() => {
           <span class="ai-course-lesson-deck__eyebrow">WEB PPT</span>
           <strong>{{ deckTitle }}</strong>
         </div>
+        <nav v-if="deck" class="ai-course-lesson-deck__modes" aria-label="课件版本">
+          <button type="button" :aria-pressed="activeMode === 'native'" @click="selectMode('native')">
+            课程精编 <small>{{ nativeSlides.length }} 页</small>
+          </button>
+          <button
+            v-if="sourceManifestUrl"
+            type="button"
+            :aria-pressed="activeMode === 'source'"
+            @click="selectMode('source')"
+          >
+            原课件 <small>{{ sourceSummary?.selected_pages || sourceSlides.length || '…' }} 页</small>
+          </button>
+        </nav>
         <div class="ai-course-lesson-deck__toolbar-actions">
           <span v-if="total" class="ai-course-lesson-deck__counter">{{ currentIndex + 1 }} / {{ total }}</span>
           <a v-if="deck?.pptxUrl" :href="deck.pptxUrl" download>下载 PPTX</a>
@@ -324,28 +438,28 @@ onBeforeUnmount(() => {
         </div>
       </header>
 
-      <div v-if="isLoading" class="ai-course-lesson-deck__state" role="status" aria-live="polite">
+      <div v-if="playerLoading" class="ai-course-lesson-deck__state" role="status" aria-live="polite">
         <span class="ai-course-lesson-deck__spinner" aria-hidden="true" />
-        <strong>正在加载本节 Web PPT</strong>
-        <span>读取原创公开课件与页面结构…</span>
+        <strong>{{ activeMode === 'source' ? '正在加载原课件素材' : '正在加载本节 Web PPT' }}</strong>
+        <span>{{ activeMode === 'source' ? '读取真实 PowerPoint 页面、图片与视频…' : '读取课程精编内容与页面结构…' }}</span>
       </div>
-      <div v-else-if="error" class="ai-course-lesson-deck__state ai-course-lesson-deck__state--error" role="alert">
+      <div v-else-if="playerError" class="ai-course-lesson-deck__state ai-course-lesson-deck__state--error" role="alert">
         <strong>Web PPT 暂时无法打开</strong>
-        <span>{{ error }}</span>
-        <button type="button" @click="retry">重新加载</button>
+        <span>{{ playerError }}</span>
+        <button type="button" @click="retryPlayer">重新加载</button>
       </div>
 
       <template v-else-if="currentSlide">
         <p class="ai-course-visually-hidden" aria-live="polite" aria-atomic="true">
-          {{ currentPageLabel }}：{{ currentSlide.title }}
+          {{ currentPageLabel }}：{{ currentSlideTitle }}
         </p>
         <div
           class="ai-course-lesson-deck__stage"
           role="group"
           aria-roledescription="幻灯片"
-          :aria-label="`${deckTitle}，${currentPageLabel}：${currentSlide.title}`"
+          :aria-label="`${deckTitle}，${activeMode === 'source' ? '原课件' : '课程精编'}，${currentPageLabel}：${currentSlideTitle}`"
         >
-          <article class="ai-course-native-slide" :class="`ai-course-native-slide--${currentSlide.type}`">
+          <article v-if="activeMode === 'native'" class="ai-course-native-slide" :class="`ai-course-native-slide--${currentSlide.type}`">
             <template v-if="currentSlide.type === 'cover'">
               <div class="ai-course-native-slide__cover-rule" />
               <div class="ai-course-native-slide__cover-copy">
@@ -414,31 +528,71 @@ onBeforeUnmount(() => {
             </footer>
           </article>
 
+          <article v-else class="ai-course-source-slide">
+            <picture v-if="activeVideoIndex < 0" class="ai-course-source-slide__picture">
+              <source :srcset="currentSlide.image.webp" type="image/webp">
+              <img
+                :src="currentSlide.image.jpeg"
+                :alt="`${sourceDeck?.source?.title || deckTitle}，原课件第 ${currentSlide.source_page} 页`"
+                :width="currentSlide.image.width"
+                :height="currentSlide.image.height"
+              >
+            </picture>
+            <div v-else class="ai-course-source-slide__video-stage">
+              <video
+                class="ai-course-source-slide__video"
+                :src="currentSourceVideos[activeVideoIndex]?.src"
+                :poster="currentSourceVideos[activeVideoIndex]?.poster"
+                controls
+                playsinline
+                preload="metadata"
+              >当前浏览器不支持视频播放。</video>
+              <button type="button" @click="showSourcePage">返回原课件页</button>
+            </div>
+            <div class="ai-course-source-slide__meta">
+              <span>原课件第 {{ currentSlide.source_page }} 页</span>
+              <span>图片 {{ currentSlide.source_media?.image_count || 0 }}</span>
+              <span v-if="currentSourceVideos.length">视频 {{ currentSourceVideos.length }}</span>
+            </div>
+            <div v-if="currentSourceVideos.length && activeVideoIndex < 0" class="ai-course-source-slide__video-actions">
+              <button
+                v-for="(video, index) in currentSourceVideos"
+                :key="`${video.src}-${index}`"
+                type="button"
+                @click="showSourceVideo(index)"
+              >打开本页视频{{ currentSourceVideos.length > 1 ? ` ${index + 1}` : '' }}</button>
+            </div>
+          </article>
+
           <button class="ai-course-lesson-deck__arrow ai-course-lesson-deck__arrow--previous" type="button" :disabled="currentIndex === 0" aria-label="上一页幻灯片" @click="previous">‹</button>
           <button class="ai-course-lesson-deck__arrow ai-course-lesson-deck__arrow--next" type="button" :disabled="currentIndex === total - 1" aria-label="下一页幻灯片" @click="next">›</button>
         </div>
 
         <footer class="ai-course-lesson-deck__footer">
-          <span>{{ currentPageLabel }}</span>
+          <span>{{ activeMode === 'source' ? `原课件 ${currentPageLabel}` : currentPageLabel }}</span>
           <span class="ai-course-lesson-deck__keyboard-hint">方向键翻页 · Home / End 跳转 · Esc 退出</span>
         </footer>
 
         <nav class="ai-course-lesson-deck__thumbs" aria-label="幻灯片页码导航">
           <button
             v-for="(slide, index) in slides"
-            :key="slide.slide_id"
+            :key="slide.slide_id || `source-${slide.source_page}-${index}`"
             :ref="(element) => setThumbRef(element, index)"
-            class="ai-course-lesson-deck__thumb ai-course-lesson-deck__thumb--native"
-            :class="{ 'ai-course-lesson-deck__thumb--active': index === currentIndex }"
+            class="ai-course-lesson-deck__thumb"
+            :class="[
+              activeMode === 'source' ? 'ai-course-lesson-deck__thumb--source' : 'ai-course-lesson-deck__thumb--native',
+              { 'ai-course-lesson-deck__thumb--active': index === currentIndex }
+            ]"
             type="button"
-            :aria-label="`跳转到第 ${index + 1} 页：${slide.title}`"
+            :aria-label="`跳转到第 ${index + 1} 页：${activeMode === 'source' ? `原课件第 ${slide.source_page} 页` : slide.title}`"
             :aria-current="index === currentIndex ? 'page' : undefined"
             :tabindex="index === currentIndex ? 0 : -1"
             @click="setCurrent(index)"
             @keydown="onThumbKeydown($event, index)"
           >
+            <img v-if="activeMode === 'source'" :src="slide.image.webp" alt="" loading="lazy">
             <span>{{ index + 1 }}</span>
-            <em>{{ slide.title }}</em>
+            <em>{{ activeMode === 'source' ? `原课件第 ${slide.source_page} 页` : slide.title }}</em>
           </button>
         </nav>
       </template>

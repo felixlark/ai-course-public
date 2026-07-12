@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "render_pipeline_version": 2,
+  "generated_by": "scripts/build-private-fidelity-decks.py",
+  "lesson_id": "IN-009",
+  "module": "行业应用",
+  "title": "文旅、展厅与智慧建筑",
+  "render_mode": "full-page",
+  "source": {
+    "title": "文旅、展厅与智慧建筑（团队课程节选）",
+    "sha256": "87fbcefa74c080239afe71ff63226f755401b3d1efcbb1ddb494f6f304b9bce7",
+    "bytes": 59725796,
+    "slide_count": 12
+  },
+  "selected_source_pages": [
+    1,
+    3,
+    6,
+    8,
+    9
+  ],
+  "public_asset_dir": "/course-assets/source-media/in-009",
+  "rights": {
+    "classification": "team-course-source",
+    "public_review_required": false,
+    "notes": "只保留通用架构、无价格的产品能力对比、讲解系统与导览系统页；已排除价格与销售联系方式、重复目录、具体客户坡度和采购方案。规格页属于课件形成时的厂商资料，不作为当前采购建议。",
+    "reviewed_at": "2026-07-12",
+    "reviewed_by": "课程负责人公开课媒体接入要求",
+    "usage": "原课件精选页与内嵌媒体，用于团队公开课程教学。"
+  },
+  "video_policy": {
+    "mode": "extract",
+    "reason": "团队原课件内嵌视频已转码为公开课 Web 播放格式。"
+  },
+  "source_media_summary": {
+    "selected_pages": 5,
+    "image_references": 9,
+    "pages_with_images": 3,
+    "embedded_videos": 0,
+    "published_videos": 0
+  },
+  "slides": [
+    {
+      "lesson_slide": 1,
+      "source_page": 1,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-009/slide-001.jpg",
+        "webp": "/course-assets/source-media/in-009/slide-001.webp",
+        "jpeg_bytes": 103039,
+        "webp_bytes": 45052
+      },
+      "source_media": {
+        "image_count": 2,
+        "image_bytes": 2432306,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 2,
+      "source_page": 3,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-009/slide-002.jpg",
+        "webp": "/course-assets/source-media/in-009/slide-002.webp",
+        "jpeg_bytes": 91670,
+        "webp_bytes": 40966
+      },
+      "source_media": {
+        "image_count": 0,
+        "image_bytes": 0,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 3,
+      "source_page": 6,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-009/slide-003.jpg",
+        "webp": "/course-assets/source-media/in-009/slide-003.webp",
+        "jpeg_bytes": 107552,
+        "webp_bytes": 50576
+      },
+      "source_media": {
+        "image_count": 0,
+        "image_bytes": 0,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 4,
+      "source_page": 8,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-009/slide-004.jpg",
+        "webp": "/course-assets/source-media/in-009/slide-004.webp",
+        "jpeg_bytes": 179874,
+        "webp_bytes": 112694
+      },
+      "source_media": {
+        "image_count": 4,
+        "image_bytes": 398734,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 5,
+      "source_page": 9,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-009/slide-005.jpg",
+        "webp": "/course-assets/source-media/in-009/slide-005.webp",
+        "jpeg_bytes": 157973,
+        "webp_bytes": 89298
+      },
+      "source_media": {
+        "image_count": 3,
+        "image_bytes": 673704,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    }
+  ],
+  "warnings": [],
+  "bytes": {
+    "images": 978694,
+    "videos_and_posters": 0,
+    "total_assets": 978694
+  }
+}

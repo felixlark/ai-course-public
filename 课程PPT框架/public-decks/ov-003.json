@@ -18,6 +18,10 @@
     "dark": "#123B67"
   },
   "pptx_asset": "/course-assets/course-pptx/ov-003.pptx",
+  "source_materials": {
+    "manifest": "/course-assets/source-media/ov-003/deck.json",
+    "label": "原课件"
+  },
   "slides": [
     {
       "slide_id": "OV-003-S01",
@@ -341,8 +345,8 @@
           "url": "https://www.coursera.org/specializations/machine-learning-introduction"
         }
       ],
-      "note": "公开幻灯片只使用课程原创文字与原生图形；完整论证、链接和事实边界请见本节讲义。"
+      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
     }
   ],
-  "spec_sha256": "ee34f0f1c3c12de48440b5a5759181c94070ed40ed18bb03d4131d1e3112ebc4"
+  "spec_sha256": "827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d"
 }

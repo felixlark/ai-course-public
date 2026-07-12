@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'OV-002'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-002/deck.json'
-deck_revision: 'd02bd9a550b15cf9d0c48bc58c9331d4904b0e7504a8fa3a33b102ad0b05cdbd'
+source_media_manifest: '/course-assets/source-media/ov-002/deck.json'
+deck_revision: '56d4c0a9cd56ecf1374b5ae67eab939d6528cc2b6510cb78c33d41a8f04af77d'
 ---
 
 <div class="lesson-hero">
@@ -24,6 +25,12 @@ deck_revision: 'd02bd9a550b15cf9d0c48bc58c9331d4904b0e7504a8fa3a33b102ad0b05cdbd
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ov-002/deck.json" title="人工智能发展与社会影响" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ov-002/deck.json" title="人工智能发展与社会影响原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

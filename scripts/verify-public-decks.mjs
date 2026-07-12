@@ -210,8 +210,10 @@ for (const record of plan.lessons || []) {
   if (record.rights?.public_review_required !== false) failures.push(`${lessonId}: public_review_required must be false`)
   const idLower = lessonId.toLowerCase()
   const expectedManifestUrl = `/course-assets/course-decks/${idLower}/deck.json`
+  const expectedSourceMediaManifestUrl = `/course-assets/source-media/${idLower}/deck.json`
   const expectedPptxUrl = `/course-assets/course-pptx/${idLower}.pptx`
   if (record.manifest_url !== expectedManifestUrl) failures.push(`${lessonId}: manifest_url must be ${expectedManifestUrl}`)
+  if (record.source_media_manifest_url !== expectedSourceMediaManifestUrl) failures.push(`${lessonId}: source_media_manifest_url must be ${expectedSourceMediaManifestUrl}`)
   if (record.pptx_url !== expectedPptxUrl) failures.push(`${lessonId}: pptx_url must be ${expectedPptxUrl}`)
 
   const specFile = path.join(root, record.spec_path || '')
@@ -260,6 +262,9 @@ for (const record of plan.lessons || []) {
   if (deck.render_mode !== 'native-web') failures.push(`${lessonId}: spec render_mode must be native-web`)
   if (deck.lesson_id !== lessonId || deck.title !== record.title) failures.push(`${lessonId}: spec identity does not match plan`)
   if (deck.pptx_asset !== record.pptx_url) failures.push(`${lessonId}: spec PPTX URL does not match plan`)
+  if (deck.source_materials?.manifest !== record.source_media_manifest_url || deck.source_materials?.label !== '原课件') {
+    failures.push(`${lessonId}: native deck does not link to its source-media manifest`)
+  }
   if (!Array.isArray(deck.slides) || deck.slides.length < 8 || deck.slides.length > 14) {
     failures.push(`${lessonId}: slide count must be 8-14`)
     continue
@@ -336,4 +341,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log(`Verified ${expectedLessonCount} native Web decks, ${expectedLessonCount} original PPTX files, and ${slideCount} shared slides with zero raster source-page assets.`)
+console.log(`Verified ${expectedLessonCount} native Web decks, ${expectedLessonCount} PPTX files, and ${slideCount} shared course-summary slides linked to source-media manifests.`)

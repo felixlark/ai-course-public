@@ -18,6 +18,10 @@
     "dark": "#0D4D68"
   },
   "pptx_asset": "/course-assets/course-pptx/ag-003.pptx",
+  "source_materials": {
+    "manifest": "/course-assets/source-media/ag-003/deck.json",
+    "label": "原课件"
+  },
   "slides": [
     {
       "slide_id": "AG-003-S01",
@@ -242,8 +246,8 @@
           "url": "https://developers.googleblog.com/en/developers-guide-to-ai-agent-protocols/"
         }
       ],
-      "note": "公开幻灯片只使用课程原创文字与原生图形；完整论证、链接和事实边界请见本节讲义。"
+      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
     }
   ],
-  "spec_sha256": "b53d8ed2fd0a9adb13ceb1bd3a49ad888a5e88226c0f782b52c9e8dc9b4cb746"
+  "spec_sha256": "2ca1d80924c5d50af21ed193047e0b9d1d580376d406320efa576f6fd1288364"
 }

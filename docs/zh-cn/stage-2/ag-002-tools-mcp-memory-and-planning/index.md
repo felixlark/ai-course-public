@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'AG-002'
 module: 'AI 智能体'
 deck_manifest: '/course-assets/course-decks/ag-002/deck.json'
-deck_revision: 'c1b2b892c91ea99c94f8bd05d8d1b3efd13bd10177d90aeae117e9c091cff7d7'
+source_media_manifest: '/course-assets/source-media/ag-002/deck.json'
+deck_revision: 'cf700ef06d6fb18ce2ba560cecdc2aa347a36b76d2ece5bae17dd974cbc38ef7'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: 'c1b2b892c91ea99c94f8bd05d8d1b3efd13bd10177d90aeae117e9c091cff7d7
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ag-002/deck.json" title="工具调用、MCP、记忆与规划" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ag-002/deck.json" title="工具调用、MCP、记忆与规划原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

@@ -16,6 +16,13 @@ const publicDeckCheck = spawnSync(process.execPath, [path.join(root, 'scripts', 
 if (publicDeckCheck.status !== 0) {
   failures.push(`public deck verification failed:\n${publicDeckCheck.stderr || publicDeckCheck.stdout}`)
 }
+const sourceMediaCheck = spawnSync(process.execPath, [path.join(root, 'scripts', 'verify-public-source-media.mjs')], {
+  cwd: root,
+  encoding: 'utf8'
+})
+if (sourceMediaCheck.status !== 0) {
+  failures.push(`public source-media verification failed:\n${sourceMediaCheck.stderr || sourceMediaCheck.stdout}`)
+}
 
 const [catalog, publicPlan, assetRights] = await Promise.all([
   readJson('course-catalog.json'),
@@ -56,8 +63,8 @@ const collectFiles = async (directory) => {
 }
 
 const rightsEntries = Array.isArray(assetRights.assets) ? assetRights.assets : []
-if (assetRights.schema_version !== 2 || assetRights.policy !== 'public-original-assets-only') {
-  failures.push('course asset rights must use the public-original-assets-only v2 policy')
+if (assetRights.schema_version !== 3 || assetRights.policy !== 'public-course-assets-with-team-source-media') {
+  failures.push('course asset rights must use the public-course-assets-with-team-source-media v3 policy')
 }
 for (const entry of rightsEntries) {
   const assetPath = entry?.asset_path
@@ -67,8 +74,13 @@ for (const entry of rightsEntries) {
   }
   const target = path.join(publicRoot, assetPath.slice(1))
   try { await fs.access(target) } catch { failures.push(`${assetPath}: rights entry target is missing`) }
-  if (!['team-original', 'generated-original'].includes(entry.classification)) failures.push(`${assetPath}: invalid public classification`)
-  if (entry.third_party_media_count !== 0) failures.push(`${assetPath}: third_party_media_count must be zero`)
+  if (!['team-original', 'generated-original', 'team-course-source'].includes(entry.classification)) failures.push(`${assetPath}: invalid public classification`)
+  if (entry.classification !== 'team-course-source' && entry.third_party_media_count !== 0) {
+    failures.push(`${assetPath}: generated public assets must have third_party_media_count=0`)
+  }
+  if (entry.classification === 'team-course-source' && !String(entry.usage || '').includes('公开课程')) {
+    failures.push(`${assetPath}: team source media must record its public-course usage`)
+  }
   if (entry.public_review_required !== false) failures.push(`${assetPath}: public review must be complete`)
   if (!/^\d{4}-\d{2}-\d{2}$/.test(entry.reviewed_at || '')) failures.push(`${assetPath}: reviewed_at is missing`)
   if (typeof entry.reviewed_by !== 'string' || !entry.reviewed_by.trim()) failures.push(`${assetPath}: reviewed_by is missing`)
@@ -82,7 +94,10 @@ for (const file of files) {
     ? assetPath.startsWith(entry.asset_path)
     : assetPath === entry.asset_path)
   if (!covered) failures.push(`${assetPath}: missing public asset rights coverage`)
-  if (forbiddenExtensions.has(path.extname(file).toLowerCase())) failures.push(`${assetPath}: raster or video assets are forbidden in the rights-safe public course`)
+  if (
+    forbiddenExtensions.has(path.extname(file).toLowerCase()) &&
+    !assetPath.startsWith('/course-assets/source-media/')
+  ) failures.push(`${assetPath}: raster or video assets are only allowed in the reviewed source-media tree`)
 }
 
 if (failures.length) {
@@ -91,4 +106,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log(`Public release readiness passed for ${lessons.length} lessons, ${publicPlan.lessons.length} native Web decks, ${publicPlan.lessons.length} original PPTX files, and zero third-party media assets.`)
+console.log(`Public release readiness passed for ${lessons.length} lessons, ${publicPlan.lessons.length} dual-mode Web decks, ${publicPlan.lessons.length} PPTX files, and reviewed team source media.`)

@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'EM-001'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-001/deck.json'
-deck_revision: '347629982c218fac0d31385f5409450fb902ec67918185dcbf770b0c90c6d018'
+source_media_manifest: '/course-assets/source-media/em-001/deck.json'
+deck_revision: 'b19e857bbde60d7f79ed32b3882775dc081aeda17d45cb8d7292ba53894b2c70'
 ---
 
 <div class="lesson-hero">
@@ -23,6 +24,12 @@ deck_revision: '347629982c218fac0d31385f5409450fb902ec67918185dcbf770b0c90c6d018
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/em-001/deck.json" title="具身智能：感知、决策、行动与反馈" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/em-001/deck.json" title="具身智能：感知、决策、行动与反馈原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

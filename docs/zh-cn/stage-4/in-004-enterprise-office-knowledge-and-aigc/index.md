@@ -4,8 +4,9 @@ description: '把会议和文档转化为有引用、有权限、有版本、有
 lesson_id: 'IN-004'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-004/deck.json'
+source_media_manifest: '/course-assets/source-media/in-004/deck.json'
 authored: true
-deck_revision: 'a256ae4dbe48ffb95ddfeeeed3a3f7146547f34628dd96a305e40fd3b9d10faf'
+deck_revision: 'e909e2411c1b93d95739cab8bf53244fda2fdbd0eadea75f71562cbc8214d868'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: 'a256ae4dbe48ffb95ddfeeeed3a3f7146547f34628dd96a305e40fd3b9d10faf
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/in-004/deck.json" title="企业办公、知识管理与 AIGC" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/in-004/deck.json" title="企业办公、知识管理与 AIGC原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

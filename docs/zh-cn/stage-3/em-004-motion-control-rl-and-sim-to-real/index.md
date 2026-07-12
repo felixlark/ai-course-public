@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'EM-004'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-004/deck.json'
-deck_revision: 'ae0fc79bf178144c2d633dd3f171df700bbd61789fe3006d2b6f2708b8979937'
+source_media_manifest: '/course-assets/source-media/em-004/deck.json'
+deck_revision: '5d0eac6134f383bd238f3fea3111c80ddd7ef423e0610cfeb786714bbddbfefb'
 ---
 
 <div class="lesson-hero">
@@ -23,6 +24,12 @@ deck_revision: 'ae0fc79bf178144c2d633dd3f171df700bbd61789fe3006d2b6f2708b8979937
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/em-004/deck.json" title="运动控制、强化学习与 Sim-to-Real" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/em-004/deck.json" title="运动控制、强化学习与 Sim-to-Real原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

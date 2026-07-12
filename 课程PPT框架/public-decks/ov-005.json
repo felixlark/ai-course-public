@@ -18,6 +18,10 @@
     "dark": "#123B67"
   },
   "pptx_asset": "/course-assets/course-pptx/ov-005.pptx",
+  "source_materials": {
+    "manifest": "/course-assets/source-media/ov-005/deck.json",
+    "label": "原课件"
+  },
   "slides": [
     {
       "slide_id": "OV-005-S01",
@@ -203,8 +207,8 @@
           "url": "https://arxiv.org/abs/2501.12948"
         }
       ],
-      "note": "公开幻灯片只使用课程原创文字与原生图形；完整论证、链接和事实边界请见本节讲义。"
+      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
     }
   ],
-  "spec_sha256": "70568fee9226e6f29445d573c6cad32784a9cae39020678482dfc717aaab3ac3"
+  "spec_sha256": "d0fc7cd029ee4484bd31155508c94e822c36659b441c5cc3a40d7d8934396182"
 }

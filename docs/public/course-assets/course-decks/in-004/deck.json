@@ -18,6 +18,10 @@
     "dark": "#744027"
   },
   "pptx_asset": "/course-assets/course-pptx/in-004.pptx",
+  "source_materials": {
+    "manifest": "/course-assets/source-media/in-004/deck.json",
+    "label": "原课件"
+  },
   "slides": [
     {
       "slide_id": "IN-004-S01",
@@ -282,8 +286,8 @@
           "url": ""
         }
       ],
-      "note": "公开幻灯片只使用课程原创文字与原生图形；完整论证、链接和事实边界请见本节讲义。"
+      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
     }
   ],
-  "spec_sha256": "a256ae4dbe48ffb95ddfeeeed3a3f7146547f34628dd96a305e40fd3b9d10faf"
+  "spec_sha256": "e909e2411c1b93d95739cab8bf53244fda2fdbd0eadea75f71562cbc8214d868"
 }

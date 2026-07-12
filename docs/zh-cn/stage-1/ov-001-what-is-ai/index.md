@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'OV-001'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-001/deck.json'
-deck_revision: 'fbc988eb11d260ae50d109b15905c3cab69cce5c63cc249fc798fad2beb78341'
+source_media_manifest: '/course-assets/source-media/ov-001/deck.json'
+deck_revision: 'c483c7d09716e329bc8ee7c27f521b19459071f1e03a27b3bf45f0985b58ff14'
 ---
 
 <div class="lesson-hero">
@@ -24,6 +25,12 @@ deck_revision: 'fbc988eb11d260ae50d109b15905c3cab69cce5c63cc249fc798fad2beb78341
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ov-001/deck.json" title="什么是人工智能：感知、思考与行动" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ov-001/deck.json" title="什么是人工智能：感知、思考与行动原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 
@@ -109,6 +116,6 @@ deck_revision: 'fbc988eb11d260ae50d109b15905c3cab69cce5c63cc249fc798fad2beb78341
 
 ## 资料与延伸
 
-- **课程来源：**团队既有 PowerPoint 与课程文档；公开 Web PPT 已按最终讲义原创重制，不发布源课件截图。
+- **课程来源：**团队既有 PowerPoint 与课程文档；Web PPT 同时提供课程精编页和原课件精选页，保留真实图片与可播放视频。
 - [Computing Machinery and Intelligence](https://doi.org/10.1093/mind/LIX.236.433)：图灵 1950 年原文；阅读时注意模仿游戏与“证明机器拥有意识”不是同一命题。
 - [Large Language Models Pass the Turing Test](https://arxiv.org/abs/2503.23674)：上述 73% 结论的原始研究；阅读时要同时关注实验条件与结论边界。

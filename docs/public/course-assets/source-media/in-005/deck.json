@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "render_pipeline_version": 2,
+  "generated_by": "scripts/build-private-fidelity-decks.py",
+  "lesson_id": "IN-005",
+  "module": "行业应用",
+  "title": "制造、能源与供应链",
+  "render_mode": "full-page",
+  "source": {
+    "title": "7-AI赋能制造业应用创新",
+    "sha256": "54f51848b1677162df704fad7e37ace839cdddec89eca3db2d54725b4391c1a2",
+    "bytes": 18477138,
+    "slide_count": 15
+  },
+  "selected_source_pages": [
+    2,
+    3,
+    4,
+    6,
+    13
+  ],
+  "public_asset_dir": "/course-assets/source-media/in-005",
+  "rights": {
+    "classification": "team-course-source",
+    "public_review_required": false,
+    "notes": "仅保留制造业政策、趋势、转型要素与设备控制概览；已排除无法稳定复核的企业效果数字和对外联络页。",
+    "reviewed_at": "2026-07-12",
+    "reviewed_by": "课程负责人公开课媒体接入要求",
+    "usage": "原课件精选页与内嵌媒体，用于团队公开课程教学。"
+  },
+  "video_policy": {
+    "mode": "extract",
+    "reason": "团队原课件内嵌视频已转码为公开课 Web 播放格式。"
+  },
+  "source_media_summary": {
+    "selected_pages": 5,
+    "image_references": 7,
+    "pages_with_images": 3,
+    "embedded_videos": 0,
+    "published_videos": 0
+  },
+  "slides": [
+    {
+      "lesson_slide": 1,
+      "source_page": 2,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-005/slide-001.jpg",
+        "webp": "/course-assets/source-media/in-005/slide-001.webp",
+        "jpeg_bytes": 207858,
+        "webp_bytes": 125478
+      },
+      "source_media": {
+        "image_count": 3,
+        "image_bytes": 655623,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 2,
+      "source_page": 3,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-005/slide-002.jpg",
+        "webp": "/course-assets/source-media/in-005/slide-002.webp",
+        "jpeg_bytes": 162972,
+        "webp_bytes": 84994
+      },
+      "source_media": {
+        "image_count": 0,
+        "image_bytes": 0,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 3,
+      "source_page": 4,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-005/slide-003.jpg",
+        "webp": "/course-assets/source-media/in-005/slide-003.webp",
+        "jpeg_bytes": 121065,
+        "webp_bytes": 64810
+      },
+      "source_media": {
+        "image_count": 0,
+        "image_bytes": 0,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 4,
+      "source_page": 6,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-005/slide-004.jpg",
+        "webp": "/course-assets/source-media/in-005/slide-004.webp",
+        "jpeg_bytes": 134333,
+        "webp_bytes": 81754
+      },
+      "source_media": {
+        "image_count": 2,
+        "image_bytes": 89926,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 5,
+      "source_page": 13,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-005/slide-005.jpg",
+        "webp": "/course-assets/source-media/in-005/slide-005.webp",
+        "jpeg_bytes": 263965,
+        "webp_bytes": 159552
+      },
+      "source_media": {
+        "image_count": 2,
+        "image_bytes": 1344737,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    }
+  ],
+  "warnings": [],
+  "bytes": {
+    "images": 1406781,
+    "videos_and_posters": 0,
+    "total_assets": 1406781
+  }
+}

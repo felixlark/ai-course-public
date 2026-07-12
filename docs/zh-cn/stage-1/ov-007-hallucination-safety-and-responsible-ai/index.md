@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'OV-007'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-007/deck.json'
-deck_revision: 'c254324172dd1fd6954ff0839e7c3108260e05e6d9829cc715528bab458c8c35'
+source_media_manifest: '/course-assets/source-media/ov-007/deck.json'
+deck_revision: 'b8d88d8f80371acffb0f3cd551309017f2293dc95b52c7c4cd7d0a3fa7fde463'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: 'c254324172dd1fd6954ff0839e7c3108260e05e6d9829cc715528bab458c8c35
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ov-007/deck.json" title="幻觉、安全与负责任 AI" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ov-007/deck.json" title="幻觉、安全与负责任 AI原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

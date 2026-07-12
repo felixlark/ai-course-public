@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'OV-003'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-003/deck.json'
-deck_revision: 'ee34f0f1c3c12de48440b5a5759181c94070ed40ed18bb03d4131d1e3112ebc4'
+source_media_manifest: '/course-assets/source-media/ov-003/deck.json'
+deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d'
 ---
 
 <div class="lesson-hero">
@@ -24,6 +25,12 @@ deck_revision: 'ee34f0f1c3c12de48440b5a5759181c94070ed40ed18bb03d4131d1e3112ebc4
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ov-003/deck.json" title="机器学习与深度学习基础" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ov-003/deck.json" title="机器学习与深度学习基础原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "render_pipeline_version": 2,
+  "generated_by": "scripts/build-private-fidelity-decks.py",
+  "lesson_id": "OV-007",
+  "module": "人工智能概述",
+  "title": "幻觉、安全与负责任 AI",
+  "render_mode": "full-page",
+  "source": {
+    "title": "2026-PRML-CS-XMU-12-AI智能体原理及实现",
+    "sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+    "bytes": 26462329,
+    "slide_count": 74
+  },
+  "selected_source_pages": [
+    62,
+    63,
+    64,
+    65,
+    71,
+    72
+  ],
+  "public_asset_dir": "/course-assets/source-media/ov-007",
+  "rights": {
+    "classification": "team-course-source",
+    "public_review_required": false,
+    "notes": "发布前复核智能体风险、评测基准、论文图和外部产品署名。",
+    "reviewed_at": "2026-07-12",
+    "reviewed_by": "课程负责人公开课媒体接入要求",
+    "usage": "原课件精选页与内嵌媒体，用于团队公开课程教学。"
+  },
+  "video_policy": {
+    "mode": "extract",
+    "reason": "团队原课件内嵌视频已转码为公开课 Web 播放格式。"
+  },
+  "source_media_summary": {
+    "selected_pages": 6,
+    "image_references": 3,
+    "pages_with_images": 3,
+    "embedded_videos": 0,
+    "published_videos": 0
+  },
+  "slides": [
+    {
+      "lesson_slide": 1,
+      "source_page": 62,
+      "image": {
+        "width": 1600,
+        "height": 1200,
+        "jpeg": "/course-assets/source-media/ov-007/slide-001.jpg",
+        "webp": "/course-assets/source-media/ov-007/slide-001.webp",
+        "jpeg_bytes": 142500,
+        "webp_bytes": 85362
+      },
+      "source_media": {
+        "image_count": 0,
+        "image_bytes": 0,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 2,
+      "source_page": 63,
+      "image": {
+        "width": 1600,
+        "height": 1200,
+        "jpeg": "/course-assets/source-media/ov-007/slide-002.jpg",
+        "webp": "/course-assets/source-media/ov-007/slide-002.webp",
+        "jpeg_bytes": 166264,
+        "webp_bytes": 83472
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 653707,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 3,
+      "source_page": 64,
+      "image": {
+        "width": 1600,
+        "height": 1200,
+        "jpeg": "/course-assets/source-media/ov-007/slide-003.jpg",
+        "webp": "/course-assets/source-media/ov-007/slide-003.webp",
+        "jpeg_bytes": 212150,
+        "webp_bytes": 107222
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 238714,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 4,
+      "source_page": 65,
+      "image": {
+        "width": 1600,
+        "height": 1200,
+        "jpeg": "/course-assets/source-media/ov-007/slide-004.jpg",
+        "webp": "/course-assets/source-media/ov-007/slide-004.webp",
+        "jpeg_bytes": 148444,
+        "webp_bytes": 70696
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 215716,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 5,
+      "source_page": 71,
+      "image": {
+        "width": 1600,
+        "height": 1200,
+        "jpeg": "/course-assets/source-media/ov-007/slide-005.jpg",
+        "webp": "/course-assets/source-media/ov-007/slide-005.webp",
+        "jpeg_bytes": 196432,
+        "webp_bytes": 115756
+      },
+      "source_media": {
+        "image_count": 0,
+        "image_bytes": 0,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 6,
+      "source_page": 72,
+      "image": {
+        "width": 1600,
+        "height": 1200,
+        "jpeg": "/course-assets/source-media/ov-007/slide-006.jpg",
+        "webp": "/course-assets/source-media/ov-007/slide-006.webp",
+        "jpeg_bytes": 175278,
+        "webp_bytes": 106136
+      },
+      "source_media": {
+        "image_count": 0,
+        "image_bytes": 0,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    }
+  ],
+  "warnings": [],
+  "bytes": {
+    "images": 1609712,
+    "videos_and_posters": 0,
+    "total_assets": 1609712
+  }
+}

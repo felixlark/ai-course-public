@@ -4,8 +4,9 @@ description: '围绕游客旅程、空间路线、内容运营、数字孪生、
 lesson_id: 'IN-009'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-009/deck.json'
+source_media_manifest: '/course-assets/source-media/in-009/deck.json'
 authored: true
-deck_revision: '09d32a5249232df9838a681df74420a29e715c3a3fc5d2c6f3b5da0b0750c967'
+deck_revision: '3bbe613732ed9e29e180a4f4b7ef9e979011a88fd777d52b2354bf8e2cffd84a'
 ---
 
 <div class="lesson-hero">
@@ -27,6 +28,12 @@ deck_revision: '09d32a5249232df9838a681df74420a29e715c3a3fc5d2c6f3b5da0b0750c967
 > 幻灯片中的产品能力参数来自团队课件形成时的厂商资料，用于学习需求比较方法，不代表当前规格、采购建议或课程方背书；真实选型应回到厂商最新技术资料并在现场复测。
 
 <LessonDeck manifest="/course-assets/course-decks/in-009/deck.json" title="文旅、展厅与智慧建筑" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/in-009/deck.json" title="文旅、展厅与智慧建筑原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

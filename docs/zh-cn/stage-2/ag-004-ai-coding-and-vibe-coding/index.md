@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'AG-004'
 module: 'AI 智能体'
 deck_manifest: '/course-assets/course-decks/ag-004/deck.json'
-deck_revision: '629beb42047a52bb126c98b55f27c6679ace8b222543ee3c25481683a586fde3'
+source_media_manifest: '/course-assets/source-media/ag-004/deck.json'
+deck_revision: 'a8f4b236772c62f43c0912091a608a00a74498c5f4c537ea58b35616f9563809'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: '629beb42047a52bb126c98b55f27c6679ace8b222543ee3c25481683a586fde3
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ag-004/deck.json" title="AI Coding 与 Vibe Coding" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ag-004/deck.json" title="AI Coding 与 Vibe Coding原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

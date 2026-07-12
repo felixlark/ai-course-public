@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'AG-001'
 module: 'AI 智能体'
 deck_manifest: '/course-assets/course-decks/ag-001/deck.json'
-deck_revision: '0c7f9d534463d94a1e904fb0f1dd0893140716eb0956b26fa33893855e393e8c'
+source_media_manifest: '/course-assets/source-media/ag-001/deck.json'
+deck_revision: '08816f3b5c35d3368290a2fbb7e8e5128665258dc278f1a46b9cf3917b76d8a8'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: '0c7f9d534463d94a1e904fb0f1dd0893140716eb0956b26fa33893855e393e8c
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ag-001/deck.json" title="Agent Loop 与 ReAct" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ag-001/deck.json" title="Agent Loop 与 ReAct原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

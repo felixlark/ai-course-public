@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'AG-005'
 module: 'AI 智能体'
 deck_manifest: '/course-assets/course-decks/ag-005/deck.json'
-deck_revision: '0c48b180f4941e5e8be7b0bc78a2dae58641038c18c8efddb89e0860425ef615'
+source_media_manifest: '/course-assets/source-media/ag-005/deck.json'
+deck_revision: '8ca5ae9906d879cacc42190c13bb0b54cec6506285ab1813a13f04c9fe00a7ce'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: '0c48b180f4941e5e8be7b0bc78a2dae58641038c18c8efddb89e0860425ef615
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ag-005/deck.json" title="可观测性、评测与 Human-in-the-loop" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ag-005/deck.json" title="可观测性、评测与 Human-in-the-loop原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

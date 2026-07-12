@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "render_pipeline_version": 2,
+  "generated_by": "scripts/build-private-fidelity-decks.py",
+  "lesson_id": "IN-003",
+  "module": "行业应用",
+  "title": "政务服务与乡村振兴",
+  "render_mode": "full-page",
+  "source": {
+    "title": "人工智能如何助力乡村振兴",
+    "sha256": "f93edbe5d7bae9c638505d83b18abd7a645eaa13b5e5252028934b0bed550404",
+    "bytes": 13439088,
+    "slide_count": 18
+  },
+  "selected_source_pages": [
+    3,
+    4,
+    6,
+    7,
+    8,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "public_asset_dir": "/course-assets/source-media/in-003",
+  "rights": {
+    "classification": "team-course-source",
+    "public_review_required": false,
+    "notes": "发布前复核政策引用、乡村案例数据、人物和现场图片。",
+    "reviewed_at": "2026-07-12",
+    "reviewed_by": "课程负责人公开课媒体接入要求",
+    "usage": "原课件精选页与内嵌媒体，用于团队公开课程教学。"
+  },
+  "video_policy": {
+    "mode": "extract",
+    "reason": "团队原课件内嵌视频已转码为公开课 Web 播放格式。"
+  },
+  "source_media_summary": {
+    "selected_pages": 13,
+    "image_references": 13,
+    "pages_with_images": 12,
+    "embedded_videos": 0,
+    "published_videos": 0
+  },
+  "slides": [
+    {
+      "lesson_slide": 1,
+      "source_page": 3,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-001.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-001.webp",
+        "jpeg_bytes": 98043,
+        "webp_bytes": 34224
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 973511,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 2,
+      "source_page": 4,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-002.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-002.webp",
+        "jpeg_bytes": 130239,
+        "webp_bytes": 67190
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 743601,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 3,
+      "source_page": 6,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-003.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-003.webp",
+        "jpeg_bytes": 82510,
+        "webp_bytes": 43022
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 677226,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 4,
+      "source_page": 7,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-004.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-004.webp",
+        "jpeg_bytes": 98634,
+        "webp_bytes": 33628
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 909784,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 5,
+      "source_page": 8,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-005.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-005.webp",
+        "jpeg_bytes": 80619,
+        "webp_bytes": 30946
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 592642,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 6,
+      "source_page": 10,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-006.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-006.webp",
+        "jpeg_bytes": 96926,
+        "webp_bytes": 52308
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 620276,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 7,
+      "source_page": 11,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-007.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-007.webp",
+        "jpeg_bytes": 81719,
+        "webp_bytes": 28560
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 812617,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 8,
+      "source_page": 12,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-008.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-008.webp",
+        "jpeg_bytes": 89711,
+        "webp_bytes": 50344
+      },
+      "source_media": {
+        "image_count": 2,
+        "image_bytes": 1458678,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 9,
+      "source_page": 13,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-009.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-009.webp",
+        "jpeg_bytes": 138902,
+        "webp_bytes": 73874
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 704014,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 10,
+      "source_page": 14,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-010.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-010.webp",
+        "jpeg_bytes": 128269,
+        "webp_bytes": 70158
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 666254,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 11,
+      "source_page": 15,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-011.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-011.webp",
+        "jpeg_bytes": 86592,
+        "webp_bytes": 31228
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 849697,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 12,
+      "source_page": 16,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-012.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-012.webp",
+        "jpeg_bytes": 162305,
+        "webp_bytes": 90048
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 858951,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 13,
+      "source_page": 17,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-003/slide-013.jpg",
+        "webp": "/course-assets/source-media/in-003/slide-013.webp",
+        "jpeg_bytes": 65200,
+        "webp_bytes": 33528
+      },
+      "source_media": {
+        "image_count": 0,
+        "image_bytes": 0,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    }
+  ],
+  "warnings": [],
+  "bytes": {
+    "images": 1978727,
+    "videos_and_posters": 0,
+    "total_assets": 1978727
+  }
+}

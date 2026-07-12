@@ -18,7 +18,7 @@ const expectedModules = [
 ]
 const expectedLessonCount = 27
 const expectedLessonHeadings = [
-  '学习目标', 'Web PPT', '本节导入', '核心内容',
+  '学习目标', 'Web PPT', '原课件图片与视频', '本节导入', '核心内容',
   '案例与图解', '动手实践', '课后复盘', '资料与延伸'
 ]
 const failures = []
@@ -72,6 +72,11 @@ const lessonFile = (module, lesson) =>
 
 const lessonDeckManifests = (text) =>
   [...text.matchAll(/<LessonDeck\b[^>]*\bmanifest\s*=\s*(["'])([^"']+)\1[^>]*\/?\s*>/g)].map(
+    (match) => match[2]
+  )
+
+const sourceMaterialManifests = (text) =>
+  [...text.matchAll(/<SourceMaterialGallery\b[^>]*\bmanifest\s*=\s*(["'])([^"']+)\1[^>]*\/?\s*>/g)].map(
     (match) => match[2]
   )
 
@@ -193,8 +198,13 @@ for (const { module, lesson } of lessons) {
   if (!/^\/course-assets\/course-pptx\/[a-z]{2}-\d{3}\.pptx$/.test(deck.pptx_url || '')) {
     failures.push(`${lesson.id}: invalid pptx_url ${JSON.stringify(deck.pptx_url)}`)
   }
+  if (!/^\/course-assets\/source-media\/[a-z]{2}-\d{3}\/deck\.json$/.test(deck.source_media_manifest_url || '')) {
+    failures.push(`${lesson.id}: invalid source_media_manifest_url ${JSON.stringify(deck.source_media_manifest_url)}`)
+  }
   const manifestUrl = deck.manifest_url
+  const sourceMediaManifestUrl = deck.source_media_manifest_url
   const manifestFile = path.join(publicDir, manifestUrl.slice(1))
+  const sourceMediaManifestFile = path.join(publicDir, sourceMediaManifestUrl.slice(1))
 
   if (!(await exists(file))) {
     failures.push(`${lesson.id}: missing page for ${route}: ${path.relative(root, file)}`)
@@ -209,6 +219,7 @@ for (const { module, lesson } of lessons) {
     lesson_id: lesson.id,
     module: module.title,
     deck_manifest: manifestUrl,
+    source_media_manifest: sourceMediaManifestUrl,
     deck_revision: deck.spec_sha256
   }
   for (const [field, expected] of Object.entries(expectedFrontmatter)) {
@@ -224,6 +235,12 @@ for (const { module, lesson } of lessons) {
     failures.push(`${lesson.id}: expected exactly one LessonDeck, found ${manifestRefs.length}`)
   } else if (manifestRefs[0] !== manifestUrl) {
     failures.push(`${lesson.id}: LessonDeck manifest ${manifestRefs[0]} != ${manifestUrl}`)
+  }
+  const sourceManifestRefs = sourceMaterialManifests(text)
+  if (sourceManifestRefs.length !== 1) {
+    failures.push(`${lesson.id}: expected exactly one SourceMaterialGallery, found ${sourceManifestRefs.length}`)
+  } else if (sourceManifestRefs[0] !== sourceMediaManifestUrl) {
+    failures.push(`${lesson.id}: SourceMaterialGallery manifest ${sourceManifestRefs[0]} != ${sourceMediaManifestUrl}`)
   }
   const lessonHeadings = [...text.matchAll(/^##\s+(.+?)\s*$/gm)].map((match) => match[1])
   if (JSON.stringify(lessonHeadings) !== JSON.stringify(expectedLessonHeadings)) {
@@ -254,6 +271,9 @@ for (const { module, lesson } of lessons) {
     failures.push(`${lesson.id}: missing LessonDeck manifest ${manifestUrl}`)
     continue
   }
+  if (!(await exists(sourceMediaManifestFile))) {
+    failures.push(`${lesson.id}: missing source-media manifest ${sourceMediaManifestUrl}`)
+  }
   const manifest = await readJson(manifestFile, `${lesson.id} deck manifest`)
   if (!manifest) continue
   for (const [field, expected] of [
@@ -266,6 +286,9 @@ for (const { module, lesson } of lessons) {
     if (manifest[field] !== expected) {
       failures.push(`${lesson.id}: deck.json ${field} ${JSON.stringify(manifest[field])} != ${JSON.stringify(expected)}`)
     }
+  }
+  if (manifest.source_materials?.manifest !== sourceMediaManifestUrl) {
+    failures.push(`${lesson.id}: deck.json source_materials.manifest does not match the lesson source media`)
   }
 }
 
@@ -296,5 +319,5 @@ if (failures.length) {
 }
 
 console.log(
-  `Verified ${catalog.modules.length} modules, ${lessons.length} lesson routes, frontmatter, LessonDeck manifests, and public page assets.`
+  `Verified ${catalog.modules.length} modules, ${lessons.length} lesson routes, dual-mode LessonDeck manifests, source-media galleries, and public page assets.`
 )

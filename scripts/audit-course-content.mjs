@@ -60,6 +60,7 @@ const h3Count = (text) => (text.match(/^###\s+.+$/gm) || []).length
 const sectionRules = [
   { key: 'goals', label: '学习目标', headings: [/^学习目标$/], minimum: 30 },
   { key: 'deck', label: 'Web PPT', headings: [/^Web PPT$/i], minimum: 0 },
+  { key: 'sourceMedia', label: '原课件图片与视频', headings: [/^原课件图片与视频$/], minimum: 0 },
   { key: 'intro', label: '本节导入', headings: [/^本节导入$/], minimum: 40 },
   { key: 'core', label: '核心内容', headings: [/^核心内容$/], minimum: 350 },
   { key: 'case', label: '案例与图解', headings: [/^案例与图解$/, /^案例分析$/], minimum: 100 },
@@ -119,6 +120,10 @@ for (const { module, lesson } of lessons) {
     findings.push(`${lesson.id}: missing ready public Web PPT plan`)
   } else if (!bodies.deck?.includes(`<LessonDeck manifest="${expectedManifest}"`)) {
     findings.push(`${lesson.id}: Web PPT section must embed LessonDeck manifest ${expectedManifest}`)
+  }
+  const expectedSourceMedia = deck?.source_media_manifest_url || null
+  if (!bodies.sourceMedia?.includes(`<SourceMaterialGallery manifest="${expectedSourceMedia}"`)) {
+    findings.push(`${lesson.id}: source-media section must embed SourceMaterialGallery manifest ${expectedSourceMedia}`)
   }
   if (bodies.core && h3Count(bodies.core) < 2) {
     findings.push(`${lesson.id}: core content needs at least 2 concept subsections`)

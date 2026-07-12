@@ -86,6 +86,7 @@ const fileFor = (lesson) =>
   path.join(zhDir, lesson.moduleId, `${lesson.id.toLowerCase()}-${lesson.slug}`, 'index.md')
 
 const deckManifestUrl = (lesson) => deckByLessonId.get(lesson.id).manifest_url
+const sourceMediaManifestUrl = (lesson) => `/course-assets/source-media/${lesson.id.toLowerCase()}/deck.json`
 
 const composeBlueprint = (lesson) => {
   const sources = lesson.content_sources.map((id) => blueprints[id])
@@ -140,8 +141,34 @@ const sourceBlock = (lesson) => {
   return `### 本节课件来源
 
 - **课程来源：**团队既有 PowerPoint、课程文档与最终讲义。
-- **公开 Web PPT：**以最终讲义为单一内容模型重新组织，使用原创排版与原生图形，不发布源 PPT 整页截图。
+- **课程精编：**以最终讲义为主线重新组织，使用统一排版与原生 Web 图形。
+- **原课件：**播放器保留团队 PowerPoint 精选页、真实图片和内嵌视频；每一页标明原始页码。
 - **PPTX：**与 Web PPT 共用页序、标题和正文，可从播放器直接下载。`
+}
+
+const sourceMaterialBlock = (lesson) => `<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="${sourceMediaManifestUrl(lesson)}" title="${html(lesson.title)}原课件素材" />
+<!-- ai-course-source-materials:end -->`
+
+const syncAuthoredSourceMaterials = async (file, lesson) => {
+  let content = await fs.readFile(file, 'utf8')
+  const block = sourceMaterialBlock(lesson)
+  const existing = /<!-- ai-course-source-materials:start -->[\s\S]*?<!-- ai-course-source-materials:end -->/
+  if (existing.test(content)) content = content.replace(existing, block)
+  else {
+    const deckComponent = /<LessonDeck\b[^>]*\/>/
+    if (!deckComponent.test(content)) throw new Error(`${lesson.id}: authored lesson is missing LessonDeck`)
+    content = content.replace(deckComponent, (match) => `${match}\n\n${block}`)
+  }
+  if (!/^source_media_manifest:/m.test(content)) {
+    content = content.replace(
+      /^(deck_manifest:\s*[^\n]+)$/m,
+      `$1\nsource_media_manifest: '${sourceMediaManifestUrl(lesson)}'`
+    )
+  }
+  await writeFile(file, content)
 }
 
 const referencesBlock = (lesson) => {
@@ -166,6 +193,7 @@ description: '${yaml(lesson.summary)}'
 lesson_id: '${lesson.id}'
 module: '${yaml(lesson.moduleTitle)}'
 deck_manifest: '${deckManifestUrl(lesson)}'
+source_media_manifest: '${sourceMediaManifestUrl(lesson)}'
 deck_revision: '${deckByLessonId.get(lesson.id).spec_sha256}'
 ---
 
@@ -183,6 +211,8 @@ ${bullets(lesson.learning_outcomes || [])}
 ## Web PPT
 
 <LessonDeck manifest="${deckManifestUrl(lesson)}" title="${html(lesson.title)}" />
+
+${sourceMaterialBlock(lesson)}
 
 ## 本节导入
 
@@ -282,7 +312,7 @@ ${cards}
 ## 如何使用这门课
 
 - **阅读讲义：**每节先解释概念，再进入案例、实践和复盘。
-- **打开 Web PPT：**课程页内可直接展开原创重制幻灯片、切换全屏讲授，并下载同源 PPTX。
+- **打开 Web PPT：**可在“课程精编”和“原课件”之间切换；原课件模式保留真实图片与可播放视频，并支持全屏讲授。
 - **沿来源核对：**时效性强的模型、协议和案例均标明核对日期；关键结论请回到所附一手资料。
 - **按行业选学：**完成前三章后，可在行业应用章按教育、政务、制造、交通、应急、海洋和文旅场景组合学习。
 `
@@ -382,6 +412,7 @@ const main = async () => {
   for (const lesson of lessons) {
     const file = fileFor(lesson)
     if (isAuthored(file)) {
+      await syncAuthoredSourceMaterials(file, lesson)
       console.log(`Preserved authored lesson ${lesson.id}`)
       continue
     }

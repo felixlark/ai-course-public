@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'EM-006'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-006/deck.json'
-deck_revision: 'f2d951e05d63dd462c1fc55462ff8719a281f7e3043c9a0835300173af136a5b'
+source_media_manifest: '/course-assets/source-media/em-006/deck.json'
+deck_revision: '8fc69598f1136479d4865588f1615049bb88113073d83761c8dc1f6fdb918929'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: 'f2d951e05d63dd462c1fc55462ff8719a281f7e3043c9a0835300173af136a5b
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/em-006/deck.json" title="Crowdverse 与群体具身智能" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/em-006/deck.json" title="Crowdverse 与群体具身智能原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

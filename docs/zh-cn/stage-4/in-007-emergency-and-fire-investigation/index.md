@@ -4,8 +4,9 @@ description: '围绕现场资料、证据链、竞争性假设和专业复核，
 lesson_id: 'IN-007'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-007/deck.json'
+source_media_manifest: '/course-assets/source-media/in-007/deck.json'
 authored: true
-deck_revision: 'f0aaf9529572f74f51d5504a5282fb0d0afe8a8c07aa5ebff1225b31bea0f3ac'
+deck_revision: 'f3d66ea879aa1dafa143964d6a379ed537402071cc384d4771699bea58d829cb'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: 'f0aaf9529572f74f51d5504a5282fb0d0afe8a8c07aa5ebff1225b31bea0f3ac
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/in-007/deck.json" title="应急管理与火灾调查" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/in-007/deck.json" title="应急管理与火灾调查原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

@@ -18,6 +18,10 @@
     "dark": "#0D4D68"
   },
   "pptx_asset": "/course-assets/course-pptx/ag-001.pptx",
+  "source_materials": {
+    "manifest": "/course-assets/source-media/ag-001/deck.json",
+    "label": "原课件"
+  },
   "slides": [
     {
       "slide_id": "AG-001-S01",
@@ -249,8 +253,8 @@
           "url": "https://arxiv.org/abs/2210.03629"
         }
       ],
-      "note": "公开幻灯片只使用课程原创文字与原生图形；完整论证、链接和事实边界请见本节讲义。"
+      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
     }
   ],
-  "spec_sha256": "0c7f9d534463d94a1e904fb0f1dd0893140716eb0956b26fa33893855e393e8c"
+  "spec_sha256": "08816f3b5c35d3368290a2fbb7e8e5128665258dc278f1a46b9cf3917b76d8a8"
 }

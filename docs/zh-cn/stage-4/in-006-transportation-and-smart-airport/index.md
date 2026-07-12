@@ -4,8 +4,9 @@ description: '用数据融合、知识服务、智慧运维和应急协同理解
 lesson_id: 'IN-006'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-006/deck.json'
+source_media_manifest: '/course-assets/source-media/in-006/deck.json'
 authored: true
-deck_revision: 'd885c14ebd8bbe1914f744f4148570c8569f1e5628a3212ec89a34baffd0a4f7'
+deck_revision: '3da7e830fdc200c88b4697986a0c69006ba4f5245fff44ecf0a38bbe3963a305'
 ---
 
 <div class="lesson-hero">
@@ -27,6 +28,12 @@ deck_revision: 'd885c14ebd8bbe1914f744f4148570c8569f1e5628a3212ec89a34baffd0a4f7
 > 本节幻灯片是原始团队课件的公开摘编：只保留政策背景、机场业务目标和场景定位三页；人员、预算、申报任务、知识产权与未公开项目细节均未发布。完整的架构、方法、评测和责任边界由下方讲义展开。
 
 <LessonDeck manifest="/course-assets/course-decks/in-006/deck.json" title="交通与智慧机场" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/in-006/deck.json" title="交通与智慧机场原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

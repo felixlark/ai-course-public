@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "render_pipeline_version": 2,
+  "generated_by": "scripts/build-private-fidelity-decks.py",
+  "lesson_id": "IN-006",
+  "module": "行业应用",
+  "title": "交通与智慧机场",
+  "render_mode": "full-page",
+  "source": {
+    "title": "交通与智慧机场（团队课程节选）",
+    "sha256": "41812495269f1154dd78051acc6f9c09016abc4cc6cf0e07ca29f47cbc958803",
+    "bytes": 89168797,
+    "slide_count": 34
+  },
+  "selected_source_pages": [
+    3,
+    4,
+    5
+  ],
+  "public_asset_dir": "/course-assets/source-media/in-006",
+  "rights": {
+    "classification": "team-course-source",
+    "public_review_required": false,
+    "notes": "只保留公开政策、技术背景与智慧机场场景页；已排除申报指南、任务分解、承担单位、预期成果、预算和效益页。",
+    "reviewed_at": "2026-07-12",
+    "reviewed_by": "课程负责人公开课媒体接入要求",
+    "usage": "原课件精选页与内嵌媒体，用于团队公开课程教学。"
+  },
+  "video_policy": {
+    "mode": "extract",
+    "reason": "团队原课件内嵌视频已转码为公开课 Web 播放格式。"
+  },
+  "source_media_summary": {
+    "selected_pages": 3,
+    "image_references": 11,
+    "pages_with_images": 2,
+    "embedded_videos": 0,
+    "published_videos": 0
+  },
+  "slides": [
+    {
+      "lesson_slide": 1,
+      "source_page": 3,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-006/slide-001.jpg",
+        "webp": "/course-assets/source-media/in-006/slide-001.webp",
+        "jpeg_bytes": 233234,
+        "webp_bytes": 148546
+      },
+      "source_media": {
+        "image_count": 1,
+        "image_bytes": 92133,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 2,
+      "source_page": 4,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-006/slide-002.jpg",
+        "webp": "/course-assets/source-media/in-006/slide-002.webp",
+        "jpeg_bytes": 163889,
+        "webp_bytes": 87412
+      },
+      "source_media": {
+        "image_count": 10,
+        "image_bytes": 226724,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    },
+    {
+      "lesson_slide": 3,
+      "source_page": 5,
+      "image": {
+        "width": 1600,
+        "height": 900,
+        "jpeg": "/course-assets/source-media/in-006/slide-003.jpg",
+        "webp": "/course-assets/source-media/in-006/slide-003.webp",
+        "jpeg_bytes": 119310,
+        "webp_bytes": 71354
+      },
+      "source_media": {
+        "image_count": 0,
+        "image_bytes": 0,
+        "video_count": 0,
+        "video_bytes": 0,
+        "videos": [],
+        "external_videos": []
+      }
+    }
+  ],
+  "warnings": [],
+  "bytes": {
+    "images": 823745,
+    "videos_and_posters": 0,
+    "total_assets": 823745
+  }
+}

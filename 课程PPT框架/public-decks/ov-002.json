@@ -18,6 +18,10 @@
     "dark": "#123B67"
   },
   "pptx_asset": "/course-assets/course-pptx/ov-002.pptx",
+  "source_materials": {
+    "manifest": "/course-assets/source-media/ov-002/deck.json",
+    "label": "原课件"
+  },
   "slides": [
     {
       "slide_id": "OV-002-S01",
@@ -199,8 +203,8 @@
           "url": "https://openai.com/index/chatgpt/"
         }
       ],
-      "note": "公开幻灯片只使用课程原创文字与原生图形；完整论证、链接和事实边界请见本节讲义。"
+      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
     }
   ],
-  "spec_sha256": "d02bd9a550b15cf9d0c48bc58c9331d4904b0e7504a8fa3a33b102ad0b05cdbd"
+  "spec_sha256": "56d4c0a9cd56ecf1374b5ae67eab939d6528cc2b6510cb78c33d41a8f04af77d"
 }

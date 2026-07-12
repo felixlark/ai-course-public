@@ -4,8 +4,9 @@ description: '围绕设备运维、质量、能耗和供应风险建立可监测
 lesson_id: 'IN-005'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-005/deck.json'
+source_media_manifest: '/course-assets/source-media/in-005/deck.json'
 authored: true
-deck_revision: 'f6e1a8029ad6b1401d6a188b417cfdc6a0f64ea6906b00e1240c6c0fccc2fb1c'
+deck_revision: 'ce53c2d6ee497a6f6b02b4875450762afcb377150b1859b620d26a3d40ba9b15'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: 'f6e1a8029ad6b1401d6a188b417cfdc6a0f64ea6906b00e1240c6c0fccc2fb1c
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/in-005/deck.json" title="制造、能源与供应链" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/in-005/deck.json" title="制造、能源与供应链原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

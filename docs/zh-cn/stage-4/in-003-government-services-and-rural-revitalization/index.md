@@ -4,8 +4,9 @@ description: '用有权限、有证据、可转人工的服务流程支持政策
 lesson_id: 'IN-003'
 module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-003/deck.json'
+source_media_manifest: '/course-assets/source-media/in-003/deck.json'
 authored: true
-deck_revision: '4c8c8283256b807ce1c0653e204b6fe7e9dfcdab0830531006e173881715726c'
+deck_revision: 'e8df70babe971a1d2af1fe90a3afa281d6216964d398c2d6fbccf33c3629bd20'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: '4c8c8283256b807ce1c0653e204b6fe7e9dfcdab0830531006e173881715726c
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/in-003/deck.json" title="政务服务与乡村振兴" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/in-003/deck.json" title="政务服务与乡村振兴原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

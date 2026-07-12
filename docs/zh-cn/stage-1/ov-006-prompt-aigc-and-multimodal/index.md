@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'OV-006'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-006/deck.json'
-deck_revision: '9eaa76d703d95c6a859d0ee3239f9c2f01d75b1cc33b05c174222847375bbbf6'
+source_media_manifest: '/course-assets/source-media/ov-006/deck.json'
+deck_revision: 'b33f3e26d48aa3af6c1421dc2f6a306d2601f7f13e279ae4be4de31f9d54c003'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: '9eaa76d703d95c6a859d0ee3239f9c2f01d75b1cc33b05c174222847375bbbf6
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ov-006/deck.json" title="提示词、AIGC 与多模态工作流" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ov-006/deck.json" title="提示词、AIGC 与多模态工作流原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

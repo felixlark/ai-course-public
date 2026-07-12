@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'EM-005'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-005/deck.json'
-deck_revision: '53e07802ca64bb59cc96544f5f23a24041a5834c82726e21b2a9794fa0ee8931'
+source_media_manifest: '/course-assets/source-media/em-005/deck.json'
+deck_revision: 'dd82501022e42557bd6065d25127c0e271b8068feb9510eeeb9f1fdd37c47d15'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: '53e07802ca64bb59cc96544f5f23a24041a5834c82726e21b2a9794fa0ee8931
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/em-005/deck.json" title="G1、Go2 与 ROS2 实训" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/em-005/deck.json" title="G1、Go2 与 ROS2 实训原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

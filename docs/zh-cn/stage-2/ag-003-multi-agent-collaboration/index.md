@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'AG-003'
 module: 'AI 智能体'
 deck_manifest: '/course-assets/course-decks/ag-003/deck.json'
-deck_revision: 'b53d8ed2fd0a9adb13ceb1bd3a49ad888a5e88226c0f782b52c9e8dc9b4cb746'
+source_media_manifest: '/course-assets/source-media/ag-003/deck.json'
+deck_revision: '2ca1d80924c5d50af21ed193047e0b9d1d580376d406320efa576f6fd1288364'
 ---
 
 <div class="lesson-hero">
@@ -25,6 +26,12 @@ deck_revision: 'b53d8ed2fd0a9adb13ceb1bd3a49ad888a5e88226c0f782b52c9e8dc9b4cb746
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ag-003/deck.json" title="多智能体协作" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ag-003/deck.json" title="多智能体协作原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

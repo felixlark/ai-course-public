@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'EM-003'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-003/deck.json'
-deck_revision: '4d41450074077069ca5ba024f99f1e28d215ae999bc7c1b973d2800e079dfcda'
+source_media_manifest: '/course-assets/source-media/em-003/deck.json'
+deck_revision: '27e197fecff61c012982a9855de4bc83a73801aebd2a7282e6a3ddbfe1cb9814'
 ---
 
 <div class="lesson-hero">
@@ -23,6 +24,12 @@ deck_revision: '4d41450074077069ca5ba024f99f1e28d215ae999bc7c1b973d2800e079dfcda
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/em-003/deck.json" title="多模态感知与环境理解" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/em-003/deck.json" title="多模态感知与环境理解原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 

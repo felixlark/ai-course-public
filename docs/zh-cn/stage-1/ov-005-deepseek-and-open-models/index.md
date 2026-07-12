@@ -5,7 +5,8 @@ authored: true
 lesson_id: 'OV-005'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-005/deck.json'
-deck_revision: '70568fee9226e6f29445d573c6cad32784a9cae39020678482dfc717aaab3ac3'
+source_media_manifest: '/course-assets/source-media/ov-005/deck.json'
+deck_revision: 'd0fc7cd029ee4484bd31155508c94e822c36659b441c5cc3a40d7d8934396182'
 ---
 
 <div class="lesson-hero">
@@ -24,6 +25,12 @@ deck_revision: '70568fee9226e6f29445d573c6cad32784a9cae39020678482dfc717aaab3ac3
 ## Web PPT
 
 <LessonDeck manifest="/course-assets/course-decks/ov-005/deck.json" title="DeepSeek 与开源模型生态" />
+
+<!-- ai-course-source-materials:start -->
+## 原课件图片与视频
+
+<SourceMaterialGallery manifest="/course-assets/source-media/ov-005/deck.json" title="DeepSeek 与开源模型生态原课件素材" />
+<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 
