@@ -6,7 +6,7 @@ lesson_id: 'OV-003'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-003/deck.json'
 source_media_manifest: '/course-assets/source-media/ov-003/deck.json'
-deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d'
+deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773'
 ---
 
 <div class="lesson-hero">
@@ -21,17 +21,6 @@ deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d
 - 解释数据、模型、损失函数和优化如何组成机器学习闭环。
 - 区分训练表现、测试表现、过拟合与泛化能力。
 - 说明深度网络如何自动学习特征，以及梯度下降和反向传播各自承担什么角色。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/ov-003/deck.json" title="机器学习与深度学习基础" />
-
-<!-- ai-course-source-materials:start -->
-## 原课件图片与视频
-
-<SourceMaterialGallery manifest="/course-assets/source-media/ov-003/deck.json" title="机器学习与深度学习基础原课件素材" />
-<!-- ai-course-source-materials:end -->
-
 ## 本节导入
 
 相册应用自动把家人的照片归到一组，输入法预测你要打的下一个词，地图软件预估到达时间——这些功能背后没有一条条人工写死的判断规则。支撑它们的是同一件事：**让程序从数据中自己找出规律**，这就是机器学习。
@@ -54,6 +43,10 @@ deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d
 - **半监督学习**：少量带标签数据加大量无标签数据混合使用，贴近标注成本高的现实。
 
 本节聚焦监督学习：它是理解深度学习与大模型的基础，工业界大多数落地系统也从它做起。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="1,2,4,10,12,18" title="机器学习：从数据中学习规律" />
+<!-- ai-course-inline-media:end -->
 
 ### 监督学习的三个要素
 
@@ -110,6 +103,10 @@ deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d
 
 这批经典模型有一个共同的天花板：**特征仍然主要靠人来设计**。图像里该提取什么信息、文本该统计哪些量，都依赖专家经验。深度学习登场，针对的正是这块短板。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="3,6" title="经典模型速览：LDA、AdaBoost 与支持向量机" />
+<!-- ai-course-inline-media:end -->
+
 ### 深度学习：让机器自己学特征
 
 在深度学习之前，一个图像识别系统是"分段"组装的：人工设计特征提取（边缘、纹理、视觉词典），再接一个分类器，每一段单独调优。深度学习改成**端到端**：原始像素直接进网络，识别结果直接出来，中间的特征全部由网络自己学。
@@ -122,6 +119,10 @@ deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d
 
 只有输入层和输出层的**单层感知机**能模拟逻辑与、或、与非，却对"异或"无能为力，因为异或线性不可分——这个局限曾让神经网络研究陷入低谷。破局的办法是加**隐藏层**：多层感知机让上一层的输出作为下一层的输入，层与层全连接、信息单向流动，这类结构统称**前馈神经网络**。层数够深、神经元够多，它就能逼近极其复杂的函数。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="7,8,11,13,17,20,29,30" title="深度学习：让机器自己学特征" />
+<!-- ai-course-inline-media:end -->
+
 ### 神经网络怎么训练：梯度下降与误差反向传播
 
 网络结构定了，剩下的问题是：这么多参数（权重）怎么定？答案仍是监督学习那套流程——定义损失函数，然后优化它。回归任务常用均方误差；分类任务常用交叉熵，它度量预测概率分布与真实分布的差距。
@@ -131,6 +132,10 @@ deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d
 深层网络的参数分布在一层层结构里，输出端算出的误差如何反馈给前面每一层？**误差反向传播**（BP）解决了这件事：利用链式求导法则，把输出误差从后向前逐层传递，算出每个参数对总误差该负多大"责任"，再按责任大小更新。1986 年反向传播的推广让训练多层网络真正变得可行，也为后来的深度学习铺平了路。
 
 把这一节收拢成一句话：**机器学习的能力在于拟合和优化**——网络结构负责提供足够强的表达能力，梯度下降加反向传播负责把参数调到位。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="9,19" title="神经网络怎么训练：梯度下降与误差反向传播" />
+<!-- ai-course-inline-media:end -->
 
 ### 卷积神经网络：看懂图像
 
@@ -146,6 +151,10 @@ deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d
 
 训练深层网络同样要防过拟合，常用手段包括 Dropout（训练时随机丢弃部分神经元）、批归一化和 L1/L2 正则——结构风险最小化的思想在深度时代照常生效。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="21,22,23,24,25,26,27" title="卷积神经网络：看懂图像" />
+<!-- ai-course-inline-media:end -->
+
 ### 序列与生成：循环网络、生成对抗与词向量
 
 图像一次性输入就好，语言、语音、时序数据却有前后依赖。**循环神经网络**（RNN）为此在网络里加了一条"记忆"通路：每读一个词，把当前输入和上一步的隐状态一起加工，隐状态就像一路携带的笔记，让后面的判断能利用前面的信息。
@@ -158,6 +167,10 @@ deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d
 
 到这里可以把整节课串起来了：监督学习给出"数据 + 损失函数 + 优化"的方法论，深度学习提供了能自动学特征的强大模型形式。今天的大语言模型仍以这套框架为基础——大规模数据提供训练样本，预测下一个 token 构成重要训练目标，梯度方法驱动优化，Transformer 负责处理上下文关系。下一节将进一步拆解这些概念。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="5,14,15,16" title="序列与生成：循环网络、生成对抗与词向量" />
+<!-- ai-course-inline-media:end -->
+
 ### 关键概念
 
 - **监督学习**：用带标签数据学习"输入到输出"映射的学习范式。
@@ -169,6 +182,10 @@ deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d
 - **梯度下降**：沿损失下降最快的方向迭代更新参数的优化算法。
 - **误差反向传播**：用链式法则把输出误差逐层回传、分摊到每个参数的训练方法。
 - **卷积神经网络**：以卷积和池化为核心、擅长图像等网格数据的深度网络。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="28" title="关键概念" />
+<!-- ai-course-inline-media:end -->
 
 ## 案例与图解
 
@@ -224,11 +241,7 @@ deck_revision: '827d458e45604138b386564b4d385d2c7dc9be4c20e65b5083e833a6e82a814d
 - [MIT 6.S191 Introduction to Deep Learning](https://introtodeeplearning.com/)：麻省理工的深度学习入门课，讲座、幻灯片和实验齐全，适合系统深入神经网络与生成模型。
 - [3Blue1Brown：神经网络系列视频](https://www.3blue1brown.com/topics/neural-networks)：用可视化动画直观呈现神经网络、梯度下降与反向传播的运行机制。
 - [吴恩达 Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction)：面向零基础的机器学习系统课程，配有编程练习。
-
-### 本节课件来源
-
 <div class="ai-course-card-grid">
-<div class="ai-course-card ai-course-deck-card"><strong>2026 深度学习基础</strong><br>本节课件按照概念顺序呈现监督学习、经典模型、神经网络、优化与生成学习中的公式和图表。</div>
 <div class="ai-course-card ai-course-deck-card"><strong>第4章 机器学习及有监督学习</strong><br>概念材料 · 97 页 · 173 张图<br>本节前半部分的直接来源讲义，正文图解取自其整页版式。</div>
 <div class="ai-course-card ai-course-deck-card"><strong>第6章 深度学习</strong><br>概念材料 · 79 页 · 121 张图<br>本节后半部分的直接来源讲义，正文图解取自其整页版式。</div>
 </div>

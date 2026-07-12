@@ -6,7 +6,7 @@ lesson_id: 'EM-006'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-006/deck.json'
 source_media_manifest: '/course-assets/source-media/em-006/deck.json'
-deck_revision: '8fc69598f1136479d4865588f1615049bb88113073d83761c8dc1f6fdb918929'
+deck_revision: 'e44aea0159eab491027812a3db3b8ac8558341d184c82a4427d788fbfe6adcca'
 ---
 
 <div class="lesson-hero">
@@ -22,17 +22,6 @@ deck_revision: '8fc69598f1136479d4865588f1615049bb88113073d83761c8dc1f6fdb918929
 - 用个体规则、环境变量、通信拓扑、扰动和指标定义一个可复现实验。
 - 说明大模型在任务描述、角色编排和结果解释中的作用与边界。
 - 区分仿真内成绩、经过现实数据校准的结论和可用于真实决策的证据。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/em-006/deck.json" title="Crowdverse 与群体具身智能" />
-
-<!-- ai-course-source-materials:start -->
-## 原课件图片与视频
-
-<SourceMaterialGallery manifest="/course-assets/source-media/em-006/deck.json" title="Crowdverse 与群体具身智能原课件素材" />
-<!-- ai-course-source-materials:end -->
-
 ## 本节导入
 
 单个机器人完成目标导航时，主要处理自己与环境的关系；数十或数百个智能体共享空间后，还会出现拥堵、争抢、队列、局部协作和连锁故障。群体表现并不是单个体性能的简单相加，通信、视野、规则和环境反馈会共同产生新的整体行为。
@@ -49,6 +38,10 @@ Crowdverse 是团队用于群体具身任务建模、仿真与观察的数字孪
 
 群体涌现、机器人车队调度和异构设备互操作是三类不同问题：前者关注局部规则怎样形成宏观模式，第二类关注任务分配、路线冲突和故障恢复，第三类还要处理不同设备能力与接口。不能把三者统称为一个“群体智能算法”。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-006/deck.json" slides="4,6,7,8,9,10" title="从个体策略到群体涌现" />
+<!-- ai-course-inline-media:end -->
+
 ### 数字孪生训练场的四层
 
 1. **环境层**描述地图、道路、障碍、资源、入口与出口。
@@ -64,11 +57,19 @@ Crowdverse 是团队用于群体具身任务建模、仿真与观察的数字孪
 
 可靠流程先把自然语言转换成结构化任务，再进行 schema 校验、范围检查和人工确认；执行仍由确定的仿真接口与策略完成。这样既利用大模型的表达与组合能力，又避免一句含糊指令悄悄改变安全边界。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-006/deck.json" slides="5,12,13,14" title="大模型适合放在哪一层" />
+<!-- ai-course-inline-media:end -->
+
 ### 动态协同与群体模式分析
 
 群体关系会随时间变化。动态聚类可以根据位置、速度或交互关系识别暂时形成的群组；时空张量等表示方法可以把“个体—时间—特征”组织起来，帮助发现周期、异常或协同行为。这些方法是分析工具，不等于自动证明某种群体机制成立。
 
 分析时要先说明相似度、窗口、阈值和缺失数据处理，再用可视化与个体轨迹回查结果。若聚类标签变化只是传感噪声或参数选择造成，就不能解释成真实协作。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-006/deck.json" slides="1,2,11" title="动态协同与群体模式分析" />
+<!-- ai-course-inline-media:end -->
 
 ### 评测：同时看个体、群体与系统
 
@@ -81,6 +82,10 @@ Crowdverse 是团队用于群体具身任务建模、仿真与观察的数字孪
 数字孪生需要现实数据校准，例如行走速度分布、机器人转向半径、传感延迟和道路容量。随后用未参与校准的现实片段验证模型是否能复现关键统计与故障模式。
 
 即使验证通过，结论也只在已覆盖的人群、场地和任务范围内有效。疏散或公共安全场景中的仿真可以帮助比较方案、发现风险，不能单独替代现场规范、专家判断和真实演练。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-006/deck.json" slides="3" title="从仿真到现实：校准、验证与适用域" />
+<!-- ai-course-inline-media:end -->
 
 ## 案例与图解
 
@@ -110,8 +115,6 @@ Crowdverse 是团队用于群体具身任务建模、仿真与观察的数字孪
 - 哪些公共安全结论不能只凭数字孪生实验决定？
 
 ## 资料与延伸
-
-- **团队主课件：**《群体具身智能训练场》课程节选，覆盖任务、协同、分析与数字孪生。
 - [Reynolds：Flocks, Herds, and Schools](https://www.red3d.com/cwr/papers/1987/SIGGRAPH87.pdf)：局部感知与简单规则产生宏观群体运动的原始计算机动画模型；不能自动证明真实群体机制。（核对日期：2026-07-12）
 - [ARGoS 原论文](https://argos-sim.info/stuff/Pinciroli%3ASI2012.pdf)：面向大规模、异构多机器人实验的模块化仿真系统；性能和精度结论只对具体场景成立。（核对日期：2026-07-12）
 - [ROS2 QoS 官方设计](https://design.ros2.org/articles/qos)：核对可靠性、队列、历史与兼容性；通信失效实验要区分丢包、延迟、消息过期和 QoS 不兼容。（核对日期：2026-07-12）

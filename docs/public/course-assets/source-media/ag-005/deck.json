@@ -52,6 +52,7 @@
     {
       "lesson_slide": 1,
       "source_page": 48,
+      "text": "采用 LangSmith 方法进行轨迹 追踪 • LangChain 推出的 LangSmith： 面向 LLM 应用的可观测性平台 – 追踪：可视化智能体执行的每个步骤（包括输入、输出、延迟、 Token 消耗 ） – 调试：检查每个推理步骤及工具调用情况 – 评估：运行测试 集，对比模型版本，追踪性能退化 • 它如何帮助处理智能体的轨迹： – 多步骤智能体运行的可折叠树 状结构 – 每一步的 Token 使用量和延迟指标 – 在长轨迹中进行过滤和搜索",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -72,6 +73,7 @@
     {
       "lesson_slide": 2,
       "source_page": 49,
+      "text": "用于 LLM 智能体的 Agentic Harness（ 智能体运行框架） • 什么是 Agentic Harness ？ – 用于封装大语言模型（ LLM） 以实现智能行为的软件基础设施 • Agentic Harness 的组成部分： – 工具集成： 将 LLM 与外部 API、 数据库及代码执行连接起来 – 记忆系统： 短期存储（上下文窗口）和长期存储（向量存储器、数据库） – 控制循环： ReAct、 重试逻辑、错误处理 – orchestration （任务编排） ： 管理多步骤工作流和多智能体协作 • LLM 是 “大脑” ，而 harness 则提供了 “身体” 。",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -92,6 +94,7 @@
     {
       "lesson_slide": 3,
       "source_page": 50,
+      "text": "用于 LLM 智能体的 Agentic Harness（ 智能体运行框架） • Agentic Harness 使 LLM 能够通过观察感知其所处的环境。",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -112,6 +115,7 @@
     {
       "lesson_slide": 4,
       "source_page": 51,
+      "text": "用于 LLM 智能体的 Agentic Harness（ 智能体运行框架） • Harness 负责管理观察—行动循环（ observation-action loop ），并在不同 组件之间传递数据",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -132,6 +136,7 @@
     {
       "lesson_slide": 5,
       "source_page": 61,
+      "text": "Agentic Harness 架构 • Harness 将所有组件整合为统一的架构： – LLM 核心： 负责推理 、规划 、语言理解 – 工具层： API 连接器 、代码执行 、 网页浏览 – 记忆层：短期上下文信息 + 长期检索 – 控制循环： ReAct 循环 、错误处理 、终止条件",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -152,6 +157,7 @@
     {
       "lesson_slide": 6,
       "source_page": 62,
+      "text": "评估（多）智能体系统 LLM 驱动的 智能体带来了丰富的能力，但同时也放大了潜在风险： – 如何评估智能体的性能以及对安全风险的 意识？ • 潜在风险：泄露私人数据或造成 经济损失 • 识别这些风险属于劳动密集型工作： 随着智能体复杂度的增加，测试变得愈发困难 智能体的基准测试需要涵盖广泛领域，包括： – 工具 – 外部资源 – 正确的行为痕迹或标签",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -172,6 +178,7 @@
     {
       "lesson_slide": 7,
       "source_page": 64,
+      "text": "示例： AgentBench • 为大语言模型模拟交互式环境， 使其能够作为自主智能体运行 • 共有 8 种不同的环境， 分为 3种 类型 （编程 、 游戏 、 网络） • 评估智能体的核心能力，例如逻辑推理能力",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -192,6 +199,7 @@
     {
       "lesson_slide": 8,
       "source_page": 65,
+      "text": "示例： ToolEMU • 目标：识别智能体的风险行为 • 模拟工具执行过程， 实现智能体的可扩展测试",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -212,6 +220,7 @@
     {
       "lesson_slide": 9,
       "source_page": 66,
+      "text": "示例： WebShop • 基于 116 万件亚马逊商品的大规模复杂环境 • 这些挑战涉及语言理解 、视觉理解以及决策能力",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -232,6 +241,7 @@
     {
       "lesson_slide": 10,
       "source_page": 67,
+      "text": "示例： WebM all 评估智能体从多家商店寻找并对比优惠信息能力的基准测试： 模拟了一个由四家异构网店组成的在线购物环境 定义 了基础任务与高级任务： • 基本任务： 根据具体需求比较报价， 将报价添加到购物车中 • 高级任务： 针对模糊需求进行搜索，或搜索兼容及替代产品 这些商店提供不同的交互接口： HTML 页面 、 MCP APIs（ 模型上下文协议接口） 、 NLWeb （自然语言 Web） 接口。",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -252,6 +262,7 @@
     {
       "lesson_slide": 11,
       "source_page": 68,
+      "text": "示例： WebArena • 模拟与真实世界热门网站高度相似的 Web 环境 • 将工具和知识资源嵌入为独立的网站 • 针对具体 Web 交互动作的基准测试 ( Benchmark)",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -272,6 +283,7 @@
     {
       "lesson_slide": 12,
       "source_page": 69,
+      "text": "更多 Benchmark ……",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -292,6 +304,7 @@
     {
       "lesson_slide": 13,
       "source_page": 71,
+      "text": "示例：基于 检查点的 LLM 智能体评估 • 基于结果的评估： 仅检查最终目标是否达成 • 基于检查点的评估： 在任务执行过程中验证中间状态， 并对执行错误进行惩罚 • WorkArena benchmark ： – 一个面向 Web Agent 评估的 benchmark， 使用真实的企业级应用场景 – 为每个任务定义预期的中间状态（检查点） – 评估智能体是否通过了任务要求的检查点 • 关键指标： – 进展速率（ Progress Rate ）：达到预期检查点的比例 – 步骤成功率（ Step Success Rate ）：计划步骤中成功执行的比例 • 优势： 不仅诊断 Agent 是否失败，还能诊断 Agent 在哪里失败",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -312,6 +325,7 @@
     {
       "lesson_slide": 14,
       "source_page": 72,
+      "text": "如何针对你自己的用 例评估一个 agent ？ • 步骤 1： 定义成功标准 – 什么样才算“足够好”？最适合评估它的指标是什么？ 例如： accuracy、latency、cost、safety – 参考指南： platform.claude.com/docs/en/test-and-evaluate/define-success • 步骤 2： 选择评估方法 – 基于代码：基于 outcome 或 checkpoints 做自动化检查 – LLM-as-Judge ：使用另一个 LLM 来评估输出结果 – 人工评估：由专家人工评审主观质量，例如有用性、可读性、专业性等 • 步骤 3： 使用评估工具 – 例如 LangSmith： 用于 执行轨迹追踪 + 评估 + 数据集管理 • 步骤 4： 迭代 – 根据结果持续评估并改进 – 实用指南： hamel.dev/blog/posts/evals/",
       "image": {
         "width": 1600,
         "height": 1200,

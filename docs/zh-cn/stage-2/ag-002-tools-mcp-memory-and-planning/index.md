@@ -6,7 +6,7 @@ lesson_id: 'AG-002'
 module: 'AI 智能体'
 deck_manifest: '/course-assets/course-decks/ag-002/deck.json'
 source_media_manifest: '/course-assets/source-media/ag-002/deck.json'
-deck_revision: 'cf700ef06d6fb18ce2ba560cecdc2aa347a36b76d2ece5bae17dd974cbc38ef7'
+deck_revision: '2cbc5db70d92677e5e55c680f2e0288f712f574307f59bedc6f7310d30b3489f'
 ---
 
 <div class="lesson-hero">
@@ -22,17 +22,6 @@ deck_revision: 'cf700ef06d6fb18ce2ba560cecdc2aa347a36b76d2ece5bae17dd974cbc38ef7
 - 说明 MCP 中 host、client、server 以及 tools、resources、prompts 的职责边界。
 - 区分当前上下文、任务短期状态和长期记忆，并为记忆设置来源、范围和失效条件。
 - 把长任务拆成可验收步骤，并正确处理无权限、工具异常和部分完成。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/ag-002/deck.json" title="工具调用、MCP、记忆与规划" />
-
-<!-- ai-course-source-materials:start -->
-## 原课件图片与视频
-
-<SourceMaterialGallery manifest="/course-assets/source-media/ag-002/deck.json" title="工具调用、MCP、记忆与规划原课件素材" />
-<!-- ai-course-source-materials:end -->
-
 ## 本节导入
 
 语言模型能生成文字，但不能仅凭文字读取最新库存、查询内部资料或修改日程。智能体要进入真实业务，必须通过工具与外部系统交互。工具把“模型建议做什么”转换为“系统实际执行了什么”，也把权限、数据质量和错误恢复带入了智能体设计。
@@ -56,6 +45,10 @@ deck_revision: 'cf700ef06d6fb18ce2ba560cecdc2aa347a36b76d2ece5bae17dd974cbc38ef7
 
 描述越含糊，模型越容易选错工具或补造参数。对于写入型工具，还要提供“预览”或“草稿”能力，让智能体先展示将要发生的变化，再进入真正执行。删除、外发、付款、授权等高影响动作不应与普通查询共享同一权限级别。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ag-002/deck.json" slides="4,5,6,9,11,12,13,15,26" title="工具契约：先约定，再调用" />
+<!-- ai-course-inline-media:end -->
+
 ### 工具结果：失败必须是可读状态
 
 工具调用可能出现四类结果：成功、部分成功、可重试失败和不可重试失败。超时或网络中断通常只能说明“结果未知”，不能直接再次写入，否则可能重复创建记录。参数错误应先修正输入；未授权应停止并请求合适权限；业务规则拒绝则需要改变方案，而不是重复调用。
@@ -77,6 +70,10 @@ MCP server 可以提供三类常见能力：
 - **Prompts：**server 提供的可复用提示模板，通常由用户或应用显式选择，用来组织某类任务的输入。
 
 协议解决的是“如何描述、发现和调用能力”，并不会自动解决业务授权、数据合规或结果正确性。同一个工具即使符合协议，也可能因为用户身份、资源范围或组织政策而被拒绝。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ag-002/deck.json" slides="1,3,14,17,18,19,20,21,22,23,24,25,27,28" title="MCP：连接能力的通用边界" />
+<!-- ai-course-inline-media:end -->
 
 ### 上下文、短期状态与长期记忆
 
@@ -100,6 +97,10 @@ MCP server 可以提供三类常见能力：
 
 智能体不应尝试猜测凭据、切换到未授权账号，或通过另一个工具绕过限制。获得权限后，也应从失败步骤重新观察当前状态，因为外部数据可能已经变化。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ag-002/deck.json" slides="16" title="权限失败：不能靠“换一种说法”绕过" />
+<!-- ai-course-inline-media:end -->
+
 ## 案例与图解
 
 ### 文档问答智能体为什么答错了“最新版政策”
@@ -113,6 +114,10 @@ MCP server 可以提供三类常见能力：
 5. 评测时对照原文逐条核验，不让长期记忆覆盖当前证据。
 
 这个案例说明：资源提供依据，工具取得动态结果，短期状态保存进度，长期记忆只提供背景，计划则约束它们的使用顺序。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ag-002/deck.json" slides="2,7,8,10" title="文档问答智能体为什么答错了“最新版政策”" />
+<!-- ai-course-inline-media:end -->
 
 ## 动手实践
 
@@ -134,10 +139,6 @@ MCP server 可以提供三类常见能力：
 - 写入请求超时后，为什么盲目重试可能比直接失败更危险？
 
 ## 资料与延伸
-
-### 本节课件来源
-
-- **主课件：**《2026-PRML-CS-XMU-12-AI智能体原理及实现》，本节 Web PPT 选取其中与工具使用、MCP、上下文、记忆和规划相关的内容。
 
 ### 一手资料与延伸阅读
 

@@ -6,7 +6,7 @@ lesson_id: 'EM-001'
 module: '具身智能'
 deck_manifest: '/course-assets/course-decks/em-001/deck.json'
 source_media_manifest: '/course-assets/source-media/em-001/deck.json'
-deck_revision: 'b19e857bbde60d7f79ed32b3882775dc081aeda17d45cb8d7292ba53894b2c70'
+deck_revision: '804647bc24a0c9f06b25aee664c6ca5a69ce7c32391ac75e0bfc5b08b4d90102'
 ---
 
 <div class="lesson-hero">
@@ -20,17 +20,6 @@ deck_revision: 'b19e857bbde60d7f79ed32b3882775dc081aeda17d45cb8d7292ba53894b2c70
 
 - 解释感知、决策、行动和反馈如何构成具身闭环。
 - 说明具身任务相较文本问答增加的实时、安全和环境约束。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/em-001/deck.json" title="具身智能：感知、决策、行动与反馈" />
-
-<!-- ai-course-source-materials:start -->
-## 原课件图片与视频
-
-<SourceMaterialGallery manifest="/course-assets/source-media/em-001/deck.json" title="具身智能：感知、决策、行动与反馈原课件素材" />
-<!-- ai-course-source-materials:end -->
-
 ## 本节导入
 
 具身智能关注 AI 如何在物理世界中感知、决策、行动并从反馈中学习。
@@ -45,17 +34,29 @@ deck_revision: 'b19e857bbde60d7f79ed32b3882775dc081aeda17d45cb8d7292ba53894b2c70
 
 它不同于只在屏幕里生成文本的 AI，因为行动会受到物理约束、传感器误差和安全风险影响。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="16" title="什么是具身智能" />
+<!-- ai-course-inline-media:end -->
+
 ### 感知：理解环境状态
 
 具身系统需要通过摄像头、深度相机、雷达、IMU 或触觉传感器感知环境。
 
 感知结果决定后续规划质量，传感器噪声和遮挡会直接影响行动安全。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="3,12,14" title="感知：理解环境状态" />
+<!-- ai-course-inline-media:end -->
+
 ### 推理：从目标到计划
 
 推理环节把用户目标、环境状态和机器人能力转成可执行计划。
 
 大模型可以参与任务理解，但底层运动和安全约束仍需要专门控制系统。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="5,6,11" title="推理：从目标到计划" />
+<!-- ai-course-inline-media:end -->
 
 ### 执行：动作与反馈闭环
 
@@ -65,11 +66,19 @@ deck_revision: 'b19e857bbde60d7f79ed32b3882775dc081aeda17d45cb8d7292ba53894b2c70
 
 闭环中每个环节都有频率要求。任务规划可以按秒更新，运动控制往往需要更高频率；如果把慢速大模型直接放进底层控制回路，网络或推理抖动就可能变成不稳定动作。工程系统通常让高层模型负责理解目标和组合技能，让实时控制器负责姿态、力矩、接触与紧急停止。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="1,8,9,10,15,17,20,21" title="执行：动作与反馈闭环" />
+<!-- ai-course-inline-media:end -->
+
 ### 世界状态：机器人知道什么，也要知道自己不知道什么
 
 传感器只提供带噪声、延迟和遮挡的观测，系统需要把多帧信息、机器人自身状态和任务上下文融合成可用于决策的状态估计。状态不是现实本身；相机看不到杯子背面、定位会漂移、识别置信度也可能在光照变化时骤降。
 
 可靠决策要显式保留不确定性。目标位置不确定时可以换视角重新观察，路径被遮挡时可以减速，抓取失败时可以松开重试；当无法把风险降到允许范围时，应停止并请求人工处理。把“继续猜一个动作”设为默认，正是许多具身事故的起点。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="4,7,18,19" title="世界状态：机器人知道什么，也要知道自己不知道什么" />
+<!-- ai-course-inline-media:end -->
 
 ### 分层控制：任务、技能与安全互相约束
 
@@ -89,6 +98,10 @@ deck_revision: 'b19e857bbde60d7f79ed32b3882775dc081aeda17d45cb8d7292ba53894b2c70
 
 先在可控环境中验证，再迁移到实机，是降低成本和风险的基本路径。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="13" title="学习路径：从仿真到实机" />
+<!-- ai-course-inline-media:end -->
+
 ### 关键概念
 
 - 具身智能
@@ -100,6 +113,10 @@ deck_revision: 'b19e857bbde60d7f79ed32b3882775dc081aeda17d45cb8d7292ba53894b2c70
 - 分层控制
 - 安全监控
 - 仿真到实机
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="2" title="关键概念" />
+<!-- ai-course-inline-media:end -->
 
 ## 案例与图解
 
@@ -130,8 +147,6 @@ deck_revision: 'b19e857bbde60d7f79ed32b3882775dc081aeda17d45cb8d7292ba53894b2c70
 - 仿真到实机为什么重要？
 
 ## 资料与延伸
-
-- **团队主课件：**《2-具身智能基础》精选感知、推理、执行与平台页。
 - [Rodney Brooks：Intelligence without Representation](https://people.csail.mit.edu/brooks/papers/representation.pdf)：具身与情境化智能的重要早期路线；它不是具身智能的唯一公认定义，也不意味着所有系统都应放弃内部表示。（核对日期：2026-07-12）
 - [Embodied Question Answering](https://openaccess.thecvf.com/content_cvpr_2018/html/Das_Embodied_Question_Answering_CVPR_2018_paper.html)：说明行动会改变后续可获得的信息；证据来自三维仿真任务，不能直接等同于真机能力。（核对日期：2026-07-12）
 - [Google Research：PaLM-E](https://research.google/blog/palm-e-an-embodied-multimodal-language-model/)：观察图像、机器人状态与高层语言计划如何组合；低层实时控制仍由专门策略承担。（核对日期：2026-07-12）

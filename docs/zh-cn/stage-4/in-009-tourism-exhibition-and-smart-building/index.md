@@ -6,7 +6,7 @@ module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-009/deck.json'
 source_media_manifest: '/course-assets/source-media/in-009/deck.json'
 authored: true
-deck_revision: '3bbe613732ed9e29e180a4f4b7ef9e979011a88fd777d52b2354bf8e2cffd84a'
+deck_revision: '341d844e0280d37af398ebfc54ad03c9005f525ba3866a68f1f0e7b8f242d227'
 ---
 
 <div class="lesson-hero">
@@ -22,18 +22,6 @@ deck_revision: '3bbe613732ed9e29e180a4f4b7ef9e979011a88fd777d52b2354bf8e2cffd84a
 - 把客流、地图、路线、展项内容、问答和现场人员连接成完整流程。
 - 解释数字孪生如何服务空间、设备和运营，而不是停留在三维展示。
 - 为机器人、终端、网络、内容和人工接管制定长期运维与评测方案。
-
-## Web PPT
-
-> 幻灯片中的产品能力参数来自团队课件形成时的厂商资料，用于学习需求比较方法，不代表当前规格、采购建议或课程方背书；真实选型应回到厂商最新技术资料并在现场复测。
-
-<LessonDeck manifest="/course-assets/course-decks/in-009/deck.json" title="文旅、展厅与智慧建筑" />
-
-<!-- ai-course-source-materials:start -->
-## 原课件图片与视频
-
-<SourceMaterialGallery manifest="/course-assets/source-media/in-009/deck.json" title="文旅、展厅与智慧建筑原课件素材" />
-<!-- ai-course-source-materials:end -->
 
 ## 本节导入
 
@@ -59,6 +47,10 @@ deck_revision: '3bbe613732ed9e29e180a4f4b7ef9e979011a88fd777d52b2354bf8e2cffd84a
 
 地图、路线和现场标识要有同一变更流程。展项移动或区域封闭后，数字地图、机器人路线、移动端与工作人员信息应同步更新，并经过现场走测；只修改其中一个入口会制造新的迷路风险。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/in-009/deck.json" slides="2,3,5" title="二、地图、客流与路线形成动态空间服务" />
+<!-- ai-course-inline-media:end -->
+
 ### 三、内容运营：一次创作，多入口受控交付
 
 展项知识可拆成事实、故事、术语、媒体、常见问题和可公开限制。每条内容应有来源、责任编辑、语言版本、生效时间和复审日期。AI 可以生成不同长度、语言与年龄层的草稿，但专有名词、历史事实、人物与版权素材需要编辑核验。
@@ -67,6 +59,10 @@ deck_revision: '3bbe613732ed9e29e180a4f4b7ef9e979011a88fd777d52b2354bf8e2cffd84a
 
 内容指标不能只看生成数量。可观察用户是否完成目标路线、是否反复追问、哪些问题没有资料、人工纠错需要多久、不同语言是否表达一致，以及内容更新后各入口是否同步。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/in-009/deck.json" slides="4" title="三、内容运营：一次创作，多入口受控交付" />
+<!-- ai-course-inline-media:end -->
+
 ### 四、问答与人工接管
 
 问答系统先识别问题属于展项知识、路线服务、运营信息还是现场求助，再从有权使用的最新资料中检索。回答应给出适用时间和来源；不知道时直接说明，不编造展项、路线或开放状态。
@@ -74,6 +70,10 @@ deck_revision: '3bbe613732ed9e29e180a4f4b7ef9e979011a88fd777d52b2354bf8e2cffd84a
 涉及失物、投诉、支付、个人信息、身体不适、儿童走失、安全隐患或紧急情况时，应快速转现场人员或正式求助渠道。接管不是显示一个电话号码就结束：系统应传递必要的上下文和位置，但只传递解决问题所需的信息，并让用户知道接下来由谁处理。
 
 机器人和自助终端还要处理物理接管。遇到路线堵塞、定位丢失、传感器异常、用户靠得过近或设备电量不足时，应安全停止、语音提示并通知人员。任何远程控制都需要身份验证、动作范围和日志。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/in-009/deck.json" slides="1" title="四、问答与人工接管" />
+<!-- ai-course-inline-media:end -->
 
 ### 五、数字孪生：连接空间、设备与运营状态
 
@@ -125,8 +125,6 @@ deck_revision: '3bbe613732ed9e29e180a4f4b7ef9e979011a88fd777d52b2354bf8e2cffd84a
 - 首次上线之后，哪些持续工作决定系统是否真正可用？
 
 ## 资料与延伸
-
-- 主课件：《文旅、展厅与智慧建筑》团队课程节选。
 - 团队补充资料：《数字工科大楼具身智能项目-介绍》。
 - [ISO 41001:2018](https://www.iso.org/standard/68021.html)：设施管理体系要求与使用指南。
 - [ISO 19650-1:2018](https://www.iso.org/standard/68078.html)：使用建筑信息模型管理建筑和土木工程信息的概念与原则。

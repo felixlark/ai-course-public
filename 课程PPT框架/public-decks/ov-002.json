@@ -20,7 +20,7 @@
   "pptx_asset": "/course-assets/course-pptx/ov-002.pptx",
   "source_materials": {
     "manifest": "/course-assets/source-media/ov-002/deck.json",
-    "label": "原课件"
+    "label": "幻灯片"
   },
   "slides": [
     {
@@ -203,8 +203,8 @@
           "url": "https://openai.com/index/chatgpt/"
         }
       ],
-      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
+      "note": "课程正文与幻灯片共享同一知识主线，图片和视频用于帮助理解本节概念与案例。"
     }
   ],
-  "spec_sha256": "56d4c0a9cd56ecf1374b5ae67eab939d6528cc2b6510cb78c33d41a8f04af77d"
+  "spec_sha256": "762519b580af394884ae0b6aa885d0783da85a1542b639489019ba211d734cdf"
 }

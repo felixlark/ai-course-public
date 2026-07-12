@@ -262,7 +262,7 @@ for (const record of plan.lessons || []) {
   if (deck.render_mode !== 'native-web') failures.push(`${lessonId}: spec render_mode must be native-web`)
   if (deck.lesson_id !== lessonId || deck.title !== record.title) failures.push(`${lessonId}: spec identity does not match plan`)
   if (deck.pptx_asset !== record.pptx_url) failures.push(`${lessonId}: spec PPTX URL does not match plan`)
-  if (deck.source_materials?.manifest !== record.source_media_manifest_url || deck.source_materials?.label !== '原课件') {
+  if (deck.source_materials?.manifest !== record.source_media_manifest_url || deck.source_materials?.label !== '幻灯片') {
     failures.push(`${lessonId}: native deck does not link to its source-media manifest`)
   }
   if (!Array.isArray(deck.slides) || deck.slides.length < 8 || deck.slides.length > 14) {

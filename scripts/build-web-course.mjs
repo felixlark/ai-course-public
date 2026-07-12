@@ -65,6 +65,10 @@ const lessons = catalog.modules.flatMap((module) =>
 
 const lessonById = new Map(lessons.map((lesson) => [lesson.id, lesson]))
 const deckByLessonId = new Map(deckPlan.lessons.map((deck) => [deck.lesson_id, deck]))
+const mediaDeckByLessonId = new Map(await Promise.all(lessons.map(async (lesson) => {
+  const file = path.join(docsDir, 'public', 'course-assets', 'source-media', lesson.id.toLowerCase(), 'deck.json')
+  return [lesson.id, JSON.parse(await fs.readFile(file, 'utf8'))]
+})))
 
 const assertCatalog = () => {
   if (catalog.modules.length !== 4) throw new Error(`Expected four modules, found ${catalog.modules.length}`)
@@ -137,37 +141,123 @@ ${item.check ? `<p><strong>边界与复核：</strong>${html(item.check)}</p>` :
 
 const bullets = (items) => items.map((item) => `- ${markdown(item)}`).join('\n')
 
-const sourceBlock = (lesson) => {
-  return `### 本节课件来源
+const inlineMediaMarker = /<!-- ai-course-inline-media:start[^>]*-->[\s\S]*?<!-- ai-course-inline-media:end -->\s*/g
+const stopTokens = new Set(['人工智能', '智能', '模型', '系统', '课程', '内容', '核心', '案例', '本节', '学习', '技术', '应用'])
 
-- **课程来源：**团队既有 PowerPoint、课程文档与最终讲义。
-- **课程精编：**以最终讲义为主线重新组织，使用统一排版与原生 Web 图形。
-- **原课件：**播放器保留团队 PowerPoint 精选页、真实图片和内嵌视频；每一页标明原始页码。
-- **PPTX：**与 Web PPT 共用页序、标题和正文，可从播放器直接下载。`
+const semanticTokens = (value) => {
+  const text = String(value || '').toLowerCase().replace(/<[^>]+>/g, ' ').replace(/[^\p{L}\p{N}]+/gu, ' ')
+  const tokens = new Set((text.match(/[a-z][a-z0-9+.-]{1,}|\d{2,}/g) || []).filter((item) => !stopTokens.has(item)))
+  for (const sequence of text.match(/[\p{Script=Han}]{2,}/gu) || []) {
+    if (sequence.length <= 4 && !stopTokens.has(sequence)) tokens.add(sequence)
+    for (let index = 0; index < sequence.length - 1; index += 1) {
+      const pair = sequence.slice(index, index + 2)
+      if (!stopTokens.has(pair)) tokens.add(pair)
+    }
+  }
+  return tokens
 }
 
-const sourceMaterialBlock = (lesson) => `<!-- ai-course-source-materials:start -->
-## 原课件图片与视频
+const cleanLearnerPage = (value) => String(value)
+  .replace(inlineMediaMarker, '')
+  .replace(/\n*##\s+Web PPT\s*\n[\s\S]*?(?=\n##\s+|$)/gi, '\n')
+  .replace(/\n*##\s+Web PPT\s*\n+<LessonDeck\b[^>]*\/>\s*/gi, '\n')
+  .replace(/\n*<!-- ai-course-source-materials:start -->[\s\S]*?<!-- ai-course-source-materials:end -->\s*/g, '\n')
+  .replace(/^\s*-\s*\*\*课程来源：\*\*.*(?:\r?\n|$)/gmu, '')
+  .replace(/^\s*-\s*\*\*课程精编：\*\*.*(?:\r?\n|$)/gmu, '')
+  .replace(/^\s*-\s*\*\*原课件：\*\*.*(?:\r?\n|$)/gmu, '')
+  .replace(/^\s*-\s*\*\*PPTX：\*\*.*(?:\r?\n|$)/gmu, '')
+  .replace(/^\s*#{3,4}\s+本节课件来源\s*(?:\r?\n|$)/gmu, '')
+  .replace(/^\s*-\s*\*\*(?:团队)?主课件：\*\*.*(?:\r?\n|$)/gmu, '')
+  .replace(/^\s*-\s*主课件：.*(?:\r?\n|$)/gmu, '')
+  .replace(/<div class="ai-course-card ai-course-deck-card"><strong>[^<]+<\/strong><br>本节课件[^<]*<\/div>\s*/gmu, '')
+  .replace(/本节 Web PPT 选取其中与/g, '其中重点介绍')
+  .replace(/本节 Web PPT/g, '本节幻灯片')
+  .replace(/讲义\s*\+\s*Web PPT/g, '讲义 + 幻灯片')
+  .replace(/本节主课件以/g, '本节以')
+  .replace(/团队主课件/g, '课程案例')
+  .replace(/团队课件以/g, '这一案例以')
+  .replace(/课件截图/g, '页面截图')
+  .replace(/\n{3,}/g, '\n\n')
 
-<SourceMaterialGallery manifest="${sourceMediaManifestUrl(lesson)}" title="${html(lesson.title)}原课件素材" />
-<!-- ai-course-source-materials:end -->`
-
-const syncAuthoredSourceMaterials = async (file, lesson) => {
-  let content = await fs.readFile(file, 'utf8')
-  const block = sourceMaterialBlock(lesson)
-  const existing = /<!-- ai-course-source-materials:start -->[\s\S]*?<!-- ai-course-source-materials:end -->/
-  if (existing.test(content)) content = content.replace(existing, block)
-  else {
-    const deckComponent = /<LessonDeck\b[^>]*\/>/
-    if (!deckComponent.test(content)) throw new Error(`${lesson.id}: authored lesson is missing LessonDeck`)
-    content = content.replace(deckComponent, (match) => `${match}\n\n${block}`)
+const learningAnchors = (content) => {
+  const headings = [...content.matchAll(/^(#{2,3})\s+(.+?)\s*$/gmu)].map((match) => ({
+    level: match[1].length,
+    title: match[2].trim(),
+    start: match.index,
+    headingEnd: match.index + match[0].length
+  }))
+  let currentH2 = ''
+  const allowed = new Set(['本节导入', '核心内容', '案例与图解', '案例分析'])
+  for (const heading of headings) {
+    if (heading.level === 2) currentH2 = heading.title
+    heading.parent = currentH2
   }
+  const anchors = headings.filter((heading) => heading.level === 3 && allowed.has(heading.parent))
+  const selected = anchors.length ? anchors : headings.filter((heading) => heading.level === 2 && allowed.has(heading.title))
+  return selected.map((anchor) => {
+    const next = headings.find((heading) => heading.start > anchor.start && heading.level <= anchor.level)
+    const end = next?.start ?? content.length
+    const body = content.slice(anchor.headingEnd, end)
+    return { ...anchor, end, tokens: semanticTokens(`${anchor.title} ${body}`) }
+  })
+}
+
+const distributeSlides = (anchors, slides) => {
+  const assignments = new Array(slides.length).fill(-1)
+  slides.forEach((slide, slideIndex) => {
+    const tokens = semanticTokens(slide.text)
+    let bestIndex = -1
+    let bestScore = 0
+    anchors.forEach((anchor, anchorIndex) => {
+      let score = 0
+      for (const token of tokens) if (anchor.tokens.has(token)) score += token.length > 2 ? 3 : 1
+      if (score > bestScore) { bestScore = score; bestIndex = anchorIndex }
+    })
+    if (bestScore >= 2) assignments[slideIndex] = bestIndex
+  })
+  if (!assignments.some((value) => value >= 0)) {
+    return assignments.map((_, index) => Math.min(anchors.length - 1, Math.floor(index * anchors.length / slides.length)))
+  }
+  assignments.forEach((value, index) => {
+    if (value >= 0) return
+    let nearest = -1
+    let distance = Number.POSITIVE_INFINITY
+    assignments.forEach((candidate, candidateIndex) => {
+      if (candidate < 0) return
+      const nextDistance = Math.abs(candidateIndex - index)
+      if (nextDistance < distance) { nearest = candidate; distance = nextDistance }
+    })
+    assignments[index] = nearest >= 0 ? nearest : 0
+  })
+  return assignments
+}
+
+const addInlineMedia = (content, lesson) => {
+  const deck = mediaDeckByLessonId.get(lesson.id)
+  const slides = deck?.slides || []
+  const anchors = learningAnchors(content)
+  if (!slides.length || !anchors.length) throw new Error(`${lesson.id}: cannot map course media into learner sections`)
+  const assignments = distributeSlides(anchors, slides)
+  const byAnchor = new Map()
+  assignments.forEach((anchorIndex, slideIndex) => {
+    if (!byAnchor.has(anchorIndex)) byAnchor.set(anchorIndex, [])
+    byAnchor.get(anchorIndex).push(slideIndex + 1)
+  })
+  let result = content
+  for (const [anchorIndex, positions] of [...byAnchor.entries()].sort((a, b) => anchors[b[0]].end - anchors[a[0]].end)) {
+    const anchor = anchors[anchorIndex]
+    const block = `\n<!-- ai-course-inline-media:start -->\n<CourseMedia manifest="${sourceMediaManifestUrl(lesson)}" slides="${positions.join(',')}" title="${html(anchor.title)}" />\n<!-- ai-course-inline-media:end -->\n`
+    result = `${result.slice(0, anchor.end).trimEnd()}\n${block}\n${result.slice(anchor.end).trimStart()}`
+  }
+  return result
+}
+
+const syncAuthoredLearningMedia = async (file, lesson) => {
+  let content = cleanLearnerPage(await fs.readFile(file, 'utf8'))
   if (!/^source_media_manifest:/m.test(content)) {
-    content = content.replace(
-      /^(deck_manifest:\s*[^\n]+)$/m,
-      `$1\nsource_media_manifest: '${sourceMediaManifestUrl(lesson)}'`
-    )
+    content = content.replace(/^(deck_manifest:\s*[^\n]+)$/m, `$1\nsource_media_manifest: '${sourceMediaManifestUrl(lesson)}'`)
   }
+  content = addInlineMedia(content, lesson)
   await writeFile(file, content)
 }
 
@@ -208,12 +298,6 @@ deck_revision: '${deckByLessonId.get(lesson.id).spec_sha256}'
 
 ${bullets(lesson.learning_outcomes || [])}
 
-## Web PPT
-
-<LessonDeck manifest="${deckManifestUrl(lesson)}" title="${html(lesson.title)}" />
-
-${sourceMaterialBlock(lesson)}
-
 ## 本节导入
 
 ${renderParagraphs(blueprint.intro)}
@@ -240,8 +324,6 @@ ${bullets(blueprint.review)}
 
 ## 资料与延伸
 
-${sourceBlock(lesson)}
-
 ${referencesBlock(lesson)}
 `
 }
@@ -266,7 +348,7 @@ aside: false
   <div class="lesson-hero__num">0${module.order}</div>
   <h1 class="lesson-hero__title">${html(module.title)}</h1>
   <div class="lesson-hero__sub">${html(module.summary)}</div>
-  <div class="lesson-hero__tags"><span>${module.lessons.length} 节</span><span>讲义 + Web PPT</span></div>
+  <div class="lesson-hero__tags"><span>${module.lessons.length} 节</span><span>讲义 + 幻灯片</span></div>
 </div>
 
 ## 本章课程
@@ -312,7 +394,7 @@ ${cards}
 ## 如何使用这门课
 
 - **阅读讲义：**每节先解释概念，再进入案例、实践和复盘。
-- **打开 Web PPT：**可在“课程精编”和“原课件”之间切换；原课件模式保留真实图片与可播放视频，并支持全屏讲授。
+- **播放幻灯片：**点击页面右上角的“幻灯片”，即可全屏查看本节图片与视频。
 - **沿来源核对：**时效性强的模型、协议和案例均标明核对日期；关键结论请回到所附一手资料。
 - **按行业选学：**完成前三章后，可在行业应用章按教育、政务、制造、交通、应急、海洋和文旅场景组合学习。
 `
@@ -342,7 +424,7 @@ aside: false
 
 # 学习地图
 
-课程按“概念基础 → AI 智能体 → 具身智能 → 行业应用”推进。每一节都是独立学习单元，包含 Web PPT、Markdown 讲义、案例、练习、复盘和来源。
+课程按“概念基础 → AI 智能体 → 具身智能 → 行业应用”推进。每一节都是独立学习单元，包含图文讲解、幻灯片、案例、练习、复盘和延伸阅读。
 
 ${modules}
 `
@@ -412,11 +494,11 @@ const main = async () => {
   for (const lesson of lessons) {
     const file = fileFor(lesson)
     if (isAuthored(file)) {
-      await syncAuthoredSourceMaterials(file, lesson)
+      await syncAuthoredLearningMedia(file, lesson)
       console.log(`Preserved authored lesson ${lesson.id}`)
       continue
     }
-    await writeFile(file, lessonPage(lesson))
+    await writeFile(file, addInlineMedia(lessonPage(lesson), lesson))
   }
 
   for (const module of catalog.modules) {

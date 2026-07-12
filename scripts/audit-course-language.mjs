@@ -55,6 +55,11 @@ const checks = [
     scope: 'visible'
   },
   {
+    name: 'public-course-version-label',
+    pattern: /原课件|源课件|课程精编|原课件图片与视频|打开本节 Web PPT/gi,
+    scope: 'visible'
+  },
+  {
     name: 'unverified-gpt4-parameter-count',
     pattern: /GPT\s*-?\s*4[^。；\n]{0,50}(?:1[.,]?8\s*万亿|1\.8\s*(?:trillion|T)\b)/gi,
     scope: 'visible'

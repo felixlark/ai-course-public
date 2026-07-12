@@ -6,7 +6,7 @@ lesson_id: 'OV-001'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-001/deck.json'
 source_media_manifest: '/course-assets/source-media/ov-001/deck.json'
-deck_revision: 'c483c7d09716e329bc8ee7c27f521b19459071f1e03a27b3bf45f0985b58ff14'
+deck_revision: '2f96914942ff0806d9852931bd16ec512175771c6a64a6bf5f2964e5049582b5'
 ---
 
 <div class="lesson-hero">
@@ -21,17 +21,6 @@ deck_revision: 'c483c7d09716e329bc8ee7c27f521b19459071f1e03a27b3bf45f0985b58ff14
 - 用“感知—思考—行动”解释一个人工智能系统。
 - 区分计算智能、感知智能和认知智能。
 - 说明图灵测试能观察到什么，以及它不能证明什么。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/ov-001/deck.json" title="什么是人工智能：感知、思考与行动" />
-
-<!-- ai-course-source-materials:start -->
-## 原课件图片与视频
-
-<SourceMaterialGallery manifest="/course-assets/source-media/ov-001/deck.json" title="什么是人工智能：感知、思考与行动原课件素材" />
-<!-- ai-course-source-materials:end -->
-
 ## 本节导入
 
 ### 先看几个真实案例
@@ -57,6 +46,10 @@ deck_revision: 'c483c7d09716e329bc8ee7c27f521b19459071f1e03a27b3bf45f0985b58ff14
 - **行动**：用机械臂拿东西、用轮子跑起来。这一步让 AI 从"空想"变"实干"。
 
 这里的"系统"可以有很多形态：既可以是纯软件（像 ChatGPT，靠"脑"聊天），也可以是带传感器的设备（像智能音箱，能听会说），还可以是既有聪明脑、又有灵活手脚的具身智能体（像会跳舞的机器人、送外卖的无人车）。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-001/deck.json" slides="10" title="AI 的核心逻辑：感知—思考—行动" />
+<!-- ai-course-inline-media:end -->
 
 ### 智能的三个层次
 
@@ -94,13 +87,25 @@ deck_revision: 'c483c7d09716e329bc8ee7c27f521b19459071f1e03a27b3bf45f0985b58ff14
 
 索菲亚由 Hanson Robotics 开发，并因获得沙特阿拉伯公民身份而广为人知。她能进行对话并做出面部表情，更像一个把“类人交互”推到公众面前的展示平台。这个案例抛出的问题很真实：当机器能听、能说、能表演情绪时，我们应该用什么标准判断它是否真的理解？
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-001/deck.json" slides="1,2,3,4,5,6" title="机器人公民索菲亚" />
+<!-- ai-course-inline-media:end -->
+
 ### 会自主决策的具身大脑
 
 和索菲亚强调类人交互的展示不同，具身系统关注站立、行走和平衡等物理动作。仅凭一次演示不能判断系统的自主决策范围，因此这里把它作为观察具身闭环的入口：传感器读取状态，控制系统生成动作，机器人执行后再根据反馈修正。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-001/deck.json" slides="7" title="会自主决策的具身大脑" />
+<!-- ai-course-inline-media:end -->
+
 ### 从仿真到真机的闭环：Crowdverse
 
-团队课件以 Crowdverse 作为具身仿真案例，其中的“全身动作重定向”（Whole-Body Motion Retargeting）把人的动作映射到机器人模型。它的价值，是先在可重复的虚拟环境中检查任务控制、状态反馈与行为评估，再决定哪些结果值得进入真机验证。仿真能够降低真机试错的成本和风险，但不能自动证明策略在现实中同样有效。
+这一案例以 Crowdverse 作为具身仿真案例，其中的“全身动作重定向”（Whole-Body Motion Retargeting）把人的动作映射到机器人模型。它的价值，是先在可重复的虚拟环境中检查任务控制、状态反馈与行为评估，再决定哪些结果值得进入真机验证。仿真能够降低真机试错的成本和风险，但不能自动证明策略在现实中同样有效。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-001/deck.json" slides="8,9" title="从仿真到真机的闭环：Crowdverse" />
+<!-- ai-course-inline-media:end -->
 
 ## 动手实践
 
@@ -115,7 +120,5 @@ deck_revision: 'c483c7d09716e329bc8ee7c27f521b19459071f1e03a27b3bf45f0985b58ff14
 - 图灵测试的判据是什么？它被跨过说明了什么，又没有说明什么？
 
 ## 资料与延伸
-
-- **课程来源：**团队既有 PowerPoint 与课程文档；Web PPT 同时提供课程精编页和原课件精选页，保留真实图片与可播放视频。
 - [Computing Machinery and Intelligence](https://doi.org/10.1093/mind/LIX.236.433)：图灵 1950 年原文；阅读时注意模仿游戏与“证明机器拥有意识”不是同一命题。
 - [Large Language Models Pass the Turing Test](https://arxiv.org/abs/2503.23674)：上述 73% 结论的原始研究；阅读时要同时关注实验条件与结论边界。

@@ -20,7 +20,7 @@
   "pptx_asset": "/course-assets/course-pptx/in-007.pptx",
   "source_materials": {
     "manifest": "/course-assets/source-media/in-007/deck.json",
-    "label": "原课件"
+    "label": "幻灯片"
   },
   "slides": [
     {
@@ -290,8 +290,8 @@
           "url": ""
         }
       ],
-      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
+      "note": "课程正文与幻灯片共享同一知识主线，图片和视频用于帮助理解本节概念与案例。"
     }
   ],
-  "spec_sha256": "f3d66ea879aa1dafa143964d6a379ed537402071cc384d4771699bea58d829cb"
+  "spec_sha256": "e690945aa0347f58cb1f149dc88a10260119474b907c31431d2d9abc5f9e989c"
 }

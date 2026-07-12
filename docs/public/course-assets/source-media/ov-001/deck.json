@@ -48,6 +48,7 @@
     {
       "lesson_slide": 1,
       "source_page": 1,
+      "text": "",
       "image": {
         "width": 1600,
         "height": 900,
@@ -68,6 +69,7 @@
     {
       "lesson_slide": 2,
       "source_page": 2,
+      "text": "",
       "image": {
         "width": 1600,
         "height": 900,
@@ -88,6 +90,7 @@
     {
       "lesson_slide": 3,
       "source_page": 3,
+      "text": "索菲亚：全球首位机器人公民",
       "image": {
         "width": 1600,
         "height": 900,
@@ -141,6 +144,7 @@
     {
       "lesson_slide": 4,
       "source_page": 4,
+      "text": "",
       "image": {
         "width": 1600,
         "height": 900,
@@ -161,6 +165,7 @@
     {
       "lesson_slide": 5,
       "source_page": 5,
+      "text": "",
       "image": {
         "width": 1600,
         "height": 900,
@@ -214,6 +219,7 @@
     {
       "lesson_slide": 6,
       "source_page": 6,
+      "text": "",
       "image": {
         "width": 1600,
         "height": 900,
@@ -234,6 +240,7 @@
     {
       "lesson_slide": 7,
       "source_page": 7,
+      "text": "来福 机器人：团队自研自主决策 具身大脑 8 厦门卫视《玲听两岸》人物专题访谈 节目",
       "image": {
         "width": 1600,
         "height": 900,
@@ -297,6 +304,7 @@
     {
       "lesson_slide": 8,
       "source_page": 8,
+      "text": "Crowdverse ：团队自研具身智能 模拟器 全身动作重定向（ Whole-Body Motion Retargeting ） 案例 团队自研 Crowdverse 具身智能模拟器，支持虚拟场景中的 任务控制、状态反馈与行为评估 。通过仿真平台与真实机器人实验联动，实现具身智能任务从 虚拟验证 到 真实执行 的 闭环验证 。 9",
       "image": {
         "width": 1600,
         "height": 900,
@@ -360,6 +368,7 @@
     {
       "lesson_slide": 9,
       "source_page": 9,
+      "text": "",
       "image": {
         "width": 1600,
         "height": 900,
@@ -380,6 +389,7 @@
     {
       "lesson_slide": 10,
       "source_page": 10,
+      "text": "什么是人工智能(AI)?： AI 想让 “系统” 变成 “全能选手” 👀 感知： 不光用摄像头 “ 看 ” ，还能用触觉、嗅觉 （比如机器人摸热水会缩手）； 🧠 思考： 分析环境、规划策略 （比如避开路上的猫）； 🦿 行动： 用机械臂拿东西、用轮子跑起来 （具身的关键！让 AI 从 “ 空想 ” 变 “ 实干 ” ）。 研究对象：这个 “系统” 可以是： 📱 软件程序 （比如 ChatGPT ，靠 “脑” 聊天）； 💻 计算机 / 设备 （比如智能音箱，能听会说）； 🤖 具身智能体 （比如会跳舞的机器人、送外卖的无人车） —— 既有聪明脑，又有灵活手脚！能感知世界，还能动手行动！ 具身智能核心逻辑： 感知 → 思考 → 行动 → 再感知",
       "image": {
         "width": 1600,
         "height": 900,

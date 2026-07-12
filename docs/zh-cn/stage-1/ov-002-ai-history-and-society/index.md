@@ -6,7 +6,7 @@ lesson_id: 'OV-002'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-002/deck.json'
 source_media_manifest: '/course-assets/source-media/ov-002/deck.json'
-deck_revision: '56d4c0a9cd56ecf1374b5ae67eab939d6528cc2b6510cb78c33d41a8f04af77d'
+deck_revision: '762519b580af394884ae0b6aa885d0783da85a1542b639489019ba211d734cdf'
 ---
 
 <div class="lesson-hero">
@@ -21,17 +21,6 @@ deck_revision: '56d4c0a9cd56ecf1374b5ae67eab939d6528cc2b6510cb78c33d41a8f04af77d
 - 解释规则系统、机器学习、深度学习和大模型之间的演进关系。
 - 把“职业被改变”拆成可以评估的具体任务变化。
 - 从人才、数据、算法算力、反馈和场景五个维度评估 AI 项目的落地条件。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/ov-002/deck.json" title="人工智能发展与社会影响" />
-
-<!-- ai-course-source-materials:start -->
-## 原课件图片与视频
-
-<SourceMaterialGallery manifest="/course-assets/source-media/ov-002/deck.json" title="人工智能发展与社会影响原课件素材" />
-<!-- ai-course-source-materials:end -->
-
 ## 本节导入
 
 人工智能的发展从来不是一条只由算法推动的直线。规则系统、机器学习、深度学习和大模型依次扩大了机器可处理的任务边界；与此同时，数据、算力、产品入口、组织流程和社会接受度共同决定了技术能否真正进入生活。
@@ -48,11 +37,19 @@ deck_revision: '56d4c0a9cd56ecf1374b5ae67eab939d6528cc2b6510cb78c33d41a8f04af77d
 
 每次跃迁都伴随新的限制：规则难以穷尽，数据会带来偏差，深度模型缺乏可解释性，大模型会产生幻觉，智能体的行动还会放大权限与安全风险。理解历史的价值，不是背年份，而是知道每一代能力解决了什么、又留下了什么问题。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-002/deck.json" slides="1,2,4,5,7,8,9,10,11,12,13,14,15,18,19,20,21" title="六次转折：能力、资源与预期共同塑造 AI" />
+<!-- ai-course-inline-media:end -->
+
 ### 哪些工作会被改变
 
 大模型的目标往往不止于模仿人类。在一些定义清楚、数据充分的基准任务中，模型能达到很高的分数；但分数取决于数据集、提示、工具和评价方法，不能直接外推成“全面超过人类”。程序员、教师、主播、翻译、记者、会计、客服、销售等岗位中的部分任务，正在被 AI 重新分工。
 
 需要说明的是，被改变不等于整份职业被取代。更常见的变化，是职业内部的检索、起草、分类、分析和重复沟通被重新分工；人仍要负责目标、判断、责任与例外处理。与其只问“岗位会不会消失”，更有用的问题是：哪些任务可以自动化，哪些任务必须保留人在回路中。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-002/deck.json" slides="3,6" title="哪些工作会被改变" />
+<!-- ai-course-inline-media:end -->
 
 ### AI 落地需要什么条件
 
@@ -66,6 +63,10 @@ deck_revision: '56d4c0a9cd56ecf1374b5ae67eab939d6528cc2b6510cb78c33d41a8f04af77d
 
 这五项不是所有项目都必须以同一种方式满足的“成功公式”，而是一组诊断维度。比如围棋规则清晰、对局可自我生成、胜负能快速反馈，所以适合强化学习；而“用 AI 一步到位管理整个城市”目标过宽、数据权限复杂、错误后果难以回退，应先拆成可度量、可复核的具体任务。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-002/deck.json" slides="17" title="AI 落地需要什么条件" />
+<!-- ai-course-inline-media:end -->
+
 ## 案例与图解
 
 ### 一只乌鸦的启示
@@ -73,6 +74,10 @@ deck_revision: '56d4c0a9cd56ecf1374b5ae67eab939d6528cc2b6510cb78c33d41a8f04af77d
 城市中的乌鸦会利用车辆轧开坚果，并根据交通变化选择取食时机。它没有海量训练数据，却能在真实环境里感知、规划、使用工具并达成目标。
 
 这个例子的启发在于，生物智能能利用有限经验、身体能力和环境反馈完成开放任务。它不能直接证明哪条 AI 技术路线一定正确，却提醒我们：判断智能不能只看训练规模，还要看系统能否在环境中感知、行动、纠错并承担后果。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-002/deck.json" slides="16" title="一只乌鸦的启示" />
+<!-- ai-course-inline-media:end -->
 
 ## 动手实践
 
@@ -86,8 +91,6 @@ deck_revision: '56d4c0a9cd56ecf1374b5ae67eab939d6528cc2b6510cb78c33d41a8f04af77d
 - 乌鸦的例子和大模型的"大数据大算力"路线，各自的优势是什么？
 
 ## 资料与延伸
-
-- **主课件：**《1-人工智能发展概述》精选 21 页，覆盖发展阶段、关键转折与未来议题。
 - [英国议会《AI in the UK》历史章节](https://publications.parliament.uk/pa/ld201719/ldselect/ldai/100/10005.htm)：用于核对达特茅斯起点、专家系统与两次 AI 寒冬；历史低谷不能简单归因于一次报告或单一事件。（核对日期：2026-07-12）
 - [AlexNet 原论文](https://papers.neurips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html)：理解数据、GPU 与深层卷积网络共同推动的视觉转折。（核对日期：2026-07-12）
 - [Attention Is All You Need](https://papers.nips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html)：Transformer 原论文；证据来自机器翻译任务，不能直接外推为大模型全部能力。（核对日期：2026-07-12）

@@ -74,6 +74,7 @@
     {
       "lesson_slide": 1,
       "source_page": 3,
+      "text": "人形机器人的行走控制 人形机器人的行走控制是其最基本的技能之一。",
       "image": {
         "width": 1600,
         "height": 901,
@@ -94,6 +95,7 @@
     {
       "lesson_slide": 2,
       "source_page": 4,
+      "text": "人形机器人的行走控制 右脚着地 右脚离地 支撑相 摆动相 步行周期 (Gait Cycle) ：是指完成一个完整步行过程所需要的时间。 正常步态：分为支撑相（ Stance phase ）和摆动相（ Swing phase ）",
       "image": {
         "width": 1600,
         "height": 901,
@@ -114,6 +116,7 @@
     {
       "lesson_slide": 3,
       "source_page": 5,
+      "text": "人形机器人的行走控制 目前，生成双足机器人步态的主要方法可归为三类 ： 1） 基于人体运动捕捉数据的步态规划 （ 人类数据 ） 2）基于力学简化模型的步态规划（model-based） 3）基于智能算法的步态规划（learning-based）。",
       "image": {
         "width": 1600,
         "height": 901,
@@ -134,6 +137,7 @@
     {
       "lesson_slide": 4,
       "source_page": 6,
+      "text": "人形机器人的行走控制 目前，生成双足机器人步态的主要方法可归为三类： 1） 基于人体运动捕捉数据的步态规划 （人类数据） ； 2）基于力学简化模型的步态规划（model-based）； 3）基于智能算法的步态规划（learning-based）。 4d humans CVPR 2025 Georgios Pavlakos https://geopavlakos.github.io/",
       "image": {
         "width": 1600,
         "height": 901,
@@ -197,6 +201,7 @@
     {
       "lesson_slide": 5,
       "source_page": 7,
+      "text": "人形机器人的行走控制： 倒立摆（LIP）+ 零力矩点（ZMP）模型 目前，生成双足机器人步态的主要方法可归为三类： 1）基于人体运动捕捉数据的步态规划 （人类数据）； 2） 基于力学简化模型的步态规划（model-based） ； 3）基于智能算法的步态规划（learning-based）。 支撑腿切换瞬时的状态",
       "image": {
         "width": 1600,
         "height": 901,
@@ -217,6 +222,7 @@
     {
       "lesson_slide": 6,
       "source_page": 8,
+      "text": "人形机器人的行走控制： 倒立摆（LIP）+ 零力矩点（ZMP）模型 目前，生成双足机器人步态的主要方法可归为三类： 1）基于人体运动捕捉数据的步态规划 （人类数据）； 2） 基于力学简化模型的步态规划（model-based） ； 3）基于智能算法的步态规划（learning-based）。 前进一步的步态模式，支撑腿交换两次 步态下的重心位置和速度",
       "image": {
         "width": 1600,
         "height": 901,
@@ -237,6 +243,7 @@
     {
       "lesson_slide": 7,
       "source_page": 9,
+      "text": "人形机器人的行走控制： 倒立摆（LIP）+ 零力矩点（ZMP）模型 目前，生成双足机器人步态的主要方法可归为三类： 1）基于人体运动捕捉数据的步态规划 （人类数据）； 2） 基于力学简化模型的步态规划（model-based） ； 3）基于智能算法的步态规划（learning-based）。 用来表示双足行走机器人的三维倒立摆。支点可以通过球形关节自由旋转，并能产生腿部踢力 f 三维线性倒立摆在平面上的前进步态模式， 从静止状态向前步行3步后停止",
       "image": {
         "width": 1600,
         "height": 901,
@@ -257,6 +264,7 @@
     {
       "lesson_slide": 8,
       "source_page": 10,
+      "text": "人形机器人的行走控制： 倒立摆（LIP）+ 零力矩点（ZMP）模型 目前，生成双足机器人步态的主要方法可归为三类： 1）基于人体运动捕捉数据的步态规划 （人类数据）； 2） 基于力学简化模型的步态规划（model-based） ； 3）基于智能算法的步态规划（learning-based）。 零力矩点 （Zero-MomentPoint，ZMP）是指在机器人行走过程中，地面反作用力的作用点，使得在该点处机器人所受到的地面反作用力的合力矩为零。 重心、ZMP、支撑多边形的位置关系",
       "image": {
         "width": 1600,
         "height": 901,
@@ -277,6 +285,7 @@
     {
       "lesson_slide": 9,
       "source_page": 11,
+      "text": "人形机器人的行走控制： 倒立摆（LIP）+ 零力矩点（ZMP）模型 目前，生成双足机器人步态的主要方法可归为三类： 1）基于人体运动捕捉数据的步态规划 （人类数据）； 2） 基于力学简化模型的步态规划（model-based） ； 3）基于智能算法的步态规划（learning-based）。 控制器 ZMP方程 Pref ZMP 参考轨迹 + - u P x,y CoM ZMP",
       "image": {
         "width": 1600,
         "height": 901,
@@ -330,6 +339,7 @@
     {
       "lesson_slide": 10,
       "source_page": 12,
+      "text": "人形机器人的行走控制：步态规划的步骤总结 (1) 步态参数设定 步长：根据行走速度和稳定性需求确定。 步频：高频步态可提高速度，但可能降低稳定性。 足端轨迹：通常采用多项式或样条曲线规划摆动腿的轨迹，避免碰撞并减小冲击。 (2) 质心轨迹生成 CoM轨迹规划：基于LIPM或ZMP约束，生成质心的水平运动轨迹（如正弦曲线或优化轨迹）。 高度调整：在上下坡或不平地面时，需动态调整质心高度。 (3) 落脚点调整 基于环境的调整：通过传感器（IMU、视觉、力觉）检测地形，实时修正落脚点位置。 扰动恢复：若检测到失衡，通过调整步长或迈步频率恢复平衡（如捕获步策略）。 (4) 关节运动控制 逆运动学求解：将足端和质心的轨迹映射到各关节角度。 力控与柔顺性：通过阻抗控制或力/位混合控制，实现柔顺触地。",
       "image": {
         "width": 1600,
         "height": 901,
@@ -350,6 +360,7 @@
     {
       "lesson_slide": 11,
       "source_page": 16,
+      "text": "什么是强化学习 强化学习 技术在围棋、游戏、大模型、自动驾驶、机器人控制等领域取得了成功。 围棋 游戏 自动驾驶",
       "image": {
         "width": 1600,
         "height": 901,
@@ -370,6 +381,7 @@
     {
       "lesson_slide": 12,
       "source_page": 17,
+      "text": "什么是强化学习 强化学习 （Reinforcement Learning）受人类学习行为的启发——从交互中学习。 动作 action 状态state 奖赏reward 智能体 Agent 环境 Environment 智能体 （Agent）与 环境 （Environment）进行交互。 智能体可以观察环境的状态，然后根据当前的状态选择一个 动作 （Action）来执行。 执行动作后，环境会给智能体一个 奖励 或者 惩罚 （Reward），以反馈这个动作的好坏。 智能体的目标是通过不断尝试不同的动作， 最大化累计奖赏 （Return），学会选择最优的 策略 （Policy）。",
       "image": {
         "width": 1600,
         "height": 901,
@@ -390,6 +402,7 @@
     {
       "lesson_slide": 13,
       "source_page": 18,
+      "text": "强化学习的基础概念 动作 action 状态state 奖赏reward 智能体 Agent 环境 Environment 智能体 Agent： 决策者，如自动驾驶汽车的控制系统。 环境 Environment： 智能体交互的外部世界，如道路和交通状况。 状态 State： 环境当前的信息，如汽车的位置、速度。 动作 Action： 智能体的选择，如加速、刹车。 奖赏 Reward： 环境对动作的反馈，如安全行驶得 + 1 分，碰撞得 - 10 分。 策略 Policy： 智能体根据状态选择动作的规则，比如 “看到红灯就刹车”。",
       "image": {
         "width": 1600,
         "height": 901,
@@ -410,6 +423,7 @@
     {
       "lesson_slide": 14,
       "source_page": 19,
+      "text": "强化学习的基础概念——奖赏 动作 action 状态state 奖赏reward 智能体 Agent 环境 Environment 奖赏（Reward） 是由环境给出的一种反馈信号，显示智能体在某一步采取某个策略的表现如何。 强化学习的目的，就是最大化智能体可以获得的 累计奖赏（Rerurn） 。 其中， 是一轮学习过程的立即奖赏值序列 为折扣因子（ Discount Factor ），在0~1范围内取值，用来调整未来奖赏在当前的重要程度",
       "image": {
         "width": 1600,
         "height": 901,
@@ -430,6 +444,7 @@
     {
       "lesson_slide": 15,
       "source_page": 20,
+      "text": "强化学习的基础概念——策略、价值函数 动作 action 状态state 奖赏reward 智能体 Agent 环境 Environment 策略（Policy） 表达了智能体会如何采取下一步的动作。 策略的本质是从状态 到动作的映射，可以表示为 。 强化学习最终目标就是获得最优的策略。当智能体依此策略行事时，能够获得最高的累计奖赏。 价值函数（Value Function） 是对未来奖赏的预测，可以用来评估状态的好坏。即智能体进入某个状态后，可以对后面的奖赏带来多大的影响。值函数值越大，说明智能体进入这个状态越有利。 状态值函数 状态动作值函数 = = =",
       "image": {
         "width": 1600,
         "height": 901,
@@ -450,6 +465,7 @@
     {
       "lesson_slide": 16,
       "source_page": 21,
+      "text": "强化学习的分类体系 一、按策略更新性质分类 On-Policy （同策略） 特点：使用当前策略生成的数据更新策略本身。 优势：数据一致性好，理论收敛性好 劣势：采样率低（数据不能复用） 代表算法： SARSA 、 PPO 、 TRPO Off-Policy （异策略） 特点：使用历史策略（如经验回放池）的数据更新当前策略。 优势：数据复用率高，适合高成本交互场景。 劣势：需处理重要性采样（ Importance Sampling ）偏差。 代表算法： Q-Learning / DQN 、 DDPG 、 SAC",
       "image": {
         "width": 1600,
         "height": 901,
@@ -470,6 +486,7 @@
     {
       "lesson_slide": 17,
       "source_page": 22,
+      "text": "强化学习的分类体系 二、按策略优化方式分类 基于价值（ Value-Based ） 核心思想：通过优化价值函数（如 Q 值、 V 值）间接推导策略。 特点： 策略是隐式的（如贪婪策略： 适用于离散动作空间。 代表算法： Q-Learning DQN （ Deep Q-Network ） SARSA （ On-Policy 版 Q-Learning ） DQN",
       "image": {
         "width": 1600,
         "height": 901,
@@ -490,6 +507,7 @@
     {
       "lesson_slide": 18,
       "source_page": 23,
+      "text": "强化学习算法——Q-learning 算法 Q-learning 会为环境中的所有状态 或者状态动作对 给出其价值。 Q-learning 通过建立一个Q表来查询每个状态所对应的最好的动作。 Q-learning 是一种典型的 基于价值估计（Value-based） 的强化学习算法。",
       "image": {
         "width": 1600,
         "height": 901,
@@ -510,6 +528,7 @@
     {
       "lesson_slide": 19,
       "source_page": 24,
+      "text": "强化学习算法——Q-learning 算法 Q-learning 算法 初始化 Q 表 Q(s, a) 为 0，其中 s 是状态，a 是动作 设置学习率 α（通常在 0 到 1 之间） 设置折扣因子 γ（通常在 0 到 1 之间） 设置探索率 ε（通常在 0 到 1 之间） 对于每个训练回合： 初始化状态 s 当 s 不是终止状态时： 以概率 ε 选择一个随机动作 a（ 探索 ） 否则，选择 Q(s, a) 值最大的动作 a （ 利用 ） 执行动作 a，观察下一个状态 s' 和奖励 r 更新 Q 表： 更新当前状态 s = s'",
       "image": {
         "width": 1600,
         "height": 901,
@@ -530,6 +549,7 @@
     {
       "lesson_slide": 20,
       "source_page": 25,
+      "text": "深度强化学习算法——DQN 算法 当状态空间很大时，如有上百万个状态时，Q-learning中所需的Q表会很大，建立表格和更新表格就很低效。 DQN （Deep Q Network，深度 Q 网络）算法用 深度神经网络 代替了 Q-learning 中的 Q 表来计算每个状态中每个动作的 近似Q值 。 DQN 是一种融合了深度神经网络和 Q-learning 的算法，也是一种典型的 基于价值估计 的深度强化学习算法。",
       "image": {
         "width": 1600,
         "height": 901,
@@ -550,6 +570,7 @@
     {
       "lesson_slide": 21,
       "source_page": 31,
+      "text": "强化学习的分类体系 二、按策略优化方式分类 演员 - 评论家（ Actor-Critic ） 核心思想：结合价值函数（ Critic ）和策略函数（ Actor ），兼具两类优点。 特点： Critic 减少策略梯度的方差 Actor 直接优化策略。 代表算法： A2C/A3C （ Advantage Actor-Critic ） SAC （ Soft Actor-Critic ） DDPG （ Deep Deterministic Policy Gradient ） PPO Critic ：根据当前state，预测执行一个action之后的reward值 Actor ：根据当前state，生成下一个action",
       "image": {
         "width": 1600,
         "height": 901,
@@ -570,6 +591,7 @@
     {
       "lesson_slide": 22,
       "source_page": 32,
+      "text": "深度强化学习算法——PPO算法 PPO （Proximal Policy Optimization），由 OpenAI 在 2017 年提出的强化学习算法。 TRPO ： 使用泰勒展开近似、共轭梯度、线性搜索等方法直接求解， 求解约束优化问题的困难",
       "image": {
         "width": 1600,
         "height": 901,
@@ -590,6 +612,7 @@
     {
       "lesson_slide": 23,
       "source_page": 33,
+      "text": "深度强化学习算法——PPO算法 PPO 的核心是限制策略更新的幅度，避免策略在一次更新中发生过大的变化。 取最小值，确保始终选择更保守的估计，防止过度优化 裁剪操作，防止策略变化过大",
       "image": {
         "width": 1600,
         "height": 901,
@@ -610,6 +633,7 @@
     {
       "lesson_slide": 24,
       "source_page": 34,
+      "text": "深度强化学习算法——PPO算法 PPO改进： 目标函数设计： 优势函数估计：",
       "image": {
         "width": 1600,
         "height": 901,
@@ -630,6 +654,7 @@
     {
       "lesson_slide": 25,
       "source_page": 35,
+      "text": "深度强化学习算法——PPO算法 https://spinningup.openai.com/en/latest/algorithms/ppo.html",
       "image": {
         "width": 1600,
         "height": 901,
@@ -650,6 +675,7 @@
     {
       "lesson_slide": 26,
       "source_page": 39,
+      "text": "基于强化学习的行走控制工作流 Train : 在 Isaac Gym 模拟器中让 G1 与环境进行交互，并找到一种能使奖励最大化的策略，默认为 PPO 强化学习算法 。 Play : 使用 “Play” 命令来验证已训练的策略，并确保其符合预期 。 Sim2Sim : 将 Gym 中训练的策略部署到其他模拟器中，例如Mujoco 。 Sim2Real : 将训练好的策略（Policy / Actor）部署到一台实体机器人上，以实现运动控制 。 参考资料：宇树开源 https://github.com/unitreerobotics/unitree_rl_gym Train & Play in Isaac Gym Sim2Sim in Mujoco Sim2Real in Real Robot",
       "image": {
         "width": 1600,
         "height": 901,
@@ -670,6 +696,7 @@
     {
       "lesson_slide": 27,
       "source_page": 40,
+      "text": "仿真环境代码结构 unitree_rl_gym deploy doc legged_gym resources deploy_ mujoco deploy_ real pre_train envs scripts utils robots g1_ description G1 模型文件，URDF等 base g1 base_config.py base_task.py legged_robot.py legged_robot_config.py g1_config.py g1_env.py train.py play.py task_registry.py terrain.py 训练入口 推理入口 训练/推理注册，主要是对于参数的读取(参数来自于envs下的脚本)和设置等 设置训练地形 参数的初始化，训练环境的设置等 Legged_Robot类 仿真训练参数 训练机器人的强化学习方法 说明文档 机器人模型文件 存放训好的 模型部署脚本 项目地址：https://github.com/unitreerobotics/unitree_rl_gym 机器人环境注册 环境、地形、指令、奖励函数设置 helper.py deploy_mujoco.py configs 将训练好后的强化学习模型在mujico仿真环境中进行部署的脚本 存放针对 G1 机器人的部署参数 deploy_real.py config.py common 将训练好后的强化学习模型在实物中进行部署的脚本 读取配置参数文件的脚本 存放实物部署过程中的通用脚本，包括指令、远程遥控、旋转变化等脚本 存放针对G1机器人的实物部署相关配置，包括强化训练模型目录，PD参数等 configs 存放待实机部署的强化训练模型",
       "image": {
         "width": 1600,
         "height": 901,
@@ -690,6 +717,7 @@
     {
       "lesson_slide": 28,
       "source_page": 41,
+      "text": "train.py 是强化学习训练代码运行的入口 Unitree RL Gym 开源项目 参考资料：https://github.com/unitreerobotics/unitree_rl_gym/blob/main/README_zh.md python legged_gym/scripts/train.py --task=g1",
       "image": {
         "width": 1600,
         "height": 901,
@@ -710,6 +738,7 @@
     {
       "lesson_slide": 29,
       "source_page": 62,
+      "text": "强化学习模型训练与验证框架 图形渲染",
       "image": {
         "width": 1600,
         "height": 901,
@@ -730,6 +759,7 @@
     {
       "lesson_slide": 30,
       "source_page": 63,
+      "text": "训练效果演示验证 如果想要在 Gym 中查看训练效果，可以运行以下命令 ： 说明 ： Play 启动参数与 Train 相同 。 默认加载实验文件夹上次运行的最后一个模型 。 可通过 load_run 和 checkpoint 指定其他模型 。 导出网络 ： Play 会导出 Actor 网络，保存于 logs/{ experiment_name }/exported/policies 中： 普通网络（MLP）导出为 policy_1.pt RNN 网络，导出为 policy_lstm_1.pt",
       "image": {
         "width": 1600,
         "height": 901,
@@ -783,6 +813,7 @@
     {
       "lesson_slide": 31,
       "source_page": 64,
+      "text": "仿真迁移 Sim2Sim 切换Mujoco虚拟环境，验证强化学习的训练结果，证明其泛化性 在 Mujoco 仿真器中运行 Sim2Sim： 参数说明 : config_name : 配置文件，默认查询路径为 deploy/ deploy_mujoco /configs/ 示例：运行 G1 替换网络模型 ： 默认模型位于 deploy/ pre_train /{robot}/motion.pt； 自己训练模型保存于logs /g1/exported/policies/policy_lstm_1.pt，只需替换 yaml 配置文件中 policy_path 。",
       "image": {
         "width": 1600,
         "height": 901,
@@ -836,6 +867,7 @@
     {
       "lesson_slide": 32,
       "source_page": 69,
+      "text": "部署到现实环境中，验证实际效果 1. 启动机器人 将机器人在吊装状态下启动，并等待机器人进入 零力矩模式 2. 进入调试模式 确保机器人处于 零力矩模式 的情况下，按下遥控器的 L2+R2组合键；此时机器人会进入调试模式, 调试模式下机器人关节处于阻尼状态 。 3. 连接机器人 使用网线连接自己的电脑和机器人上的网口 。 4. 启动程序",
       "image": {
         "width": 1600,
         "height": 901,
@@ -856,6 +888,7 @@
     {
       "lesson_slide": 33,
       "source_page": 70,
+      "text": "仿真环境代码结构 unitree_rl_gym deploy doc legged_gym resources deploy_ mujoco deploy_ real pre_train envs scripts utils robots g1_ description G1 模型文件，URDF等 base g1 base_config.py base_task.py legged_robot.py legged_robot_config.py g1_config.py g1_env.py train.py play.py task_registry.py terrain.py 训练入口 推理入口 训练/推理注册，主要是对于参数的读取(参数来自于envs下的脚本)和设置等 设置训练地形 参数的初始化，训练环境的设置等 Legged_Robot类 仿真训练参数 训练机器人的强化学习方法 说明文档 机器人模型文件 存放训好的 模型部署脚本 项目地址：https://github.com/unitreerobotics/unitree_rl_gym 机器人环境注册 环境、地形、指令、奖励函数设置 helper.py deploy_mujoco.py configs 将训练好后的强化学习模型在mujico仿真环境中进行部署的脚本 存放针对 G1 机器人的部署参数 deploy_real.py config.py common 将训练好后的强化学习模型在实物中进行部署的脚本 读取配置参数文件的脚本 存放实物部署过程中的通用脚本，包括指令、远程遥控、旋转变化等脚本 存放针对G1机器人的实物部署相关配置，包括强化训练模型目录，PD参数等 configs 存放待实机部署的强化训练模型",
       "image": {
         "width": 1600,
         "height": 901,
@@ -876,6 +909,7 @@
     {
       "lesson_slide": 34,
       "source_page": 71,
+      "text": "强化模型实机部署 参考资料：https://blog.csdn.net/Guanhj_BIT_1995/article/details/145732591 deploy 部署脚本代码调用的基本逻辑 强化学习模型部署的入口 config.py功能是读取yaml文件中的部署参数为deploy_real.py所用 提供了一些典型的电机控制模式 实现对接收远程遥控消息的定义 transform_imu_data 函数是将躯干部分 IMU 信息转移到骨盆处 get_gravity_orientation函数计算重力在机器人坐标系下的三个方向的分量 用于仿真到实物的迁移",
       "image": {
         "width": 1600,
         "height": 901,
@@ -896,6 +930,7 @@
     {
       "lesson_slide": 35,
       "source_page": 72,
+      "text": "强化模型实机部署 参考资料：https://blog.csdn.net/Guanhj_BIT_1995/article/details/145732591 config.py完成对上述参数的配置",
       "image": {
         "width": 1600,
         "height": 901,
@@ -916,6 +951,7 @@
     {
       "lesson_slide": 36,
       "source_page": 73,
+      "text": "部署到现实环境中，验证实际效果",
       "image": {
         "width": 1600,
         "height": 901,

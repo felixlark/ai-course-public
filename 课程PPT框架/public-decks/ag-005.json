@@ -20,7 +20,7 @@
   "pptx_asset": "/course-assets/course-pptx/ag-005.pptx",
   "source_materials": {
     "manifest": "/course-assets/source-media/ag-005/deck.json",
-    "label": "原课件"
+    "label": "幻灯片"
   },
   "slides": [
     {
@@ -269,8 +269,8 @@
           "url": "https://arxiv.org/abs/2308.03688"
         }
       ],
-      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
+      "note": "课程正文与幻灯片共享同一知识主线，图片和视频用于帮助理解本节概念与案例。"
     }
   ],
-  "spec_sha256": "8ca5ae9906d879cacc42190c13bb0b54cec6506285ab1813a13f04c9fe00a7ce"
+  "spec_sha256": "bd2b2d1847543b9ebc99de691eeaa3f8a16db2db3af07c7055ff8b7aee152d8a"
 }

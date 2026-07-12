@@ -18,7 +18,7 @@ const expectedModules = [
 ]
 const expectedLessonCount = 27
 const expectedLessonHeadings = [
-  '学习目标', 'Web PPT', '原课件图片与视频', '本节导入', '核心内容',
+  '学习目标', '本节导入', '核心内容',
   '案例与图解', '动手实践', '课后复盘', '资料与延伸'
 ]
 const failures = []
@@ -70,14 +70,9 @@ const lessonRoute = (module, lesson) =>
 const lessonFile = (module, lesson) =>
   path.join(zhDir, module.id, `${lesson.id.toLowerCase()}-${lesson.slug}`, 'index.md')
 
-const lessonDeckManifests = (text) =>
-  [...text.matchAll(/<LessonDeck\b[^>]*\bmanifest\s*=\s*(["'])([^"']+)\1[^>]*\/?\s*>/g)].map(
-    (match) => match[2]
-  )
-
-const sourceMaterialManifests = (text) =>
-  [...text.matchAll(/<SourceMaterialGallery\b[^>]*\bmanifest\s*=\s*(["'])([^"']+)\1[^>]*\/?\s*>/g)].map(
-    (match) => match[2]
+const courseMediaRefs = (text) =>
+  [...text.matchAll(/<CourseMedia\b[^>]*\bmanifest\s*=\s*(["'])([^"']+)\1[^>]*\bslides\s*=\s*(["'])([^"']+)\3[^>]*\/?\s*>/g)].map(
+    (match) => ({ manifest: match[2], slides: match[4].split(',').map((value) => Number.parseInt(value, 10)) })
   )
 
 const stripUrlDecorations = (value) => value.split(/[?#]/, 1)[0]
@@ -230,17 +225,13 @@ for (const { module, lesson } of lessons) {
     }
   }
 
-  const manifestRefs = lessonDeckManifests(text)
-  if (manifestRefs.length !== 1) {
-    failures.push(`${lesson.id}: expected exactly one LessonDeck, found ${manifestRefs.length}`)
-  } else if (manifestRefs[0] !== manifestUrl) {
-    failures.push(`${lesson.id}: LessonDeck manifest ${manifestRefs[0]} != ${manifestUrl}`)
+  if (/<LessonDeck\b|<SourceMaterialGallery\b|^##\s+(?:Web PPT|原课件图片与视频)\s*$/mu.test(text)) {
+    failures.push(`${lesson.id}: production-facing slide or media block remains in the article`)
   }
-  const sourceManifestRefs = sourceMaterialManifests(text)
-  if (sourceManifestRefs.length !== 1) {
-    failures.push(`${lesson.id}: expected exactly one SourceMaterialGallery, found ${sourceManifestRefs.length}`)
-  } else if (sourceManifestRefs[0] !== sourceMediaManifestUrl) {
-    failures.push(`${lesson.id}: SourceMaterialGallery manifest ${sourceManifestRefs[0]} != ${sourceMediaManifestUrl}`)
+  const inlineMedia = courseMediaRefs(text)
+  if (!inlineMedia.length) failures.push(`${lesson.id}: article does not embed CourseMedia beside the lesson content`)
+  if (inlineMedia.some((item) => item.manifest !== sourceMediaManifestUrl)) {
+    failures.push(`${lesson.id}: CourseMedia must use ${sourceMediaManifestUrl}`)
   }
   const lessonHeadings = [...text.matchAll(/^##\s+(.+?)\s*$/gm)].map((match) => match[1])
   if (JSON.stringify(lessonHeadings) !== JSON.stringify(expectedLessonHeadings)) {
@@ -251,8 +242,8 @@ for (const { module, lesson } of lessons) {
   for (const legacy of ['sample-2026', '/zh-cn/materials/', '<WebDeck', '<PageSlidesButton']) {
     if (text.includes(legacy)) failures.push(`${lesson.id}: legacy course reference remains: ${legacy}`)
   }
-  if (/<(?:img|video|source)\b|withBase\(|\/course-assets\/lessons\//i.test(text)) {
-    failures.push(`${lesson.id}: public lesson still embeds a direct image or video asset`)
+  if (/<SourceMaterialGallery\b|\/course-assets\/lessons\//i.test(text)) {
+    failures.push(`${lesson.id}: public lesson still uses a detached or legacy media path`)
   }
 
   const assetRefs = [
@@ -273,6 +264,18 @@ for (const { module, lesson } of lessons) {
   }
   if (!(await exists(sourceMediaManifestFile))) {
     failures.push(`${lesson.id}: missing source-media manifest ${sourceMediaManifestUrl}`)
+  }
+  const sourceManifest = await readJson(sourceMediaManifestFile, `${lesson.id} source-media manifest`)
+  if (sourceManifest) {
+    const positions = inlineMedia.flatMap((item) => item.slides)
+    const expectedPositions = (sourceManifest.slides || []).map((_, index) => index + 1)
+    const sortedPositions = [...positions].sort((a, b) => a - b)
+    if (JSON.stringify(sortedPositions) !== JSON.stringify(expectedPositions)) {
+      failures.push(`${lesson.id}: inline media positions do not cover every course visual exactly once`)
+    }
+    if ((sourceManifest.slides || []).some((slide) => typeof slide.text !== 'string')) {
+      failures.push(`${lesson.id}: source-media manifest is missing learner mapping text`)
+    }
   }
   const manifest = await readJson(manifestFile, `${lesson.id} deck manifest`)
   if (!manifest) continue
@@ -319,5 +322,5 @@ if (failures.length) {
 }
 
 console.log(
-  `Verified ${catalog.modules.length} modules, ${lessons.length} lesson routes, dual-mode LessonDeck manifests, source-media galleries, and public page assets.`
+  `Verified ${catalog.modules.length} modules, ${lessons.length} learner-facing lesson routes, page-level slide manifests, complete inline course media, and public assets.`
 )

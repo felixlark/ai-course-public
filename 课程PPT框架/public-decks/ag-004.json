@@ -20,7 +20,7 @@
   "pptx_asset": "/course-assets/course-pptx/ag-004.pptx",
   "source_materials": {
     "manifest": "/course-assets/source-media/ag-004/deck.json",
-    "label": "原课件"
+    "label": "幻灯片"
   },
   "slides": [
     {
@@ -234,8 +234,8 @@
           "url": "https://html.spec.whatwg.org/"
         }
       ],
-      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
+      "note": "课程正文与幻灯片共享同一知识主线，图片和视频用于帮助理解本节概念与案例。"
     }
   ],
-  "spec_sha256": "a8f4b236772c62f43c0912091a608a00a74498c5f4c537ea58b35616f9563809"
+  "spec_sha256": "c8ca7a4b7fa26452119e2931b93792a8135db9d718c6248136068dd0f1adbf8e"
 }

@@ -6,7 +6,7 @@ module: '行业应用'
 deck_manifest: '/course-assets/course-decks/in-001/deck.json'
 source_media_manifest: '/course-assets/source-media/in-001/deck.json'
 authored: true
-deck_revision: 'ee2d3b42f1130a069d6fbd13c76efb4117ba50e1f5dd62c5aa809f56f8f9d0d8'
+deck_revision: '14488574f3084fb5af8af0ccf31a48b9101fba092b3f03084b96b41294a15152'
 ---
 
 <div class="lesson-hero">
@@ -22,17 +22,6 @@ deck_revision: 'ee2d3b42f1130a069d6fbd13c76efb4117ba50e1f5dd62c5aa809f56f8f9d0d8
 - 建立现状基线，区分直接收益、间接收益、一次性投入、持续成本与风险成本。
 - 设计小范围试点，用对照、抽样复核和敏感性分析计算 ROI 区间。
 - 在试点开始前写明推广门槛、停止条件与人工回退路径。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/in-001/deck.json" title="行业 AI 落地方法与 ROI" />
-
-<!-- ai-course-source-materials:start -->
-## 原课件图片与视频
-
-<SourceMaterialGallery manifest="/course-assets/source-media/in-001/deck.json" title="行业 AI 落地方法与 ROI原课件素材" />
-<!-- ai-course-source-materials:end -->
-
 ## 本节导入
 
 行业 AI 项目最容易出现的误区，是先购买模型或平台，再四处寻找它能解决的问题。演示中的回答流畅、图片漂亮，并不等于真实流程更快、更准或更安全。落地判断必须回到一个朴素问题：在明确的业务边界内，AI 能否以可接受的成本持续改善结果，并且错误能够被发现、纠正和追责？
@@ -47,17 +36,29 @@ deck_revision: 'ee2d3b42f1130a069d6fbd13c76efb4117ba50e1f5dd62c5aa809f56f8f9d0d8
 
 优先试点的任务通常高频、边界稳定、结果可检查、数据可合法取得，而且失败后可以回到原流程。若资料权属不清、输出无法验证、错误会直接影响人身安全或重要权益，就应先补治理条件，而不是用更强的模型掩盖问题。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/in-001/deck.json" slides="1,2,4,7,9,11,12,15" title="一、把场景写成可评测任务" />
+<!-- ai-course-inline-media:end -->
+
 ### 二、先测基线，再讨论提升
 
 基线是没有 AI 时的真实表现。至少记录任务量、平均处理时长、等待时长、一次通过率、返工率、严重错误、人员成本和用户反馈。采样要覆盖繁忙期、低频异常和不同熟练度人员，不能只挑最容易的样本。
 
 质量指标应连接业务后果。知识问答不仅看答案是否通顺，还要看引用是否支持结论、规则版本是否有效、应转人工的问题是否被正确转交。内容生成不仅看数量，还要看事实错误、品牌一致性、授权状态和修改成本。一个指标改善而另一个关键指标恶化，不能直接宣布成功。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/in-001/deck.json" slides="3,8,10" title="二、先测基线，再讨论提升" />
+<!-- ai-course-inline-media:end -->
+
 ### 三、把方案设计成人机闭环
 
 稳定流程通常包含资料检索、草稿生成、规则校验、人工审批、正式交付和事后反馈。每一步都要回答三个问题：模型看得到什么，模型能做什么，谁对结果负责。低置信度、资料冲突、敏感内容和异常输入应有确定的转交规则，不能让模型自行猜测。
 
 试点阶段宜采用“影子运行”或“双轨对照”：AI 先给建议但不直接改变业务结果，与原流程并行比较。通过抽样复核记录错误类型，而不是只统计平均分。上线后仍要保存输入版本、引用、模型版本、审核人与最终输出，便于发现漂移和复盘事故。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/in-001/deck.json" slides="6" title="三、把方案设计成人机闭环" />
+<!-- ai-course-inline-media:end -->
 
 ### 四、用完整成本计算 ROI
 
@@ -71,11 +72,19 @@ deck_revision: 'ee2d3b42f1130a069d6fbd13c76efb4117ba50e1f5dd62c5aa809f56f8f9d0d8
 
 结果应给区间，并分别改变任务量、自动完成率、审核时长和错误成本，观察结论是否稳健。如果只在最乐观假设下为正，项目还不具备推广依据。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/in-001/deck.json" slides="5,13,14" title="四、用完整成本计算 ROI" />
+<!-- ai-course-inline-media:end -->
+
 ### 五、一个可计算的假设示例
 
 以下数字仅用于演示算法，不代表任何企业的实际表现。假设某团队每月处理 10,000 个低风险文本任务，人工平均每项 12 分钟，含管理与福利的小时成本假设为 90 元，则现状人工成本为 18 万元。试点假设 AI 可为 60% 的任务生成可用草稿，每项仍需 3 分钟复核；其余 40% 保持 12 分钟人工处理。这样，复核和人工处理合计约 1,100 小时，对应 9.9 万元，毛节省约 8.1 万元。
 
 再假设每月模型与运维为 2 万至 3.5 万元，集成分摊为 1.5 万至 2.5 万元，质量抽检与风险准备为 0.8 万至 1.5 万元。月度增量投入为 4.3 万至 7.5 万元，净收益区间约为 0.6 万至 3.8 万元，对应的示例 ROI 约为 8% 至 88%。这个跨度说明，审核时间和持续运维一旦估错，结论会显著变化。团队应以真实试点数据替换每个假设，并同时检查质量是否至少不低于基线。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/in-001/deck.json" slides="16" title="五、一个可计算的假设示例" />
+<!-- ai-course-inline-media:end -->
 
 ### 六、推广门槛与停止条件
 
@@ -115,8 +124,6 @@ deck_revision: 'ee2d3b42f1130a069d6fbd13c76efb4117ba50e1f5dd62c5aa809f56f8f9d0d8
 - 当效率提高但关键错误增加时，应如何作出继续、缩小或停止的决定？
 
 ## 资料与延伸
-
-- 主课件：《6-AIGC 行业应用》。
 - [NIST：Artificial Intelligence Risk Management Framework（AI RMF 1.0）](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10)：面向组织的自愿性 AI 风险管理框架。
 - [ISO/IEC 42001:2023](https://www.iso.org/standard/42001)：人工智能管理体系要求；使用时应核对具体版本和适用范围。
 - 建议结合所在组织的财务核算、数据分级、信息安全、采购与审计制度，建立自己的指标字典。

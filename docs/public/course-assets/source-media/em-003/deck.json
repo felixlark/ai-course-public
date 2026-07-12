@@ -61,6 +61,7 @@
     {
       "lesson_slide": 1,
       "source_page": 2,
+      "text": "1. RealSence D435i 和 Mid360 简介 2. D435i 仿真模型加载与数据获取 3. Mid360 仿真模型加载与数据获取 4. D435i 实机初始化与数据获取 5 . Mid360 实机初始化数据获取",
       "image": {
         "width": 1600,
         "height": 900,
@@ -81,6 +82,7 @@
     {
       "lesson_slide": 2,
       "source_page": 3,
+      "text": "RealSense D435i 相机 D435i深度相机FOV （视场角） 侧视图",
       "image": {
         "width": 1600,
         "height": 900,
@@ -101,6 +103,7 @@
     {
       "lesson_slide": 3,
       "source_page": 4,
+      "text": "官方链接： https://www.intelrealsense.com/zh-hans/depth-camera-d435i/ Intel RealSense D435i 是英特尔公司推出的一款消费级深度相机，它的主要构成如下图。 测距范围： 0.2m-10m RealSense D435i 相机",
       "image": {
         "width": 1600,
         "height": 900,
@@ -121,6 +124,7 @@
     {
       "lesson_slide": 4,
       "source_page": 5,
+      "text": "主要包含： 一个红外发射器 ：投射 850nm 伪随机散斑图案，增强低纹理场景特征。 两个红外相机 ： 1280 × 720 分辨率， 50mm 基线距离，同步采集带散斑的左右图像。 一个RGB相机 ： 1080P 分辨率，与深度数据时空对齐，生成 RGB-D 点云。 一个IMU单元 ： 这也是D435i和D435的区别，i表示imu 工作原理（5 步流程） ： 红外纹理投射： 主动生成人工散斑图案，解决白墙、单色物体等低纹理场景的特征缺失问题。 双目图像采集 ： 左右相机因 50mm 基线产生视差，同一物体在两幅图像中位置不同（视差 = 像素位移差）。 立体匹配 ： 通过半全局匹配（ SGM ）等算法，寻找左右图像对应点，精度达亚像素级。 深度计算 ： 基于三角测距原理： 深度值 = ( 基线 × 焦距 ) / 视差 （视差越大，距离越近；基线 / 焦距固定时，视差决定深度） 数据融合与优化 ：时间同步（ IMU 与相机 μs 级时间戳对齐） + 空间对齐（ RGB 与深度图配准）；后处理滤波（边缘保留、时间一致性） + 空洞填充，输出稳定深度图。 RealSense D435i 相机",
       "image": {
         "width": 1600,
         "height": 900,
@@ -141,6 +145,7 @@
     {
       "lesson_slide": 5,
       "source_page": 6,
+      "text": "结构光 (Structured-light) 代表公司有奥比中光，苹果 (Prime Sense) ，微软 Kinect-1 ，英特尔 RealSense, Mantis Vision 等； 适用于室内机器人 SLAM ； (2) 双目视觉 (Stereo) 代表公司 Leap Motion ， ZED ， 大疆； 双目抗眩光，适用于自动驾驶； (3) 光飞行时间法 (ToF) 代表公司 微软 Kinect-2 ， PMD ， SoftKinect ， 联想 Phab ； 亚毫米精度，适用于工业精密检测。 目前市面上常见的深度相机方案主要有以下几种： 其他深度相机对比",
       "image": {
         "width": 1600,
         "height": 900,
@@ -161,6 +166,7 @@
     {
       "lesson_slide": 6,
       "source_page": 7,
+      "text": "结构光 (Structured-light) 代表公司有奥比中光，苹果 (Prime Sense) ，微软 Kinect-1 ，英特尔 RealSense, Mantis Vision 等； 适用于室内机器人 SLAM ； (2) 双目视觉 (Stereo) 代表公司 Leap Motion ， ZED ， 大疆； 双目抗眩光，适用于自动驾驶； (3) 光飞行时间法 (ToF) 代表公司 微软 Kinect-2 ， PMD ， SoftKinect ， 联想 Phab ； 亚毫米精度，适用于工业精密检测。 目前市面上常见的深度相机方案主要有以下几种： 深度相机仿真数据读取方法",
       "image": {
         "width": 1600,
         "height": 900,
@@ -181,6 +187,7 @@
     {
       "lesson_slide": 7,
       "source_page": 8,
+      "text": "激光传感器 :Livox mid360 G1 机器人雷达位于头部位置，雷达型号为 livox Mid-360 。 Livox Mid-360 是一款高性价比、安全可靠的激光探测测距仪传感器。",
       "image": {
         "width": 1600,
         "height": 900,
@@ -201,6 +208,7 @@
     {
       "lesson_slide": 8,
       "source_page": 9,
+      "text": "Mid360 坐标系定义 点 O 为原点， O-XYZ 为 Mid-360 的点云坐标系 。",
       "image": {
         "width": 1600,
         "height": 900,
@@ -221,6 +229,7 @@
     {
       "lesson_slide": 9,
       "source_page": 10,
+      "text": "1. RealSence D435i 和 Mid360 简介 2. D435i 仿真模型加载与数据获取 3. Mid360 仿真模型加载与数据获取 4. D435i 实机初始化与数据获取 5 . Mid360 实机初始化数据获取",
       "image": {
         "width": 1600,
         "height": 900,
@@ -241,6 +250,7 @@
     {
       "lesson_slide": 10,
       "source_page": 11,
+      "text": "D435i 模型加载和数据读取 D435i 深度相机模型加载及初始化",
       "image": {
         "width": 1600,
         "height": 900,
@@ -261,6 +271,7 @@
     {
       "lesson_slide": 11,
       "source_page": 12,
+      "text": "D435i 模型加载和数据读取 Rviz 中订阅深度相机话题及显示数据",
       "image": {
         "width": 1600,
         "height": 900,
@@ -281,6 +292,7 @@
     {
       "lesson_slide": 12,
       "source_page": 13,
+      "text": "仿真环境下的传感器加载和数据读取 使用代码订阅深度相机话题及读取数据",
       "image": {
         "width": 1600,
         "height": 900,
@@ -301,6 +313,7 @@
     {
       "lesson_slide": 13,
       "source_page": 14,
+      "text": "1. RealSence D435i 和 Mid360 简介 2. D435i 仿真模型加载与数据获取 3. Mid360 仿真模型加载与数据获取 4. D435i 实机初始化与数据获取 5 . Mid360 实机初始化数据获取",
       "image": {
         "width": 1600,
         "height": 900,
@@ -321,6 +334,7 @@
     {
       "lesson_slide": 14,
       "source_page": 15,
+      "text": "仿真环境下的传感器加载和数据读取 Mid360 模型加载及初始化",
       "image": {
         "width": 1600,
         "height": 900,
@@ -341,6 +355,7 @@
     {
       "lesson_slide": 15,
       "source_page": 16,
+      "text": "仿真环境下的传感器加载和数据读取 rviz 中订阅 Mid360 话题及显示数据",
       "image": {
         "width": 1600,
         "height": 900,
@@ -361,6 +376,7 @@
     {
       "lesson_slide": 16,
       "source_page": 17,
+      "text": "1. RealSence D435i 和 Mid360 简介 2. D435i 仿真模型加载与数据获取 3. Mid360 仿真模型加载与数据获取 4. D435i 实机初始化与数据获取 5 . Mid360 实机初始化数据获取",
       "image": {
         "width": 1600,
         "height": 900,
@@ -381,6 +397,7 @@
     {
       "lesson_slide": 17,
       "source_page": 18,
+      "text": "实机环境下的 D435i 加载和数据读取 通过 RealSense Viewer 上位机查看数据 在机器人的 NX 计算机平台上，我们已经安装了 librealsense ，可以直接使用。 硬件连接正常的情况下，终端输入 realsense -viewer 打开软件，可以查看到：",
       "image": {
         "width": 1600,
         "height": 900,
@@ -401,6 +418,7 @@
     {
       "lesson_slide": 18,
       "source_page": 19,
+      "text": "实机环境下的 D435i 加载和数据读取 通过 ros 获取数据 相机 ros 驱动代码仓库： https://github.com/IntelRealSense/realsense-ros 通过 SDK 获取数据 相机 SDK 代码仓库： https://github.com/IntelRealSense/librealsense 在机器人的 NX 计算机平台上，我们已经安装了 librealsense ，可以直接使用。",
       "image": {
         "width": 1600,
         "height": 900,
@@ -421,6 +439,7 @@
     {
       "lesson_slide": 19,
       "source_page": 20,
+      "text": "1. RealSence D435i 和 Mid360 简介 2. D435i 仿真模型加载与数据获取 3. Mid360 仿真模型加载与数据获取 4. D435i 实机初始化与数据获取 5. Mid360 实机初始化数据获取",
       "image": {
         "width": 1600,
         "height": 900,
@@ -441,6 +460,7 @@
     {
       "lesson_slide": 20,
       "source_page": 21,
+      "text": "实机环境下的 Mid360 加载和数据读取 雷达随机器人出厂的 ip 地址设置为 192.168.123.120 。 建议使用自己 PC 连接 G1 肩部网口配置雷达 IP 及相关参数，在开放主机中打开 Livox Viewer 2 查看雷达数据。",
       "image": {
         "width": 1600,
         "height": 900,
@@ -461,6 +481,7 @@
     {
       "lesson_slide": 21,
       "source_page": 22,
+      "text": "实机环境下的 Mid360 加载和数据读取 通过 Livox-SDK2 获取数据 代码例程参考 .../Livox-SDK2/samples 文件夹下的代码示例，注意修改 mid360_config.json 文件里 \" lidar_ip \" 为 192.168.123.120 、 \" host_ip \" 为开发主机 ip 。",
       "image": {
         "width": 1600,
         "height": 900,
@@ -481,6 +502,7 @@
     {
       "lesson_slide": 22,
       "source_page": 23,
+      "text": "实机环境下的 Mid360 加载和数据读取 通过 livox_ros_driver2 获取数据 针对 G1 机器人雷达，需要修改 .../livox_ros_driver2/config/MID360_config.json 文件内的 “ lidar_configs ” “ ip ” 为 “192.168.123.120” 、 “ host_net_info ” 下的 ip 为开发主机 ip 。",
       "image": {
         "width": 1600,
         "height": 900,
@@ -501,6 +523,7 @@
     {
       "lesson_slide": 23,
       "source_page": 24,
+      "text": "实机环境下的 Mid360 加载和数据读取 通过 livox_ros_driver2 获取数据 在 launch 文件内修改 user_config_path 参数为配置文件 MID360_config.json 的路径。 以 .../livox_ros_driver2/launch_ROS1 文件内容为例子。 若硬件连接正常，在 roslaunch livox_ros_driver2 msg_MID360.launch 后即可订阅到 / livox /lidar 、 / livox /imu 话题。",
       "image": {
         "width": 1600,
         "height": 900,

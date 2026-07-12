@@ -66,6 +66,7 @@
     {
       "lesson_slide": 1,
       "source_page": 2,
+      "text": "1.LLM 的工具使用 一 为什么大语言模型需要工具? 一 教学工具使用 一 工具调用工作流 一 模型上下文协议 2. LLM作为代理 一 什么是代理? 一 ReAct 范式 3. 用于 LLM 代理的代理绑定 工具 4. 评估大语言模型代 理 AI智能体原理及实现",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -86,6 +87,7 @@
     {
       "lesson_slide": 2,
       "source_page": 3,
+      "text": "经过后训练的大型语言模型能否直接使用这些任务? 示例任务：问答",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -106,6 +108,7 @@
     {
       "lesson_slide": 3,
       "source_page": 4,
+      "text": "人类是如何随着时间的推移发展到如今这般 境地的? 一个重要因素：工具的使用 → 长矛、犁、电力、计算机… … → 如今，我们拥有许多复杂的工具来帮助我们 解决问题，例如 计算器、 搜索引擎，.. . 使用工具支持大语言模型",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -126,6 +129,7 @@
     {
       "lesson_slide": 4,
       "source_page": 5,
+      "text": "Question : In Fibonacci sequence , it follows the rule that each number is equal to the sum of the preceding two numbers . Assuming the first two numbers are 0 and 1,what is the 50th number in Fibonacci sequence? length _ of _ fibonacci _ sequence =50 fibonacci _ sequence = np . zeros ( length _ of _) fibonacci _ sequence [0]=0 fibonacci _ sequence [1]=1 For iin range (3, length _ of _ fibonacci _ sequence ): fibonacci _ sequence []= fibonacci _ sequence [i-1] + fibonacci _ sequence [i-2] ans = fibonacci _ sequence [-1] PoT python X 12,586,269,025 利用外部工具 ( Python 解释器)将计算与推理 解耦 LLM可以调用解 释器来执行生成的代码。 The first number is 0, the second number is 1, therefore , the third number is 0+1=1. The fourth number is 1+1= 2. The fifth number is 1+2=3. The sixth number is 2+3= 5. The seventh number is 3+5=8. The eighth number is 5+8 =13. ……(Skip 1000 tok ens) The 50th number is 32,432,268,459. 32,432,268,459 CoT 示例：计算问题的代码生成",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -146,6 +150,7 @@
     {
       "lesson_slide": 5,
       "source_page": 6,
+      "text": "LLMs 的上下文窗 口有限。 需要回答知识密集型问题。 外部数据源(例如数据库、互联 网) 一种检索器(例如 BM 25、 DensePassageRetrieval 等) What protects th e digestive system against infection? gastric ac id and proteases [1] Retriever Reader 示例：检索—针对知识问题的增强生成方法",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -166,6 +171,7 @@
     {
       "lesson_slide": 6,
       "source_page": 7,
+      "text": "添加特殊令牌以调用工具调用 搜索引擎、计算器等。 任务特定模型(翻译) API 非自然格式需要针对具体 任务或工具进行精细调 整。 例 1：调用计算器 Out of 1400 participants ,400( or [ Calculator (400/1400) →0.29] 29% ) passed the test . 例 2：调用翻译模型 The name derives from \"la tortuga\",the Spa nish word for [MT(\"tortuga\" )→t urtle ] turtle. 例 3：调用 Wiki 搜索 The Brown Act is Californias law [WikiSearch(\"Brown Act\")→The Ralph M.Brown Act is an act of the California State Legislature th at guarantees the public's right to attend and participate in mee tings of local legislative bodies.] that requires legislative bodie s,like city councils, to hold their meetings open to the public. A weather task: how hot will it get in NYC today ? | weather lookup re - gion = NYC | result p recipitation chance :10, high temp : 20c, low - temp :12c | output today ' s high will be 20 C 教会 LLM 使用工具 用户问题 → 模型决定调用工具 → 工具返回结果 → 模型整理成自然语言回答",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -186,6 +192,7 @@
     {
       "lesson_slide": 7,
       "source_page": 8,
+      "text": "教程学习 请查阅工具手册(教程),以确保模型已针对工具使用进行优 化，从而使其能够理解工具的功能 及操作方法。 与强大的大语言模型协同工 作 LLM which can utilize tool API Manual,Tool Ma nual, … Tutorial 工具学习：教程 工具本身 + 工具教程 → LLM → 会使用该工具的 LLM",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -206,6 +213,7 @@
     {
       "lesson_slide": 8,
       "source_page": 9,
+      "text": "工具学习 Prompt",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -226,6 +234,7 @@
     {
       "lesson_slide": 9,
       "source_page": 10,
+      "text": "自监督工具学习 预定义工具 APl 鼓励模型调用并执行工具APl 设计自监督损失函数以评估工具执行的实用性 工具学习：自我监督",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -246,6 +255,7 @@
     {
       "lesson_slide": 10,
       "source_page": 11,
+      "text": "强化学习 基于环境反馈的强化学习实现自主探索与误差修正 由工具定义的动作空间 智能体学会选择合适的工具 正确的操作将最大化奖励信号 API Calling Success Rate,User Feedback ... LLM Multi-tur n exploration Env Summary Perceiver EQ Feedback Planning Tool 目费 Execution 工具学习：强化学习",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -266,6 +276,7 @@
     {
       "lesson_slide": 11,
       "source_page": 12,
+      "text": "在 OpenAI 上进行的监督学习 试图模仿人类行为以利用搜索引擎 监督微调+强化学习 仅有6000个带注释的数据实例 UNIVERSITY OF MANNHEIM 数据与网络科学小组 早期示例： WebGPT",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -286,6 +297,7 @@
     {
       "lesson_slide": 12,
       "source_page": 13,
+      "text": "在长篇问答方面表现优异，甚至有时超越人类 专家 760M best-of-4 13B best-of-16 175B best-of-64 WebGPT preferr ed(%) WebGPT preferr ed(%) 早期示例： WebGPT",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -306,6 +318,7 @@
     {
       "lesson_slide": 13,
       "source_page": 14,
+      "text": "工具的定义采用 JSON 模式，包含三个关键 字段： 名称：唯一标识符 (例如： “ get _ current _ weather ”) 描述：该工具的功能(由大语言模型用于判断何时 调用) 参数： JSON 模式对象， 包含输入类型和必填字段 示例 (OpenAl函数 调用格式): {“ type ”:\" function ”} “ function ”:{“ name ”:\" get _ current _ weather ”} “获取指定地点的当前天气信 息”。 “参数”:{ \" type ” : \" object \"} “属性”:{“位置”:{“类 型”: “字符串”}} “必需”: [ “location” ]}}} 替代方案：带有类型提示和文档字符 串的 Python 函 数(会自动转换为模式) 1 4 示例：如何定义和使用工具",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -326,6 +339,7 @@
     {
       "lesson_slide": 14,
       "source_page": 15,
+      "text": "工具使用：通用流程",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -346,6 +360,7 @@
     {
       "lesson_slide": 15,
       "source_page": 16,
+      "text": "1. 通过查询和一组函数 来调用模型(例 如 ChatGPT ) 函数被定义为字典，其包 含 关键参数： 名称、描述及其参数。 函数调用步骤",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -366,6 +381,7 @@
     {
       "lesson_slide": 16,
       "source_page": 17,
+      "text": "1. 使用一个查询 ( query) 和一组函数 ( functions) 来调用模型（例如 ChatGPT） 2. 模型决定是否调用传递给它的某个函数。 如果决定调用，它会将函数调用作为结束原因 (finish reason) 返回，并给出调用该函数所需的参数 (parameters)。 函数调用步骤",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -386,6 +402,7 @@
     {
       "lesson_slide": 17,
       "source_page": 18,
+      "text": "1.通过查询和一组函数来调用模型(例如ChatGPT)。 2.模型会决定是否调用传入其中的一个函数。 3. 客户端 可以使用从模型返回的参数调用该函数。 函数调用步骤",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -406,6 +423,7 @@
     {
       "lesson_slide": 18,
       "source_page": 19,
+      "text": "1.通过查询和一组函数来调用模型(例如ChatGPT)。 2.模型会决定是否调用传入其中的一个函数。 3. 客户端 可以使用从模型返回的参数调用该函数。 4.函数计算结果连同问题再次输入模型，以汇总最终结果。 曼海姆目前的天气如何? ChatGPT 曼海姆的温度是 25摄氏度。 {“温度”:25,“单位” :摄氏度} 函数调用步骤",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -426,6 +444,7 @@
     {
       "lesson_slide": 19,
       "source_page": 20,
+      "text": "API请求——聊天自动补全中 的“ tools ”参数： 消息：【{“role”: “use r”, \"content”: “曼海姆的 天气如何?”}] 工具：{ “type”:“functio n ”, “functio n” ： {\"name” ： \" get_current_weather” , .…. }}] LLM响应——助手消息中的工具调用： “角色”:“助理”, “内容” ： null \" tool_calls\": [{\"function\" ： {\"name\" : \"get_current_weather\",一 \"arguments”:“{”locationl“:\\”曼海 姆\\ “}”}} ] 要点 ： LLM 会根据查询和工具描述决定 是否调用以及调用哪个工 具 。 “tool_calls” 信号指示客户端执行该函数。 执行完成后，结果将以“工具”角色消息的形式作为最终响 应返回。 示例：使用 OpenAI 的工具",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -446,6 +465,7 @@
     {
       "lesson_slide": 20,
       "source_page": 21,
+      "text": "Berkeley函数-调用 排行榜 (BFCL): 评 估 LLM函数调 用的标准基准 测试类型：简单调用、多次调用、并行调用、相关性检测 关键评估指标： 调用准确性： 模型是否正确判断了是否需要调用某个函 数? 工具选择准确性：它能否从一组选项中选择正确的功能? 参数名称/值 F1: 参数是否 正确且完整? AST正确性： 生成的函数调用在语法上是否有 效? 其他基准测试： API-Bank、ToolBench、Nexus Raven、Seal-To ols、 Mannheim函数调用基准测 试 2 1 评估工具使用情况",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -466,6 +486,7 @@
     {
       "lesson_slide": 21,
       "source_page": 22,
+      "text": "MCP: 一种将任何大型语言模型 ( LLM) 连接到 任何工 具的标准协议 只需一次编写工具集成代码，即可与任何支持 MCP标准的大语 言模型 ( LLM) 主机配合使用。 22 MCP host MCP serve r MCP client User Tools 问题 ： N 个大语言 模型× M 个工具= N×M 个自定义集成 Prompts Resources 模型上下文协议 (MCP)",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -486,6 +507,7 @@
     {
       "lesson_slide": 22,
       "source_page": 23,
+      "text": "Claude Desktop Book provider MCP client \" Recommend a new poetry book to my teddy bear\" 好 处 ： 标准化：一次构建，适用于任何支 持 MCP 的主机 不断壮大的生态系统：1000 多台由社区构建的 MCP 服务 器 安全性：服务器端授权、受控的工具访问 2 3 find _ title recommend_ taste Personal collection Top books Recommend MCP server Find 示例：模型上下文协议",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -506,6 +528,7 @@
     {
       "lesson_slide": 23,
       "source_page": 24,
+      "text": "模型上下文协议 (MCP)",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -526,6 +549,7 @@
     {
       "lesson_slide": 24,
       "source_page": 25,
+      "text": "示例：模型 上下文协议",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -546,6 +570,7 @@
     {
       "lesson_slide": 25,
       "source_page": 26,
+      "text": "官方 MCP 注册库： https://registry.modelcontextprotocol.io/ 公共 MCP 服务器的类别及示例 文件系统：本地文件、Google Drive、Dropbox 数据库：PostgreSQL、SQLite、MongoDB 网页与搜索：Brave Search、Google Search、网页抓取 开发者工具：GitHub、Git、Docker、Kubernetes 生产力工具：Slack、Google 日历、Notion、Linear 数据与知识：持久内存、知识图谱 人工智能与机器学习：面部识别模型、图像生成、嵌入技术 任何人都可以构建并发布 MCP 服务器。 可在 Python. TypeScript、Java、Kotlin、C中使用的 2 6 公共 MCP 服务器",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -566,6 +591,7 @@
     {
       "lesson_slide": 26,
       "source_page": 27,
+      "text": "推理： 在回答之前，使用教学模型逐步解释 推 理过程 大规模思维链，在 训练后 得以实现 工具使用是实现推理的关键能力： 仅LLM本身具有有 限的推理能力、静态知识，且无法执行具 体操作。 推理模型可以(学会)决定 何时以及如何 使用工具来克服这 些局限性 2 7 Answer Reasoning Answer Question LLM 考察主题：当前的推理大语言模型",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -586,6 +612,7 @@
     {
       "lesson_slide": 27,
       "source_page": 28,
+      "text": "示例： DeepSeek R 1 训练流程(5步流程): 1.预训练基础模型 2.基于精选推理数据的小规模 SFT (冷启动) 3.使用以推理为重点的数据进行强化学习(强化学习第1 阶段) 4.大规模 SFT 混合：约60万条推理数据+约20万条通用数 据 5.采用混合奖励的最终强化学习：准确性+ 有用 性+无害性(强化学习第二阶段) 测试时(推理)计算扩展性 (思考标记): 动态预算： 为更复杂的问题分配更多计算资源 上下文感知： 模型会 根据问题复杂度调整推理深度 预算约束： 控制最大推理令牌数(成本与质量权衡——取 舍 ) 2 8 推理型大语言模型",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -606,6 +633,7 @@
     {
       "lesson_slide": 28,
       "source_page": 29,
+      "text": "基于可验证奖励的强化学习 (R LVR) 核心理念：无需人工标注推理链即可训练推理能力 使用可自动验证正确性 的域名 通常位于指令调优与 RLHF 之间。 随着 DeepSeek R 1 (强化学习第1阶段)的发布，其发 展 势头显著增强。 两种奖励信号： 格式化奖励：验证模型是否使用(例如)… …(/ think ) 模板 进行推理 准确性奖励：通过例如 代码执行或数学基准真 实值 (可自动验 证)来验证最终答案 优势： 无需对推理链进行昂贵的人工标注 即可实现规模 化运行，并自动训练工具使用方法 2 9 推理型大语言模型：一种新的强化学习范式",
       "image": {
         "width": 1600,
         "height": 1200,

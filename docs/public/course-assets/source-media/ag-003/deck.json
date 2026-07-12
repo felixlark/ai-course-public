@@ -48,6 +48,7 @@
     {
       "lesson_slide": 1,
       "source_page": 52,
+      "text": "“ 大脑 ” • LLM 在 Harness 中充当“大脑”角色 – 该系统将推理与决策功能委托给 LLM – 该工具提供了上下文信息（观察记录与记忆辅助功能）",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -68,6 +69,7 @@
     {
       "lesson_slide": 2,
       "source_page": 53,
+      "text": "“ 大脑 ” • 记忆： 存储智能体过去的观察 、 想法及行动序列 – 包含长期记忆和短期记忆 – 长期记忆通常是抽象的。 – 用于检索相关的历史记忆 – 是 Harness 的一个组成部分 • 决策制定流程： – 规划： 子目标与分解——将大型任务分解为更小 、 更易管理的子目标 ，从而高效处理复杂任务 – 推理过程： 对过去的行为进行自我批评与自我反思，从错误中学习并优化后续步骤 – 由 Harness 进行编排",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -88,6 +90,7 @@
     {
       "lesson_slide": 3,
       "source_page": 54,
+      "text": "协作 • 多智能体协同 系统：不同的智能体相互配合以解决问题 • 人机协同系统：具备人类监督功能的协作系统",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -108,6 +111,7 @@
     {
       "lesson_slide": 4,
       "source_page": 55,
+      "text": "智能体如何进行通信？",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -128,6 +132,7 @@
     {
       "lesson_slide": 5,
       "source_page": 56,
+      "text": "标准： A2A 协议（ Agent2Agent） • 智能体通过使用 JSON 格式的“智能体卡片 ( Agent Card)” 来展示其能力 • 该协议允许客户端智能体识别出最适合执行某项任务的智能体，并利用 A2A 进行通信",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -148,6 +153,7 @@
     {
       "lesson_slide": 6,
       "source_page": 57,
+      "text": "标准： A2A 协议（ Agent2Agent）",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -168,6 +174,7 @@
     {
       "lesson_slide": 7,
       "source_page": 58,
+      "text": "多智能体编排 ( Multi-Agent Orchestration) • 通常需要一名 “ 经理 (Manager) ”或 “ 指挥官 (Commander) ”来编排多个智能体 上下文可以是共享的，也可以是相互隔离的 协作式环境 与 对抗式环境 集中式通信 与 分布式通信 人类干预 与 全自动化",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -188,6 +195,7 @@
     {
       "lesson_slide": 8,
       "source_page": 59,
+      "text": "示例：多智能体 编程 • Commander 接收用户问题并执行代码 • Writer 编写代码 • Safeguard 可确保不会发生信息泄露或恶意代码入侵",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -208,6 +216,7 @@
     {
       "lesson_slide": 9,
       "source_page": 60,
+      "text": "示例： Magentic-One • 多智能体系统： 由一个编排者 ( Orchestrator) 和多个拥有工具访问权限的任 务专家 ( Task Specialists) 组成。 • 进度账本： 编排者维护着一份任务与进度账本，用于追踪执行进度，并在事 情未按计划进行时进行调整。",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -228,6 +237,7 @@
     {
       "lesson_slide": 10,
       "source_page": 61,
+      "text": "Agentic Harness 架构 • Harness 将所有组件整合为统一的架构： – LLM 核心： 负责推理 、规划 、语言理解 – 工具层： API 连接器 、代码执行 、 网页浏览 – 记忆层：短期上下文信息 + 长期检索 – 控制循环： ReAct 循环 、错误处理 、终止条件",
       "image": {
         "width": 1600,
         "height": 1200,

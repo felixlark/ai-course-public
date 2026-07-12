@@ -445,7 +445,7 @@
   .ai-course-native-diagram i { transform: rotate(90deg); }
 }
 
-/* ---- LessonDeck: manifest-driven Web PPT player ---- */
+/* ---- LessonDeck: manifest-driven slide player ---- */
 .ai-course-lesson-deck button:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--vp-c-brand-1) 38%, transparent);
   outline-offset: 2px;
@@ -458,6 +458,35 @@
   margin: 24px 0;
   color: var(--vp-c-text-1);
   scroll-margin-top: 88px;
+}
+
+.ai-course-lesson-deck--nav {
+  display: inline-flex;
+  margin: 0 0 0 10px;
+  scroll-margin-top: 0;
+}
+
+.ai-course-lesson-deck--nav .ai-course-lesson-deck__open {
+  min-height: 32px;
+  gap: 6px;
+  border-color: var(--vp-c-divider);
+  border-radius: 999px;
+  padding: 5px 11px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.ai-course-lesson-deck--nav .ai-course-lesson-deck__open svg {
+  width: 17px;
+  height: 17px;
+}
+
+.ai-course-lesson-deck--nav .ai-course-lesson-deck__open:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  transform: none;
 }
 
 .ai-course-lesson-deck:focus {
@@ -807,6 +836,8 @@
 }
 
 @media (max-width: 720px) {
+  .ai-course-lesson-deck--nav .ai-course-lesson-deck__open span { display: none; }
+  .ai-course-lesson-deck--nav .ai-course-lesson-deck__open { width: 32px; padding: 5px; }
   .ai-course-lesson-deck__toolbar {
     align-items: flex-start;
     flex-direction: column;
@@ -851,6 +882,70 @@
     display: none;
   }
 
+}
+
+/* ---- CourseMedia: PowerPoint visuals placed in the lesson flow ---- */
+.ai-course-inline-media {
+  display: grid;
+  gap: 24px;
+  margin: 24px 0 32px;
+}
+
+.ai-course-inline-media figure {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-soft);
+  box-shadow: 0 12px 34px rgba(15, 23, 42, .08);
+}
+
+.ai-course-inline-media picture,
+.ai-course-inline-media img {
+  display: block;
+  width: 100%;
+}
+
+.ai-course-inline-media img {
+  height: auto;
+  background: #fff;
+  object-fit: contain;
+}
+
+.ai-course-inline-media figcaption {
+  border-top: 1px solid var(--vp-c-divider);
+  padding: 12px 16px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.ai-course-inline-media__videos {
+  display: grid;
+  gap: 12px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding: 14px 16px 18px;
+  background: var(--vp-c-bg);
+}
+
+.ai-course-inline-media__videos p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+}
+
+.ai-course-inline-media__videos video {
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  border-radius: 10px;
+  background: #000;
+}
+
+.ai-course-inline-media__error {
+  margin: 18px 0;
+  color: var(--vp-c-text-3);
+  font-size: 13px;
 }
 
 @media (max-height: 600px) {
@@ -1427,7 +1522,7 @@
   aspect-ratio: 16 / 9;
 }
 
-/* ---- SourceMaterialGallery: source PPT evidence in the lesson body ---- */
+/* ---- Legacy media gallery styles; retained only until the next stylesheet cleanup ---- */
 .ai-course-source-gallery {
   margin: 22px 0 30px;
   overflow: hidden;

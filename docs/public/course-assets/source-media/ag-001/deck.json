@@ -56,6 +56,7 @@
     {
       "lesson_slide": 1,
       "source_page": 30,
+      "text": "什么是智能体？ 大语言模型（LLM） 驱动 的智能 体 是人工实体， 它们通过增强LLM的核心能力，使其能够感知环境 、做出决策并执行行动。",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -76,6 +77,7 @@
     {
       "lesson_slide": 2,
       "source_page": 31,
+      "text": "什么是智能体？ 一种能够与特定“环境 ”交互的“ 智能 ”系统 物理环境：机器人 、 自动驾驶汽车 … … 数字环境： 面向 Atari 游戏的 DQN、Siri 、 AlphaGo 人类与环境： 聊天机器人",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -96,6 +98,7 @@
     {
       "lesson_slide": 3,
       "source_page": 32,
+      "text": "LLM 智能体 与 LLM 工作流 对比 LLM 工作流：固定的代码执行流程 LLM 智能体：自主决策制定",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -116,6 +119,7 @@
     {
       "lesson_slide": 4,
       "source_page": 33,
+      "text": "智能体",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -136,6 +140,7 @@
     {
       "lesson_slide": 5,
       "source_page": 34,
+      "text": "智能体 简史",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -156,6 +161,7 @@
     {
       "lesson_slide": 6,
       "source_page": 35,
+      "text": "推理 (Reasoning) 和执行 ( Acting)",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -176,6 +182,7 @@
     {
       "lesson_slide": 7,
       "source_page": 36,
+      "text": "ReAct 范 式",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -196,6 +203,7 @@
     {
       "lesson_slide": 8,
       "source_page": 37,
+      "text": "ReAct 使用简单且直观 单样本 提示 少样本 提示 微调",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -216,6 +224,7 @@
     {
       "lesson_slide": 9,
       "source_page": 38,
+      "text": "零样本 ReAct 提示 词",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -236,6 +245,7 @@
     {
       "lesson_slide": 10,
       "source_page": 39,
+      "text": "零样本 ReAct 提示 词",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -256,6 +266,7 @@
     {
       "lesson_slide": 11,
       "source_page": 40,
+      "text": "零样本 ReAct 提示 词 协同效应 执行支持推理： 通过行动获取的外部反馈帮助模型修正认知。 推理指导 执行： 模型的逻辑思考决定了下一步该调用什么工具或搜索什么内容。",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -276,6 +287,7 @@
     {
       "lesson_slide": 12,
       "source_page": 41,
+      "text": "将任务转换为文本 • 许多任务都可以转换为智能体所需的自然语言。 “LLM grounding” : 为大语言模型补充特定用例的信息，例如作为 RAG 系统一部分的数据存储。",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -296,6 +308,7 @@
     {
       "lesson_slide": 13,
       "source_page": 42,
+      "text": "只有执行，没有推理 • 无法进行系统性的探索，也无法整合反馈信息 Act Only",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -316,6 +329,7 @@
     {
       "lesson_slide": 14,
       "source_page": 43,
+      "text": "ReAct 实现了系统 性的探索",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -336,6 +350,7 @@
     {
       "lesson_slide": 15,
       "source_page": 44,
+      "text": "ReAct 具有通用性和有效性 性能 对比表",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -356,6 +371,7 @@
     {
       "lesson_slide": 16,
       "source_page": 45,
+      "text": "示例：人类 / 智能体 / 环境 的交互 编程智能体的高层工作 流",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -376,6 +392,7 @@
     {
       "lesson_slide": 17,
       "source_page": 46,
+      "text": "示例： web 智能体的提示 词 用户： ## 目标 ： 找到最便宜的iPhone 13优惠。 # 当前步骤观察： ## 当前打开的标签页： Tab 0（活动标签页）： Title ： WebMall URL: http://localhost:8085/ ## AXTree：… # 操作空间： 共有15种不同的操作类型可供选择。 noop(wait_ms: float = 1000) scroll(delta_x: float, delta_y: float) keyboard_press(key: str) click(bid: str, button: Literal['left', 'middle', 'right'] = 'left’ fill(bid: str, value: str) hover(bid: str) tab_focus(index: int) new_tab() # 具体示例 以下是一个具体的示例， 说明如何格式化您的回答 。 <think> 在之前的操作中， 我尝试使用 select_option 将 year 的值设置为“2022” ，但该选项似乎未出现在表单中 。 这可能是一个动态下拉菜单， 我将尝试使用 bid “a324” 进行点击操作，并查看来自该页面的响应结果。 </think> <action> click(‘a324’) </action> 智能体： <think> 为了找到最便宜的iPhone 13优惠， 我需要浏览不同的网 店 。我会先访问 Shop 1 。 </think> <action> click( ‘ 9’) </action> 系统 ： 您是一名智能体， 旨在根据页面内容和用户指令完成网页任务 。您可以与页面进 行交互并向用户发送消息 。每 次执行操作后，该操作都会被发送至浏览器 ，您将收到新的页面。",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -396,6 +413,7 @@
     {
       "lesson_slide": 18,
       "source_page": 47,
+      "text": "示例： web 智能体的运行 轨迹 • Web智能体的轨迹 通常极长且难以调试： – 每个步骤通常包括： 全页面观察 （AXTree）、 推理 （ < think > ）、 行动 和 行动历史 – 一个简单的购物任务可能产生 50 个以上 的步骤。 • 运行轨迹示例 ： – 步骤 1 ：[注： AXTree ~500 行][历史记录] < think > 我需要搜索 </ think > → 点击“搜 索” – 步骤 2 ：[注： 搜索结果约300行][历史记录] < think > 找到的项目 </ think > → 点击（“item_3”） – 步骤 3 ：[ 注 ： 产品页面约 400 行][ 历史记录] < think > 检查价格 </ think > → fill (“Qty” , “ 1 ”) – （后续还有数十个步骤， 每个步骤均包含完整的页面观察记录及逐步详细的历史记录） – 步骤 N：[注：确认] < think > 完成 </ think > → send_m sg_to_user（“任务已完成”） • 挑战： 巨大的 Token 开销 、 跨步骤的错误传播 、 难以定位故障点",
       "image": {
         "width": 1600,
         "height": 1200,

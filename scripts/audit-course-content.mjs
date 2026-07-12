@@ -59,8 +59,6 @@ const h3Count = (text) => (text.match(/^###\s+.+$/gm) || []).length
 
 const sectionRules = [
   { key: 'goals', label: '学习目标', headings: [/^学习目标$/], minimum: 30 },
-  { key: 'deck', label: 'Web PPT', headings: [/^Web PPT$/i], minimum: 0 },
-  { key: 'sourceMedia', label: '原课件图片与视频', headings: [/^原课件图片与视频$/], minimum: 0 },
   { key: 'intro', label: '本节导入', headings: [/^本节导入$/], minimum: 40 },
   { key: 'core', label: '核心内容', headings: [/^核心内容$/], minimum: 350 },
   { key: 'case', label: '案例与图解', headings: [/^案例与图解$/, /^案例分析$/], minimum: 100 },
@@ -79,7 +77,8 @@ const metaPatterns = [
   { label: '讲者内部指令', pattern: /讲者脚本|讲者验收|读者验收|讲者应该|讲者可以|讲课时应|授课前/ },
   { label: '内部课程结构', pattern: /课程PPT框架|课程PPT矩阵|课程矩阵|旧课程矩阵|lesson blueprint/i },
   { label: '素材库替代课程', pattern: /PPT\s*素材讲义库|完整素材库|打开完整逐页讲义|逐页文本/ },
-  { label: '重写过程', pattern: /重写为(?:课程|讲义|课件)|本节负责把|这一版(?:先|将)/ }
+  { label: '重写过程', pattern: /重写为(?:课程|讲义|课件)|本节负责把|这一版(?:先|将)/ },
+  { label: '公开页生产版本', pattern: /原课件|源课件|课程精编|打开本节 Web PPT|原课件图片与视频/ }
 ]
 
 if (catalog.modules.length !== 4) findings.push(`catalog: expected 4 modules, found ${catalog.modules.length}`)
@@ -115,15 +114,16 @@ for (const { module, lesson } of lessons) {
     findings.push(`${lesson.id}: learning goals need at least 2 observable outcomes`)
   }
   const deck = deckByLessonId.get(lesson.id)
-  const expectedManifest = deck?.manifest_url || null
   if (!deck) {
-    findings.push(`${lesson.id}: missing ready public Web PPT plan`)
-  } else if (!bodies.deck?.includes(`<LessonDeck manifest="${expectedManifest}"`)) {
-    findings.push(`${lesson.id}: Web PPT section must embed LessonDeck manifest ${expectedManifest}`)
+    findings.push(`${lesson.id}: missing ready slide plan`)
   }
   const expectedSourceMedia = deck?.source_media_manifest_url || null
-  if (!bodies.sourceMedia?.includes(`<SourceMaterialGallery manifest="${expectedSourceMedia}"`)) {
-    findings.push(`${lesson.id}: source-media section must embed SourceMaterialGallery manifest ${expectedSourceMedia}`)
+  const courseMedia = [...text.matchAll(/<CourseMedia\b[^>]*\bmanifest="([^"]+)"[^>]*\bslides="([^"]+)"[^>]*\/>/g)]
+  if (!courseMedia.length || courseMedia.some((match) => match[1] !== expectedSourceMedia)) {
+    findings.push(`${lesson.id}: learner sections must embed CourseMedia from ${expectedSourceMedia}`)
+  }
+  if (/<LessonDeck\b|<SourceMaterialGallery\b|^##\s+(?:Web PPT|原课件图片与视频)\s*$/m.test(text)) {
+    findings.push(`${lesson.id}: slide launcher or detached media inventory remains in the article`)
   }
   if (bodies.core && h3Count(bodies.core) < 2) {
     findings.push(`${lesson.id}: core content needs at least 2 concept subsections`)
@@ -141,8 +141,8 @@ for (const { module, lesson } of lessons) {
   if (bodies.review && bulletCount(bodies.review) < 3) {
     findings.push(`${lesson.id}: review section needs at least 3 retrieval or reflection questions`)
   }
-  if (bodies.resources && !/(课程来源|主课件|本节课件来源|一手资料|延伸阅读|参考资料)/.test(bodies.resources)) {
-    findings.push(`${lesson.id}: resources section must identify the main deck or external references`)
+  if (bodies.resources && !/(https:\/\/|一手资料|延伸阅读|参考资料|团队资料)/.test(bodies.resources)) {
+    findings.push(`${lesson.id}: resources section must provide learner-facing references`)
   }
 
   if (meaningfulLength(text) < 900) {

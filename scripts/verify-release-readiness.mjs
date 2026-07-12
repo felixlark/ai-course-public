@@ -106,4 +106,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log(`Public release readiness passed for ${lessons.length} lessons, ${publicPlan.lessons.length} dual-mode Web decks, ${publicPlan.lessons.length} PPTX files, and reviewed team source media.`)
+console.log(`Public release readiness passed for ${lessons.length} media-rich lessons, ${publicPlan.lessons.length} fullscreen slide decks, and ${publicPlan.lessons.length} PPTX files.`)

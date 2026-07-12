@@ -68,6 +68,7 @@
     {
       "lesson_slide": 1,
       "source_page": 4,
+      "text": "深度学习得到大量关注 我相信你以前见过很多振奋人心的结果",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -88,6 +89,7 @@
     {
       "lesson_slide": 2,
       "source_page": 5,
+      "text": "机器学习 ≈ 寻找一个函数 语音识别 下围棋 对话系统 f  图片识别 f  f    f    “Cat”   “How are you”   “5-5” “ 你说啥？ ” “ 导航回家 ” ( 你说的内容 ) ( 系统的回答 ) ( 下一步棋的结果 )",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -108,6 +110,7 @@
     {
       "lesson_slide": 3,
       "source_page": 6,
+      "text": "机器学习框架 一系列 f 1 , f 2    “ c a t ” 图像识别 : f  模型 训练 数据 模型和数据 的 拟合 “monkey” “cat” “ do g ” f * 选择最优函数 U s ing f  “ c a t ” 训练 测试 函数 Step 1 Step 2 Step 3",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -128,6 +131,7 @@
     {
       "lesson_slide": 4,
       "source_page": 7,
+      "text": "机器学习（ Machine Learning ）是一门专门研究计算机怎样模拟或实现人类的学习行为，以获取新的知识或技能，重新组织已有的知识结构使之不断改善自身的性能的学科 简单地说，机器学习就是通过 算法 ，使得机器能从大量的历史 数据 中学习规律，从而对新的样本做智能 识别或预测 未来 机器学习",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -148,6 +152,7 @@
     {
       "lesson_slide": 5,
       "source_page": 8,
+      "text": "特征的自学习 传统的模式识别方法 通过传感器获取数据，经过预处理、特征提取、特征选择、再到推理、预测或识别",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -168,6 +173,7 @@
     {
       "lesson_slide": 6,
       "source_page": 9,
+      "text": "特征的自学习 传统的模式识别方法 特征提取与选择的好坏对最终算法的确定性起关键作用 特征的样式一般都是靠人工提取特征，而手工选取特征费时费力，需要专业知识，很大程度上靠经验和运气 那么： 机器能不能自动的学习特征呢？ 深度学习的出现为这个问题提出了一种解决方案",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -188,6 +194,7 @@
     {
       "lesson_slide": 7,
       "source_page": 10,
+      "text": "深度学习 自 2006 年，深度学习（ Deep Learning ）已经成为机器学习研究中的一个新兴领域。其动机在于建立、 模拟人脑 进行分析学习的神经网络，通过模拟人脑的机制来解释数据，例如图像，声音和文本 深度学习是机器学习的一种。深度学习的概念源于人工神经网络的研究，含多隐层的 多层感知器 就是一种深度学习结构。深度学习通过 组合低层特征形成更加抽象的高层表示 属性类别或特征，以发现数据的分布式特征表示",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -208,6 +215,7 @@
     {
       "lesson_slide": 8,
       "source_page": 11,
+      "text": "步骤 1: 定义一组函数 步骤 2: 模型和数据的拟合 步骤 3: 选择最优函数 深度学习的三个步骤 深度学习 是如此简单 … 问曰：把大象装进冰箱需要几步？ 答曰：三步即可 把冰箱门打开， 把大象塞进去， 把冰箱门关上。",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -228,6 +236,7 @@
     {
       "lesson_slide": 9,
       "source_page": 12,
+      "text": "深度学习的兴起",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -248,6 +257,7 @@
     {
       "lesson_slide": 10,
       "source_page": 13,
+      "text": "什么深度学习 人工智能 任何能使计算机模仿人类行为的技术 机器学习 无需明确编程就能学习的能力 深度学习 使用神经网络从数据中提取模式",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -268,6 +278,7 @@
     {
       "lesson_slide": 11,
       "source_page": 14,
+      "text": "学习表征（ Learning representation ） Trainable Feature Transform ML/AI : 如何学习特征? 基本规则是什么? 神经科学 （ Neuroscience ） : 大脑皮层是如何学习感知的? 认知科学 （ CogSci ） : 大脑如何在不那么抽象的概念之上学习抽象的概念? 深度学习 ： 解决了用单一算法学习分层表示的问题 “Deep Learning Tutorial” by LeCun",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -288,6 +299,7 @@
     {
       "lesson_slide": 12,
       "source_page": 15,
+      "text": "Why Deep Learning? 手工设计的特征费时费力，而且在实践中无法扩展 。 我们能直接从数据中学习基础特征吗？ Low Level Features Lines & Edges Eyes & Nose & Ears Facial Structure Mid Level Features High Level Features",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -308,6 +320,7 @@
     {
       "lesson_slide": 13,
       "source_page": 16,
+      "text": "Is it brand new? Neural Nets McCulloch & Pitt 1943 Perception Rosenblatt 1958 RNN Grossberg 1973 CNN Fukushima 1979 RBM Hinton 1999 DBN Hinton 2006 D-AE Vincent 2008 AlexNet Alex 2012 GoogLeNet Szegedy 2015 Transformer Vaswani 2017 GPT-1 Radford 2018 DeepSeek-R1 DeepSeek -AI 2025",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -328,6 +341,7 @@
     {
       "lesson_slide": 14,
       "source_page": 17,
+      "text": "Why Now? 1952 Stochastic Gradient Descent 1958 Perceptron Learnable Weights 1995 Deep Convolutional NN Digit Recognition 1986 Backpropagation Multi-Layer Perceptron 1. 大数据 更大的数据集 更容易收集和存储 2. 硬件 图形处理单元(GPUs) 大规模可并行 3. 软件 改进的的技术 新模型 工具箱（ Toolboxes ） 神经网络的历史可以追溯到几十年前，为什么会再次兴起？",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -348,6 +362,7 @@
     {
       "lesson_slide": 15,
       "source_page": 18,
+      "text": "人类的大脑 树突 细胞核 细胞体 轴突",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -368,6 +383,7 @@
     {
       "lesson_slide": 16,
       "source_page": 19,
+      "text": "人脑的视觉原理",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -388,6 +404,7 @@
     {
       "lesson_slide": 17,
       "source_page": 20,
+      "text": "深度学习 受到大脑结构分层的启发，神经网络的研究发现多隐层的人工神经网络具有优异的 特征学习 能力 学习得到的特征对 数据 有更本质的刻画，从而有利于可视化或分类 深度学习可以通过学习一种 深层非线性网络 结构，实现 复杂函数逼近 ，表征输入数据分布式表示",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -408,6 +425,7 @@
     {
       "lesson_slide": 18,
       "source_page": 21,
+      "text": "深度学习应用",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -428,6 +446,7 @@
     {
       "lesson_slide": 19,
       "source_page": 22,
+      "text": "ALVINN （ 阿尔文在 ） 高速公路上以每小时 70 英里的速度行驶 Slide credit : T.Michell 神经网络应用",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -448,6 +467,7 @@
     {
       "lesson_slide": 20,
       "source_page": 23,
+      "text": "Slide credit : Andraw Ng. 神经网络应用",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -468,6 +488,7 @@
     {
       "lesson_slide": 21,
       "source_page": 24,
+      "text": "B. Zhou, A. Lapedriza , J. Xiao, A. Torralba , and A. Oliva. “Learning Deep Features for Scene Recognition using Places Database.” Advances in Neural Information Processing Systems 27 (NIPS), 2014. 场景识别 (CNN)",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -488,6 +509,7 @@
     {
       "lesson_slide": 22,
       "source_page": 25,
+      "text": "视觉风格识别 (CNN) Karayev , Sergey, et al. \"Recognizing image style.\" arXiv preprint arXiv:1311.3715 (2013).",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -508,6 +530,7 @@
     {
       "lesson_slide": 23,
       "source_page": 26,
+      "text": "目标检测 (R-CNN) Girshick , Ross, et al. \"Region-based convolutional networks for accurate object detection and segmentation.\" Pattern Analysis and Machine Intelligence, IEEE Transactions on 38.1 (2016): 142-158.",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -528,6 +551,7 @@
     {
       "lesson_slide": 24,
       "source_page": 27,
+      "text": "图生文 (CNN+LSTM) Donahue, Jeffrey, et al. \"Long-term recurrent convolutional networks for visual recognition and description.\" Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition . 2015.",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -548,6 +572,7 @@
     {
       "lesson_slide": 25,
       "source_page": 28,
+      "text": "分割 (DeconvNet) Hyeonwoo Noh, Seunghoon Hong, Bohyung Han, Learning Deconvolution Network for Semantic Segmentation, arXiv:1505.04366.",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -568,6 +593,7 @@
     {
       "lesson_slide": 26,
       "source_page": 29,
+      "text": "Deep Visuomotor Control (CNN) Levine, Sergey, et al. \"End-to-end training of deep visuomotor policies.\" arXiv preprint arXiv:1504.00702 (2015).",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -621,6 +647,7 @@
     {
       "lesson_slide": 27,
       "source_page": 30,
+      "text": "Gatys , Leon A., Alexander S. Ecker , and Matthias Bethge . \"A neural algorithm of artistic style.\" arXiv , 2015 风格迁移 (CNN)",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -641,6 +668,7 @@
     {
       "lesson_slide": 28,
       "source_page": 45,
+      "text": "Step 1: 定义一组函数 Step 2: 模型和数据的拟合 Step 3: 选择最优函数 结束语 深度学习是如此简单 …",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -661,6 +689,7 @@
     {
       "lesson_slide": 29,
       "source_page": 46,
+      "text": "深度学习 深度学习的实质 通过构建具有 很多隐层的机器学习模型， 在 海量的训练数据上 学习 有用的特征 ，最终提升 分类或预测 的准确性 深度模型 是手段， 特征学习 是目的",
       "image": {
         "width": 1600,
         "height": 1200,
@@ -681,6 +710,7 @@
     {
       "lesson_slide": 30,
       "source_page": 47,
+      "text": "深度学习 Demo 手写字符识别 https://transcranial.github.io/keras-js/#/mnist-cnn 超像素还原 https://transcranial.github.io/keras-js/#/image-super-resolution",
       "image": {
         "width": 1600,
         "height": 1200,

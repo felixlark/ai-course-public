@@ -20,7 +20,7 @@
   "pptx_asset": "/course-assets/course-pptx/em-003.pptx",
   "source_materials": {
     "manifest": "/course-assets/source-media/em-003/deck.json",
-    "label": "原课件"
+    "label": "幻灯片"
   },
   "slides": [
     {
@@ -237,8 +237,8 @@
           "url": "https://github.com/Livox-SDK/livox_ros_driver2"
         }
       ],
-      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
+      "note": "课程正文与幻灯片共享同一知识主线，图片和视频用于帮助理解本节概念与案例。"
     }
   ],
-  "spec_sha256": "27e197fecff61c012982a9855de4bc83a73801aebd2a7282e6a3ddbfe1cb9814"
+  "spec_sha256": "843149fd155cff6e668aa05e72cdf8cd30734dd8598ec9dbda4f2f64da0fb2b4"
 }

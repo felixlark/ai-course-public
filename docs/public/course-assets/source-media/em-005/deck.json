@@ -63,6 +63,7 @@
     {
       "lesson_slide": 1,
       "source_page": 2,
+      "text": "教学目标 1 掌握 Go2 键盘控制。 2 掌握 ROS2 Twist 消息桥接。 3 实现机器人模型可视化。 4 实现 ROS2 驱动包。",
       "image": {
         "width": 1600,
         "height": 900,
@@ -83,6 +84,7 @@
     {
       "lesson_slide": 2,
       "source_page": 3,
+      "text": "1-Go2 键盘控制",
       "image": {
         "width": 1600,
         "height": 900,
@@ -103,6 +105,7 @@
     {
       "lesson_slide": 3,
       "source_page": 4,
+      "text": "1-Go2 键盘控制",
       "image": {
         "width": 1600,
         "height": 900,
@@ -123,6 +126,7 @@
     {
       "lesson_slide": 4,
       "source_page": 5,
+      "text": "1-Go2 键盘控制",
       "image": {
         "width": 1600,
         "height": 900,
@@ -143,6 +147,7 @@
     {
       "lesson_slide": 5,
       "source_page": 6,
+      "text": "1-Go2 键盘控制",
       "image": {
         "width": 1600,
         "height": 900,
@@ -163,6 +168,7 @@
     {
       "lesson_slide": 6,
       "source_page": 7,
+      "text": "1-Go2 键盘控制",
       "image": {
         "width": 1600,
         "height": 900,
@@ -183,6 +189,7 @@
     {
       "lesson_slide": 7,
       "source_page": 8,
+      "text": "2- ROS2 Twist 消息桥接",
       "image": {
         "width": 1600,
         "height": 900,
@@ -203,6 +210,7 @@
     {
       "lesson_slide": 8,
       "source_page": 9,
+      "text": "2- ROS2 Twist 消息桥接",
       "image": {
         "width": 1600,
         "height": 900,
@@ -223,6 +231,7 @@
     {
       "lesson_slide": 9,
       "source_page": 10,
+      "text": "2- ROS2 Twist 消息桥接",
       "image": {
         "width": 1600,
         "height": 900,
@@ -243,6 +252,7 @@
     {
       "lesson_slide": 10,
       "source_page": 11,
+      "text": "2- ROS2 Twist 消息桥接",
       "image": {
         "width": 1600,
         "height": 900,
@@ -263,6 +273,7 @@
     {
       "lesson_slide": 11,
       "source_page": 12,
+      "text": "2- ROS2 Twist 消息桥接",
       "image": {
         "width": 1600,
         "height": 900,
@@ -283,6 +294,7 @@
     {
       "lesson_slide": 12,
       "source_page": 13,
+      "text": "2- ROS2 Twist 消息桥接",
       "image": {
         "width": 1600,
         "height": 900,
@@ -303,6 +315,7 @@
     {
       "lesson_slide": 13,
       "source_page": 14,
+      "text": "3- 机器人模型可视化",
       "image": {
         "width": 1600,
         "height": 900,
@@ -323,6 +336,7 @@
     {
       "lesson_slide": 14,
       "source_page": 15,
+      "text": "3- 机器人模型可视化",
       "image": {
         "width": 1600,
         "height": 900,
@@ -343,6 +357,7 @@
     {
       "lesson_slide": 15,
       "source_page": 16,
+      "text": "3- 机器人模型可视化",
       "image": {
         "width": 1600,
         "height": 900,
@@ -363,6 +378,7 @@
     {
       "lesson_slide": 16,
       "source_page": 17,
+      "text": "3- 机器人模型可视化",
       "image": {
         "width": 1600,
         "height": 900,
@@ -383,6 +399,7 @@
     {
       "lesson_slide": 17,
       "source_page": 18,
+      "text": "3- 机器人模型可视化",
       "image": {
         "width": 1600,
         "height": 900,
@@ -403,6 +420,7 @@
     {
       "lesson_slide": 18,
       "source_page": 19,
+      "text": "3- 机器人模型可视化",
       "image": {
         "width": 1600,
         "height": 900,
@@ -423,6 +441,7 @@
     {
       "lesson_slide": 19,
       "source_page": 20,
+      "text": "4-ROS2 驱动包",
       "image": {
         "width": 1600,
         "height": 900,
@@ -443,6 +462,7 @@
     {
       "lesson_slide": 20,
       "source_page": 21,
+      "text": "4-ROS2 驱动包",
       "image": {
         "width": 1600,
         "height": 900,
@@ -463,6 +483,7 @@
     {
       "lesson_slide": 21,
       "source_page": 22,
+      "text": "4-ROS2 驱动包",
       "image": {
         "width": 1600,
         "height": 900,
@@ -483,6 +504,7 @@
     {
       "lesson_slide": 22,
       "source_page": 23,
+      "text": "4-ROS2 驱动包",
       "image": {
         "width": 1600,
         "height": 900,
@@ -503,6 +525,7 @@
     {
       "lesson_slide": 23,
       "source_page": 24,
+      "text": "4-ROS2 驱动包",
       "image": {
         "width": 1600,
         "height": 900,
@@ -523,6 +546,7 @@
     {
       "lesson_slide": 24,
       "source_page": 25,
+      "text": "4-ROS2 驱动包",
       "image": {
         "width": 1600,
         "height": 900,
@@ -543,6 +567,7 @@
     {
       "lesson_slide": 25,
       "source_page": 26,
+      "text": "4-ROS2 驱动包",
       "image": {
         "width": 1600,
         "height": 900,

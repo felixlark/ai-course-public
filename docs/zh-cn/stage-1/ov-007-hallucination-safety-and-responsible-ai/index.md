@@ -6,7 +6,7 @@ lesson_id: 'OV-007'
 module: '人工智能概述'
 deck_manifest: '/course-assets/course-decks/ov-007/deck.json'
 source_media_manifest: '/course-assets/source-media/ov-007/deck.json'
-deck_revision: 'b8d88d8f80371acffb0f3cd551309017f2293dc95b52c7c4cd7d0a3fa7fde463'
+deck_revision: '5fed0bc600410806254184c2141d4b10d575a2995394b2e1c839487fed854a37'
 ---
 
 <div class="lesson-hero">
@@ -22,17 +22,6 @@ deck_revision: 'b8d88d8f80371acffb0f3cd551309017f2293dc95b52c7c4cd7d0a3fa7fde463
 - 为已识别风险写出证据要求、权限边界、人工责任与可逆性，形成可交接的风险卡。
 - 从公平、隐私、透明度、可解释性、问责和影响范围评估负责任 AI。
 - 按错误后果与可逆性划分风险，而不是把同一套自动化规则用于所有场景。
-
-## Web PPT
-
-<LessonDeck manifest="/course-assets/course-decks/ov-007/deck.json" title="幻觉、安全与负责任 AI" />
-
-<!-- ai-course-source-materials:start -->
-## 原课件图片与视频
-
-<SourceMaterialGallery manifest="/course-assets/source-media/ov-007/deck.json" title="幻觉、安全与负责任 AI原课件素材" />
-<!-- ai-course-source-materials:end -->
-
 ## 本节导入
 
 一个模型回答错了，可能只是让读者多花几分钟；同一个模型如果能发送邮件、修改数据库或给出医疗处置建议，错误就会跨越系统边界。AI 风险因此不能只看模型准确率，还要看它接触了什么数据、拥有什么权限、结果由谁使用、错误能否被发现和撤销。
@@ -53,11 +42,19 @@ deck_revision: 'b8d88d8f80371acffb0f3cd551309017f2293dc95b52c7c4cd7d0a3fa7fde463
 
 防御要组合使用：把系统规则、用户任务和外部数据分开；只给任务所需的最小工具；对参数做类型和范围校验；阻止外部文本提升自己的权限；对外发、删除、支付、权限变更等动作设置独立确认。模型识别出攻击文本很有帮助，但不能把安全完全寄托在模型“自觉抵抗”。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-007/deck.json" slides="2,6" title="提示注入：不可信数据伪装成指令" />
+<!-- ai-course-inline-media:end -->
+
 ### 最小权限与可逆动作
 
 能读取一份文件，不等于能读取整个磁盘；能生成邮件草稿，不等于能发送；能提出数据库更新，不等于能直接执行。每个工具都应有明确输入、输出、作用域、超时、失败状态和审计记录。
 
 自动化可以从低风险、可回退的动作开始。高风险操作先在沙盒或影子模式运行，只记录“如果执行会做什么”；通过离线任务集和真实流量观察后，再逐步扩大权限。系统还要设计幂等、撤销、备份和人工接管，不让一次错误变成不可恢复的连锁反应。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-007/deck.json" slides="5" title="最小权限与可逆动作" />
+<!-- ai-course-inline-media:end -->
 
 ### 公平、隐私与透明度
 
@@ -65,11 +62,19 @@ deck_revision: 'b8d88d8f80371acffb0f3cd551309017f2293dc95b52c7c4cd7d0a3fa7fde463
 
 隐私治理要求数据最小化、用途限制、访问控制、保留期限和删除机制。所谓“内部使用”也不代表可以把所有数据交给模型。透明度则要求用户知道何时在与 AI 交互、系统能做什么、不能做什么、证据来自哪里，以及如何申诉或请求人工处理。
 
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-007/deck.json" slides="3" title="公平、隐私与透明度" />
+<!-- ai-course-inline-media:end -->
+
 ### 问责：模型不能成为责任空白
 
 上线前要明确产品负责人、数据负责人、模型或供应商负责人、业务审核者和事故响应者。日志至少记录输入来源、检索证据、模型与提示版本、工具调用、人工确认和最终输出；同时避免把不必要的敏感数据永久写入日志。
 
 风险识别完成后，仍需分别检查结果是否正确、过程是否合规、系统是否可持续运营；AG-005 将把三类问题落实为 trace 字段、评测指标与线上监控。此处只需记住：结果正确但过程越权，系统仍不合格。
+
+<!-- ai-course-inline-media:start -->
+<CourseMedia manifest="/course-assets/source-media/ov-007/deck.json" slides="1,4" title="问责：模型不能成为责任空白" />
+<!-- ai-course-inline-media:end -->
 
 ### 按后果分级，而不是一刀切
 
@@ -105,6 +110,4 @@ deck_revision: 'b8d88d8f80371acffb0f3cd551309017f2293dc95b52c7c4cd7d0a3fa7fde463
 **本节输出：风险卡。** 至少写清风险类型、影响对象、证据要求、权限边界、人工责任和可逆性。它回答了“要防什么”，但还没有回答“运行中如何证明控制有效”；这个问题将在 AG-005 用 trace、评测、HITL 和恢复点继续解决。
 
 ## 资料与延伸
-
-- **团队主课件：**《2026-PRML-CS-XMU-12-AI智能体原理及实现》中的风险与评测内容，以及团队整理的幻觉与安全案例。
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)：从治理、映射、测量与管理组织 AI 风险的官方框架。（核对日期：2026-07-11）

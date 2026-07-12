@@ -20,7 +20,7 @@
   "pptx_asset": "/course-assets/course-pptx/ag-002.pptx",
   "source_materials": {
     "manifest": "/course-assets/source-media/ag-002/deck.json",
-    "label": "原课件"
+    "label": "幻灯片"
   },
   "slides": [
     {
@@ -254,8 +254,8 @@
           "url": "https://modelcontextprotocol.io/specification/2025-11-25"
         }
       ],
-      "note": "课程精编页用于讲授主线；播放器中的“原课件”模式保留团队 PowerPoint 精选页、真实图片和可播放视频。"
+      "note": "课程正文与幻灯片共享同一知识主线，图片和视频用于帮助理解本节概念与案例。"
     }
   ],
-  "spec_sha256": "cf700ef06d6fb18ce2ba560cecdc2aa347a36b76d2ece5bae17dd974cbc38ef7"
+  "spec_sha256": "2cbc5db70d92677e5e55c680f2e0288f712f574307f59bedc6f7310d30b3489f"
 }
