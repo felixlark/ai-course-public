@@ -1,7 +1,7 @@
 import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import { spawn } from 'node:child_process'
+import { spawn, spawnSync } from 'node:child_process'
 
 export const VISUAL_POLICY = Object.freeze({
   excluded_lessons: ['OV-001', 'OV-002'],
@@ -168,6 +168,8 @@ const run = (command, args, { binary = false } = {}) => new Promise((resolve, re
     resolve(binary ? output : output.toString('utf8'))
   })
 })
+
+const hasImageMagick7 = spawnSync('magick', ['-version'], { stdio: 'ignore' }).status === 0
 
 export const unzipEntry = (pptx, entry) => run('unzip', ['-p', pptx, entry], { binary: true })
 
@@ -416,7 +418,12 @@ const imageMetadata = async (file, extension) => {
     }
   }
   const frame = `${file}[0]`
-  const description = (await run('magick', ['identify', '-quiet', '-format', '%w|%h|%[channels]|%[opaque]', frame])).trim()
+  const description = (await run(
+    hasImageMagick7 ? 'magick' : 'identify',
+    hasImageMagick7
+      ? ['identify', '-quiet', '-format', '%w|%h|%[channels]|%[opaque]', frame]
+      : ['-quiet', '-format', '%w|%h|%[channels]|%[opaque]', frame]
+  )).trim()
   const [widthText, heightText, channels = '', opaque = ''] = description.split('|')
   const width = Number(widthText)
   const height = Number(heightText)
@@ -425,7 +432,7 @@ const imageMetadata = async (file, extension) => {
   }
   let alphaMean = 1
   if (!/^true$/i.test(opaque)) {
-    const value = (await run('magick', [frame, '-alpha', 'extract', '-format', '%[fx:mean]', 'info:'])).trim()
+    const value = (await run(hasImageMagick7 ? 'magick' : 'convert', [frame, '-alpha', 'extract', '-format', '%[fx:mean]', 'info:'])).trim()
     alphaMean = Number(value)
     if (!Number.isFinite(alphaMean)) throw new Error(`Unable to inspect alpha channel for ${file}`)
   }

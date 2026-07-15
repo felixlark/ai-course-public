@@ -40,8 +40,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Verify PPTX inspection tool
-        run: command -v unzip
+      - name: Install course verification tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes imagemagick ffmpeg
+          command -v unzip
+          command -v magick || command -v identify
+          command -v convert
+          command -v ffprobe
 
       - name: Verify and build the course
         env:
