@@ -3,10 +3,9 @@ title: '企业办公、知识管理与 AIGC'
 description: '把会议和文档转化为有引用、有权限、有版本、有审批的企业知识与内容工作流。'
 lesson_id: 'IN-004'
 module: '行业应用'
-deck_manifest: '/course-assets/course-decks/in-004/deck.json'
-source_media_manifest: '/course-assets/source-media/in-004/deck.json'
+slides_url: 'https://xmu-mars.feishu.cn/wiki/RyiMwPMuQiD7X6kXV5dczNwwnKX'
+slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/RyiMwPMuQiD7X6kXV5dczNwwnKX'
 authored: true
-deck_revision: 'e672b83493dd83a3b971cec988e5c986a9c509b6ebc01fa717c9092cc07a4994'
 ---
 
 <div class="lesson-hero">
@@ -22,6 +21,16 @@ deck_revision: 'e672b83493dd83a3b971cec988e5c986a9c509b6ebc01fa717c9092cc07a4994
 - 为知识设置来源、权限、版本、有效期、责任人和失效处置。
 - 设计从草稿生成到人工审批、正式交付和反馈纠错的办公流程。
 - 用使用率、引用质量、时效、纠错与业务结果评估知识系统。
+## 知识导图
+
+企业知识工作流要让内容可检索、权限可控、版本有效、交付可审批。
+
+- **知识单元：** 把文档和会议内容整理为带来源、时间与权限的可检索信息。
+
+- **检索与生成：** 用外部知识支撑回答，并把引用和版本状态一同交付。
+
+- **审批与度量：** 在外部使用前设置审核，用真实使用和纠错衡量长期价值。
+
 ## 本节导入
 
 企业里并不缺文档，缺的是在正确时间把正确版本交给有权限的人。会议录音、聊天、制度、合同、产品说明和销售材料不断产生；若没有来源与责任管理，AI 只会加速复制旧信息和错误信息。办公智能化的核心不是多生成几段文字，而是让信息经过提取、核验、审批和交付，最终成为可信的组织知识。
@@ -38,19 +47,11 @@ deck_revision: 'e672b83493dd83a3b971cec988e5c986a9c509b6ebc01fa717c9092cc07a4994
 
 第三步是核验。模型可能把讨论中的建议写成正式决定，也可能把多个版本拼接。资料责任人应检查事实、引用和状态，确认后才进入可检索知识库。未确认的会议转写、草稿和外部网页应明确标为候选信息，不能与已批准内容同级返回。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-004/deck.json" slides="1,2,3,4,5,6" title="一、从原始文档到知识单元" />
-<!-- ai-course-inline-media:end -->
-
 ### 二、检索与生成必须带引用
 
 用户提问时，系统先识别身份与用途，再从其有权访问且仍有效的资料中检索。生成回答应附文档名称、版本或日期以及具体位置，必要时直接展示支持结论的短句。若检索结果互相冲突、证据不足或问题超出资料范围，系统应说明无法确定并转给责任人。
 
 引用质量至少包含三层检查：引用文件真实存在；引用位置确实包含相关内容；内容能够支持回答中的结论。只有第一层通过，仍可能出现“有引用的错误答案”。对于数字、价格、承诺、政策与合同条款，应优先显示原文并要求人工确认。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-004/deck.json" slides="7,8,9,10,11,12" title="二、检索与生成必须带引用" />
-<!-- ai-course-inline-media:end -->
 
 ### 三、权限、版本与有效期共同决定可见性
 
@@ -58,19 +59,11 @@ deck_revision: 'e672b83493dd83a3b971cec988e5c986a9c509b6ebc01fa717c9092cc07a4994
 
 同一制度可能有草案、现行版和历史版。同一产品也可能因地区、客户或发布时间不同而有多个口径。系统要标出版本关系、生效时间、失效时间和替代文件。接近复审日期时通知责任人；逾期未确认的条目应降级或停止用于自动回答，而不是继续以“可能过期”交付。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-004/deck.json" slides="13,14,15,16,17,18" title="三、权限、版本与有效期共同决定可见性" />
-<!-- ai-course-inline-media:end -->
-
 ### 四、审批后再交付
 
 AIGC 适合生成会议纪要草稿、制度问答、邮件、简报、销售材料和多渠道内容，但不同输出需要不同审批。内部个人草稿可由使用者自审；跨部门通知需要业务负责人确认；对客户的价格、功能、合同、合规与品牌表述，则需经过对应权限的审批人。
 
 流程要保存生成依据、修改差异、审批意见和正式版本。正式交付只能来自批准状态，修改源资料后应使受影响的派生内容进入重新审核。紧急场景也应有预先批准的模板和事后复核，而不是绕过治理。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-004/deck.json" slides="19,20,21,22,23,24" title="四、审批后再交付" />
-<!-- ai-course-inline-media:end -->
 
 ### 五、三个常见工作流
 
@@ -80,21 +73,20 @@ AIGC 适合生成会议纪要草稿、制度问答、邮件、简报、销售材
 
 **销售资料：**AI 根据批准的产品事实和品牌表达生成行业版本，产品、法务或合规人员审核关键主张；价格和功能从业务系统读取，过期材料停止外发。这样既能提高复用，也能防止“创作”出不存在的承诺。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-004/deck.json" slides="25,26,27,28,29,30" title="五、三个常见工作流" />
-<!-- ai-course-inline-media:end -->
-
 ### 六、用真实使用和纠错衡量价值
 
 页面访问量并不能证明知识有用。更有意义的指标包括：问题是否得到有依据的解决、引用能否支持回答、用户是否反复追问、人工转交是否准确、旧版本是否被拦截、从资料产生到批准可用需要多久、纠错后多快影响后续回答。
 
 还应观察业务结果，例如会议行动项按时完成情况、服务台重复咨询变化、销售资料退回原因和知识责任人的维护负担。若用户很少采用系统答案，应通过访谈区分是检索质量、权限缺失、内容陈旧还是流程本身没有价值。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-004/deck.json" slides="31,32,33,34,35,36" title="六、用真实使用和纠错衡量价值" />
-<!-- ai-course-inline-media:end -->
-
 ## 案例与图解
+
+<!-- course-visual:start lesson=IN-004 sha256=40010807adc1c5cb4fc3166ab5c60aab4473cbbdf65ec0d68faf384525549d63 -->
+<figure class="ai-course-visual">
+  <img src="/course-assets/lesson-media/ai-models/visuals/in-004-anchor-15-40010807adc1.svg" alt="企业知识检索、生成回答与人工审批组成的 RAG 工作流图" loading="lazy" decoding="async">
+  <figcaption><strong>学习提示：</strong>观察：比较知识检索、内容生成和审批发布的责任边界，重点关注回答怎样保留依据并在对外使用前接受复核。</figcaption>
+</figure>
+<!-- course-visual:end -->
 
 <div class="ai-course-case-grid">
 <article class="ai-course-case">
@@ -128,5 +120,5 @@ AIGC 适合生成会议纪要草稿、制度问答、邮件、简报、销售材
 
 ## 资料与延伸
 - [ISO/IEC 42001:2023](https://www.iso.org/standard/42001)：人工智能管理体系要求。
-- [ISO/IEC 27001:2022](https://www.iso.org/standard/27001)：信息安全管理体系要求。
+- [ISO/IEC 27001:2022](https://www.iso.org/standard/27001)：信息安全管理体系要求；截至 2026-07-13，ISO 官方页面列明其已发布 `Amd 1:2024` 修订。
 - 企业落地时还应遵循本组织的文档管理、保密、授权审批、记录保存和对外发布制度。

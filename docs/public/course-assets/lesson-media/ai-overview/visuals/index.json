@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "policy": "native-pptx-and-structured-course-visuals-no-slide-raster",
+  "module_id": "ai-overview",
+  "source_archive": "private-course-source",
+  "source_pptx_sha256": "516694e53503198c282989794c73e75d059cd57e91dcf548231cab53e07184d5",
+  "slide_size_emu": {
+    "width": 12192000,
+    "height": 6858000
+  },
+  "selection_policy": {
+    "excluded_lessons": [
+      "OV-001",
+      "OV-002"
+    ],
+    "allowed_extensions": [
+      ".gif",
+      ".jpeg",
+      ".jpg",
+      ".png",
+      ".svg",
+      ".webp"
+    ],
+    "maximum_geometry_ratio": 0.8,
+    "minimum_geometry_ratio": 0.006,
+    "minimum_geometry_dimension_ratio": 0.04,
+    "minimum_raster_width": 180,
+    "minimum_raster_height": 100,
+    "minimum_raster_pixels": 40000,
+    "minimum_visible_alpha_mean": 0.02,
+    "repeated_asset_minimum_slides": 3,
+    "repeated_placement_ratio": 0.6
+  },
+  "curated_exclusions": {
+    "d69022f488fd1099e6db7cd3b652994d5c4cab2992dfe1a886410c1fd98c0f2b": "ornamental-campus-silhouette",
+    "bb73b395d81e8df40472628ef58e7cdd18db3001931044a55badaef214859446": "ornamental-wave-background",
+    "a25df2950c06aea4e4be916047017feb19c05e86e9ccb6f3d1a363ab600515a9": "rasterized-legacy-slide-with-header-and-footer",
+    "a38dedea30abca2a76649cf7f86b937d85cb11b13a1ab910931822c2a89ce2fa": "rasterized-slide-like-canvas-with-template-band",
+    "d1105f24307f99a4779873cf32ac9c0f8f045cb9ad62bd9e4c269b9419f30a98": "standalone-decorative-robot-icon",
+    "160b6b94de958298f027199fdd794bef02a2920bc80cfa3d9792408254556bb4": "standalone-decorative-person-icon"
+  },
+  "selection_overrides": {
+    "OV-003": {
+      "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+      "reason": "use the reviewed compute-scale chart instead of a generic AI illustration or ornamental anchor asset"
+    },
+    "OV-005": {
+      "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+      "reason": "use the reviewed DeepSeek MoE and domestic-compute illustration instead of a generic model timeline"
+    },
+    "AG-001": {
+      "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+      "reason": "use the reviewed ReAct loop instead of a generic AI activity collage"
+    },
+    "AG-002": {
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "reason": "use the reviewed MCP request and tool-call sequence"
+    },
+    "AG-005": {
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "reason": "use the reviewed evaluation-rule table instead of a social-media incident screenshot"
+    },
+    "IN-001": {
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "reason": "reuse the reviewed evaluation-rule table to show that business success criteria must be executable"
+    },
+    "IN-002": {
+      "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+      "reason": "use the reviewed retrieval-evidence-reader chain instead of a dense paper screenshot"
+    },
+    "IN-003": {
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "reason": "reuse the reviewed controlled MCP sequence instead of a low-contrast hierarchy diagram"
+    },
+    "IN-004": {
+      "kind": "structured-course-diagram",
+      "slide": 15,
+      "reason": "reconstruct the enterprise knowledge workflow because the mapped pictures are generic decoration"
+    },
+    "IN-005": {
+      "kind": "structured-course-diagram",
+      "slide": 18,
+      "reason": "reconstruct the industrial decision loop instead of reusing a weak robot-environment image"
+    },
+    "IN-007": {
+      "kind": "structured-course-diagram",
+      "slide": 15,
+      "reason": "reconstruct the fire-investigation evidence chain because the mapped picture is generic decoration"
+    },
+    "IN-008": {
+      "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+      "reason": "use the reviewed multimodal environment-observation diagram instead of a generic agent architecture"
+    },
+    "EM-002": {
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "reason": "prefer an independent animated robot scene over the pasted legacy-slide raster"
+    },
+    "EM-004": {
+      "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+      "reason": "prefer a standalone reinforcement-learning diagram over the slide-like canvas"
+    },
+    "EM-005": {
+      "kind": "native-group-rendering",
+      "slide": 10,
+      "reason": "reconstruct the native task-planning group instead of publishing either standalone icon or a pasted slide raster"
+    },
+    "EM-006": {
+      "kind": "structured-course-diagram",
+      "slide": 18,
+      "reason": "reconstruct the individual-to-group evaluation chain instead of presenting a single-agent loop as the group architecture"
+    },
+    "IN-009": {
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "reason": "reuse the reviewed indoor robot GIF to illustrate dynamic spatial perception"
+    }
+  },
+  "coverage": {
+    "required_lessons": 1,
+    "selected_assets": 1,
+    "lesson_ids": [
+      "OV-003"
+    ]
+  },
+  "lesson_audits": [
+    {
+      "lesson_id": "OV-003",
+      "source_slide_count": 3,
+      "picture_shape_count": 7,
+      "eligible_picture_count": 4,
+      "excluded_picture_count": 3,
+      "exclusion_counts": {
+        "curated:ornamental-campus-silhouette": 1,
+        "curated:ornamental-wave-background": 1,
+        "transparent-or-sparse-decoration": 1
+      }
+    }
+  ],
+  "assets": [
+    {
+      "lesson_id": "OV-003",
+      "lesson_title": "机器学习与深度学习基础",
+      "module_id": "ai-overview",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "516694e53503198c282989794c73e75d059cd57e91dcf548231cab53e07184d5",
+      "source_entry": "ppt/media/image31.png",
+      "source_entries": [
+        "ppt/media/image31.png"
+      ],
+      "source_slides": [
+        22
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 22,
+      "source_anchor": false,
+      "shape_id": "70",
+      "shape_name": "picture 70",
+      "geometry": {
+        "x_emu": 8716010,
+        "y_emu": 4652010,
+        "width_emu": 3014345,
+        "height_emu": 2011045,
+        "width_ratio": 0.24724,
+        "height_ratio": 0.293241,
+        "area_ratio": 0.072501
+      },
+      "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+      "size": 236153,
+      "width": 666,
+      "height": 500,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-overview/visuals/ov-003-anchor-22-376086e39978.png",
+      "public_url": "/course-assets/lesson-media/ai-overview/visuals/ov-003-anchor-22-376086e39978.png",
+      "alt": "模型计算规模随时间增长的趋势图",
+      "caption": "观察：比较横轴上的时间与纵轴上的数量级变化，同时思考计算规模增长为何不等于能力必然按同样比例提升。",
+      "selection_score": 1737,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+        "reason": "use the reviewed compute-scale chart instead of a generic AI illustration or ornamental anchor asset"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+        "note": "Compute-scale chart; independent picture without slide chrome."
+      }
+    }
+  ]
+}

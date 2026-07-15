@@ -1,0 +1,513 @@
+{
+  "schema_version": 1,
+  "policy": "native-pptx-and-structured-course-visuals-no-slide-raster",
+  "module_id": "ai-models",
+  "source_archive": "private-course-source",
+  "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+  "slide_size_emu": {
+    "width": 12192000,
+    "height": 6858000
+  },
+  "selection_policy": {
+    "excluded_lessons": [
+      "OV-001",
+      "OV-002"
+    ],
+    "allowed_extensions": [
+      ".gif",
+      ".jpeg",
+      ".jpg",
+      ".png",
+      ".svg",
+      ".webp"
+    ],
+    "maximum_geometry_ratio": 0.8,
+    "minimum_geometry_ratio": 0.006,
+    "minimum_geometry_dimension_ratio": 0.04,
+    "minimum_raster_width": 180,
+    "minimum_raster_height": 100,
+    "minimum_raster_pixels": 40000,
+    "minimum_visible_alpha_mean": 0.02,
+    "repeated_asset_minimum_slides": 3,
+    "repeated_placement_ratio": 0.6
+  },
+  "curated_exclusions": {
+    "d69022f488fd1099e6db7cd3b652994d5c4cab2992dfe1a886410c1fd98c0f2b": "ornamental-campus-silhouette",
+    "bb73b395d81e8df40472628ef58e7cdd18db3001931044a55badaef214859446": "ornamental-wave-background",
+    "a25df2950c06aea4e4be916047017feb19c05e86e9ccb6f3d1a363ab600515a9": "rasterized-legacy-slide-with-header-and-footer",
+    "a38dedea30abca2a76649cf7f86b937d85cb11b13a1ab910931822c2a89ce2fa": "rasterized-slide-like-canvas-with-template-band",
+    "d1105f24307f99a4779873cf32ac9c0f8f045cb9ad62bd9e4c269b9419f30a98": "standalone-decorative-robot-icon",
+    "160b6b94de958298f027199fdd794bef02a2920bc80cfa3d9792408254556bb4": "standalone-decorative-person-icon"
+  },
+  "selection_overrides": {
+    "OV-003": {
+      "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+      "reason": "use the reviewed compute-scale chart instead of a generic AI illustration or ornamental anchor asset"
+    },
+    "OV-005": {
+      "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+      "reason": "use the reviewed DeepSeek MoE and domestic-compute illustration instead of a generic model timeline"
+    },
+    "AG-001": {
+      "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+      "reason": "use the reviewed ReAct loop instead of a generic AI activity collage"
+    },
+    "AG-002": {
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "reason": "use the reviewed MCP request and tool-call sequence"
+    },
+    "AG-005": {
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "reason": "use the reviewed evaluation-rule table instead of a social-media incident screenshot"
+    },
+    "IN-001": {
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "reason": "reuse the reviewed evaluation-rule table to show that business success criteria must be executable"
+    },
+    "IN-002": {
+      "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+      "reason": "use the reviewed retrieval-evidence-reader chain instead of a dense paper screenshot"
+    },
+    "IN-003": {
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "reason": "reuse the reviewed controlled MCP sequence instead of a low-contrast hierarchy diagram"
+    },
+    "IN-004": {
+      "kind": "structured-course-diagram",
+      "slide": 15,
+      "reason": "reconstruct the enterprise knowledge workflow because the mapped pictures are generic decoration"
+    },
+    "IN-005": {
+      "kind": "structured-course-diagram",
+      "slide": 18,
+      "reason": "reconstruct the industrial decision loop instead of reusing a weak robot-environment image"
+    },
+    "IN-007": {
+      "kind": "structured-course-diagram",
+      "slide": 15,
+      "reason": "reconstruct the fire-investigation evidence chain because the mapped picture is generic decoration"
+    },
+    "IN-008": {
+      "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+      "reason": "use the reviewed multimodal environment-observation diagram instead of a generic agent architecture"
+    },
+    "EM-002": {
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "reason": "prefer an independent animated robot scene over the pasted legacy-slide raster"
+    },
+    "EM-004": {
+      "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+      "reason": "prefer a standalone reinforcement-learning diagram over the slide-like canvas"
+    },
+    "EM-005": {
+      "kind": "native-group-rendering",
+      "slide": 10,
+      "reason": "reconstruct the native task-planning group instead of publishing either standalone icon or a pasted slide raster"
+    },
+    "EM-006": {
+      "kind": "structured-course-diagram",
+      "slide": 18,
+      "reason": "reconstruct the individual-to-group evaluation chain instead of presenting a single-agent loop as the group architecture"
+    },
+    "IN-009": {
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "reason": "reuse the reviewed indoor robot GIF to illustrate dynamic spatial perception"
+    }
+  },
+  "coverage": {
+    "required_lessons": 6,
+    "selected_assets": 6,
+    "lesson_ids": [
+      "OV-004",
+      "OV-005",
+      "OV-006",
+      "OV-007",
+      "IN-004",
+      "IN-007"
+    ]
+  },
+  "lesson_audits": [
+    {
+      "lesson_id": "OV-004",
+      "source_slide_count": 12,
+      "picture_shape_count": 14,
+      "eligible_picture_count": 7,
+      "excluded_picture_count": 7,
+      "exclusion_counts": {
+        "low-resolution-raster": 7,
+        "tiny-slide-decoration": 7
+      }
+    },
+    {
+      "lesson_id": "OV-005",
+      "source_slide_count": 6,
+      "picture_shape_count": 9,
+      "eligible_picture_count": 3,
+      "excluded_picture_count": 6,
+      "exclusion_counts": {
+        "low-resolution-raster": 6,
+        "tiny-slide-decoration": 6
+      }
+    },
+    {
+      "lesson_id": "OV-006",
+      "source_slide_count": 3,
+      "picture_shape_count": 13,
+      "eligible_picture_count": 2,
+      "excluded_picture_count": 11,
+      "exclusion_counts": {
+        "low-resolution-raster": 11,
+        "tiny-slide-decoration": 11
+      }
+    },
+    {
+      "lesson_id": "OV-007",
+      "source_slide_count": 4,
+      "picture_shape_count": 9,
+      "eligible_picture_count": 2,
+      "excluded_picture_count": 7,
+      "exclusion_counts": {
+        "low-resolution-raster": 7,
+        "tiny-slide-decoration": 7
+      }
+    },
+    {
+      "lesson_id": "IN-004",
+      "source_slide_count": 5,
+      "picture_shape_count": 10,
+      "eligible_picture_count": 3,
+      "excluded_picture_count": 7,
+      "exclusion_counts": {
+        "low-resolution-raster": 7,
+        "tiny-slide-decoration": 7
+      }
+    },
+    {
+      "lesson_id": "IN-007",
+      "source_slide_count": 3,
+      "picture_shape_count": 5,
+      "eligible_picture_count": 2,
+      "excluded_picture_count": 3,
+      "exclusion_counts": {
+        "low-resolution-raster": 3,
+        "tiny-slide-decoration": 3
+      }
+    }
+  ],
+  "assets": [
+    {
+      "lesson_id": "OV-004",
+      "lesson_title": "大模型概述、Transformer 与能力边界",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/media/image5.jpeg",
+      "source_entries": [
+        "ppt/media/image5.jpeg"
+      ],
+      "source_slides": [
+        5
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 5,
+      "source_anchor": true,
+      "shape_id": "2",
+      "shape_name": "Picture 2",
+      "geometry": {
+        "x_emu": 613072,
+        "y_emu": 596283,
+        "width_emu": 7191191,
+        "height_emu": 3640346,
+        "width_ratio": 0.589829,
+        "height_ratio": 0.530817,
+        "area_ratio": 0.313091
+      },
+      "sha256": "182950acc5c2dbf54332d9fc4355fd9b7146b76e08d2535a4f21ae30db51e89f",
+      "size": 659818,
+      "width": 2699,
+      "height": 1366,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/ov-004-anchor-5-182950acc5c2.jpg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/ov-004-anchor-5-182950acc5c2.jpg",
+      "alt": "Encoder 与 Transformer 信息处理结构对比图",
+      "caption": "观察：比较两种结构传递上下文信息的路径，重点关注 Transformer 如何让不同位置的信息并行建立联系。",
+      "selection_score": 103317,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "182950acc5c2dbf54332d9fc4355fd9b7146b76e08d2535a4f21ae30db51e89f",
+        "note": "RNN-to-Transformer comparison diagram; independent crop."
+      }
+    },
+    {
+      "lesson_id": "OV-005",
+      "lesson_title": "DeepSeek 与开源模型生态",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/media/image18.jpeg",
+      "source_entries": [
+        "ppt/media/image18.jpeg"
+      ],
+      "source_slides": [
+        10
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 10,
+      "source_anchor": true,
+      "shape_id": "3",
+      "shape_name": "Picture 3",
+      "geometry": {
+        "x_emu": 6735366,
+        "y_emu": 3915116,
+        "width_emu": 4876062,
+        "height_emu": 2387600,
+        "width_ratio": 0.399939,
+        "height_ratio": 0.348148,
+        "area_ratio": 0.139238
+      },
+      "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+      "size": 791068,
+      "width": 2745,
+      "height": 1344,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/ov-005-anchor-10-4b2e75feb052.jpg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/ov-005-anchor-10-4b2e75feb052.jpg",
+      "alt": "DeepSeek 混合专家模型与国产算力硬件协同示意图",
+      "caption": "观察：区分模型侧的专家选择与硬件侧的计算支撑，比较稀疏激活和算力适配分别解决什么问题。",
+      "selection_score": 101578,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+        "reason": "use the reviewed DeepSeek MoE and domestic-compute illustration instead of a generic model timeline"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+        "note": "DeepSeek MoE and domestic-compute illustration; independent crop."
+      }
+    },
+    {
+      "lesson_id": "OV-006",
+      "lesson_title": "提示词、AIGC 与多模态工作流",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/media/image19.jpeg",
+      "source_entries": [
+        "ppt/media/image19.jpeg"
+      ],
+      "source_slides": [
+        11
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 11,
+      "source_anchor": true,
+      "shape_id": "2",
+      "shape_name": "Picture 2",
+      "geometry": {
+        "x_emu": 0,
+        "y_emu": 0,
+        "width_emu": 12192000,
+        "height_emu": 2952616,
+        "width_ratio": 1,
+        "height_ratio": 0.430536,
+        "area_ratio": 0.430536
+      },
+      "sha256": "5d593934803e23af2c905df9808ba418fcfbca6599940c04bc83963c543fdc86",
+      "size": 635778,
+      "width": 3898,
+      "height": 946,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/ov-006-anchor-11-5d593934803e.jpg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/ov-006-anchor-11-5d593934803e.jpg",
+      "alt": "图像分块后送入 Transformer 编码器的 Vision Transformer 流程图",
+      "caption": "观察：沿着图像分块、向量表示、位置编码和分类输出的顺序追踪数据，比较它与直接处理文字序列的共同点。",
+      "selection_score": 105491,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "5d593934803e23af2c905df9808ba418fcfbca6599940c04bc83963c543fdc86",
+        "note": "Vision-Transformer comparison diagram; independent crop."
+      }
+    },
+    {
+      "lesson_id": "OV-007",
+      "lesson_title": "幻觉、安全与负责任 AI",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/media/image29.jpeg",
+      "source_entries": [
+        "ppt/media/image29.jpeg"
+      ],
+      "source_slides": [
+        13
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 13,
+      "source_anchor": true,
+      "shape_id": "18",
+      "shape_name": "Picture 18",
+      "geometry": {
+        "x_emu": 7440468,
+        "y_emu": 1419862,
+        "width_emu": 4164157,
+        "height_emu": 2098038,
+        "width_ratio": 0.341548,
+        "height_ratio": 0.305926,
+        "area_ratio": 0.104488
+      },
+      "sha256": "a48148c53615b016fa25da886f90685630544d923d37feed0607c670a95e9e8f",
+      "size": 845629,
+      "width": 2699,
+      "height": 1366,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/ov-007-anchor-13-a48148c53615.jpg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/ov-007-anchor-13-a48148c53615.jpg",
+      "alt": "大模型预训练、微调与人类反馈强化学习流程图",
+      "caption": "观察：比较预训练、任务微调和人类反馈三个阶段使用的数据与优化目标，找出安全约束主要在哪些环节进入。",
+      "selection_score": 102231,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "a48148c53615b016fa25da886f90685630544d923d37feed0607c670a95e9e8f",
+        "note": "Alignment and feedback flow diagram; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-004",
+      "lesson_title": "企业办公、知识管理与 AIGC",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/slides/slide15.xml#structured-course-in-004",
+      "source_entries": [],
+      "source_slides": [
+        14,
+        15,
+        18,
+        19
+      ],
+      "source_kind": "structured-course-diagram",
+      "slide": 15,
+      "source_anchor": true,
+      "shape_id": null,
+      "shape_name": "IN-004 structured course diagram",
+      "geometry": {
+        "x_emu": 853440,
+        "y_emu": 1097280,
+        "width_emu": 10485120,
+        "height_emu": 4663440,
+        "width_ratio": 0.86,
+        "height_ratio": 0.68,
+        "area_ratio": 0.5848
+      },
+      "sha256": "40010807adc1c5cb4fc3166ab5c60aab4473cbbdf65ec0d68faf384525549d63",
+      "size": 4491,
+      "width": 1200,
+      "height": 640,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/in-004-anchor-15-40010807adc1.svg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/in-004-anchor-15-40010807adc1.svg",
+      "alt": "企业知识检索、生成回答与人工审批组成的 RAG 工作流图",
+      "caption": "观察：比较知识检索、内容生成和审批发布的责任边界，重点关注回答怎样保留依据并在对外使用前接受复核。",
+      "selection_score": 106095,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "kind": "structured-course-diagram",
+        "slide": 15,
+        "reason": "reconstruct the enterprise knowledge workflow because the mapped pictures are generic decoration",
+        "sha256": "40010807adc1c5cb4fc3166ab5c60aab4473cbbdf65ec0d68faf384525549d63"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "40010807adc1c5cb4fc3166ab5c60aab4473cbbdf65ec0d68faf384525549d63",
+        "note": "Enterprise knowledge workflow reconstructed from structured course concepts; no slide raster."
+      }
+    },
+    {
+      "lesson_id": "IN-007",
+      "lesson_title": "应急管理与火灾调查",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/slides/slide15.xml#structured-course-in-007",
+      "source_entries": [],
+      "source_slides": [
+        15,
+        18,
+        19
+      ],
+      "source_kind": "structured-course-diagram",
+      "slide": 15,
+      "source_anchor": true,
+      "shape_id": null,
+      "shape_name": "IN-007 structured course diagram",
+      "geometry": {
+        "x_emu": 853440,
+        "y_emu": 1097280,
+        "width_emu": 10485120,
+        "height_emu": 4663440,
+        "width_ratio": 0.86,
+        "height_ratio": 0.68,
+        "area_ratio": 0.5848
+      },
+      "sha256": "0098fa67b8b46a9aaf06903b8087488a4a154fe12fc4fe82b924d0edc9b7e044",
+      "size": 4499,
+      "width": 1200,
+      "height": 640,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/in-007-anchor-15-0098fa67b8b4.svg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/in-007-anchor-15-0098fa67b8b4.svg",
+      "alt": "火灾现场数据、线索关联、假设验证与结论复核组成的证据链图",
+      "caption": "观察：从结论反向核对每条证据的来源、时间和不确定性，区分模型提出的调查假设与已经验证的事实。",
+      "selection_score": 107095,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "kind": "structured-course-diagram",
+        "slide": 15,
+        "reason": "reconstruct the fire-investigation evidence chain because the mapped picture is generic decoration",
+        "sha256": "0098fa67b8b46a9aaf06903b8087488a4a154fe12fc4fe82b924d0edc9b7e044"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "0098fa67b8b46a9aaf06903b8087488a4a154fe12fc4fe82b924d0edc9b7e044",
+        "note": "Evidence and accountable-review chain reconstructed from structured course concepts; no slide raster."
+      }
+    }
+  ]
+}

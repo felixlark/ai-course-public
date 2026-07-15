@@ -12,7 +12,7 @@ aside: false
 
 从人工智能的基本循环、发展历程和机器学习基础进入大模型、生成式 AI 与负责任使用。
 
-1. [什么是人工智能：感知、思考与行动](/zh-cn/stage-1/ov-001-what-is-ai/) — 用现实案例和感知—思考—行动闭环建立人工智能的第一幅全景图。
+1. [人工智能引论：从典型案例到大模型能力边界](/zh-cn/stage-1/ov-001-what-is-ai/) — 从索菲亚、来福机器人和 Crowdverse 等案例出发，依次理解人工智能的定义与历史、社会影响、大模型技术栈、演进分类和能力边界。
 2. [人工智能发展与社会影响](/zh-cn/stage-1/ov-002-ai-history-and-society/) — 沿关键技术转折理解人工智能的兴衰，并讨论它如何改变工作、组织和社会分工。
 3. [机器学习与深度学习基础](/zh-cn/stage-1/ov-003-machine-learning-and-deep-learning/) — 从数据、模型、损失和泛化进入神经网络、反向传播与卷积网络。
 4. [大模型概述、Transformer 与能力边界](/zh-cn/stage-1/ov-004-llm-transformer-and-boundaries/) — 解释 token、注意力、Transformer、预训练与推理，并建立大模型能力边界。

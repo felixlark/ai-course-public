@@ -2,22 +2,35 @@
   "name": "ai-course-web",
   "version": "0.1.0",
   "private": true,
-  "description": "陈龙彪团队人工智能公开课：VitePress 讲义、原生 Web PPT 与原创 PPTX",
+  "description": "陈龙彪团队人工智能公开课：一节 Markdown 对应一份原始飞书课件",
   "type": "module",
   "packageManager": "pnpm@10.29.2",
   "scripts": {
-    "decks:verify": "node scripts/verify-public-decks.mjs",
-    "media:verify": "node scripts/verify-public-source-media.mjs",
+    "courseware:verify": "node scripts/verify-source-courseware.mjs",
+    "courseware:verify:remote": "node scripts/verify-source-courseware.mjs --remote",
+    "media:verify": "node scripts/verify-course-media-playback.mjs",
+    "visuals:verify": "node scripts/verify-course-visuals.mjs",
+    "course:quality:verify": "node scripts/verify-course-content-quality.mjs",
     "generate": "node scripts/build-web-course.mjs",
     "dev": "npm run generate && vitepress dev docs",
-    "build": "npm run generate && npm run decks:verify && vitepress build docs",
+    "build": "npm run generate && npm run verify:public",
     "preview": "vitepress preview docs",
-    "verify": "npm run generate && npm run decks:verify && npm run media:verify && node scripts/verify-web-course.mjs && node scripts/audit-course-language.mjs && node scripts/audit-course-content.mjs && vitepress build docs",
-    "release:verify": "node scripts/verify-release-readiness.mjs && npm run verify"
+    "preview:service:install": "zsh scripts/manage-preview-service.sh install",
+    "preview:service:status": "zsh scripts/manage-preview-service.sh status",
+    "preview:service:restart": "zsh scripts/manage-preview-service.sh restart",
+    "preview:service:logs": "zsh scripts/manage-preview-service.sh logs",
+    "preview:service:uninstall": "zsh scripts/manage-preview-service.sh uninstall",
+    "verify:public": "npm run visuals:verify && npm run media:verify && node scripts/verify-web-course.mjs && node scripts/audit-course-language.mjs && npm run course:quality:verify && vitepress build docs",
+    "verify": "npm run courseware:verify && npm run generate && npm run verify:public",
+    "release:verify": "npm run verify"
   },
   "dependencies": {
     "vitepress": "2.0.0-alpha.16",
     "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
   },
   "engines": {
     "node": ">=22.0.0"

@@ -7,9 +7,7 @@ const root = path.resolve(__dirname, '..')
 
 const scanRoots = [
   path.join(root, 'docs/zh-cn'),
-  path.join(root, 'docs/public/course-assets/course-decks'),
-  path.join(root, 'docs/public/course-assets/generated'),
-  path.join(root, '课程PPT框架/public-decks')
+  path.join(root, 'docs/public/course-assets/generated')
 ]
 
 const textExtensions = new Set(['.md', '.json', '.svg', '.txt', '.html'])
@@ -58,6 +56,18 @@ const checks = [
     name: 'public-course-version-label',
     pattern: /原课件|源课件|课程精编|原课件图片与视频|打开本节 Web PPT/gi,
     scope: 'visible'
+  },
+  {
+    name: 'learner-page-production-lineage',
+    pattern: /本节课件主线|原生\s*PPTX|PPTX\s*第\s*\d+\s*页|扩写边界|讲义[^。\n]{0,30}(?:扩写|补足)|知识点重排|课件原生文字|不冒充[^。\n]*(?:PPTX|原生页)|后续章节继续[^。\n]{0,40}(?:解释|扩展)|请在[^。\n]{0,30}幻灯片[^。\n]{0,30}查看(?:完整)?呈现|只复用[^。\n]{0,100}(?:通用)?方法|作为[^。\n]{0,80}的原生切片|治理页作为[^。\n]{0,80}技术底座|属于行业扩写内容|当前模块\s*PPTX/gi,
+    scope: 'visible',
+    filePattern: /^docs\/zh-cn\/stage-[1-4]\/[^/]+\/index\.md$/
+  },
+  {
+    name: 'learner-page-whole-slide-export-meta',
+    pattern: /直接来源讲义|整页(?:导出|版式|截图|页面图)|原始页面[^。\n]{0,30}整页|正文(?:图解|图片)[^。\n]{0,40}(?:取自|来自)[^。\n]{0,40}整页/gi,
+    scope: 'visible',
+    filePattern: /^docs\/zh-cn\/stage-[1-4]\/[^/]+\/index\.md$/
   },
   {
     name: 'unverified-gpt4-parameter-count',
@@ -109,15 +119,17 @@ const findings = []
 for (const file of files) {
   const text = await fs.readFile(file, 'utf8')
   const lines = text.split(/\r?\n/)
+  const relativeFile = path.relative(root, file)
   for (const [index, line] of lines.entries()) {
     const visible = visibleTextForAudit(line)
     for (const check of checks) {
+      if (check.filePattern && !check.filePattern.test(relativeFile)) continue
       const candidate = check.scope === 'raw' ? line : visible
       check.pattern.lastIndex = 0
       if (check.pattern.test(candidate)) {
         findings.push({
           check: check.name,
-          file: path.relative(root, file),
+          file: relativeFile,
           line: index + 1,
           text: line.trim().slice(0, 240)
         })

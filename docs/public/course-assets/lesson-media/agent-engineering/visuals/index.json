@@ -1,0 +1,693 @@
+{
+  "schema_version": 1,
+  "policy": "native-pptx-and-structured-course-visuals-no-slide-raster",
+  "module_id": "agent-engineering",
+  "source_archive": "private-course-source",
+  "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+  "slide_size_emu": {
+    "width": 9144000,
+    "height": 6858000
+  },
+  "selection_policy": {
+    "excluded_lessons": [
+      "OV-001",
+      "OV-002"
+    ],
+    "allowed_extensions": [
+      ".gif",
+      ".jpeg",
+      ".jpg",
+      ".png",
+      ".svg",
+      ".webp"
+    ],
+    "maximum_geometry_ratio": 0.8,
+    "minimum_geometry_ratio": 0.006,
+    "minimum_geometry_dimension_ratio": 0.04,
+    "minimum_raster_width": 180,
+    "minimum_raster_height": 100,
+    "minimum_raster_pixels": 40000,
+    "minimum_visible_alpha_mean": 0.02,
+    "repeated_asset_minimum_slides": 3,
+    "repeated_placement_ratio": 0.6
+  },
+  "curated_exclusions": {
+    "d69022f488fd1099e6db7cd3b652994d5c4cab2992dfe1a886410c1fd98c0f2b": "ornamental-campus-silhouette",
+    "bb73b395d81e8df40472628ef58e7cdd18db3001931044a55badaef214859446": "ornamental-wave-background",
+    "a25df2950c06aea4e4be916047017feb19c05e86e9ccb6f3d1a363ab600515a9": "rasterized-legacy-slide-with-header-and-footer",
+    "a38dedea30abca2a76649cf7f86b937d85cb11b13a1ab910931822c2a89ce2fa": "rasterized-slide-like-canvas-with-template-band",
+    "d1105f24307f99a4779873cf32ac9c0f8f045cb9ad62bd9e4c269b9419f30a98": "standalone-decorative-robot-icon",
+    "160b6b94de958298f027199fdd794bef02a2920bc80cfa3d9792408254556bb4": "standalone-decorative-person-icon"
+  },
+  "selection_overrides": {
+    "OV-003": {
+      "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+      "reason": "use the reviewed compute-scale chart instead of a generic AI illustration or ornamental anchor asset"
+    },
+    "OV-005": {
+      "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+      "reason": "use the reviewed DeepSeek MoE and domestic-compute illustration instead of a generic model timeline"
+    },
+    "AG-001": {
+      "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+      "reason": "use the reviewed ReAct loop instead of a generic AI activity collage"
+    },
+    "AG-002": {
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "reason": "use the reviewed MCP request and tool-call sequence"
+    },
+    "AG-005": {
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "reason": "use the reviewed evaluation-rule table instead of a social-media incident screenshot"
+    },
+    "IN-001": {
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "reason": "reuse the reviewed evaluation-rule table to show that business success criteria must be executable"
+    },
+    "IN-002": {
+      "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+      "reason": "use the reviewed retrieval-evidence-reader chain instead of a dense paper screenshot"
+    },
+    "IN-003": {
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "reason": "reuse the reviewed controlled MCP sequence instead of a low-contrast hierarchy diagram"
+    },
+    "IN-004": {
+      "kind": "structured-course-diagram",
+      "slide": 15,
+      "reason": "reconstruct the enterprise knowledge workflow because the mapped pictures are generic decoration"
+    },
+    "IN-005": {
+      "kind": "structured-course-diagram",
+      "slide": 18,
+      "reason": "reconstruct the industrial decision loop instead of reusing a weak robot-environment image"
+    },
+    "IN-007": {
+      "kind": "structured-course-diagram",
+      "slide": 15,
+      "reason": "reconstruct the fire-investigation evidence chain because the mapped picture is generic decoration"
+    },
+    "IN-008": {
+      "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+      "reason": "use the reviewed multimodal environment-observation diagram instead of a generic agent architecture"
+    },
+    "EM-002": {
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "reason": "prefer an independent animated robot scene over the pasted legacy-slide raster"
+    },
+    "EM-004": {
+      "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+      "reason": "prefer a standalone reinforcement-learning diagram over the slide-like canvas"
+    },
+    "EM-005": {
+      "kind": "native-group-rendering",
+      "slide": 10,
+      "reason": "reconstruct the native task-planning group instead of publishing either standalone icon or a pasted slide raster"
+    },
+    "EM-006": {
+      "kind": "structured-course-diagram",
+      "slide": 18,
+      "reason": "reconstruct the individual-to-group evaluation chain instead of presenting a single-agent loop as the group architecture"
+    },
+    "IN-009": {
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "reason": "reuse the reviewed indoor robot GIF to illustrate dynamic spatial perception"
+    }
+  },
+  "coverage": {
+    "required_lessons": 9,
+    "selected_assets": 9,
+    "lesson_ids": [
+      "AG-001",
+      "AG-002",
+      "AG-003",
+      "AG-004",
+      "AG-005",
+      "IN-001",
+      "IN-002",
+      "IN-003",
+      "IN-008"
+    ]
+  },
+  "lesson_audits": [
+    {
+      "lesson_id": "AG-001",
+      "source_slide_count": 20,
+      "picture_shape_count": 18,
+      "eligible_picture_count": 17,
+      "excluded_picture_count": 1,
+      "exclusion_counts": {
+        "low-resolution-raster": 1
+      }
+    },
+    {
+      "lesson_id": "AG-002",
+      "source_slide_count": 30,
+      "picture_shape_count": 30,
+      "eligible_picture_count": 27,
+      "excluded_picture_count": 3,
+      "exclusion_counts": {
+        "low-resolution-raster": 3,
+        "tiny-slide-decoration": 2
+      }
+    },
+    {
+      "lesson_id": "AG-003",
+      "source_slide_count": 7,
+      "picture_shape_count": 7,
+      "eligible_picture_count": 7,
+      "excluded_picture_count": 0,
+      "exclusion_counts": {}
+    },
+    {
+      "lesson_id": "AG-004",
+      "source_slide_count": 3,
+      "picture_shape_count": 1,
+      "eligible_picture_count": 1,
+      "excluded_picture_count": 0,
+      "exclusion_counts": {}
+    },
+    {
+      "lesson_id": "AG-005",
+      "source_slide_count": 13,
+      "picture_shape_count": 9,
+      "eligible_picture_count": 9,
+      "excluded_picture_count": 0,
+      "exclusion_counts": {}
+    },
+    {
+      "lesson_id": "IN-001",
+      "source_slide_count": 12,
+      "picture_shape_count": 6,
+      "eligible_picture_count": 6,
+      "excluded_picture_count": 0,
+      "exclusion_counts": {}
+    },
+    {
+      "lesson_id": "IN-002",
+      "source_slide_count": 11,
+      "picture_shape_count": 11,
+      "eligible_picture_count": 9,
+      "excluded_picture_count": 2,
+      "exclusion_counts": {
+        "low-resolution-raster": 2,
+        "tiny-slide-decoration": 1
+      }
+    },
+    {
+      "lesson_id": "IN-003",
+      "source_slide_count": 19,
+      "picture_shape_count": 14,
+      "eligible_picture_count": 13,
+      "excluded_picture_count": 1,
+      "exclusion_counts": {
+        "low-resolution-raster": 1,
+        "tiny-slide-decoration": 1
+      }
+    },
+    {
+      "lesson_id": "IN-008",
+      "source_slide_count": 15,
+      "picture_shape_count": 12,
+      "eligible_picture_count": 11,
+      "excluded_picture_count": 1,
+      "exclusion_counts": {
+        "low-resolution-raster": 1,
+        "tiny-slide-decoration": 1
+      }
+    }
+  ],
+  "assets": [
+    {
+      "lesson_id": "AG-001",
+      "lesson_title": "Agent Loop 与 ReAct",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image34.png",
+      "source_entries": [
+        "ppt/media/image34.png"
+      ],
+      "source_slides": [
+        36
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 36,
+      "source_anchor": true,
+      "shape_id": "6",
+      "shape_name": "图片 5",
+      "geometry": {
+        "x_emu": 478155,
+        "y_emu": 1371600,
+        "width_emu": 8007985,
+        "height_emu": 4482465,
+        "width_ratio": 0.875764,
+        "height_ratio": 0.653611,
+        "area_ratio": 0.572409
+      },
+      "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+      "size": 659362,
+      "width": 1372,
+      "height": 768,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/ag-001-anchor-36-41620617f12e.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/ag-001-anchor-36-41620617f12e.png",
+      "alt": "智能体思考、行动、观察与再规划构成的 ReAct 闭环图",
+      "caption": "观察：沿着一次完整循环追踪智能体的状态变化，重点关注环境观察如何修正下一轮推理与行动。",
+      "selection_score": 104095,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+        "reason": "use the reviewed ReAct loop instead of a generic AI activity collage"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+        "note": "ReAct reasoning-action-observation loop; independent crop."
+      }
+    },
+    {
+      "lesson_id": "AG-002",
+      "lesson_title": "工具调用、MCP、记忆与规划",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image26.png",
+      "source_entries": [
+        "ppt/media/image26.png"
+      ],
+      "source_slides": [
+        25
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 25,
+      "source_anchor": false,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 713105,
+        "y_emu": 1600200,
+        "width_emu": 7545070,
+        "height_emu": 3662045,
+        "width_ratio": 0.825139,
+        "height_ratio": 0.533981,
+        "area_ratio": 0.440609
+      },
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "size": 278977,
+      "width": 1024,
+      "height": 497,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/ag-002-anchor-25-9aee7d1e53ef.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/ag-002-anchor-25-9aee7d1e53ef.png",
+      "alt": "模型、MCP 客户端、MCP 服务端与外部工具之间的调用时序图",
+      "caption": "观察：比较请求、工具执行和结果回传发生的位置，找出协议层负责连接什么、又不替代哪些业务判断。",
+      "selection_score": 5449,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+        "reason": "use the reviewed MCP request and tool-call sequence"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+        "note": "MCP request, tool-call and result sequence; independent crop."
+      }
+    },
+    {
+      "lesson_id": "AG-003",
+      "lesson_title": "多智能体协作",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image50.png",
+      "source_entries": [
+        "ppt/media/image50.png"
+      ],
+      "source_slides": [
+        54
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 54,
+      "source_anchor": true,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 534035,
+        "y_emu": 2362835,
+        "width_emu": 8080375,
+        "height_emu": 3726180,
+        "width_ratio": 0.883681,
+        "height_ratio": 0.543333,
+        "area_ratio": 0.480133
+      },
+      "sha256": "f8dc6f8d92a83e79f5ace0f3c335d2333345ccd1b016966f357c51f44f76c878",
+      "size": 395076,
+      "width": 874,
+      "height": 403,
+      "alpha_mean": 0.998856,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/ag-003-anchor-54-f8dc6f8d92a8.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/ag-003-anchor-54-f8dc6f8d92a8.png",
+      "alt": "多个专业智能体围绕共享任务分工协作的结构图",
+      "caption": "观察：比较各角色掌握的上下文、承担的子任务和交换的信息，判断哪里需要协调者或共享状态。",
+      "selection_score": 105817,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "f8dc6f8d92a83e79f5ace0f3c335d2333345ccd1b016966f357c51f44f76c878",
+        "note": "Multi-agent collaboration infographic; independent crop."
+      }
+    },
+    {
+      "lesson_id": "AG-004",
+      "lesson_title": "AI Coding 与 Vibe Coding",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image43.png",
+      "source_entries": [
+        "ppt/media/image43.png"
+      ],
+      "source_slides": [
+        45
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 45,
+      "source_anchor": true,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 794385,
+        "y_emu": 1600200,
+        "width_emu": 7374255,
+        "height_emu": 5120640,
+        "width_ratio": 0.806458,
+        "height_ratio": 0.746667,
+        "area_ratio": 0.602156
+      },
+      "sha256": "e61986a6ca8dc0710c4f39609579161ddfe01583d1692aabe6a6c9f1fbfba27f",
+      "size": 737954,
+      "width": 1505,
+      "height": 1045,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/ag-004-anchor-45-e61986a6ca8d.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/ag-004-anchor-45-e61986a6ca8d.png",
+      "alt": "编程智能体从理解需求到调用工具、测试和修正的执行时序图",
+      "caption": "观察：沿着需求、计划、编辑、运行和反馈的顺序检查闭环，找出哪些节点必须用真实结果而不是模型自述来验收。",
+      "selection_score": 106124,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "e61986a6ca8dc0710c4f39609579161ddfe01583d1692aabe6a6c9f1fbfba27f",
+        "note": "Role and execution-sequence table; independent crop."
+      }
+    },
+    {
+      "lesson_id": "AG-005",
+      "lesson_title": "可观测性、评测与 Human-in-the-loop",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image65.png",
+      "source_entries": [
+        "ppt/media/image65.png"
+      ],
+      "source_slides": [
+        70
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 70,
+      "source_anchor": false,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 457200,
+        "y_emu": 1828800,
+        "width_emu": 7962900,
+        "height_emu": 3781425,
+        "width_ratio": 0.870833,
+        "height_ratio": 0.551389,
+        "area_ratio": 0.480168
+      },
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "size": 212065,
+      "width": 836,
+      "height": 397,
+      "alpha_mean": 0.998804,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/ag-005-anchor-70-8d155d874119.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/ag-005-anchor-70-8d155d874119.png",
+      "alt": "智能体评测规则表，列出任务条件、工具行为与结果判定字段",
+      "caption": "观察：比较输入条件、期望行为、实际结果和通过标准，重点关注规则能否区分“完成任务”与“看起来像完成”。",
+      "selection_score": 5814,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+        "reason": "use the reviewed evaluation-rule table instead of a social-media incident screenshot"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+        "note": "Executable evaluation-rule table; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-001",
+      "lesson_title": "行业 AI 落地方法与 ROI",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image65.png",
+      "source_entries": [
+        "ppt/media/image65.png"
+      ],
+      "source_slides": [
+        70
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 70,
+      "source_anchor": true,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 457200,
+        "y_emu": 1828800,
+        "width_emu": 7962900,
+        "height_emu": 3781425,
+        "width_ratio": 0.870833,
+        "height_ratio": 0.551389,
+        "area_ratio": 0.480168
+      },
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "size": 212065,
+      "width": 836,
+      "height": 397,
+      "alpha_mean": 0.998804,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/in-001-anchor-70-8d155d874119.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/in-001-anchor-70-8d155d874119.png",
+      "alt": "把任务条件、工具行为和结果阈值对应起来的评测规则表",
+      "caption": "观察：比较业务目标、可观测行为和通过阈值，检查每个目标是否都能被数据或事件记录明确验证。",
+      "selection_score": 102814,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+        "reason": "reuse the reviewed evaluation-rule table to show that business success criteria must be executable"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+        "note": "Tool-function evaluation table; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-002",
+      "lesson_title": "高校教学与科研",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image6.png",
+      "source_entries": [
+        "ppt/media/image6.png"
+      ],
+      "source_slides": [
+        6
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 6,
+      "source_anchor": true,
+      "shape_id": "5",
+      "shape_name": "图片 4",
+      "geometry": {
+        "x_emu": 0,
+        "y_emu": 3764280,
+        "width_emu": 9144000,
+        "height_emu": 1753870,
+        "width_ratio": 1,
+        "height_ratio": 0.255741,
+        "area_ratio": 0.255741
+      },
+      "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+      "size": 312368,
+      "width": 1668,
+      "height": 320,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/in-002-anchor-6-ab5b5f456606.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/in-002-anchor-6-ab5b5f456606.png",
+      "alt": "研究问题、检索材料、引用证据与回答结论之间的链路图",
+      "caption": "观察：从每条结论反向追踪到支持它的材料片段，比较“找到相关材料”和“形成可核查证据”之间的差别。",
+      "selection_score": 103603,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+        "reason": "use the reviewed retrieval-evidence-reader chain instead of a dense paper screenshot"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+        "note": "Retrieval, evidence and reader chain; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-003",
+      "lesson_title": "政务服务与乡村振兴",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image26.png",
+      "source_entries": [
+        "ppt/media/image26.png"
+      ],
+      "source_slides": [
+        25
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 25,
+      "source_anchor": false,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 713105,
+        "y_emu": 1600200,
+        "width_emu": 7545070,
+        "height_emu": 3662045,
+        "width_ratio": 0.825139,
+        "height_ratio": 0.533981,
+        "area_ratio": 0.440609
+      },
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "size": 278977,
+      "width": 1024,
+      "height": 497,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/in-003-anchor-25-9aee7d1e53ef.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/in-003-anchor-25-9aee7d1e53ef.png",
+      "alt": "受控 MCP 工具调用的请求、授权、执行与结果回传时序图",
+      "caption": "观察：比较参数校验、权限确认、真实执行和结果复核四个节点，找出高风险操作应在哪一步暂停。",
+      "selection_score": 5449,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+        "reason": "reuse the reviewed controlled MCP sequence instead of a low-contrast hierarchy diagram"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+        "note": "Controlled MCP request and tool-result sequence; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-008",
+      "lesson_title": "海洋与地理空间",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image47.png",
+      "source_entries": [
+        "ppt/media/image47.png"
+      ],
+      "source_slides": [
+        51
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 51,
+      "source_anchor": false,
+      "shape_id": "3",
+      "shape_name": "图片 2",
+      "geometry": {
+        "x_emu": 321945,
+        "y_emu": 1828800,
+        "width_emu": 8319135,
+        "height_emu": 3735070,
+        "width_ratio": 0.909792,
+        "height_ratio": 0.54463,
+        "area_ratio": 0.495499
+      },
+      "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+      "size": 404157,
+      "width": 911,
+      "height": 409,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/in-008-anchor-51-3756bcd53778.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/in-008-anchor-51-3756bcd53778.png",
+      "alt": "图像、位置状态与文本任务共同组成的多模态环境观测图",
+      "caption": "观察：比较不同模态提供的空间、时间和语义信息，思考当它们互相冲突时应如何校准与取证。",
+      "selection_score": 5975,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+        "reason": "use the reviewed multimodal environment-observation diagram instead of a generic agent architecture"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+        "note": "Multimodal environment, observation and action diagram; independent crop."
+      }
+    }
+  ]
+}

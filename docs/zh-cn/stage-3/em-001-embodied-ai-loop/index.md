@@ -4,9 +4,8 @@ description: '建立具身智能的闭环模型，理解物理世界中的不确
 authored: true
 lesson_id: 'EM-001'
 module: '具身智能'
-deck_manifest: '/course-assets/course-decks/em-001/deck.json'
-source_media_manifest: '/course-assets/source-media/em-001/deck.json'
-deck_revision: '804647bc24a0c9f06b25aee664c6ca5a69ce7c32391ac75e0bfc5b08b4d90102'
+slides_url: 'https://xmu-mars.feishu.cn/wiki/Jau4w6o39iGWnpk0xaJcaA24nUd'
+slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/Jau4w6o39iGWnpk0xaJcaA24nUd'
 ---
 
 <div class="lesson-hero">
@@ -20,11 +19,21 @@ deck_revision: '804647bc24a0c9f06b25aee664c6ca5a69ce7c32391ac75e0bfc5b08b4d90102
 
 - 解释感知、决策、行动和反馈如何构成具身闭环。
 - 说明具身任务相较文本问答增加的实时、安全和环境约束。
+## 知识导图
+
+具身智能把模型放进物理或仿真环境中，用感知、决策与行动形成反馈闭环。
+
+- **数据与本体：** 数据提供经验，本体承担感知和执行，两者共同限定系统能力。
+
+- **闭环结构：** 把环境观测转成状态与计划，再通过动作获取新的反馈。
+
+- **实时与安全：** 在不确定的物理世界中，为动作设置约束、停止条件和恢复路径。
+
 ## 本节导入
 
-具身智能关注 AI 如何在物理世界中感知、决策、行动并从反馈中学习。
+同一句“把杯子放到桌上”，对文本模型只是生成一段回答；对机器人却意味着辨认杯子、估计距离、规划抓取、控制接触力，并在杯子滑动或有人靠近时及时停下。动作会真实改变环境，也会带来无法用“重新生成一次”消除的后果。
 
-本节建立学习路径：先理解概念，再看感知、推理、执行和典型平台。
+本节从数据与本体出发，沿着感知、推理、执行和环境反馈追踪一个具身闭环，并把不确定性、分层控制和安全停止放进同一条因果链。
 
 ## 核心内容
 
@@ -34,9 +43,7 @@ deck_revision: '804647bc24a0c9f06b25aee664c6ca5a69ce7c32391ac75e0bfc5b08b4d90102
 
 它不同于只在屏幕里生成文本的 AI，因为行动会受到物理约束、传感器误差和安全风险影响。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="16" title="什么是具身智能" />
-<!-- ai-course-inline-media:end -->
+数据、本体与学习缺一不可。数据记录示范、失败和环境变化；本体的传感器、关节、负载与可达范围限定系统能观察和执行什么；学习方法则利用交互数据改进策略。更多数据不能弥补本体看不见、够不到或无法安全停止的问题，本体性能更强也不等于任务理解和策略已经可靠。
 
 ### 感知：理解环境状态
 
@@ -44,19 +51,11 @@ deck_revision: '804647bc24a0c9f06b25aee664c6ca5a69ce7c32391ac75e0bfc5b08b4d90102
 
 感知结果决定后续规划质量，传感器噪声和遮挡会直接影响行动安全。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="3,12,14" title="感知：理解环境状态" />
-<!-- ai-course-inline-media:end -->
-
 ### 推理：从目标到计划
 
 推理环节把用户目标、环境状态和机器人能力转成可执行计划。
 
 大模型可以参与任务理解，但底层运动和安全约束仍需要专门控制系统。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="5,6,11" title="推理：从目标到计划" />
-<!-- ai-course-inline-media:end -->
 
 ### 执行：动作与反馈闭环
 
@@ -66,19 +65,11 @@ deck_revision: '804647bc24a0c9f06b25aee664c6ca5a69ce7c32391ac75e0bfc5b08b4d90102
 
 闭环中每个环节都有频率要求。任务规划可以按秒更新，运动控制往往需要更高频率；如果把慢速大模型直接放进底层控制回路，网络或推理抖动就可能变成不稳定动作。工程系统通常让高层模型负责理解目标和组合技能，让实时控制器负责姿态、力矩、接触与紧急停止。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="1,8,9,10,15,17,20,21" title="执行：动作与反馈闭环" />
-<!-- ai-course-inline-media:end -->
-
 ### 世界状态：机器人知道什么，也要知道自己不知道什么
 
 传感器只提供带噪声、延迟和遮挡的观测，系统需要把多帧信息、机器人自身状态和任务上下文融合成可用于决策的状态估计。状态不是现实本身；相机看不到杯子背面、定位会漂移、识别置信度也可能在光照变化时骤降。
 
 可靠决策要显式保留不确定性。目标位置不确定时可以换视角重新观察，路径被遮挡时可以减速，抓取失败时可以松开重试；当无法把风险降到允许范围时，应停止并请求人工处理。把“继续猜一个动作”设为默认，正是许多具身事故的起点。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="4,7,18,19" title="世界状态：机器人知道什么，也要知道自己不知道什么" />
-<!-- ai-course-inline-media:end -->
 
 ### 分层控制：任务、技能与安全互相约束
 
@@ -98,10 +89,6 @@ deck_revision: '804647bc24a0c9f06b25aee664c6ca5a69ce7c32391ac75e0bfc5b08b4d90102
 
 先在可控环境中验证，再迁移到实机，是降低成本和风险的基本路径。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="13" title="学习路径：从仿真到实机" />
-<!-- ai-course-inline-media:end -->
-
 ### 关键概念
 
 - 具身智能
@@ -114,11 +101,14 @@ deck_revision: '804647bc24a0c9f06b25aee664c6ca5a69ce7c32391ac75e0bfc5b08b4d90102
 - 安全监控
 - 仿真到实机
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/em-001/deck.json" slides="2" title="关键概念" />
-<!-- ai-course-inline-media:end -->
-
 ## 案例与图解
+
+<!-- course-visual:start lesson=EM-001 sha256=938063d046225e45ce6d37d159327a8642587ec148db18f63cbf9e3a9020a824 -->
+<figure class="ai-course-visual">
+  <img src="/course-assets/lesson-media/embodied-ai/visuals/em-001-anchor-3-938063d04622.png" alt="具身智能感知、推理、执行与环境反馈闭环图" loading="lazy" decoding="async">
+  <figcaption><strong>学习提示：</strong>观察：沿着传感输入到动作反馈的方向追踪信息，比较身体执行带来的误差与纯软件任务中的误差有何不同。</figcaption>
+</figure>
+<!-- course-visual:end -->
 
 <div class="ai-course-case-grid">
 <article class="ai-course-case">
@@ -126,8 +116,8 @@ deck_revision: '804647bc24a0c9f06b25aee664c6ca5a69ce7c32391ac75e0bfc5b08b4d90102
 <p><strong>场景：</strong>机械臂需要识别杯子、规划轨迹并控制倒水动作。</p>
 <p><strong>问题：</strong>位置误差、液体流动和碰撞风险都会影响结果。</p>
 <p><strong>方法：</strong>系统结合视觉感知、任务规划和运动控制完成动作。</p>
-<p><strong>结果：</strong>机器人可以执行简单服务任务。</p>
-<p><strong>边界与复核：</strong>真实环境中必须有安全停止和人工接管机制。</p>
+<p><strong>可观察证据：</strong>逐步记录杯子定位、抓取是否稳定、倾倒轨迹、液体是否进入杯中，以及每次反馈后动作是否被修正。</p>
+<p><strong>边界与复核：</strong>一次成功只说明这组杯子、光照与初始位置下链路可运行；真实环境中还必须验证偏差、失败恢复、安全停止和人工接管。</p>
 </article>
 </div>
 

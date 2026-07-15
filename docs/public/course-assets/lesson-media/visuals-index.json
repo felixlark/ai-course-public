@@ -1,0 +1,1457 @@
+{
+  "schema_version": 1,
+  "policy": "native-pptx-and-structured-course-visuals-no-slide-raster",
+  "source_of_truth": "课程PPT框架/source/module-courses.json",
+  "selection_policy": {
+    "excluded_lessons": [
+      "OV-001",
+      "OV-002"
+    ],
+    "allowed_extensions": [
+      ".gif",
+      ".jpeg",
+      ".jpg",
+      ".png",
+      ".svg",
+      ".webp"
+    ],
+    "maximum_geometry_ratio": 0.8,
+    "minimum_geometry_ratio": 0.006,
+    "minimum_geometry_dimension_ratio": 0.04,
+    "minimum_raster_width": 180,
+    "minimum_raster_height": 100,
+    "minimum_raster_pixels": 40000,
+    "minimum_visible_alpha_mean": 0.02,
+    "repeated_asset_minimum_slides": 3,
+    "repeated_placement_ratio": 0.6
+  },
+  "curated_exclusions": {
+    "d69022f488fd1099e6db7cd3b652994d5c4cab2992dfe1a886410c1fd98c0f2b": "ornamental-campus-silhouette",
+    "bb73b395d81e8df40472628ef58e7cdd18db3001931044a55badaef214859446": "ornamental-wave-background",
+    "a25df2950c06aea4e4be916047017feb19c05e86e9ccb6f3d1a363ab600515a9": "rasterized-legacy-slide-with-header-and-footer",
+    "a38dedea30abca2a76649cf7f86b937d85cb11b13a1ab910931822c2a89ce2fa": "rasterized-slide-like-canvas-with-template-band",
+    "d1105f24307f99a4779873cf32ac9c0f8f045cb9ad62bd9e4c269b9419f30a98": "standalone-decorative-robot-icon",
+    "160b6b94de958298f027199fdd794bef02a2920bc80cfa3d9792408254556bb4": "standalone-decorative-person-icon"
+  },
+  "selection_overrides": {
+    "OV-003": {
+      "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+      "reason": "use the reviewed compute-scale chart instead of a generic AI illustration or ornamental anchor asset"
+    },
+    "OV-005": {
+      "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+      "reason": "use the reviewed DeepSeek MoE and domestic-compute illustration instead of a generic model timeline"
+    },
+    "AG-001": {
+      "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+      "reason": "use the reviewed ReAct loop instead of a generic AI activity collage"
+    },
+    "AG-002": {
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "reason": "use the reviewed MCP request and tool-call sequence"
+    },
+    "AG-005": {
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "reason": "use the reviewed evaluation-rule table instead of a social-media incident screenshot"
+    },
+    "IN-001": {
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "reason": "reuse the reviewed evaluation-rule table to show that business success criteria must be executable"
+    },
+    "IN-002": {
+      "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+      "reason": "use the reviewed retrieval-evidence-reader chain instead of a dense paper screenshot"
+    },
+    "IN-003": {
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "reason": "reuse the reviewed controlled MCP sequence instead of a low-contrast hierarchy diagram"
+    },
+    "IN-004": {
+      "kind": "structured-course-diagram",
+      "slide": 15,
+      "reason": "reconstruct the enterprise knowledge workflow because the mapped pictures are generic decoration"
+    },
+    "IN-005": {
+      "kind": "structured-course-diagram",
+      "slide": 18,
+      "reason": "reconstruct the industrial decision loop instead of reusing a weak robot-environment image"
+    },
+    "IN-007": {
+      "kind": "structured-course-diagram",
+      "slide": 15,
+      "reason": "reconstruct the fire-investigation evidence chain because the mapped picture is generic decoration"
+    },
+    "IN-008": {
+      "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+      "reason": "use the reviewed multimodal environment-observation diagram instead of a generic agent architecture"
+    },
+    "EM-002": {
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "reason": "prefer an independent animated robot scene over the pasted legacy-slide raster"
+    },
+    "EM-004": {
+      "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+      "reason": "prefer a standalone reinforcement-learning diagram over the slide-like canvas"
+    },
+    "EM-005": {
+      "kind": "native-group-rendering",
+      "slide": 10,
+      "reason": "reconstruct the native task-planning group instead of publishing either standalone icon or a pasted slide raster"
+    },
+    "EM-006": {
+      "kind": "structured-course-diagram",
+      "slide": 18,
+      "reason": "reconstruct the individual-to-group evaluation chain instead of presenting a single-agent loop as the group architecture"
+    },
+    "IN-009": {
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "reason": "reuse the reviewed indoor robot GIF to illustrate dynamic spatial perception"
+    }
+  },
+  "coverage": {
+    "excluded_lessons": [
+      "OV-001",
+      "OV-002"
+    ],
+    "required_lessons": 25,
+    "selected_assets": 25,
+    "missing_lessons": []
+  },
+  "modules": [
+    {
+      "module_id": "ai-overview",
+      "index": "/course-assets/lesson-media/ai-overview/visuals/index.json",
+      "selected_assets": 1
+    },
+    {
+      "module_id": "ai-models",
+      "index": "/course-assets/lesson-media/ai-models/visuals/index.json",
+      "selected_assets": 6
+    },
+    {
+      "module_id": "agent-engineering",
+      "index": "/course-assets/lesson-media/agent-engineering/visuals/index.json",
+      "selected_assets": 9
+    },
+    {
+      "module_id": "embodied-ai",
+      "index": "/course-assets/lesson-media/embodied-ai/visuals/index.json",
+      "selected_assets": 9
+    }
+  ],
+  "assets": [
+    {
+      "lesson_id": "OV-003",
+      "lesson_title": "机器学习与深度学习基础",
+      "module_id": "ai-overview",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "516694e53503198c282989794c73e75d059cd57e91dcf548231cab53e07184d5",
+      "source_entry": "ppt/media/image31.png",
+      "source_entries": [
+        "ppt/media/image31.png"
+      ],
+      "source_slides": [
+        22
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 22,
+      "source_anchor": false,
+      "shape_id": "70",
+      "shape_name": "picture 70",
+      "geometry": {
+        "x_emu": 8716010,
+        "y_emu": 4652010,
+        "width_emu": 3014345,
+        "height_emu": 2011045,
+        "width_ratio": 0.24724,
+        "height_ratio": 0.293241,
+        "area_ratio": 0.072501
+      },
+      "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+      "size": 236153,
+      "width": 666,
+      "height": 500,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-overview/visuals/ov-003-anchor-22-376086e39978.png",
+      "public_url": "/course-assets/lesson-media/ai-overview/visuals/ov-003-anchor-22-376086e39978.png",
+      "alt": "模型计算规模随时间增长的趋势图",
+      "caption": "观察：比较横轴上的时间与纵轴上的数量级变化，同时思考计算规模增长为何不等于能力必然按同样比例提升。",
+      "selection_score": 1737,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+        "reason": "use the reviewed compute-scale chart instead of a generic AI illustration or ornamental anchor asset"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+        "note": "Compute-scale chart; independent picture without slide chrome."
+      }
+    },
+    {
+      "lesson_id": "OV-004",
+      "lesson_title": "大模型概述、Transformer 与能力边界",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/media/image5.jpeg",
+      "source_entries": [
+        "ppt/media/image5.jpeg"
+      ],
+      "source_slides": [
+        5
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 5,
+      "source_anchor": true,
+      "shape_id": "2",
+      "shape_name": "Picture 2",
+      "geometry": {
+        "x_emu": 613072,
+        "y_emu": 596283,
+        "width_emu": 7191191,
+        "height_emu": 3640346,
+        "width_ratio": 0.589829,
+        "height_ratio": 0.530817,
+        "area_ratio": 0.313091
+      },
+      "sha256": "182950acc5c2dbf54332d9fc4355fd9b7146b76e08d2535a4f21ae30db51e89f",
+      "size": 659818,
+      "width": 2699,
+      "height": 1366,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/ov-004-anchor-5-182950acc5c2.jpg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/ov-004-anchor-5-182950acc5c2.jpg",
+      "alt": "Encoder 与 Transformer 信息处理结构对比图",
+      "caption": "观察：比较两种结构传递上下文信息的路径，重点关注 Transformer 如何让不同位置的信息并行建立联系。",
+      "selection_score": 103317,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "182950acc5c2dbf54332d9fc4355fd9b7146b76e08d2535a4f21ae30db51e89f",
+        "note": "RNN-to-Transformer comparison diagram; independent crop."
+      }
+    },
+    {
+      "lesson_id": "OV-005",
+      "lesson_title": "DeepSeek 与开源模型生态",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/media/image18.jpeg",
+      "source_entries": [
+        "ppt/media/image18.jpeg"
+      ],
+      "source_slides": [
+        10
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 10,
+      "source_anchor": true,
+      "shape_id": "3",
+      "shape_name": "Picture 3",
+      "geometry": {
+        "x_emu": 6735366,
+        "y_emu": 3915116,
+        "width_emu": 4876062,
+        "height_emu": 2387600,
+        "width_ratio": 0.399939,
+        "height_ratio": 0.348148,
+        "area_ratio": 0.139238
+      },
+      "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+      "size": 791068,
+      "width": 2745,
+      "height": 1344,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/ov-005-anchor-10-4b2e75feb052.jpg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/ov-005-anchor-10-4b2e75feb052.jpg",
+      "alt": "DeepSeek 混合专家模型与国产算力硬件协同示意图",
+      "caption": "观察：区分模型侧的专家选择与硬件侧的计算支撑，比较稀疏激活和算力适配分别解决什么问题。",
+      "selection_score": 101578,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+        "reason": "use the reviewed DeepSeek MoE and domestic-compute illustration instead of a generic model timeline"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+        "note": "DeepSeek MoE and domestic-compute illustration; independent crop."
+      }
+    },
+    {
+      "lesson_id": "OV-006",
+      "lesson_title": "提示词、AIGC 与多模态工作流",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/media/image19.jpeg",
+      "source_entries": [
+        "ppt/media/image19.jpeg"
+      ],
+      "source_slides": [
+        11
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 11,
+      "source_anchor": true,
+      "shape_id": "2",
+      "shape_name": "Picture 2",
+      "geometry": {
+        "x_emu": 0,
+        "y_emu": 0,
+        "width_emu": 12192000,
+        "height_emu": 2952616,
+        "width_ratio": 1,
+        "height_ratio": 0.430536,
+        "area_ratio": 0.430536
+      },
+      "sha256": "5d593934803e23af2c905df9808ba418fcfbca6599940c04bc83963c543fdc86",
+      "size": 635778,
+      "width": 3898,
+      "height": 946,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/ov-006-anchor-11-5d593934803e.jpg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/ov-006-anchor-11-5d593934803e.jpg",
+      "alt": "图像分块后送入 Transformer 编码器的 Vision Transformer 流程图",
+      "caption": "观察：沿着图像分块、向量表示、位置编码和分类输出的顺序追踪数据，比较它与直接处理文字序列的共同点。",
+      "selection_score": 105491,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "5d593934803e23af2c905df9808ba418fcfbca6599940c04bc83963c543fdc86",
+        "note": "Vision-Transformer comparison diagram; independent crop."
+      }
+    },
+    {
+      "lesson_id": "OV-007",
+      "lesson_title": "幻觉、安全与负责任 AI",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/media/image29.jpeg",
+      "source_entries": [
+        "ppt/media/image29.jpeg"
+      ],
+      "source_slides": [
+        13
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 13,
+      "source_anchor": true,
+      "shape_id": "18",
+      "shape_name": "Picture 18",
+      "geometry": {
+        "x_emu": 7440468,
+        "y_emu": 1419862,
+        "width_emu": 4164157,
+        "height_emu": 2098038,
+        "width_ratio": 0.341548,
+        "height_ratio": 0.305926,
+        "area_ratio": 0.104488
+      },
+      "sha256": "a48148c53615b016fa25da886f90685630544d923d37feed0607c670a95e9e8f",
+      "size": 845629,
+      "width": 2699,
+      "height": 1366,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/ov-007-anchor-13-a48148c53615.jpg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/ov-007-anchor-13-a48148c53615.jpg",
+      "alt": "大模型预训练、微调与人类反馈强化学习流程图",
+      "caption": "观察：比较预训练、任务微调和人类反馈三个阶段使用的数据与优化目标，找出安全约束主要在哪些环节进入。",
+      "selection_score": 102231,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "a48148c53615b016fa25da886f90685630544d923d37feed0607c670a95e9e8f",
+        "note": "Alignment and feedback flow diagram; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-004",
+      "lesson_title": "企业办公、知识管理与 AIGC",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/slides/slide15.xml#structured-course-in-004",
+      "source_entries": [],
+      "source_slides": [
+        14,
+        15,
+        18,
+        19
+      ],
+      "source_kind": "structured-course-diagram",
+      "slide": 15,
+      "source_anchor": true,
+      "shape_id": null,
+      "shape_name": "IN-004 structured course diagram",
+      "geometry": {
+        "x_emu": 853440,
+        "y_emu": 1097280,
+        "width_emu": 10485120,
+        "height_emu": 4663440,
+        "width_ratio": 0.86,
+        "height_ratio": 0.68,
+        "area_ratio": 0.5848
+      },
+      "sha256": "40010807adc1c5cb4fc3166ab5c60aab4473cbbdf65ec0d68faf384525549d63",
+      "size": 4491,
+      "width": 1200,
+      "height": 640,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/in-004-anchor-15-40010807adc1.svg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/in-004-anchor-15-40010807adc1.svg",
+      "alt": "企业知识检索、生成回答与人工审批组成的 RAG 工作流图",
+      "caption": "观察：比较知识检索、内容生成和审批发布的责任边界，重点关注回答怎样保留依据并在对外使用前接受复核。",
+      "selection_score": 106095,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "kind": "structured-course-diagram",
+        "slide": 15,
+        "reason": "reconstruct the enterprise knowledge workflow because the mapped pictures are generic decoration",
+        "sha256": "40010807adc1c5cb4fc3166ab5c60aab4473cbbdf65ec0d68faf384525549d63"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "40010807adc1c5cb4fc3166ab5c60aab4473cbbdf65ec0d68faf384525549d63",
+        "note": "Enterprise knowledge workflow reconstructed from structured course concepts; no slide raster."
+      }
+    },
+    {
+      "lesson_id": "IN-007",
+      "lesson_title": "应急管理与火灾调查",
+      "module_id": "ai-models",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "source_entry": "ppt/slides/slide15.xml#structured-course-in-007",
+      "source_entries": [],
+      "source_slides": [
+        15,
+        18,
+        19
+      ],
+      "source_kind": "structured-course-diagram",
+      "slide": 15,
+      "source_anchor": true,
+      "shape_id": null,
+      "shape_name": "IN-007 structured course diagram",
+      "geometry": {
+        "x_emu": 853440,
+        "y_emu": 1097280,
+        "width_emu": 10485120,
+        "height_emu": 4663440,
+        "width_ratio": 0.86,
+        "height_ratio": 0.68,
+        "area_ratio": 0.5848
+      },
+      "sha256": "0098fa67b8b46a9aaf06903b8087488a4a154fe12fc4fe82b924d0edc9b7e044",
+      "size": 4499,
+      "width": 1200,
+      "height": 640,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/ai-models/visuals/in-007-anchor-15-0098fa67b8b4.svg",
+      "public_url": "/course-assets/lesson-media/ai-models/visuals/in-007-anchor-15-0098fa67b8b4.svg",
+      "alt": "火灾现场数据、线索关联、假设验证与结论复核组成的证据链图",
+      "caption": "观察：从结论反向核对每条证据的来源、时间和不确定性，区分模型提出的调查假设与已经验证的事实。",
+      "selection_score": 107095,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "kind": "structured-course-diagram",
+        "slide": 15,
+        "reason": "reconstruct the fire-investigation evidence chain because the mapped picture is generic decoration",
+        "sha256": "0098fa67b8b46a9aaf06903b8087488a4a154fe12fc4fe82b924d0edc9b7e044"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "0098fa67b8b46a9aaf06903b8087488a4a154fe12fc4fe82b924d0edc9b7e044",
+        "note": "Evidence and accountable-review chain reconstructed from structured course concepts; no slide raster."
+      }
+    },
+    {
+      "lesson_id": "AG-001",
+      "lesson_title": "Agent Loop 与 ReAct",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image34.png",
+      "source_entries": [
+        "ppt/media/image34.png"
+      ],
+      "source_slides": [
+        36
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 36,
+      "source_anchor": true,
+      "shape_id": "6",
+      "shape_name": "图片 5",
+      "geometry": {
+        "x_emu": 478155,
+        "y_emu": 1371600,
+        "width_emu": 8007985,
+        "height_emu": 4482465,
+        "width_ratio": 0.875764,
+        "height_ratio": 0.653611,
+        "area_ratio": 0.572409
+      },
+      "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+      "size": 659362,
+      "width": 1372,
+      "height": 768,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/ag-001-anchor-36-41620617f12e.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/ag-001-anchor-36-41620617f12e.png",
+      "alt": "智能体思考、行动、观察与再规划构成的 ReAct 闭环图",
+      "caption": "观察：沿着一次完整循环追踪智能体的状态变化，重点关注环境观察如何修正下一轮推理与行动。",
+      "selection_score": 104095,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+        "reason": "use the reviewed ReAct loop instead of a generic AI activity collage"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+        "note": "ReAct reasoning-action-observation loop; independent crop."
+      }
+    },
+    {
+      "lesson_id": "AG-002",
+      "lesson_title": "工具调用、MCP、记忆与规划",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image26.png",
+      "source_entries": [
+        "ppt/media/image26.png"
+      ],
+      "source_slides": [
+        25
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 25,
+      "source_anchor": false,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 713105,
+        "y_emu": 1600200,
+        "width_emu": 7545070,
+        "height_emu": 3662045,
+        "width_ratio": 0.825139,
+        "height_ratio": 0.533981,
+        "area_ratio": 0.440609
+      },
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "size": 278977,
+      "width": 1024,
+      "height": 497,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/ag-002-anchor-25-9aee7d1e53ef.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/ag-002-anchor-25-9aee7d1e53ef.png",
+      "alt": "模型、MCP 客户端、MCP 服务端与外部工具之间的调用时序图",
+      "caption": "观察：比较请求、工具执行和结果回传发生的位置，找出协议层负责连接什么、又不替代哪些业务判断。",
+      "selection_score": 5449,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+        "reason": "use the reviewed MCP request and tool-call sequence"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+        "note": "MCP request, tool-call and result sequence; independent crop."
+      }
+    },
+    {
+      "lesson_id": "AG-003",
+      "lesson_title": "多智能体协作",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image50.png",
+      "source_entries": [
+        "ppt/media/image50.png"
+      ],
+      "source_slides": [
+        54
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 54,
+      "source_anchor": true,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 534035,
+        "y_emu": 2362835,
+        "width_emu": 8080375,
+        "height_emu": 3726180,
+        "width_ratio": 0.883681,
+        "height_ratio": 0.543333,
+        "area_ratio": 0.480133
+      },
+      "sha256": "f8dc6f8d92a83e79f5ace0f3c335d2333345ccd1b016966f357c51f44f76c878",
+      "size": 395076,
+      "width": 874,
+      "height": 403,
+      "alpha_mean": 0.998856,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/ag-003-anchor-54-f8dc6f8d92a8.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/ag-003-anchor-54-f8dc6f8d92a8.png",
+      "alt": "多个专业智能体围绕共享任务分工协作的结构图",
+      "caption": "观察：比较各角色掌握的上下文、承担的子任务和交换的信息，判断哪里需要协调者或共享状态。",
+      "selection_score": 105817,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "f8dc6f8d92a83e79f5ace0f3c335d2333345ccd1b016966f357c51f44f76c878",
+        "note": "Multi-agent collaboration infographic; independent crop."
+      }
+    },
+    {
+      "lesson_id": "AG-004",
+      "lesson_title": "AI Coding 与 Vibe Coding",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image43.png",
+      "source_entries": [
+        "ppt/media/image43.png"
+      ],
+      "source_slides": [
+        45
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 45,
+      "source_anchor": true,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 794385,
+        "y_emu": 1600200,
+        "width_emu": 7374255,
+        "height_emu": 5120640,
+        "width_ratio": 0.806458,
+        "height_ratio": 0.746667,
+        "area_ratio": 0.602156
+      },
+      "sha256": "e61986a6ca8dc0710c4f39609579161ddfe01583d1692aabe6a6c9f1fbfba27f",
+      "size": 737954,
+      "width": 1505,
+      "height": 1045,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/ag-004-anchor-45-e61986a6ca8d.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/ag-004-anchor-45-e61986a6ca8d.png",
+      "alt": "编程智能体从理解需求到调用工具、测试和修正的执行时序图",
+      "caption": "观察：沿着需求、计划、编辑、运行和反馈的顺序检查闭环，找出哪些节点必须用真实结果而不是模型自述来验收。",
+      "selection_score": 106124,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "e61986a6ca8dc0710c4f39609579161ddfe01583d1692aabe6a6c9f1fbfba27f",
+        "note": "Role and execution-sequence table; independent crop."
+      }
+    },
+    {
+      "lesson_id": "AG-005",
+      "lesson_title": "可观测性、评测与 Human-in-the-loop",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image65.png",
+      "source_entries": [
+        "ppt/media/image65.png"
+      ],
+      "source_slides": [
+        70
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 70,
+      "source_anchor": false,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 457200,
+        "y_emu": 1828800,
+        "width_emu": 7962900,
+        "height_emu": 3781425,
+        "width_ratio": 0.870833,
+        "height_ratio": 0.551389,
+        "area_ratio": 0.480168
+      },
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "size": 212065,
+      "width": 836,
+      "height": 397,
+      "alpha_mean": 0.998804,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/ag-005-anchor-70-8d155d874119.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/ag-005-anchor-70-8d155d874119.png",
+      "alt": "智能体评测规则表，列出任务条件、工具行为与结果判定字段",
+      "caption": "观察：比较输入条件、期望行为、实际结果和通过标准，重点关注规则能否区分“完成任务”与“看起来像完成”。",
+      "selection_score": 5814,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+        "reason": "use the reviewed evaluation-rule table instead of a social-media incident screenshot"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+        "note": "Executable evaluation-rule table; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-001",
+      "lesson_title": "行业 AI 落地方法与 ROI",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image65.png",
+      "source_entries": [
+        "ppt/media/image65.png"
+      ],
+      "source_slides": [
+        70
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 70,
+      "source_anchor": true,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 457200,
+        "y_emu": 1828800,
+        "width_emu": 7962900,
+        "height_emu": 3781425,
+        "width_ratio": 0.870833,
+        "height_ratio": 0.551389,
+        "area_ratio": 0.480168
+      },
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "size": 212065,
+      "width": 836,
+      "height": 397,
+      "alpha_mean": 0.998804,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/in-001-anchor-70-8d155d874119.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/in-001-anchor-70-8d155d874119.png",
+      "alt": "把任务条件、工具行为和结果阈值对应起来的评测规则表",
+      "caption": "观察：比较业务目标、可观测行为和通过阈值，检查每个目标是否都能被数据或事件记录明确验证。",
+      "selection_score": 102814,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+        "reason": "reuse the reviewed evaluation-rule table to show that business success criteria must be executable"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+        "note": "Tool-function evaluation table; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-002",
+      "lesson_title": "高校教学与科研",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image6.png",
+      "source_entries": [
+        "ppt/media/image6.png"
+      ],
+      "source_slides": [
+        6
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 6,
+      "source_anchor": true,
+      "shape_id": "5",
+      "shape_name": "图片 4",
+      "geometry": {
+        "x_emu": 0,
+        "y_emu": 3764280,
+        "width_emu": 9144000,
+        "height_emu": 1753870,
+        "width_ratio": 1,
+        "height_ratio": 0.255741,
+        "area_ratio": 0.255741
+      },
+      "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+      "size": 312368,
+      "width": 1668,
+      "height": 320,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/in-002-anchor-6-ab5b5f456606.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/in-002-anchor-6-ab5b5f456606.png",
+      "alt": "研究问题、检索材料、引用证据与回答结论之间的链路图",
+      "caption": "观察：从每条结论反向追踪到支持它的材料片段，比较“找到相关材料”和“形成可核查证据”之间的差别。",
+      "selection_score": 103603,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+        "reason": "use the reviewed retrieval-evidence-reader chain instead of a dense paper screenshot"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+        "note": "Retrieval, evidence and reader chain; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-003",
+      "lesson_title": "政务服务与乡村振兴",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image26.png",
+      "source_entries": [
+        "ppt/media/image26.png"
+      ],
+      "source_slides": [
+        25
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 25,
+      "source_anchor": false,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 713105,
+        "y_emu": 1600200,
+        "width_emu": 7545070,
+        "height_emu": 3662045,
+        "width_ratio": 0.825139,
+        "height_ratio": 0.533981,
+        "area_ratio": 0.440609
+      },
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "size": 278977,
+      "width": 1024,
+      "height": 497,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/in-003-anchor-25-9aee7d1e53ef.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/in-003-anchor-25-9aee7d1e53ef.png",
+      "alt": "受控 MCP 工具调用的请求、授权、执行与结果回传时序图",
+      "caption": "观察：比较参数校验、权限确认、真实执行和结果复核四个节点，找出高风险操作应在哪一步暂停。",
+      "selection_score": 5449,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+        "reason": "reuse the reviewed controlled MCP sequence instead of a low-contrast hierarchy diagram"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+        "note": "Controlled MCP request and tool-result sequence; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-008",
+      "lesson_title": "海洋与地理空间",
+      "module_id": "agent-engineering",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "source_entry": "ppt/media/image47.png",
+      "source_entries": [
+        "ppt/media/image47.png"
+      ],
+      "source_slides": [
+        51
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 51,
+      "source_anchor": false,
+      "shape_id": "3",
+      "shape_name": "图片 2",
+      "geometry": {
+        "x_emu": 321945,
+        "y_emu": 1828800,
+        "width_emu": 8319135,
+        "height_emu": 3735070,
+        "width_ratio": 0.909792,
+        "height_ratio": 0.54463,
+        "area_ratio": 0.495499
+      },
+      "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+      "size": 404157,
+      "width": 911,
+      "height": 409,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/agent-engineering/visuals/in-008-anchor-51-3756bcd53778.png",
+      "public_url": "/course-assets/lesson-media/agent-engineering/visuals/in-008-anchor-51-3756bcd53778.png",
+      "alt": "图像、位置状态与文本任务共同组成的多模态环境观测图",
+      "caption": "观察：比较不同模态提供的空间、时间和语义信息，思考当它们互相冲突时应如何校准与取证。",
+      "selection_score": 5975,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+        "reason": "use the reviewed multimodal environment-observation diagram instead of a generic agent architecture"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+        "note": "Multimodal environment, observation and action diagram; independent crop."
+      }
+    },
+    {
+      "lesson_id": "EM-001",
+      "lesson_title": "具身智能：感知、决策、行动与反馈",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image9.png",
+      "source_entries": [
+        "ppt/media/image9.png"
+      ],
+      "source_slides": [
+        3
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 3,
+      "source_anchor": true,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 509270,
+        "y_emu": 744220,
+        "width_emu": 10761345,
+        "height_emu": 6050915,
+        "width_ratio": 0.882656,
+        "height_ratio": 0.882315,
+        "area_ratio": 0.778781
+      },
+      "sha256": "938063d046225e45ce6d37d159327a8642587ec148db18f63cbf9e3a9020a824",
+      "size": 2738288,
+      "width": 2730,
+      "height": 1535,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-001-anchor-3-938063d04622.png",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-001-anchor-3-938063d04622.png",
+      "alt": "具身智能感知、推理、执行与环境反馈闭环图",
+      "caption": "观察：沿着传感输入到动作反馈的方向追踪信息，比较身体执行带来的误差与纯软件任务中的误差有何不同。",
+      "selection_score": 105195,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "938063d046225e45ce6d37d159327a8642587ec148db18f63cbf9e3a9020a824",
+        "note": "Embodied perception-reasoning-action loop diagram; independent picture."
+      }
+    },
+    {
+      "lesson_id": "EM-002",
+      "lesson_title": "人形机器人与 Unitree 生态",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image12.GIF",
+      "source_entries": [
+        "ppt/media/image12.GIF"
+      ],
+      "source_slides": [
+        7
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 7,
+      "source_anchor": true,
+      "shape_id": "3",
+      "shape_name": "图片 2",
+      "geometry": {
+        "x_emu": 7475903,
+        "y_emu": 932520,
+        "width_emu": 4191000,
+        "height_emu": 2857500,
+        "width_ratio": 0.34375,
+        "height_ratio": 0.416667,
+        "area_ratio": 0.143229
+      },
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "size": 2049981,
+      "width": 440,
+      "height": 300,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-002-anchor-7-709d21e49212.gif",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-002-anchor-7-709d21e49212.gif",
+      "alt": "室内彩色画面逐步叠加点云并转为三维环境表示的动态演示",
+      "caption": "观察：比较彩色画面、点云叠加与三维表示三个阶段，辨认纹理信息如何转为可计算的空间结构；这段素材展示的是环境表征过程，并不直接证明机器人已经完成自主避障。",
+      "selection_score": 101378,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+        "reason": "prefer an independent animated robot scene over the pasted legacy-slide raster"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+        "note": "Animated robot navigation scene; independent GIF."
+      }
+    },
+    {
+      "lesson_id": "EM-003",
+      "lesson_title": "多模态感知与环境理解",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image10.GIF",
+      "source_entries": [
+        "ppt/media/image10.GIF"
+      ],
+      "source_slides": [
+        5
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 5,
+      "source_anchor": true,
+      "shape_id": "2",
+      "shape_name": "图片 1",
+      "geometry": {
+        "x_emu": 9241787,
+        "y_emu": 1323047,
+        "width_emu": 2624203,
+        "height_emu": 4802180,
+        "width_ratio": 0.21524,
+        "height_ratio": 0.70023,
+        "area_ratio": 0.150717
+      },
+      "sha256": "43292a195e75a40dc35d2af08e0c75f925d2fd1d5e35b49139840f88c35feabb",
+      "size": 14553585,
+      "width": 400,
+      "height": 709,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-003-anchor-5-43292a195e75.gif",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-003-anchor-5-43292a195e75.gif",
+      "alt": "G1 人形机器人在展区连续行走的动态演示",
+      "caption": "观察：关注迈步、摆臂、落脚与身体姿态的连续变化，区分“能够稳定行走”的现场表现与“具备自主感知、规划和探索能力”的系统结论。",
+      "selection_score": 102508,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "43292a195e75a40dc35d2af08e0c75f925d2fd1d5e35b49139840f88c35feabb",
+        "note": "Animated humanoid robot scene; independent GIF."
+      }
+    },
+    {
+      "lesson_id": "EM-004",
+      "lesson_title": "运动控制、强化学习与 Sim-to-Real",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image23.png",
+      "source_entries": [
+        "ppt/media/image23.png"
+      ],
+      "source_slides": [
+        18
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 18,
+      "source_anchor": true,
+      "shape_id": "5",
+      "shape_name": "图片 4",
+      "geometry": {
+        "x_emu": 7629527,
+        "y_emu": 3812641,
+        "width_emu": 4178675,
+        "height_emu": 2599675,
+        "width_ratio": 0.342739,
+        "height_ratio": 0.379072,
+        "area_ratio": 0.129923
+      },
+      "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+      "size": 51263,
+      "width": 792,
+      "height": 516,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-004-anchor-18-85b406969801.png",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-004-anchor-18-85b406969801.png",
+      "alt": "智能体与环境之间状态、动作和奖励往返的强化学习循环图",
+      "caption": "观察：比较状态、动作与奖励在循环中的方向，重点判断奖励信号怎样影响后续策略，而不是直接指定每一步动作。",
+      "selection_score": 102326,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+        "reason": "prefer a standalone reinforcement-learning diagram over the slide-like canvas"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+        "note": "Agent-environment reinforcement-learning diagram; independent crop."
+      }
+    },
+    {
+      "lesson_id": "EM-005",
+      "lesson_title": "G1、Go2 与 ROS2 实训",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/slides/slide10.xml#native-group-15",
+      "source_entries": [
+        "ppt/media/image14.png",
+        "ppt/media/image15.png"
+      ],
+      "source_slides": [
+        10
+      ],
+      "source_kind": "native-group-rendering",
+      "slide": 10,
+      "source_anchor": true,
+      "shape_id": "15",
+      "shape_name": "组合 14",
+      "geometry": {
+        "x_emu": 384175,
+        "y_emu": 3111500,
+        "width_emu": 11585575,
+        "height_emu": 3094990,
+        "width_ratio": 0.95026,
+        "height_ratio": 0.451296,
+        "area_ratio": 0.428849
+      },
+      "sha256": "7c81609d7ce9566d45cbd173628d8630277738035f50e2642e194b70220e6a25",
+      "size": 519239,
+      "width": 1200,
+      "height": 640,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-005-anchor-10-7c81609d7ce9.svg",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-005-anchor-10-7c81609d7ce9.svg",
+      "alt": "把自然语言取水请求分解为机器人连续动作的任务规划图",
+      "caption": "观察：从“拿杯水”的目标依次核对移动、抓取、搬运和放置动作，找出一步失败后应从哪里重新规划。",
+      "selection_score": 105383,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "kind": "native-group-rendering",
+        "slide": 10,
+        "reason": "reconstruct the native task-planning group instead of publishing either standalone icon or a pasted slide raster",
+        "sha256": "7c81609d7ce9566d45cbd173628d8630277738035f50e2642e194b70220e6a25"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "7c81609d7ce9566d45cbd173628d8630277738035f50e2642e194b70220e6a25",
+        "note": "Task-planning group reconstructed from native text/shapes and two independent source icons; no slide raster."
+      }
+    },
+    {
+      "lesson_id": "EM-006",
+      "lesson_title": "Crowdverse 与群体具身智能",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/slides/slide18.xml#structured-course-em-006",
+      "source_entries": [],
+      "source_slides": [
+        18,
+        21,
+        22
+      ],
+      "source_kind": "structured-course-diagram",
+      "slide": 18,
+      "source_anchor": true,
+      "shape_id": null,
+      "shape_name": "EM-006 structured course diagram",
+      "geometry": {
+        "x_emu": 853440,
+        "y_emu": 1097280,
+        "width_emu": 10485120,
+        "height_emu": 4663440,
+        "width_ratio": 0.86,
+        "height_ratio": 0.68,
+        "area_ratio": 0.5848
+      },
+      "sha256": "40b47d8b8014f48d387aae4e50411e86d0fa665a16ad26e105acfb0b28e783fd",
+      "size": 4507,
+      "width": 1200,
+      "height": 640,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-006-anchor-18-40b47d8b8014.svg",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-006-anchor-18-40b47d8b8014.svg",
+      "alt": "从数字孪生训练、个体策略到群体指标和现实校准的流程图",
+      "caption": "观察：沿着个体行动、通信互动和群体评测向前追踪，比较个体奖励与群体安全、公平和韧性之间的差别。",
+      "selection_score": 105095,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "kind": "structured-course-diagram",
+        "slide": 18,
+        "reason": "reconstruct the individual-to-group evaluation chain instead of presenting a single-agent loop as the group architecture",
+        "sha256": "40b47d8b8014f48d387aae4e50411e86d0fa665a16ad26e105acfb0b28e783fd"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "40b47d8b8014f48d387aae4e50411e86d0fa665a16ad26e105acfb0b28e783fd",
+        "note": "Individual-to-group evaluation chain reconstructed from structured course concepts; no slide raster."
+      }
+    },
+    {
+      "lesson_id": "IN-005",
+      "lesson_title": "制造、能源与供应链",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/slides/slide18.xml#structured-course-in-005",
+      "source_entries": [],
+      "source_slides": [
+        18,
+        21,
+        22
+      ],
+      "source_kind": "structured-course-diagram",
+      "slide": 18,
+      "source_anchor": true,
+      "shape_id": null,
+      "shape_name": "IN-005 structured course diagram",
+      "geometry": {
+        "x_emu": 853440,
+        "y_emu": 1097280,
+        "width_emu": 10485120,
+        "height_emu": 4663440,
+        "width_ratio": 0.86,
+        "height_ratio": 0.68,
+        "area_ratio": 0.5848
+      },
+      "sha256": "309cb53ef57e8d1ce98c5a10dc1f9ec195421764aa547026654cd8c154601ba4",
+      "size": 4507,
+      "width": 1200,
+      "height": 640,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/in-005-anchor-18-309cb53ef57e.svg",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/in-005-anchor-18-309cb53ef57e.svg",
+      "alt": "工业现场传感、分析、决策与执行组成的运行闭环图",
+      "caption": "观察：沿着现场信号到控制动作再到新状态的路径追踪反馈，比较延迟、误报和执行偏差会在哪些节点累积。",
+      "selection_score": 104095,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "kind": "structured-course-diagram",
+        "slide": 18,
+        "reason": "reconstruct the industrial decision loop instead of reusing a weak robot-environment image",
+        "sha256": "309cb53ef57e8d1ce98c5a10dc1f9ec195421764aa547026654cd8c154601ba4"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "309cb53ef57e8d1ce98c5a10dc1f9ec195421764aa547026654cd8c154601ba4",
+        "note": "Industrial sensing, decision and feedback loop reconstructed from structured course concepts; no slide raster."
+      }
+    },
+    {
+      "lesson_id": "IN-006",
+      "lesson_title": "交通与智慧机场",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image16.png",
+      "source_entries": [
+        "ppt/media/image16.png"
+      ],
+      "source_slides": [
+        13
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 13,
+      "source_anchor": true,
+      "shape_id": "3",
+      "shape_name": "图片 2",
+      "geometry": {
+        "x_emu": 605738,
+        "y_emu": 1907928,
+        "width_emu": 11316531,
+        "height_emu": 2942096,
+        "width_ratio": 0.928193,
+        "height_ratio": 0.429002,
+        "area_ratio": 0.398197
+      },
+      "sha256": "162356930398adb927f5ba6215e7804269b27e4d3ef08b6929f13a6d43c1c8e2",
+      "size": 60028,
+      "width": 927,
+      "height": 241,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/in-006-anchor-13-162356930398.png",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/in-006-anchor-13-162356930398.png",
+      "alt": "建图定位、路径规划与避障控制组成的三段式导航图",
+      "caption": "观察：比较三段流程各自的输入和输出，判断地图错误、定位漂移或临时障碍分别会怎样传导到最终路线。",
+      "selection_score": 101965,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "162356930398adb927f5ba6215e7804269b27e4d3ef08b6929f13a6d43c1c8e2",
+        "note": "Navigation-method comparison strip; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-009",
+      "lesson_title": "文旅、展厅与智慧建筑",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image12.GIF",
+      "source_entries": [
+        "ppt/media/image12.GIF"
+      ],
+      "source_slides": [
+        7
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 7,
+      "source_anchor": true,
+      "shape_id": "3",
+      "shape_name": "图片 2",
+      "geometry": {
+        "x_emu": 7475903,
+        "y_emu": 932520,
+        "width_emu": 4191000,
+        "height_emu": 2857500,
+        "width_ratio": 0.34375,
+        "height_ratio": 0.416667,
+        "area_ratio": 0.143229
+      },
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "size": 2049981,
+      "width": 440,
+      "height": 300,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/in-009-anchor-7-709d21e49212.gif",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/in-009-anchor-7-709d21e49212.gif",
+      "alt": "机器人持续感知室内人员、障碍物与可通行区域的动态演示",
+      "caption": "观察：关注人员移动或空间关系变化后环境表示是否及时更新，并判断规划动作如何响应新的可通行区域。",
+      "selection_score": 102378,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+        "reason": "reuse the reviewed indoor robot GIF to illustrate dynamic spatial perception"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+        "note": "Animated indoor robot perception scene; independent GIF."
+      }
+    }
+  ]
+}

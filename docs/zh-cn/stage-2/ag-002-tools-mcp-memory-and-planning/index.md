@@ -4,9 +4,8 @@ description: '解释智能体如何通过稳定工具契约、分层上下文和
 authored: true
 lesson_id: 'AG-002'
 module: 'AI 智能体'
-deck_manifest: '/course-assets/course-decks/ag-002/deck.json'
-source_media_manifest: '/course-assets/source-media/ag-002/deck.json'
-deck_revision: '2cbc5db70d92677e5e55c680f2e0288f712f574307f59bedc6f7310d30b3489f'
+slides_url: 'https://xmu-mars.feishu.cn/wiki/FtH0wPuomiYeNakEQeXc64BSnpg'
+slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/FtH0wPuomiYeNakEQeXc64BSnpg'
 ---
 
 <div class="lesson-hero">
@@ -22,6 +21,16 @@ deck_revision: '2cbc5db70d92677e5e55c680f2e0288f712f574307f59bedc6f7310d30b3489f
 - 说明 MCP 中 host、client、server 以及 tools、resources、prompts 的职责边界。
 - 区分当前上下文、任务短期状态和长期记忆，并为记忆设置来源、范围和失效条件。
 - 把长任务拆成可验收步骤，并正确处理无权限、工具异常和部分完成。
+## 知识导图
+
+长任务能否稳定完成，取决于工具契约、上下文组织和可更新的任务状态。
+
+- **工具与 MCP：** 用明确的名称、参数、返回值和授权边界连接外部能力。
+
+- **记忆与规划：** 区分当前上下文、短期状态与长期记忆，并持续更新任务图。
+
+- **失败与权限：** 把错误变成可读状态；权限不足时停止绕行并请求正确授权。
+
 ## 本节导入
 
 语言模型能生成文字，但不能仅凭文字读取最新库存、查询内部资料或修改日程。智能体要进入真实业务，必须通过工具与外部系统交互。工具把“模型建议做什么”转换为“系统实际执行了什么”，也把权限、数据质量和错误恢复带入了智能体设计。
@@ -45,15 +54,19 @@ deck_revision: '2cbc5db70d92677e5e55c680f2e0288f712f574307f59bedc6f7310d30b3489f
 
 描述越含糊，模型越容易选错工具或补造参数。对于写入型工具，还要提供“预览”或“草稿”能力，让智能体先展示将要发生的变化，再进入真正执行。删除、外发、付款、授权等高影响动作不应与普通查询共享同一权限级别。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ag-002/deck.json" slides="4,5,6,9,11,12,13,15,26" title="工具契约：先约定，再调用" />
-<!-- ai-course-inline-media:end -->
-
 ### 工具结果：失败必须是可读状态
 
 工具调用可能出现四类结果：成功、部分成功、可重试失败和不可重试失败。超时或网络中断通常只能说明“结果未知”，不能直接再次写入，否则可能重复创建记录。参数错误应先修正输入；未授权应停止并请求合适权限；业务规则拒绝则需要改变方案，而不是重复调用。
 
 智能体要读取结构化错误码、错误信息和是否可重试，而不是从一句模糊文本中猜测。系统还应保存调用标识，便于确认一次写入究竟是否已经发生。
+
+### Function call 的 JSON 怎样找到真实函数
+
+模型回传的 JSON 并不会自己“反射”出一段可执行代码。宿主程序在启动时把允许调用的工具登记成一个注册表，例如把 `search_orders` 映射到 Python 的函数对象、Node.js 的异步函数或某个远程 API 客户端。模型只返回工具名和参数；宿主先按工具名查表，再按参数模式校验，最后才调用已经登记的处理器，并把结构化结果回传给模型。
+
+这在 Python 中通常就是一个 `dict[str, Callable]`，在 Node.js 中通常是一个对象或 `Map<string, handler>`；框架可能把登记、校验和分派封装起来，但底层仍是受控查表。Java 反射可以用于某些框架实现，却不是 function calling 的前提。真正重要的是：模型不能给出任意函数名后直接执行，未登记名称、参数不合法、权限不足和高影响写入都必须在分派前被拒绝或转入人工确认。
+
+最小执行链可以写成：`模型工具调用 JSON → 工具名白名单查表 → JSON Schema/业务参数校验 → 权限与影响检查 → handler 执行 → 结构化结果或错误 → 模型继续决策`。这也说明为什么工具描述、错误语义和幂等性属于课程核心：它们约束的不是模型“会不会生成 JSON”，而是系统会不会把 JSON 安全地变成行动。
 
 ### MCP：连接能力的通用边界
 
@@ -70,10 +83,6 @@ MCP server 可以提供三类常见能力：
 - **Prompts：**server 提供的可复用提示模板，通常由用户或应用显式选择，用来组织某类任务的输入。
 
 协议解决的是“如何描述、发现和调用能力”，并不会自动解决业务授权、数据合规或结果正确性。同一个工具即使符合协议，也可能因为用户身份、资源范围或组织政策而被拒绝。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ag-002/deck.json" slides="1,3,14,17,18,19,20,21,22,23,24,25,27,28" title="MCP：连接能力的通用边界" />
-<!-- ai-course-inline-media:end -->
 
 ### 上下文、短期状态与长期记忆
 
@@ -97,11 +106,14 @@ MCP server 可以提供三类常见能力：
 
 智能体不应尝试猜测凭据、切换到未授权账号，或通过另一个工具绕过限制。获得权限后，也应从失败步骤重新观察当前状态，因为外部数据可能已经变化。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ag-002/deck.json" slides="16" title="权限失败：不能靠“换一种说法”绕过" />
-<!-- ai-course-inline-media:end -->
-
 ## 案例与图解
+
+<!-- course-visual:start lesson=AG-002 sha256=9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5 -->
+<figure class="ai-course-visual">
+  <img src="/course-assets/lesson-media/agent-engineering/visuals/ag-002-anchor-25-9aee7d1e53ef.png" alt="模型、MCP 客户端、MCP 服务端与外部工具之间的调用时序图" loading="lazy" decoding="async">
+  <figcaption><strong>学习提示：</strong>观察：比较请求、工具执行和结果回传发生的位置，找出协议层负责连接什么、又不替代哪些业务判断。</figcaption>
+</figure>
+<!-- course-visual:end -->
 
 ### 文档问答智能体为什么答错了“最新版政策”
 
@@ -115,18 +127,15 @@ MCP server 可以提供三类常见能力：
 
 这个案例说明：资源提供依据，工具取得动态结果，短期状态保存进度，长期记忆只提供背景，计划则约束它们的使用顺序。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ag-002/deck.json" slides="2,7,8,10" title="文档问答智能体为什么答错了“最新版政策”" />
-<!-- ai-course-inline-media:end -->
-
 ## 动手实践
 
 以“查询图书馆在借图书并生成到期提醒”为例，完成一份系统设计：
 
 1. 分别为“查询在借图书”和“创建提醒”写工具契约，标明读取或写入权限、错误码和重试规则。
-2. 画出 host、两个 client/server 连接以及 tools、resources、prompts 的位置，并写出数据不能越过的边界。
-3. 把信息分到当前上下文、短期状态、长期记忆三栏，为长期记忆增加来源和失效条件。
-4. 设计一个包含至少五步的计划，并加入“查询权限不足”和“创建提醒结果未知”两条失败分支。
+2. 用 Python 字典或 Node.js `Map` 画出“工具名 → handler”的注册表示意，并为未登记工具名、参数校验失败和无权限各写一个返回结果。
+3. 画出 host、两个 client/server 连接以及 tools、resources、prompts 的位置，并写出数据不能越过的边界。
+4. 把信息分到当前上下文、短期状态、长期记忆三栏，为长期记忆增加来源和失效条件。
+5. 设计一个包含至少五步的计划，并加入“查询权限不足”和“创建提醒结果未知”两条失败分支。
 
 验收标准是：任何一次失败都能被明确分类；没有权限时不会继续写入；任务中断后能根据短期状态恢复；最终提醒中的日期可以追溯到工具结果。
 

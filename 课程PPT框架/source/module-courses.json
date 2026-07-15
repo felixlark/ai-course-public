@@ -1,0 +1,330 @@
+{
+  "schema_version": 3,
+  "policy": "original-feishu-courseware-and-independent-media-no-slide-raster",
+  "course_title": "陈龙彪团队人工智能迷你课",
+  "source_of_truth": "pptx",
+  "viewer": {
+    "primary": "feishu-wiki-courseware",
+    "portal": "vitepress",
+    "render_contract": "VitePress links to the original Feishu courseware. It does not generate, host, embed, or simulate a slide player."
+  },
+  "modules": [
+    {
+      "id": "ai-overview",
+      "order": 1,
+      "title": "人工智能概述",
+      "summary": "从真实案例、技术谱系与社会影响建立人工智能的整体判断框架。",
+      "source_pptx": "素材-2026飞书/PPT/1-AI大模型.pptx",
+      "canonical_map": "课程PPT框架/source/latest-ai-deck-map.json",
+      "sha256": "516694e53503198c282989794c73e75d059cd57e91dcf548231cab53e07184d5",
+      "file_size": 606909159,
+      "source_slide_count": 31,
+      "slide_count": 30,
+      "publication_omissions": [
+        {
+          "source_slide": 31,
+          "privacy_flags": ["personal_email", "personal_phone", "wechat_qr_code"],
+          "reason": "非教学结束页，包含个人电话、邮箱和微信二维码；为保护隐私，不进入 Web 幻灯片、课程正文或公开素材。"
+        }
+      ],
+      "source_visual_asset_count": 49,
+      "visual_asset_count": 48,
+      "video_count": 9,
+      "feishu_acceptance_checks": [
+        { "id": "opening-layout", "slide": 1, "format": "native-layout", "viewports": ["desktop"] },
+        { "id": "video-layout", "slide": 3, "format": "embedded-video", "viewports": ["desktop", "mobile"] },
+        { "id": "privacy-safe-closing", "slide": 30, "format": "native-layout", "viewports": ["desktop", "mobile"] }
+      ],
+      "delivery": {
+        "media_profile": "feishu-native-courseware",
+        "purpose": "Preserve the original Feishu courseware and its embedded media for classroom playback in Feishu Web PPT."
+      },
+      "lesson_ids": ["OV-001", "OV-002", "OV-003"],
+      "lesson_sources": {
+        "OV-001": {
+          "slides": "1-30",
+          "anchors": [3, 7, 8, 10, 21, 28],
+          "coverage": "native",
+          "focus": "用机器人与仿真案例进入人工智能定义，再连接技术栈、大模型能力和使用边界。"
+        },
+        "OV-002": {
+          "slides": "11-19,23-26,29-30",
+          "anchors": [25, 26, 30],
+          "coverage": "partial",
+          "focus": "从大模型演进、学生技术依赖、心理风险、能力边界和未来趋势讨论人工智能的社会影响。",
+          "source_gaps": ["早期人工智能史的可检索原生文字较少，部分历史脉络由讲义的一手资料补足"]
+        },
+        "OV-003": {
+          "slides": "20-22",
+          "anchors": [20, 21],
+          "coverage": "partial",
+          "focus": "建立人工智能、机器学习、深度学习、预训练模型和大语言模型的层级关系。",
+          "source_gaps": ["监督学习、损失函数、泛化、反向传播和卷积网络需由讲义扩写"]
+        }
+      },
+      "sections": [
+        { "id": "cases", "title": "从典型案例观察人工智能", "slides": "1-8" },
+        { "id": "definition", "title": "定义、历史与能力层次", "slides": "9-15" },
+        { "id": "society", "title": "人工智能如何改变社会", "slides": "16-19" },
+        { "id": "stack", "title": "大模型位于技术栈的哪里", "slides": "20-22" },
+        { "id": "boundaries", "title": "大模型演进、分类与能力边界", "slides": "23-30" }
+      ]
+    },
+    {
+      "id": "ai-models",
+      "order": 2,
+      "title": "AI 大模型",
+      "summary": "理解 Transformer、大模型训练、应用开发、RAG 与负责任使用。",
+      "source_pptx": "2-AI大模型/迷你课程/飞书导入-Transformer与大语言模型原理与实践（2026）/Transformer与大语言模型原理与实践（2026）.pptx",
+      "sha256": "a645fcd512c6b075fd9a94512890f765146b5f37ddbf76b198bb9f1637e7a4b7",
+      "file_size": 13117094,
+      "source_slide_count": 20,
+      "slide_count": 20,
+      "visual_asset_count": 54,
+      "video_count": 0,
+      "feishu_acceptance_checks": [
+        { "id": "transformer-svg", "slide": 9, "format": "svg", "viewports": ["desktop", "mobile"] }
+      ],
+      "manifest_text_exclude_slides": [20],
+      "lesson_ids": ["OV-004", "OV-005", "OV-006", "OV-007", "IN-004", "IN-007"],
+      "lesson_sources": {
+        "OV-004": {
+          "slides": "1-7,13,17-20",
+          "anchors": [4, 5, 6, 7, 13, 17],
+          "coverage": "native",
+          "focus": "沿 RNN 局限、Transformer 架构、自注意力、位置编码和训练流程理解大模型技术底座。"
+        },
+        "OV-005": {
+          "slides": "8-10,16-17,19",
+          "anchors": [9, 10, 17, 19],
+          "coverage": "partial",
+          "focus": "比较 GPT、BERT、DeepSeek、MoE 与新兴架构的演进路线。",
+          "source_gaps": ["开源许可、本地部署、隐私、成本和运维取舍由讲义扩写"]
+        },
+        "OV-006": {
+          "slides": "11,14,19",
+          "anchors": [11, 14, 19],
+          "coverage": "partial",
+          "focus": "把 ViT、多模态、Prompt、ICL、CoT 和模型工具生态连成应用工作流。",
+          "source_gaps": ["文生图、视频生成和内容审核工作流由讲义扩写"]
+        },
+        "OV-007": {
+          "slides": "13,15,18-19",
+          "anchors": [13, 15, 18, 19],
+          "coverage": "partial",
+          "focus": "从对齐、RAG、伦理、安全、隐私和责任机制建立负责任使用框架。",
+          "source_gaps": ["提示注入、工具越权、权限白名单和审计链路由讲义扩写"]
+        },
+        "IN-004": {
+          "slides": "12,14-15,18-19",
+          "anchors": [14, 15, 18, 19],
+          "coverage": "bridge",
+          "focus": "以应用开发、RAG、Agent 和治理页作为企业知识工作流的技术底座。",
+          "source_gaps": ["会议、制度、审批、知识有效期和责任人属于行业扩写内容"]
+        },
+        "IN-007": {
+          "slides": "15,18-19",
+          "anchors": [15, 18, 19],
+          "coverage": "bridge",
+          "focus": "只复用 RAG、Agent、风险治理和人工负责等通用方法。",
+          "source_gaps": ["火灾调查、证据链、三维重建、法规程序和假设核验不在当前模块 PPTX 中"]
+        }
+      },
+      "sections": [
+        { "id": "transformer", "title": "Transformer 基础架构", "slides": "3-7" },
+        { "id": "architectures", "title": "主流大模型架构", "slides": "8-11" },
+        { "id": "practice", "title": "训练与应用实践", "slides": "12-15" },
+        { "id": "future", "title": "前沿、治理与课程总结", "slides": "16-20" }
+      ]
+    },
+    {
+      "id": "agent-engineering",
+      "order": 3,
+      "title": "智能体工程",
+      "summary": "从工具调用、ReAct、运行框架、多智能体协作走向可观测评测。",
+      "source_pptx": "3-智能体工程/迷你课程/飞书导入-2026-PRML-CS-XMU-12-AI智能体原理及实现/2026-PRML-CS-XMU-12-AI智能体原理及实现.pptx",
+      "sha256": "2ca72114955e31c495337946e460c0622a9b2426483e25bd0f0438995821cf6f",
+      "file_size": 26462329,
+      "source_slide_count": 74,
+      "slide_count": 73,
+      "publication_omissions": [
+        {
+          "source_slide": 74,
+          "privacy_flags": ["personal_email", "personal_homepage", "personal_phone", "wechat_qr_code"],
+          "reason": "非教学联系页，包含教师电话、主页与微信二维码；为保护隐私，不进入 Web 幻灯片、课程正文或公开素材。"
+        }
+      ],
+      "source_visual_asset_count": 68,
+      "visual_asset_count": 65,
+      "video_count": 0,
+      "feishu_acceptance_checks": [
+        { "id": "evaluation-layout", "slide": 73, "format": "native-layout", "viewports": ["desktop", "mobile"] }
+      ],
+      "lesson_ids": ["AG-001", "AG-002", "AG-003", "AG-004", "AG-005", "IN-001", "IN-002", "IN-003", "IN-008"],
+      "lesson_sources": {
+        "AG-001": {
+          "slides": "1-2,27-44",
+          "anchors": [30, 32, 36, 40, 43],
+          "coverage": "native",
+          "focus": "从工具增强推理进入智能体定义、工作流差异、ReAct 与环境反馈。"
+        },
+        "AG-002": {
+          "slides": "3-26,49-53,61",
+          "anchors": [6, 14, 19, 22, 24, 49, 53, 61],
+          "coverage": "native",
+          "focus": "串联工具学习、函数调用、BFCL、MCP、记忆、规划和 Agentic Harness。"
+        },
+        "AG-003": {
+          "slides": "54-60",
+          "anchors": [54, 56, 58, 60],
+          "coverage": "native",
+          "focus": "理解多智能体通信、A2A、编排、人类干预和进度账本。"
+        },
+        "AG-004": {
+          "slides": "45-47",
+          "anchors": [45, 46, 47],
+          "coverage": "partial",
+          "focus": "以编程智能体和 Web Agent 的目标、动作空间与长轨迹作为 AI Coding 的原生切片。",
+          "source_gaps": ["Vibe Coding、版本控制、测试和发布闭环由讲义扩写"]
+        },
+        "AG-005": {
+          "slides": "48,62-73",
+          "anchors": [48, 62, 63, 71, 72],
+          "coverage": "native",
+          "focus": "从 trace、风险事故、基准测试、结果评估和检查点评估建立可观测验收。"
+        },
+        "IN-001": {
+          "slides": "14-21,62,70-72",
+          "anchors": [14, 21, 62, 70, 71, 72],
+          "coverage": "bridge",
+          "focus": "把工具契约、执行链、风险和成功指标迁移到行业 AI 试点方法。",
+          "source_gaps": ["业务基线、成本收益、ROI 区间和试点扩展由讲义补足"]
+        },
+        "IN-002": {
+          "slides": "3,6,8-13,21,72-73",
+          "anchors": [6, 8, 12, 21, 72],
+          "coverage": "bridge",
+          "focus": "复用问答、RAG、工具学习和评测方法支撑高校教学与科研工作流。",
+          "source_gaps": ["学术诚信、引用复现、隐私和作者责任由讲义补足"]
+        },
+        "IN-003": {
+          "slides": "14-20,22-26,54,62-65,71-72",
+          "anchors": [14, 22, 23, 54, 62, 65, 72],
+          "coverage": "bridge",
+          "focus": "复用受控工具、MCP 授权、人机协作、风险模拟和检查点评测。",
+          "source_gaps": ["政务流程、乡村振兴、行政权利边界和政策证据由讲义补足"]
+        },
+        "IN-008": {
+          "slides": "22-26,49-53,61-62,70-72",
+          "anchors": [22, 49, 53, 61, 71],
+          "coverage": "bridge",
+          "focus": "以 MCP、Harness、记忆、规划、风险和可复核评测支撑海洋数据智能工作流。",
+          "source_gaps": ["遥感、ARGO、AIS、坐标尺度和时空不确定性由讲义补足"]
+        }
+      },
+      "sections": [
+        { "id": "tools", "title": "工具调用与 MCP", "slides": "2-29" },
+        { "id": "react", "title": "智能体与 ReAct", "slides": "30-47" },
+        { "id": "harness", "title": "Agentic Harness 与多智能体", "slides": "48-61" },
+        { "id": "evaluation", "title": "风险、基准与评测", "slides": "62-73" }
+      ]
+    },
+    {
+      "id": "embodied-ai",
+      "order": 4,
+      "title": "具身智能",
+      "summary": "围绕感知、推理、执行和持续学习理解身体、环境与任务闭环。",
+      "source_pptx": "4-具身智能/迷你课程/飞书导入-2-具身智能基础/2-具身智能基础.pptx",
+      "sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "file_size": 28735703,
+      "source_slide_count": 23,
+      "slide_count": 22,
+      "publication_omissions": [
+        {
+          "source_slide": 23,
+          "privacy_flags": ["personal_email", "personal_phone", "wechat_qr_code"],
+          "reason": "非教学联系页，包含姓名、手机、邮箱和微信二维码；为保护隐私，不进入 Web 幻灯片、课程正文或公开素材。"
+        }
+      ],
+      "source_visual_asset_count": 31,
+      "visual_asset_count": 27,
+      "video_count": 0,
+      "feishu_acceptance_checks": [
+        { "id": "gif-motion-1", "slide": 5, "format": "gif-motion", "viewports": ["desktop", "mobile"] },
+        { "id": "gif-motion-2", "slide": 7, "format": "gif-motion", "viewports": ["desktop"] },
+        { "id": "jpeg-xr-background", "slide": 20, "format": "jpeg-xr-wdp", "viewports": ["desktop"] }
+      ],
+      "lesson_ids": ["EM-001", "EM-002", "EM-003", "EM-004", "EM-005", "EM-006", "IN-005", "IN-006", "IN-009"],
+      "lesson_sources": {
+        "EM-001": {
+          "slides": "1-3",
+          "anchors": [2, 3],
+          "coverage": "native",
+          "focus": "从数据、本体、学习和感知—推理—执行三分法建立具身闭环。"
+        },
+        "EM-002": {
+          "slides": "2-3,7,21",
+          "anchors": [2, 7, 21],
+          "coverage": "partial",
+          "focus": "用本体性能、机器人感知形态和未来技术栈理解机器人平台。",
+          "source_gaps": ["Unitree 产品、Go2、人形机器人和产业格局由讲义扩写"]
+        },
+        "EM-003": {
+          "slides": "4-8",
+          "anchors": [5, 7, 8],
+          "coverage": "native",
+          "focus": "沿主动视觉、三维定位、多模态感知和下游任务理解环境状态。"
+        },
+        "EM-004": {
+          "slides": "17-22",
+          "anchors": [18, 19, 21, 22],
+          "coverage": "partial",
+          "focus": "连接强化学习、模仿学习、仿真、世界模型和持续学习。",
+          "source_gaps": ["步态控制、PPO、Isaac Gym、MuJoCo 和 Sim-to-Real 实操由讲义扩写"]
+        },
+        "EM-005": {
+          "slides": "8,10-11,21-22",
+          "anchors": [8, 10, 11, 22],
+          "coverage": "partial",
+          "focus": "把传感链路、任务分解、技能库、通用执行器和 ROS 工具库连接为实训架构。",
+          "source_gaps": ["G1、Go2、ROS2 节点话题和实训命令由讲义扩写"]
+        },
+        "EM-006": {
+          "slides": "2,10-11,18-22",
+          "anchors": [2, 10, 18, 21, 22],
+          "coverage": "partial",
+          "focus": "用任务规划、强化与模仿学习、仿真和世界模型连接群体具身系统。",
+          "source_gaps": ["Crowdverse、多智能体、群体指标和数字孪生平台由讲义扩写"]
+        },
+        "IN-005": {
+          "slides": "2,8,10-11,18,21-22",
+          "anchors": [2, 8, 10, 18, 21],
+          "coverage": "bridge",
+          "focus": "把数据、感知、规划、执行、反馈与持续优化迁移到工业物理系统。",
+          "source_gaps": ["制造、能源、源网荷储和供应链案例由讲义补足"]
+        },
+        "IN-006": {
+          "slides": "5-8,12-16,21-22",
+          "anchors": [5, 8, 12, 13, 14, 16, 21],
+          "coverage": "bridge",
+          "focus": "复用多模态感知、规则导航、学习导航和视觉语言导航。",
+          "source_gaps": ["机场、ADS-B、GraphRAG 和应急预案由讲义补足"]
+        },
+        "IN-009": {
+          "slides": "5,7-16,21-22",
+          "anchors": [7, 8, 10, 12, 16, 21],
+          "coverage": "bridge",
+          "focus": "复用环境、行为和意图感知，以及任务规划、导航与反馈学习。",
+          "source_gaps": ["展厅、智慧建筑、数字孪生和运维清单由讲义补足"]
+        }
+      },
+      "sections": [
+        { "id": "loop", "title": "具身智能核心闭环", "slides": "1-3" },
+        { "id": "perception", "title": "具身感知", "slides": "4-8" },
+        { "id": "reasoning", "title": "任务规划与导航", "slides": "9-16" },
+        { "id": "execution", "title": "强化学习与模仿学习", "slides": "17-19" },
+        { "id": "future", "title": "未来技术栈与持续学习", "slides": "20-22" }
+      ]
+    }
+  ]
+}

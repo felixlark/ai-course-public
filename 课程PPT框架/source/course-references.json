@@ -4,7 +4,25 @@
       "title": "Large Language Models Pass the Turing Test",
       "url": "https://arxiv.org/abs/2503.23674",
       "note": "2025 年预注册三方图灵测试研究；用于把实验结论与“机器已经获得人类智能”区分开。",
-      "checked_on": "2026-07-11"
+      "checked_on": "2026-07-13"
+    },
+    {
+      "title": "OECD 对 AI 系统定义的说明",
+      "url": "https://oecd.ai/en/ai-publications/explanatory-memorandum-on-the-updated-oecd-definition-of-an-ai-system",
+      "note": "从输入、推断、输出及其对虚拟或物理环境的影响理解 AI 系统。",
+      "checked_on": "2026-07-13"
+    },
+    {
+      "title": "Generative AI and Jobs: A Refined Global Index of Occupational Exposure",
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-refined-global-index-occupational-exposure",
+      "note": "国际劳工组织 2025 年任务级暴露研究；用于区分职业转型、任务增强与直接替代预测。",
+      "checked_on": "2026-07-13"
+    },
+    {
+      "title": "NIST AI 600-1: Generative Artificial Intelligence Profile",
+      "url": "https://doi.org/10.6028/NIST.AI.600-1",
+      "note": "生成式 AI 风险识别、评测、治理和持续监测的官方框架配置文件。",
+      "checked_on": "2026-07-13"
     }
   ],
   "OV-002": [

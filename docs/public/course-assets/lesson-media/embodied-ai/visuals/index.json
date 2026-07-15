@@ -1,0 +1,742 @@
+{
+  "schema_version": 1,
+  "policy": "native-pptx-and-structured-course-visuals-no-slide-raster",
+  "module_id": "embodied-ai",
+  "source_archive": "private-course-source",
+  "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+  "slide_size_emu": {
+    "width": 12192000,
+    "height": 6858000
+  },
+  "selection_policy": {
+    "excluded_lessons": [
+      "OV-001",
+      "OV-002"
+    ],
+    "allowed_extensions": [
+      ".gif",
+      ".jpeg",
+      ".jpg",
+      ".png",
+      ".svg",
+      ".webp"
+    ],
+    "maximum_geometry_ratio": 0.8,
+    "minimum_geometry_ratio": 0.006,
+    "minimum_geometry_dimension_ratio": 0.04,
+    "minimum_raster_width": 180,
+    "minimum_raster_height": 100,
+    "minimum_raster_pixels": 40000,
+    "minimum_visible_alpha_mean": 0.02,
+    "repeated_asset_minimum_slides": 3,
+    "repeated_placement_ratio": 0.6
+  },
+  "curated_exclusions": {
+    "d69022f488fd1099e6db7cd3b652994d5c4cab2992dfe1a886410c1fd98c0f2b": "ornamental-campus-silhouette",
+    "bb73b395d81e8df40472628ef58e7cdd18db3001931044a55badaef214859446": "ornamental-wave-background",
+    "a25df2950c06aea4e4be916047017feb19c05e86e9ccb6f3d1a363ab600515a9": "rasterized-legacy-slide-with-header-and-footer",
+    "a38dedea30abca2a76649cf7f86b937d85cb11b13a1ab910931822c2a89ce2fa": "rasterized-slide-like-canvas-with-template-band",
+    "d1105f24307f99a4779873cf32ac9c0f8f045cb9ad62bd9e4c269b9419f30a98": "standalone-decorative-robot-icon",
+    "160b6b94de958298f027199fdd794bef02a2920bc80cfa3d9792408254556bb4": "standalone-decorative-person-icon"
+  },
+  "selection_overrides": {
+    "OV-003": {
+      "sha256": "376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd",
+      "reason": "use the reviewed compute-scale chart instead of a generic AI illustration or ornamental anchor asset"
+    },
+    "OV-005": {
+      "sha256": "4b2e75feb052e921fa9a8c66ca91aed854fb541e5e693306e1af661b809f39f0",
+      "reason": "use the reviewed DeepSeek MoE and domestic-compute illustration instead of a generic model timeline"
+    },
+    "AG-001": {
+      "sha256": "41620617f12e74b6fda1f6f72c719ee616b4d22d6d116ad0b29a4031ac14fad0",
+      "reason": "use the reviewed ReAct loop instead of a generic AI activity collage"
+    },
+    "AG-002": {
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "reason": "use the reviewed MCP request and tool-call sequence"
+    },
+    "AG-005": {
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "reason": "use the reviewed evaluation-rule table instead of a social-media incident screenshot"
+    },
+    "IN-001": {
+      "sha256": "8d155d874119b6ed839927d6c52d2d4b1e3c6b6d7aacbac3cd339a2bdf7fa037",
+      "reason": "reuse the reviewed evaluation-rule table to show that business success criteria must be executable"
+    },
+    "IN-002": {
+      "sha256": "ab5b5f456606b1d3be33238a6a9e5dd8b8f5c043370ea014456418a18ebe374d",
+      "reason": "use the reviewed retrieval-evidence-reader chain instead of a dense paper screenshot"
+    },
+    "IN-003": {
+      "sha256": "9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5",
+      "reason": "reuse the reviewed controlled MCP sequence instead of a low-contrast hierarchy diagram"
+    },
+    "IN-004": {
+      "kind": "structured-course-diagram",
+      "slide": 15,
+      "reason": "reconstruct the enterprise knowledge workflow because the mapped pictures are generic decoration"
+    },
+    "IN-005": {
+      "kind": "structured-course-diagram",
+      "slide": 18,
+      "reason": "reconstruct the industrial decision loop instead of reusing a weak robot-environment image"
+    },
+    "IN-007": {
+      "kind": "structured-course-diagram",
+      "slide": 15,
+      "reason": "reconstruct the fire-investigation evidence chain because the mapped picture is generic decoration"
+    },
+    "IN-008": {
+      "sha256": "3756bcd5377898ae061eb72a355371158934019159487bec6058541195376577",
+      "reason": "use the reviewed multimodal environment-observation diagram instead of a generic agent architecture"
+    },
+    "EM-002": {
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "reason": "prefer an independent animated robot scene over the pasted legacy-slide raster"
+    },
+    "EM-004": {
+      "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+      "reason": "prefer a standalone reinforcement-learning diagram over the slide-like canvas"
+    },
+    "EM-005": {
+      "kind": "native-group-rendering",
+      "slide": 10,
+      "reason": "reconstruct the native task-planning group instead of publishing either standalone icon or a pasted slide raster"
+    },
+    "EM-006": {
+      "kind": "structured-course-diagram",
+      "slide": 18,
+      "reason": "reconstruct the individual-to-group evaluation chain instead of presenting a single-agent loop as the group architecture"
+    },
+    "IN-009": {
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "reason": "reuse the reviewed indoor robot GIF to illustrate dynamic spatial perception"
+    }
+  },
+  "coverage": {
+    "required_lessons": 9,
+    "selected_assets": 9,
+    "lesson_ids": [
+      "EM-001",
+      "EM-002",
+      "EM-003",
+      "EM-004",
+      "EM-005",
+      "EM-006",
+      "IN-005",
+      "IN-006",
+      "IN-009"
+    ]
+  },
+  "lesson_audits": [
+    {
+      "lesson_id": "EM-001",
+      "source_slide_count": 3,
+      "picture_shape_count": 8,
+      "eligible_picture_count": 3,
+      "excluded_picture_count": 5,
+      "exclusion_counts": {
+        "curated:ornamental-campus-silhouette": 1,
+        "curated:ornamental-wave-background": 1,
+        "low-resolution-raster": 2,
+        "repeated-decoration": 5,
+        "transparent-or-sparse-decoration": 1
+      }
+    },
+    {
+      "lesson_id": "EM-002",
+      "source_slide_count": 4,
+      "picture_shape_count": 8,
+      "eligible_picture_count": 3,
+      "excluded_picture_count": 5,
+      "exclusion_counts": {
+        "curated:rasterized-legacy-slide-with-header-and-footer": 1,
+        "low-resolution-raster": 4,
+        "repeated-decoration": 4
+      }
+    },
+    {
+      "lesson_id": "EM-003",
+      "source_slide_count": 5,
+      "picture_shape_count": 12,
+      "eligible_picture_count": 4,
+      "excluded_picture_count": 8,
+      "exclusion_counts": {
+        "curated:ornamental-campus-silhouette": 1,
+        "curated:ornamental-wave-background": 1,
+        "low-resolution-raster": 5,
+        "repeated-decoration": 8,
+        "transparent-or-sparse-decoration": 1
+      }
+    },
+    {
+      "lesson_id": "EM-004",
+      "source_slide_count": 6,
+      "picture_shape_count": 19,
+      "eligible_picture_count": 4,
+      "excluded_picture_count": 15,
+      "exclusion_counts": {
+        "curated:ornamental-campus-silhouette": 2,
+        "curated:ornamental-wave-background": 2,
+        "curated:rasterized-legacy-slide-with-header-and-footer": 2,
+        "curated:rasterized-slide-like-canvas-with-template-band": 1,
+        "low-resolution-raster": 6,
+        "repeated-decoration": 12,
+        "transparent-or-sparse-decoration": 2
+      }
+    },
+    {
+      "lesson_id": "EM-005",
+      "source_slide_count": 5,
+      "picture_shape_count": 10,
+      "eligible_picture_count": 1,
+      "excluded_picture_count": 9,
+      "exclusion_counts": {
+        "curated:rasterized-legacy-slide-with-header-and-footer": 2,
+        "curated:standalone-decorative-person-icon": 1,
+        "curated:standalone-decorative-robot-icon": 1,
+        "low-resolution-raster": 5,
+        "repeated-decoration": 5
+      }
+    },
+    {
+      "lesson_id": "EM-006",
+      "source_slide_count": 8,
+      "picture_shape_count": 21,
+      "eligible_picture_count": 5,
+      "excluded_picture_count": 16,
+      "exclusion_counts": {
+        "curated:ornamental-campus-silhouette": 1,
+        "curated:ornamental-wave-background": 1,
+        "curated:rasterized-legacy-slide-with-header-and-footer": 2,
+        "curated:rasterized-slide-like-canvas-with-template-band": 1,
+        "curated:standalone-decorative-person-icon": 1,
+        "curated:standalone-decorative-robot-icon": 1,
+        "low-resolution-raster": 8,
+        "repeated-decoration": 11,
+        "transparent-or-sparse-decoration": 1
+      }
+    },
+    {
+      "lesson_id": "IN-005",
+      "source_slide_count": 7,
+      "picture_shape_count": 14,
+      "eligible_picture_count": 3,
+      "excluded_picture_count": 11,
+      "exclusion_counts": {
+        "curated:rasterized-legacy-slide-with-header-and-footer": 2,
+        "curated:standalone-decorative-person-icon": 1,
+        "curated:standalone-decorative-robot-icon": 1,
+        "low-resolution-raster": 7,
+        "repeated-decoration": 7
+      }
+    },
+    {
+      "lesson_id": "IN-006",
+      "source_slide_count": 11,
+      "picture_shape_count": 22,
+      "eligible_picture_count": 9,
+      "excluded_picture_count": 13,
+      "exclusion_counts": {
+        "curated:rasterized-legacy-slide-with-header-and-footer": 2,
+        "low-resolution-raster": 11,
+        "repeated-decoration": 11
+      }
+    },
+    {
+      "lesson_id": "IN-009",
+      "source_slide_count": 13,
+      "picture_shape_count": 28,
+      "eligible_picture_count": 8,
+      "excluded_picture_count": 20,
+      "exclusion_counts": {
+        "curated:ornamental-campus-silhouette": 1,
+        "curated:ornamental-wave-background": 1,
+        "curated:rasterized-legacy-slide-with-header-and-footer": 2,
+        "curated:standalone-decorative-person-icon": 1,
+        "curated:standalone-decorative-robot-icon": 1,
+        "low-resolution-raster": 13,
+        "repeated-decoration": 16,
+        "transparent-or-sparse-decoration": 1
+      }
+    }
+  ],
+  "assets": [
+    {
+      "lesson_id": "EM-001",
+      "lesson_title": "具身智能：感知、决策、行动与反馈",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image9.png",
+      "source_entries": [
+        "ppt/media/image9.png"
+      ],
+      "source_slides": [
+        3
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 3,
+      "source_anchor": true,
+      "shape_id": "4",
+      "shape_name": "图片 3",
+      "geometry": {
+        "x_emu": 509270,
+        "y_emu": 744220,
+        "width_emu": 10761345,
+        "height_emu": 6050915,
+        "width_ratio": 0.882656,
+        "height_ratio": 0.882315,
+        "area_ratio": 0.778781
+      },
+      "sha256": "938063d046225e45ce6d37d159327a8642587ec148db18f63cbf9e3a9020a824",
+      "size": 2738288,
+      "width": 2730,
+      "height": 1535,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-001-anchor-3-938063d04622.png",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-001-anchor-3-938063d04622.png",
+      "alt": "具身智能感知、推理、执行与环境反馈闭环图",
+      "caption": "观察：沿着传感输入到动作反馈的方向追踪信息，比较身体执行带来的误差与纯软件任务中的误差有何不同。",
+      "selection_score": 105195,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "938063d046225e45ce6d37d159327a8642587ec148db18f63cbf9e3a9020a824",
+        "note": "Embodied perception-reasoning-action loop diagram; independent picture."
+      }
+    },
+    {
+      "lesson_id": "EM-002",
+      "lesson_title": "人形机器人与 Unitree 生态",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image12.GIF",
+      "source_entries": [
+        "ppt/media/image12.GIF"
+      ],
+      "source_slides": [
+        7
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 7,
+      "source_anchor": true,
+      "shape_id": "3",
+      "shape_name": "图片 2",
+      "geometry": {
+        "x_emu": 7475903,
+        "y_emu": 932520,
+        "width_emu": 4191000,
+        "height_emu": 2857500,
+        "width_ratio": 0.34375,
+        "height_ratio": 0.416667,
+        "area_ratio": 0.143229
+      },
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "size": 2049981,
+      "width": 440,
+      "height": 300,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-002-anchor-7-709d21e49212.gif",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-002-anchor-7-709d21e49212.gif",
+      "alt": "室内彩色画面逐步叠加点云并转为三维环境表示的动态演示",
+      "caption": "观察：比较彩色画面、点云叠加与三维表示三个阶段，辨认纹理信息如何转为可计算的空间结构；这段素材展示的是环境表征过程，并不直接证明机器人已经完成自主避障。",
+      "selection_score": 101378,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+        "reason": "prefer an independent animated robot scene over the pasted legacy-slide raster"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+        "note": "Animated robot navigation scene; independent GIF."
+      }
+    },
+    {
+      "lesson_id": "EM-003",
+      "lesson_title": "多模态感知与环境理解",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image10.GIF",
+      "source_entries": [
+        "ppt/media/image10.GIF"
+      ],
+      "source_slides": [
+        5
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 5,
+      "source_anchor": true,
+      "shape_id": "2",
+      "shape_name": "图片 1",
+      "geometry": {
+        "x_emu": 9241787,
+        "y_emu": 1323047,
+        "width_emu": 2624203,
+        "height_emu": 4802180,
+        "width_ratio": 0.21524,
+        "height_ratio": 0.70023,
+        "area_ratio": 0.150717
+      },
+      "sha256": "43292a195e75a40dc35d2af08e0c75f925d2fd1d5e35b49139840f88c35feabb",
+      "size": 14553585,
+      "width": 400,
+      "height": 709,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-003-anchor-5-43292a195e75.gif",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-003-anchor-5-43292a195e75.gif",
+      "alt": "G1 人形机器人在展区连续行走的动态演示",
+      "caption": "观察：关注迈步、摆臂、落脚与身体姿态的连续变化，区分“能够稳定行走”的现场表现与“具备自主感知、规划和探索能力”的系统结论。",
+      "selection_score": 102508,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "43292a195e75a40dc35d2af08e0c75f925d2fd1d5e35b49139840f88c35feabb",
+        "note": "Animated humanoid robot scene; independent GIF."
+      }
+    },
+    {
+      "lesson_id": "EM-004",
+      "lesson_title": "运动控制、强化学习与 Sim-to-Real",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image23.png",
+      "source_entries": [
+        "ppt/media/image23.png"
+      ],
+      "source_slides": [
+        18
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 18,
+      "source_anchor": true,
+      "shape_id": "5",
+      "shape_name": "图片 4",
+      "geometry": {
+        "x_emu": 7629527,
+        "y_emu": 3812641,
+        "width_emu": 4178675,
+        "height_emu": 2599675,
+        "width_ratio": 0.342739,
+        "height_ratio": 0.379072,
+        "area_ratio": 0.129923
+      },
+      "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+      "size": 51263,
+      "width": 792,
+      "height": 516,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-004-anchor-18-85b406969801.png",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-004-anchor-18-85b406969801.png",
+      "alt": "智能体与环境之间状态、动作和奖励往返的强化学习循环图",
+      "caption": "观察：比较状态、动作与奖励在循环中的方向，重点判断奖励信号怎样影响后续策略，而不是直接指定每一步动作。",
+      "selection_score": 102326,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+        "reason": "prefer a standalone reinforcement-learning diagram over the slide-like canvas"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "85b406969801d624eef976437b4a84da3667ed62433489fbf646c61e60b7598f",
+        "note": "Agent-environment reinforcement-learning diagram; independent crop."
+      }
+    },
+    {
+      "lesson_id": "EM-005",
+      "lesson_title": "G1、Go2 与 ROS2 实训",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/slides/slide10.xml#native-group-15",
+      "source_entries": [
+        "ppt/media/image14.png",
+        "ppt/media/image15.png"
+      ],
+      "source_slides": [
+        10
+      ],
+      "source_kind": "native-group-rendering",
+      "slide": 10,
+      "source_anchor": true,
+      "shape_id": "15",
+      "shape_name": "组合 14",
+      "geometry": {
+        "x_emu": 384175,
+        "y_emu": 3111500,
+        "width_emu": 11585575,
+        "height_emu": 3094990,
+        "width_ratio": 0.95026,
+        "height_ratio": 0.451296,
+        "area_ratio": 0.428849
+      },
+      "sha256": "7c81609d7ce9566d45cbd173628d8630277738035f50e2642e194b70220e6a25",
+      "size": 519239,
+      "width": 1200,
+      "height": 640,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-005-anchor-10-7c81609d7ce9.svg",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-005-anchor-10-7c81609d7ce9.svg",
+      "alt": "把自然语言取水请求分解为机器人连续动作的任务规划图",
+      "caption": "观察：从“拿杯水”的目标依次核对移动、抓取、搬运和放置动作，找出一步失败后应从哪里重新规划。",
+      "selection_score": 105383,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "kind": "native-group-rendering",
+        "slide": 10,
+        "reason": "reconstruct the native task-planning group instead of publishing either standalone icon or a pasted slide raster",
+        "sha256": "7c81609d7ce9566d45cbd173628d8630277738035f50e2642e194b70220e6a25"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "7c81609d7ce9566d45cbd173628d8630277738035f50e2642e194b70220e6a25",
+        "note": "Task-planning group reconstructed from native text/shapes and two independent source icons; no slide raster."
+      }
+    },
+    {
+      "lesson_id": "EM-006",
+      "lesson_title": "Crowdverse 与群体具身智能",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/slides/slide18.xml#structured-course-em-006",
+      "source_entries": [],
+      "source_slides": [
+        18,
+        21,
+        22
+      ],
+      "source_kind": "structured-course-diagram",
+      "slide": 18,
+      "source_anchor": true,
+      "shape_id": null,
+      "shape_name": "EM-006 structured course diagram",
+      "geometry": {
+        "x_emu": 853440,
+        "y_emu": 1097280,
+        "width_emu": 10485120,
+        "height_emu": 4663440,
+        "width_ratio": 0.86,
+        "height_ratio": 0.68,
+        "area_ratio": 0.5848
+      },
+      "sha256": "40b47d8b8014f48d387aae4e50411e86d0fa665a16ad26e105acfb0b28e783fd",
+      "size": 4507,
+      "width": 1200,
+      "height": 640,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/em-006-anchor-18-40b47d8b8014.svg",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/em-006-anchor-18-40b47d8b8014.svg",
+      "alt": "从数字孪生训练、个体策略到群体指标和现实校准的流程图",
+      "caption": "观察：沿着个体行动、通信互动和群体评测向前追踪，比较个体奖励与群体安全、公平和韧性之间的差别。",
+      "selection_score": 105095,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "kind": "structured-course-diagram",
+        "slide": 18,
+        "reason": "reconstruct the individual-to-group evaluation chain instead of presenting a single-agent loop as the group architecture",
+        "sha256": "40b47d8b8014f48d387aae4e50411e86d0fa665a16ad26e105acfb0b28e783fd"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "40b47d8b8014f48d387aae4e50411e86d0fa665a16ad26e105acfb0b28e783fd",
+        "note": "Individual-to-group evaluation chain reconstructed from structured course concepts; no slide raster."
+      }
+    },
+    {
+      "lesson_id": "IN-005",
+      "lesson_title": "制造、能源与供应链",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/slides/slide18.xml#structured-course-in-005",
+      "source_entries": [],
+      "source_slides": [
+        18,
+        21,
+        22
+      ],
+      "source_kind": "structured-course-diagram",
+      "slide": 18,
+      "source_anchor": true,
+      "shape_id": null,
+      "shape_name": "IN-005 structured course diagram",
+      "geometry": {
+        "x_emu": 853440,
+        "y_emu": 1097280,
+        "width_emu": 10485120,
+        "height_emu": 4663440,
+        "width_ratio": 0.86,
+        "height_ratio": 0.68,
+        "area_ratio": 0.5848
+      },
+      "sha256": "309cb53ef57e8d1ce98c5a10dc1f9ec195421764aa547026654cd8c154601ba4",
+      "size": 4507,
+      "width": 1200,
+      "height": 640,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/in-005-anchor-18-309cb53ef57e.svg",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/in-005-anchor-18-309cb53ef57e.svg",
+      "alt": "工业现场传感、分析、决策与执行组成的运行闭环图",
+      "caption": "观察：沿着现场信号到控制动作再到新状态的路径追踪反馈，比较延迟、误报和执行偏差会在哪些节点累积。",
+      "selection_score": 104095,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "kind": "structured-course-diagram",
+        "slide": 18,
+        "reason": "reconstruct the industrial decision loop instead of reusing a weak robot-environment image",
+        "sha256": "309cb53ef57e8d1ce98c5a10dc1f9ec195421764aa547026654cd8c154601ba4"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "309cb53ef57e8d1ce98c5a10dc1f9ec195421764aa547026654cd8c154601ba4",
+        "note": "Industrial sensing, decision and feedback loop reconstructed from structured course concepts; no slide raster."
+      }
+    },
+    {
+      "lesson_id": "IN-006",
+      "lesson_title": "交通与智慧机场",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image16.png",
+      "source_entries": [
+        "ppt/media/image16.png"
+      ],
+      "source_slides": [
+        13
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 13,
+      "source_anchor": true,
+      "shape_id": "3",
+      "shape_name": "图片 2",
+      "geometry": {
+        "x_emu": 605738,
+        "y_emu": 1907928,
+        "width_emu": 11316531,
+        "height_emu": 2942096,
+        "width_ratio": 0.928193,
+        "height_ratio": 0.429002,
+        "area_ratio": 0.398197
+      },
+      "sha256": "162356930398adb927f5ba6215e7804269b27e4d3ef08b6929f13a6d43c1c8e2",
+      "size": 60028,
+      "width": 927,
+      "height": 241,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/in-006-anchor-13-162356930398.png",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/in-006-anchor-13-162356930398.png",
+      "alt": "建图定位、路径规划与避障控制组成的三段式导航图",
+      "caption": "观察：比较三段流程各自的输入和输出，判断地图错误、定位漂移或临时障碍分别会怎样传导到最终路线。",
+      "selection_score": 101965,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": null,
+      "visual_review": {
+        "status": "approved",
+        "sha256": "162356930398adb927f5ba6215e7804269b27e4d3ef08b6929f13a6d43c1c8e2",
+        "note": "Navigation-method comparison strip; independent crop."
+      }
+    },
+    {
+      "lesson_id": "IN-009",
+      "lesson_title": "文旅、展厅与智慧建筑",
+      "module_id": "embodied-ai",
+      "source_archive": "private-course-source",
+      "source_pptx_sha256": "cc440d94efb3c97dc682efaf08e454c946a1878183f4f5dcc71e1926e19cf90b",
+      "source_entry": "ppt/media/image12.GIF",
+      "source_entries": [
+        "ppt/media/image12.GIF"
+      ],
+      "source_slides": [
+        7
+      ],
+      "source_kind": "native-picture-shape",
+      "slide": 7,
+      "source_anchor": true,
+      "shape_id": "3",
+      "shape_name": "图片 2",
+      "geometry": {
+        "x_emu": 7475903,
+        "y_emu": 932520,
+        "width_emu": 4191000,
+        "height_emu": 2857500,
+        "width_ratio": 0.34375,
+        "height_ratio": 0.416667,
+        "area_ratio": 0.143229
+      },
+      "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+      "size": 2049981,
+      "width": 440,
+      "height": 300,
+      "alpha_mean": 1,
+      "output_file": "course-assets/lesson-media/embodied-ai/visuals/in-009-anchor-7-709d21e49212.gif",
+      "public_url": "/course-assets/lesson-media/embodied-ai/visuals/in-009-anchor-7-709d21e49212.gif",
+      "alt": "机器人持续感知室内人员、障碍物与可通行区域的动态演示",
+      "caption": "观察：关注人员移动或空间关系变化后环境表示是否及时更新，并判断规划动作如何响应新的可通行区域。",
+      "selection_score": 102378,
+      "repeat_stats": {
+        "slide_count": 1,
+        "occurrence_count": 1,
+        "strongest_placement_ratio": 1,
+        "isRepeatedDecoration": false
+      },
+      "selection_override": {
+        "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+        "reason": "reuse the reviewed indoor robot GIF to illustrate dynamic spatial perception"
+      },
+      "visual_review": {
+        "status": "approved",
+        "sha256": "709d21e492124969baf7af6355a9177e08c409749a66ff404a0b38983007fc51",
+        "note": "Animated indoor robot perception scene; independent GIF."
+      }
+    }
+  ]
+}

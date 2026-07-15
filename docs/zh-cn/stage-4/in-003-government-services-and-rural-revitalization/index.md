@@ -3,10 +3,9 @@ title: '政务服务与乡村振兴'
 description: '用有权限、有证据、可转人工的服务流程支持政策咨询、基层治理和乡村公共服务。'
 lesson_id: 'IN-003'
 module: '行业应用'
-deck_manifest: '/course-assets/course-decks/in-003/deck.json'
-source_media_manifest: '/course-assets/source-media/in-003/deck.json'
+slides_url: 'https://xmu-mars.feishu.cn/wiki/FLWXwP1o8i9VxGkR0J1cXFAJnge'
+slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/FLWXwP1o8i9VxGkR0J1cXFAJnge'
 authored: true
-deck_revision: '0230279df22d5c48b1384d9bca9e80bf8e2f51041a446627362a8e775c1b6a6f'
 ---
 
 <div class="lesson-hero">
@@ -22,6 +21,16 @@ deck_revision: '0230279df22d5c48b1384d9bca9e80bf8e2f51041a446627362a8e775c1b6a6f
 - 为每个环节定义数据权限、证据要求、人工责任和日志记录。
 - 区分一般信息指引、资格预审与影响个人权益的行政决定。
 - 为医疗、法律等高风险咨询设置只提供信息指引、及时转专业人员的边界。
+## 知识导图
+
+公共服务中的智能化必须服从流程、权限、证据和责任边界。
+
+- **事项与权限：** 从具体服务事项出发，只开放完成任务所需的数据与工具。
+
+- **依据与风险：** 让回答回到有效政策和材料，并按后果设置人工复核。
+
+- **服务与责任：** 在基层和乡村场景中解决具体需求，同时保留可追溯责任链。
+
 ## 本节导入
 
 公共服务中的 AI 可能缩短资料查找和群众等待时间，但它面对的不是抽象问题，而是具体的人、地区、政策版本和权益。一次看似细小的适用条件错误，可能让群众错过办理期限；一次过度收集，也可能暴露家庭、健康或财产信息。因此，政务智能化不能只用回答速度衡量。
@@ -36,29 +45,17 @@ deck_revision: '0230279df22d5c48b1384d9bca9e80bf8e2f51041a446627362a8e775c1b6a6f
 
 一个基础流程可以是：接收问题并识别服务事项；按用户角色检查可访问范围；从现行权威资料中检索；生成带引用的说明或待办清单；依据风险等级自动交付或送人工复核；记录使用的资料版本与最终答复；接受反馈并纠错。群众应能知道自己是在与自动系统互动，也能方便地转人工。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-003/deck.json" slides="5,6,7,13" title="一、从服务事项建立完整流程" />
-<!-- ai-course-inline-media:end -->
-
 ### 二、权限控制：只看完成任务所需的信息
 
 权限设计应同时回答“谁、为了什么、能看哪些字段、能做什么、保存多久”。公开政策问答通常不需要身份信息；查询个人办理进度才可能需要认证。即使通过认证，服务人员和系统也只能访问职责所需的数据，不能因为技术上可连接就把所有部门信息汇总给模型。
 
 对个人信息、家庭情况、位置、健康、财产和未公开生产经营数据，应采用分级、脱敏、访问审计和期限管理。测试环境不得直接复制真实敏感数据；日志也不能原样保存身份证件、病历或完整对话。数据用途变化或接入新服务商时，应重新审查授权与风险。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-003/deck.json" slides="2,8" title="二、权限控制：只看完成任务所需的信息" />
-<!-- ai-course-inline-media:end -->
-
 ### 三、证据链：回答必须能回到有效依据
 
 每项政策说明至少应标明文件名称、发布机关、文号或可唯一识别的信息、适用地区、生效或失效状态、相关条款位置和检索时间。若不同文件存在冲突，应提示冲突并转承办人员判断，不能让模型自行选择“更像答案”的一条。
 
 引用存在不等于回答正确。复核者还要确认原文确实支持结论，申请人的情况满足适用条件，且没有忽略例外条款。知识资料应有责任部门、版本和复审日期；过期内容要停止检索，而不是仅在页面上标一个旧日期。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-003/deck.json" slides="3,4" title="三、证据链：回答必须能回到有效依据" />
-<!-- ai-course-inline-media:end -->
 
 ### 四、按风险分层，保留人工责任
 
@@ -72,10 +69,6 @@ deck_revision: '0230279df22d5c48b1384d9bca9e80bf8e2f51041a446627362a8e775c1b6a6f
 
 例如，农户上传作物照片时，AI 可以整理症状并检索公开农技资料，但不能把图像识别结果当作确定诊断，更不能自动给出受管制药品用量。更稳妥的流程是提示拍摄要求、给出可能原因和依据、转当地农技人员确认，并记录后续处理结果用于评测。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-003/deck.json" slides="1,9,10,11,12" title="五、乡村服务：从具体需求而非口号切入" />
-<!-- ai-course-inline-media:end -->
-
 ### 六、医疗与法律咨询只做信息指引
 
 政务入口常收到医疗、心理危机、家庭纠纷和法律争议等问题。AI 只能提供公开机构、办理流程、材料和求助渠道等一般信息，不作诊断，不给个案治疗方案，不替代律师解释权利义务，也不预测案件结果。遇到紧急危险，应提示立即联系当地急救、报警或现场专业人员；涉及具体权益和期限，应尽快转有资质的专业服务。
@@ -83,6 +76,13 @@ deck_revision: '0230279df22d5c48b1384d9bca9e80bf8e2f51041a446627362a8e775c1b6a6f
 这类转介应优先于“继续追问更多隐私”。系统需明确能力限制，避免让群众误以为自动回答具有正式效力。
 
 ## 案例与图解
+
+<!-- course-visual:start lesson=IN-003 sha256=9aee7d1e53ef0aa8fcfe7425ae0393cf9bc094154cf42bdb0af02f8230cff8d5 -->
+<figure class="ai-course-visual">
+  <img src="/course-assets/lesson-media/agent-engineering/visuals/in-003-anchor-25-9aee7d1e53ef.png" alt="受控 MCP 工具调用的请求、授权、执行与结果回传时序图" loading="lazy" decoding="async">
+  <figcaption><strong>学习提示：</strong>观察：比较参数校验、权限确认、真实执行和结果复核四个节点，找出高风险操作应在哪一步暂停。</figcaption>
+</figure>
+<!-- course-visual:end -->
 
 <div class="ai-course-case-grid">
 <article class="ai-course-case">

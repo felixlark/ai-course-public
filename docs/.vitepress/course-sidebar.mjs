@@ -17,7 +17,7 @@ export const courseSidebar = {
       "collapsed": false,
       "items": [
         {
-          "text": "1.1 什么是人工智能：感知、思考与行动",
+          "text": "1.1 人工智能引论：从典型案例到大模型能力边界",
           "link": "/zh-cn/stage-1/ov-001-what-is-ai/"
         },
         {

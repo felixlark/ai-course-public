@@ -4,9 +4,8 @@ description: '人工智能概述课程单元：机器学习与深度学习基础
 authored: true
 lesson_id: 'OV-003'
 module: '人工智能概述'
-deck_manifest: '/course-assets/course-decks/ov-003/deck.json'
-source_media_manifest: '/course-assets/source-media/ov-003/deck.json'
-deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773'
+slides_url: 'https://xmu-mars.feishu.cn/wiki/R1oHw5SP2iTm5Gk6TjocGEyinud'
+slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/R1oHw5SP2iTm5Gk6TjocGEyinud'
 ---
 
 <div class="lesson-hero">
@@ -21,6 +20,16 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 - 解释数据、模型、损失函数和优化如何组成机器学习闭环。
 - 区分训练表现、测试表现、过拟合与泛化能力。
 - 说明深度网络如何自动学习特征，以及梯度下降和反向传播各自承担什么角色。
+## 知识导图
+
+先建立概念层级，再理解模型如何从数据中学习，以及如何检验它能否泛化。
+
+- **概念层级：** 区分人工智能、机器学习、深度学习、预训练模型与大语言模型。
+
+- **训练机制：** 用数据、模型、损失与优化描述一次完整的学习过程。
+
+- **泛化检验：** 通过训练集、验证集与测试集判断模型是否只记住了样本。
+
 ## 本节导入
 
 相册应用自动把家人的照片归到一组，输入法预测你要打的下一个词，地图软件预估到达时间——这些功能背后没有一条条人工写死的判断规则。支撑它们的是同一件事：**让程序从数据中自己找出规律**，这就是机器学习。
@@ -42,17 +51,13 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 - **强化学习**：没有现成答案，智能体在与环境的交互中根据奖励信号学会决策，下棋和机器人控制是典型场景。
 - **半监督学习**：少量带标签数据加大量无标签数据混合使用，贴近标注成本高的现实。
 
-本节聚焦监督学习：它是理解深度学习与大模型的基础，工业界大多数落地系统也从它做起。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="1,2,4,10,12,18" title="机器学习：从数据中学习规律" />
-<!-- ai-course-inline-media:end -->
+本节聚焦监督学习：它提供了“样本—目标—损失—泛化”这套基础语言，许多分类、回归和排序系统仍以监督学习或其变体作为起点。它并不覆盖聚类、强化学习、自监督预训练等全部路线，因此不能把“机器学习”直接等同于“带标签训练”。
 
 ### 监督学习的三个要素
 
 要让"从例子中学习"真正跑起来，三样东西缺一不可：
 
-1. **标注数据**：成对的"输入—标签"样本，例如一万张标好"猫/狗"的图片。数据的数量和质量直接决定上限。
+1. **标注数据**：成对的"输入—标签"样本，例如一万张标好"猫/狗"的图片。数量、代表性、标签一致性和采样偏差都会影响结果，但数据并不是唯一决定因素；模型假设、训练目标和评测设计同样重要。
 2. **学习模型**：一族带参数的候选函数，规定了 f 可能长什么样——可以是一条直线，也可以是一个深层网络。
 3. **损失函数**：给"预测得有多差"打分的尺子。预测值和真实标签差得越远，损失越大。
 
@@ -62,7 +67,7 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 
 一个关键追问随之而来：模型在见过的数据上表现好，能保证它遇到新数据还行吗？规范做法通常把数据分成三份：**训练集**用来学习参数，**验证集**用来选择模型、阈值和超参数，**测试集**留到方案冻结后做最终评估。若反复根据测试集改模型，测试集也会被“间接学会”，成绩就不再代表未见数据上的泛化能力。
 
-这对区分引出两个概念：**经验风险**是模型在训练数据上的平均损失；**期望风险**是模型面对真实数据分布时的预期损失。样本足够多时两者会趋于一致，但现实中训练样本总是有限的，一味压低经验风险就会出现两种典型病症：
+这对区分引出两个概念：**经验风险**是模型在训练数据上的平均损失；**期望风险**是模型面对真实数据分布时的预期损失。在样本独立同分布、训练集有代表性且模型复杂度受到控制等条件下，经验风险才可能随着样本增加接近期望风险。现实数据常有偏差和分布变化，一味压低经验风险就会出现两种典型病症：
 
 - **过拟合（过学习）**：训练集上近乎完美，测试集上一塌糊涂。模型把训练样本的噪声和巧合都背了下来，像只会背答案的学生，换一套题就露馅。
 - **欠拟合（欠学习）**：训练集上都学不好，模型太简单或训练不充分，像还没入门的学生。
@@ -103,10 +108,6 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 
 这批经典模型有一个共同的天花板：**特征仍然主要靠人来设计**。图像里该提取什么信息、文本该统计哪些量，都依赖专家经验。深度学习登场，针对的正是这块短板。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="3,6" title="经典模型速览：LDA、AdaBoost 与支持向量机" />
-<!-- ai-course-inline-media:end -->
-
 ### 深度学习：让机器自己学特征
 
 在深度学习之前，一个图像识别系统是"分段"组装的：人工设计特征提取（边缘、纹理、视觉词典），再接一个分类器，每一段单独调优。深度学习改成**端到端**：原始像素直接进网络，识别结果直接出来，中间的特征全部由网络自己学。
@@ -119,10 +120,6 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 
 只有输入层和输出层的**单层感知机**能模拟逻辑与、或、与非，却对"异或"无能为力，因为异或线性不可分——这个局限曾让神经网络研究陷入低谷。破局的办法是加**隐藏层**：多层感知机让上一层的输出作为下一层的输入，层与层全连接、信息单向流动，这类结构统称**前馈神经网络**。层数够深、神经元够多，它就能逼近极其复杂的函数。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="7,8,11,13,17,20,29,30" title="深度学习：让机器自己学特征" />
-<!-- ai-course-inline-media:end -->
-
 ### 神经网络怎么训练：梯度下降与误差反向传播
 
 网络结构定了，剩下的问题是：这么多参数（权重）怎么定？答案仍是监督学习那套流程——定义损失函数，然后优化它。回归任务常用均方误差；分类任务常用交叉熵，它度量预测概率分布与真实分布的差距。
@@ -132,10 +129,6 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 深层网络的参数分布在一层层结构里，输出端算出的误差如何反馈给前面每一层？**误差反向传播**（BP）解决了这件事：利用链式求导法则，把输出误差从后向前逐层传递，算出每个参数对总误差该负多大"责任"，再按责任大小更新。1986 年反向传播的推广让训练多层网络真正变得可行，也为后来的深度学习铺平了路。
 
 把这一节收拢成一句话：**机器学习的能力在于拟合和优化**——网络结构负责提供足够强的表达能力，梯度下降加反向传播负责把参数调到位。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="9,19" title="神经网络怎么训练：梯度下降与误差反向传播" />
-<!-- ai-course-inline-media:end -->
 
 ### 卷积神经网络：看懂图像
 
@@ -151,10 +144,6 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 
 训练深层网络同样要防过拟合，常用手段包括 Dropout（训练时随机丢弃部分神经元）、批归一化和 L1/L2 正则——结构风险最小化的思想在深度时代照常生效。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="21,22,23,24,25,26,27" title="卷积神经网络：看懂图像" />
-<!-- ai-course-inline-media:end -->
-
 ### 序列与生成：循环网络、生成对抗与词向量
 
 图像一次性输入就好，语言、语音、时序数据却有前后依赖。**循环神经网络**（RNN）为此在网络里加了一条"记忆"通路：每读一个词，把当前输入和上一步的隐状态一起加工，隐状态就像一路携带的笔记，让后面的判断能利用前面的信息。
@@ -166,10 +155,6 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 在语言一侧还有一块重要拼图：**词向量**。Word2Vec 把每个词映射为一个稠密向量，语义相近的词在向量空间中彼此靠近，"用数值表示语义"从此成为可能。
 
 到这里可以把整节课串起来了：监督学习给出"数据 + 损失函数 + 优化"的方法论，深度学习提供了能自动学特征的强大模型形式。今天的大语言模型仍以这套框架为基础——大规模数据提供训练样本，预测下一个 token 构成重要训练目标，梯度方法驱动优化，Transformer 负责处理上下文关系。下一节将进一步拆解这些概念。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="5,14,15,16" title="序列与生成：循环网络、生成对抗与词向量" />
-<!-- ai-course-inline-media:end -->
 
 ### 关键概念
 
@@ -183,11 +168,14 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 - **误差反向传播**：用链式法则把输出误差逐层回传、分摊到每个参数的训练方法。
 - **卷积神经网络**：以卷积和池化为核心、擅长图像等网格数据的深度网络。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-003/deck.json" slides="28" title="关键概念" />
-<!-- ai-course-inline-media:end -->
-
 ## 案例与图解
+
+<!-- course-visual:start lesson=OV-003 sha256=376086e3997844d23325f08a24f104b166f052ac203bc0d1ef7960224a4516dd -->
+<figure class="ai-course-visual">
+  <img src="/course-assets/lesson-media/ai-overview/visuals/ov-003-anchor-22-376086e39978.png" alt="模型计算规模随时间增长的趋势图" loading="lazy" decoding="async">
+  <figcaption><strong>学习提示：</strong>观察：比较横轴上的时间与纵轴上的数量级变化，同时思考计算规模增长为何不等于能力必然按同样比例提升。</figcaption>
+</figure>
+<!-- course-visual:end -->
 
 <div class="ai-course-case-grid">
 <article class="ai-course-case">
@@ -220,7 +208,7 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 
 - 用表格软件对 10 组"气温—用电量"数据画散点图并添加线性趋势线，读出斜率和截距，说明它们各自的现实含义。
 - 把你工作中的一个真实问题改写成监督学习任务：写清输入特征是什么、标签是什么、训练数据与测试数据分别从哪里来。
-- 打开浏览器版 [Teachable Machine](https://teachablemachine.withgoogle.com/)，训练一个两类图像分类器：先每类只给 5 张样本，再增加到 30 张，对比测试效果，体会数据量与过拟合的关系。
+- 打开浏览器版 [Teachable Machine](https://teachablemachine.withgoogle.com/)，训练一个两类图像分类器：先每类只给 5 张样本，再增加到 30 张；始终使用同一组未参加训练的测试图片，记录两轮的正确数和典型误判。样本增多若没有改善，也要检查类别是否平衡、拍摄环境是否单一，而不是直接得出“数据越多越好”。
 - 挑一个你熟悉的自动化判断场景（如信贷审批、内容审核），分析它更适合决策树还是神经网络，从"可解释性"和"数据规模"两个角度写出理由。
 
 完成后保留你的数据、步骤和结论，下一节讨论 AI 能力边界时会用它们做对照材料。
@@ -239,11 +227,12 @@ deck_revision: '5bfab5831e049ad9c3f58ee29ecfcfdac7c78972ecf9a02cf9291bf153acc773
 ## 资料与延伸
 
 - [MIT 6.S191 Introduction to Deep Learning](https://introtodeeplearning.com/)：麻省理工的深度学习入门课，讲座、幻灯片和实验齐全，适合系统深入神经网络与生成模型。
+- [Gradient-Based Learning Applied to Document Recognition](https://doi.org/10.1109/5.726791)：LeNet-5 原论文；可从任务、数据和当时的实际应用边界核对手写字符识别案例。
 - [3Blue1Brown：神经网络系列视频](https://www.3blue1brown.com/topics/neural-networks)：用可视化动画直观呈现神经网络、梯度下降与反向传播的运行机制。
 - [吴恩达 Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction)：面向零基础的机器学习系统课程，配有编程练习。
 <div class="ai-course-card-grid">
-<div class="ai-course-card ai-course-deck-card"><strong>第4章 机器学习及有监督学习</strong><br>概念材料 · 97 页 · 173 张图<br>本节前半部分的直接来源讲义，正文图解取自其整页版式。</div>
-<div class="ai-course-card ai-course-deck-card"><strong>第6章 深度学习</strong><br>概念材料 · 79 页 · 121 张图<br>本节后半部分的直接来源讲义，正文图解取自其整页版式。</div>
+<div class="ai-course-card"><strong>先巩固监督学习</strong><br>用“任务—数据—损失—验证”四个问题检查一个建模方案，再比较线性回归、逻辑斯蒂回归与决策树的适用边界。</div>
+<div class="ai-course-card"><strong>再理解深度学习</strong><br>沿着“前向计算—误差衡量—反向传播—参数更新”追踪一次训练过程，再观察卷积、循环与生成模型如何适配不同数据。</div>
 </div>
 
-正文中的图解均由上述两份讲义的原始页面整页导出，保留了原有公式、图表与配色，便于与讲义对照放映。
+复习时先用一个熟悉的预测任务讲清监督学习闭环，再用同一个任务解释神经网络如何自动学习特征。能够说出模型为什么会过拟合、验证集如何帮助选择方案，以及人工复核应放在哪个环节，就掌握了这一节的主线。

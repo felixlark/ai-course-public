@@ -4,9 +4,8 @@ description: '用角色、交接、共享状态、冲突处理和整体验收理
 authored: true
 lesson_id: 'AG-003'
 module: 'AI 智能体'
-deck_manifest: '/course-assets/course-decks/ag-003/deck.json'
-source_media_manifest: '/course-assets/source-media/ag-003/deck.json'
-deck_revision: '4a61680139724ce6c29fba8908f1873436d45387354bbfe3f333cbca1591ed5f'
+slides_url: 'https://xmu-mars.feishu.cn/wiki/LcPkwRrqdiXkHOkeZPBcJ7hvnxd'
+slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/LcPkwRrqdiXkHOkeZPBcJ7hvnxd'
 ---
 
 <div class="lesson-hero">
@@ -22,6 +21,16 @@ deck_revision: '4a61680139724ce6c29fba8908f1873436d45387354bbfe3f333cbca1591ed5f
 - 为协作系统定义角色职责、共享状态、交接契约和最终责任人。
 - 分析并行执行带来的费用、延迟、上下文重复与故障传播。
 - 在低置信度、角色冲突和高影响动作处设计人机协作检查点。
+## 知识导图
+
+多智能体协作只有在拆分收益大于沟通成本时才值得采用。
+
+- **角色与编排：** 按责任、输入和交付物划分角色，再选择集中或分布式协调。
+
+- **共享与交接：** 只共享协作所需事实，并让接收者能够验证前一环节的结果。
+
+- **冲突与验收：** 处理局部结果冲突、故障传播与人工介入，最后做整体验收。
+
 ## 本节导入
 
 当一个任务同时包含检索、分析、实现、测试和审阅时，把工作分给多个智能体似乎很自然。并行确实可能缩短时间，专业角色也可能提高局部质量。但多一个智能体，就多一份上下文、一次通信、一个失败点和一组需要合并的结果。
@@ -42,10 +51,6 @@ deck_revision: '4a61680139724ce6c29fba8908f1873436d45387354bbfe3f333cbca1591ed5f
 
 判断时可以用一个简单问题：子任务能否在输入明确后独立推进，并产出可验收的结果？如果答案是否定的，强行并行通常只会制造等待和冲突。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ag-003/deck.json" slides="1,2,3,4,7,8,9" title="何时值得拆分" />
-<!-- ai-course-inline-media:end -->
-
 ### 何时不应拆分
 
 以下任务更适合单智能体或确定性工作流：任务很短；步骤强依赖且必须严格串行；共享状态每一步都在变化；最终产物需要持续保持统一文风或同一设计判断；错误成本很高而又缺少统一审阅；子任务之间的通信量接近任务本身。
@@ -63,10 +68,6 @@ deck_revision: '4a61680139724ce6c29fba8908f1873436d45387354bbfe3f333cbca1591ed5f
 
 一个角色应有清楚的退出条件。没有交付标准的“研究专家”会无限收集资料；没有权限边界的“执行者”可能越过应由人确认的动作。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ag-003/deck.json" slides="10" title="角色：按责任设计，而不是按人物命名" />
-<!-- ai-course-inline-media:end -->
-
 ### 共享状态：只共享协作所需的最小事实
 
 协作系统需要一份权威状态，记录任务目标、子任务、负责人、状态、输入版本、产物位置、证据、阻塞和依赖。状态值应少而明确，例如 `pending`、`in_progress`、`blocked`、`completed`、`rejected`。
@@ -78,10 +79,6 @@ deck_revision: '4a61680139724ce6c29fba8908f1873436d45387354bbfe3f333cbca1591ed5f
 一次合格交接应包含：完成了什么、依据是什么、产物在哪里、哪些假设已验证、哪些问题未解决、对下游有什么影响、建议下一步是什么。接收者应确认输入版本和验收条件，而不是只回复“收到”。
 
 如果两个组织或系统之间通过 A2A 一类协议协作，协议可以帮助发现对方能力、传递任务和更新状态；但业务层仍要定义数据可见范围、身份信任、责任归属和失败处理。通信协议不能替代治理规则。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ag-003/deck.json" slides="5,6" title="交接：让接收者无需猜测" />
-<!-- ai-course-inline-media:end -->
 
 ### 合并与冲突：局部正确不等于整体可用
 
@@ -102,6 +99,13 @@ deck_revision: '4a61680139724ce6c29fba8908f1873436d45387354bbfe3f333cbca1591ed5f
 人工决定也应写回共享状态，包括决定、理由、适用范围和时间。否则其他智能体可能重复提交同一问题，或把一次例外误当成永久规则。
 
 ## 案例与图解
+
+<!-- course-visual:start lesson=AG-003 sha256=f8dc6f8d92a83e79f5ace0f3c335d2333345ccd1b016966f357c51f44f76c878 -->
+<figure class="ai-course-visual">
+  <img src="/course-assets/lesson-media/agent-engineering/visuals/ag-003-anchor-54-f8dc6f8d92a8.png" alt="多个专业智能体围绕共享任务分工协作的结构图" loading="lazy" decoding="async">
+  <figcaption><strong>学习提示：</strong>观察：比较各角色掌握的上下文、承担的子任务和交换的信息，判断哪里需要协调者或共享状态。</figcaption>
+</figure>
+<!-- course-visual:end -->
 
 ### 是否用多智能体完成一份行业调研
 

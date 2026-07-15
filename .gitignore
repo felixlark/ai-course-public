@@ -1,5 +1,26 @@
+.DS_Store
 node_modules/
 docs/.vitepress/cache/
 docs/.vitepress/dist/
-.DS_Store
+/.vitepress/
+artifacts/
+
+# 原始 PPTX 只作为本地/飞书历史素材，不进入网站运行时或 Git。
+docs/public/course-assets/module-pptx/
+课程PPT框架/*.inspect.ndjson
+
+# 原始讲课素材体量很大，保留在本地/飞书，不直接进入 GitHub。
+1-人工智能概述/
+2-AI大模型/
+3-智能体工程/
+4-具身智能/
+素材-2026飞书/
+
+# 本机工具与 Python 缓存不进入公开课程仓库。
+.claude/
+__pycache__/
+*.py[cod]
+.venv/
+.lark-slides/
+
 *.tmp

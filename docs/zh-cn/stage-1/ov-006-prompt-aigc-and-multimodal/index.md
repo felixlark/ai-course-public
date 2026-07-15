@@ -4,9 +4,8 @@ description: '把提示词、文本、图像和视频生成组织成可复用、
 authored: true
 lesson_id: 'OV-006'
 module: '人工智能概述'
-deck_manifest: '/course-assets/course-decks/ov-006/deck.json'
-source_media_manifest: '/course-assets/source-media/ov-006/deck.json'
-deck_revision: '66ee4b9f86e8607d7f8d700080e2d367fee965eb528708e46a55137030150882'
+slides_url: 'https://xmu-mars.feishu.cn/wiki/VfrOwm0NciZWjUkMcTnczWHFnWb'
+slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/VfrOwm0NciZWjUkMcTnczWHFnWb'
 ---
 
 <div class="lesson-hero">
@@ -22,6 +21,16 @@ deck_revision: '66ee4b9f86e8607d7f8d700080e2d367fee965eb528708e46a55137030150882
 - 判断何时使用零样本、少样本、任务分解或多候选一致性检查。
 - 设计覆盖文本、图像与视频的生成—选择—编辑—核验—发布工作流。
 - 识别商品事实、人物一致性、版权、隐私和品牌规范等多模态风险。
+## 知识导图
+
+把提示词和多模态生成放进可复用的工作流，而不是只追求一次看似惊艳的输出。
+
+- **多模态表示：** 理解文本、图像、音频和视频如何以不同方式进入模型。
+
+- **提示词结构：** 明确任务、上下文、约束、示例与输出格式，减少解释空间。
+
+- **生成工作流：** 把候选生成、人工选择、事实核对与交付验收连接起来。
+
 ## 本节导入
 
 提示词不是“让模型灵光一现的咒语”，而是一份可执行任务说明。输入材料不完整、目标含糊、验收标准缺失时，模型只能用自己的默认假设补空白；提示词再长，也不会自动把缺失事实变出来。
@@ -42,19 +51,11 @@ AIGC 的价值同样不在一次生成。真正可交付的内容通常经历需
 
 角色设定可以帮助确定专业视角和语气，但不能替代这些要素。要求模型“你是最顶尖专家”不会增加事实来源，也不会自动获得专业责任。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-006/deck.json" slides="7,8,9,10,16,17,24,25,28,29" title="一份可执行提示词的七个部分" />
-<!-- ai-course-inline-media:end -->
-
 ### 零样本、少样本与任务分解
 
 零样本适合常见、边界清楚的任务；少样本用几个代表性示例约束格式和判断标准，尤其适合分类、抽取和风格统一。复杂任务可先拆成“提取事实—形成结构—生成草稿—按清单检查”几个可验证步骤。
 
 不必索取或展示模型的完整隐藏推理。对外可要求的是**依据、关键步骤、假设和检查项**：这些内容能被人或工具核对。对于有明确答案的任务，还可以生成多个候选，再比较结果是否一致；这种一致性只能作为风险信号，多个候选一致也不等于事实必然正确。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-006/deck.json" slides="4,27" title="零样本、少样本与任务分解" />
-<!-- ai-course-inline-media:end -->
 
 ### 把提示词变成可评测模板
 
@@ -62,19 +63,11 @@ AIGC 的价值同样不在一次生成。真正可交付的内容通常经历需
 
 模型输出若要进入下游系统，应优先使用结构化格式并做程序校验。字段缺失、日期非法、引用为空或金额超出范围时，流程应明确失败，而不是悄悄继续。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-006/deck.json" slides="5,11,12,26" title="把提示词变成可评测模板" />
-<!-- ai-course-inline-media:end -->
-
 ### 文本、图像与视频需要不同控制点
 
 文本生成要区分来源事实与模型表述，新闻、产品参数、价格和政策不能由模型自行补齐。图像生成要检查主体细节、文字、商标、人物授权、风格模仿和品牌一致性。视频还增加镜头连续性、人物与物体一致性、动作合理性、配音和音乐权利等问题。
 
 多模态工作流通常先用低成本方式探索方向，再把选中的方案提升到可交付质量。生成模型适合快速扩展候选，不适合替团队做最终事实、版权和伦理判断。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-006/deck.json" slides="3,6,13,14,15,22" title="文本、图像与视频需要不同控制点" />
-<!-- ai-course-inline-media:end -->
 
 ### AIGC 接入业务流程
 
@@ -82,11 +75,14 @@ AIGC 的价值同样不在一次生成。真正可交付的内容通常经历需
 
 当 AIGC 接入知识库、核稿或审批，权限和失败处理比“写得像不像”更重要。模型能起草，不代表能批准；能读取资料，不代表能把资料发到外部。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-006/deck.json" slides="1,2,18,19" title="AIGC 接入业务流程" />
-<!-- ai-course-inline-media:end -->
-
 ## 案例与图解
+
+<!-- course-visual:start lesson=OV-006 sha256=5d593934803e23af2c905df9808ba418fcfbca6599940c04bc83963c543fdc86 -->
+<figure class="ai-course-visual">
+  <img src="/course-assets/lesson-media/ai-models/visuals/ov-006-anchor-11-5d593934803e.jpg" alt="图像分块后送入 Transformer 编码器的 Vision Transformer 流程图" loading="lazy" decoding="async">
+  <figcaption><strong>学习提示：</strong>观察：沿着图像分块、向量表示、位置编码和分类输出的顺序追踪数据，比较它与直接处理文字序列的共同点。</figcaption>
+</figure>
+<!-- course-visual:end -->
 
 ### 从“帮我写活动方案”到可验收任务
 
@@ -94,17 +90,9 @@ AIGC 的价值同样不在一次生成。真正可交付的内容通常经历需
 
 模型先根据可信输入生成两个候选，负责人选择方向后再改写。程序检查时间是否冲突、预算字段是否齐全，人再确认安全、可执行性与对外表述。提示词在这里是流程入口，不是交付终点。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-006/deck.json" slides="20" title="从“帮我写活动方案”到可验收任务" />
-<!-- ai-course-inline-media:end -->
-
 ### 商品短视频的多模态流水线
 
 团队先锁定真实商品图和参数，生成三套分镜草案；选定一套后制作关键帧，再生成短视频候选。编辑者逐镜检查商品外观、文字、手部动作和镜头连续性，并用已授权音乐与配音替换临时素材。发布前由业务负责人核对价格和功效，由品牌负责人核对视觉，由素材管理员保存来源与授权记录。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/ov-006/deck.json" slides="21,23,30" title="商品短视频的多模态流水线" />
-<!-- ai-course-inline-media:end -->
 
 ## 动手实践
 

@@ -3,10 +3,9 @@ title: '制造、能源与供应链'
 description: '围绕设备运维、质量、能耗和供应风险建立可监测、可审批、可回退的工业 AI 闭环。'
 lesson_id: 'IN-005'
 module: '行业应用'
-deck_manifest: '/course-assets/course-decks/in-005/deck.json'
-source_media_manifest: '/course-assets/source-media/in-005/deck.json'
+slides_url: 'https://xmu-mars.feishu.cn/wiki/F40Vw2bNgiWNkfkrhbscvOKonZf'
+slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/F40Vw2bNgiWNkfkrhbscvOKonZf'
 authored: true
-deck_revision: '39c8d8d04caea78ce04048ee9d51d6eb71f798e9459c2468b7c3f54c5f56ccb9'
 ---
 
 <div class="lesson-hero">
@@ -22,6 +21,16 @@ deck_revision: '39c8d8d04caea78ce04048ee9d51d6eb71f798e9459c2468b7c3f54c5f56ccb9
 - 分别为设备运维、质量检测、能源管理和供应风险选择业务指标。
 - 识别误报、漏报、数据漂移、控制越权和网络安全风险。
 - 设计影子运行、权限隔离、联锁、回退和变更管理等安全措施。
+## 知识导图
+
+工业 AI 的价值来自数据、决策和现场执行形成闭环，而不是孤立的预测分数。
+
+- **数据与工况：** 统一设备、批次、时间和运行条件，保证样本可以比较。
+
+- **预测到行动：** 把异常、质量、能耗和供应风险转成有责任人的处置流程。
+
+- **安全与成本：** 保留保护层和人工权限，同时衡量误报、漏报与运行成本。
+
 ## 本节导入
 
 制造、能源与供应链连接着设备、人员、物料和连续运行的物理过程。这里的 AI 不能只在离线测试中“准确”，还要在不同工况、季节、班次和设备状态下稳定工作。一次漏检可能带来质量或安全后果，一次错误调度也可能让局部优化转化为全局损失。
@@ -35,10 +44,6 @@ deck_revision: '39c8d8d04caea78ce04048ee9d51d6eb71f798e9459c2468b7c3f54c5f56ccb9
 工业数据可能来自传感器、控制系统、生产执行系统、质量记录、工单、库存和外部市场。开始建模前，要统一设备与物料编码、计量单位、采样时间、时区、批次和工况。更换传感器、调整工艺或维修设备都会改变数据含义，不能把所有历史值当作同一分布。
 
 数据质量不仅是缺失值问题。时间不同步会让因果顺序颠倒，人工录入可能使用不同术语，故障标签可能只记录“已维修”而没有根因。团队应保存原始数据、清洗规则和变更记录，并让现场专家参与解释异常。
-
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-005/deck.json" slides="5" title="一、先统一对象、时间和工况" />
-<!-- ai-course-inline-media:end -->
 
 ### 二、设备运维：从异常分数到可执行工单
 
@@ -64,21 +69,20 @@ deck_revision: '39c8d8d04caea78ce04048ee9d51d6eb71f798e9459c2468b7c3f54c5f56ccb9
 
 局部最优尤其危险。提高设备利用率可能积压在制品，压低库存可能放大中断风险，选择最低报价也可能增加质量与交付风险。决策应同时检查产能、库存、现金、质量、合规和单一来源依赖，并由采购、生产、质量和财务共同审查重要调整。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-005/deck.json" slides="3,4" title="五、供应链：识别风险而非制造确定性" />
-<!-- ai-course-inline-media:end -->
-
 ### 六、安全控制：模型不得绕过保护层
 
 工业 AI 应先在历史回放和影子模式中验证，只提供建议而不直接控制设备。进入半自动或自动执行前，需要风险分析、授权审批和变更管理。模型服务与控制网络应按安全要求隔离，指令需经过范围、速率、状态和联锁校验，超出许可域就拒绝执行。
 
 系统还要具备人工接管、已验证的回退策略、完整日志和定期演练。模型不可用、数据中断、时间漂移、异常置信度或网络攻击都可能触发降级。任何涉及安全仪表、保护装置和法定运行边界的功能，都不能由生成式模型替代。现场负责人对执行决定保有最终权力。
 
-<!-- ai-course-inline-media:start -->
-<CourseMedia manifest="/course-assets/source-media/in-005/deck.json" slides="1,2" title="六、安全控制：模型不得绕过保护层" />
-<!-- ai-course-inline-media:end -->
-
 ## 案例与图解
+
+<!-- course-visual:start lesson=IN-005 sha256=309cb53ef57e8d1ce98c5a10dc1f9ec195421764aa547026654cd8c154601ba4 -->
+<figure class="ai-course-visual">
+  <img src="/course-assets/lesson-media/embodied-ai/visuals/in-005-anchor-18-309cb53ef57e.svg" alt="工业现场传感、分析、决策与执行组成的运行闭环图" loading="lazy" decoding="async">
+  <figcaption><strong>学习提示：</strong>观察：沿着现场信号到控制动作再到新状态的路径追踪反馈，比较延迟、误报和执行偏差会在哪些节点累积。</figcaption>
+</figure>
+<!-- course-visual:end -->
 
 <div class="ai-course-case-grid">
 <article class="ai-course-case">
@@ -112,7 +116,7 @@ deck_revision: '39c8d8d04caea78ce04048ee9d51d6eb71f798e9459c2468b7c3f54c5f56ccb9
 
 ## 资料与延伸
 - [ISO 55001:2024](https://www.iso.org/standard/83054.html)：资产管理体系要求。
-- [ISO 50001:2018](https://www.iso.org/standard/69426.html)：能源管理体系要求与使用指南。
-- [ISA/IEC 62443 系列](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)：工业自动化和控制系统网络安全标准族。
-- [ISO 28000:2022](https://www.iso.org/standard/79612.html)：包括供应链相关要求在内的安全管理体系标准。
+- [ISO 50001:2018](https://www.iso.org/standard/69426.html)：能源管理体系要求与使用指南；截至 2026-07-13，ISO 官方状态为已确认，并列明 `Amd 1:2024` 修订。
+- [ISA/IEC 62443 系列](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)：工业自动化和控制系统网络安全标准族；系列由多个持续更新的分册组成，使用时应按职责与系统边界选择具体分册和版本。
+- [ISO 28000:2022](https://www.iso.org/standard/79612.html)：包括供应链相关要求在内的安全管理体系标准；截至 2026-07-13，ISO 官方页面列明 `Amd 1:2024` 修订。
 - 具体项目应同时遵循设备制造商要求、企业运行规程、行业监管和安全生产制度。

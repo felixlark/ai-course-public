@@ -1,0 +1,441 @@
+{
+  "schema_version": 3,
+  "rubric_id": "ppt-to-learning-document-v1",
+  "hash_scope": "learner-body",
+  "reviewed_at": "2026-07-16",
+  "source_contract": "Each lesson is reviewed against the original Feishu courseware and local PPTX mapped in course-catalog.json.",
+  "lessons": [
+    {
+      "lesson_id": "OV-001",
+      "file": "docs/zh-cn/stage-1/ov-001-what-is-ai/index.md",
+      "content_sha256": "57d7bfbdfb36abe7e2799d106c5a73bf8544fcbed0a7e516551221059555857a",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以机器人、仿真与社会观察建立人工智能定义，并把机器人跳舞升级为从动作采集到受控真机验证的研发案例。"
+    },
+    {
+      "lesson_id": "OV-002",
+      "file": "docs/zh-cn/stage-1/ov-002-ai-history-and-society/index.md",
+      "content_sha256": "df02de2387a49972ab7d403292d440b8b2402c650bd8a71f66f883b4a927f85b",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以技术史和社会案例解释能力演进与依赖风险，并以 AI 依赖与学习判断风险视频替代不再采用的硅谷吹哨人材料。"
+    },
+    {
+      "lesson_id": "OV-003",
+      "file": "docs/zh-cn/stage-1/ov-003-machine-learning-and-deep-learning/index.md",
+      "content_sha256": "e45e0ff06e33ecfe6b32bff2b2048d6e58c18018b8923fb5d1485b6522fb429d",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "收紧监督学习、数据量与泛化条件，固定测试集练习可执行，并补充 LeNet 原论文作为一手依据。"
+    },
+    {
+      "lesson_id": "OV-004",
+      "file": "docs/zh-cn/stage-1/ov-004-llm-transformer-and-boundaries/index.md",
+      "content_sha256": "7a4538591af7d6bdfd0ef6a48a7b3d967ed1dc55b2c40ea74ee5f3f41d4297b0",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "厘清 Transformer、预训练模型与大语言模型的任务边界，收紧幻觉和工具可靠性表述并保留可执行练习。"
+    },
+    {
+      "lesson_id": "OV-005",
+      "file": "docs/zh-cn/stage-1/ov-005-deepseek-and-open-models/index.md",
+      "content_sha256": "54f81b0fc1b97ec527f210559ac631075f47d74a7d0f10971b103b3606ce14f7",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "澄清推理模型输出与本地部署边界，结合 DeepSeek 官方仓库和许可证说明开源、成本与运维取舍。"
+    },
+    {
+      "lesson_id": "OV-006",
+      "file": "docs/zh-cn/stage-1/ov-006-prompt-aigc-and-multimodal/index.md",
+      "content_sha256": "735ff99113a9ebb74efec7f1950e8d3a03c3ecf62dcafbe7b099a1ad958d0442",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "用提示词、多模态场景和内容来源核验构成应用工作流，练习、复盘及 C2PA 与 NIST 资料完整。"
+    },
+    {
+      "lesson_id": "OV-007",
+      "file": "docs/zh-cn/stage-1/ov-007-hallucination-safety-and-responsible-ai/index.md",
+      "content_sha256": "99ab777c49013a5e10529d107db0df6e6a450c4d1c686aad53c5b12cde728843",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "围绕幻觉、提示注入、权限和责任边界组织风险卡练习，并以 NIST 一手资料约束负责任使用。"
+    },
+    {
+      "lesson_id": "AG-001",
+      "file": "docs/zh-cn/stage-2/ag-001-agent-loop-and-react/index.md",
+      "content_sha256": "46145d366fd70dc760966e94c23e4f8b7eaa313feb51537324453fcc2992fb81",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "从 Agent Loop、停止条件与 trace 案例解释 ReAct 闭环，配有模拟练习、复盘和 ReAct 原论文。"
+    },
+    {
+      "lesson_id": "AG-002",
+      "file": "docs/zh-cn/stage-2/ag-002-tools-mcp-memory-and-planning/index.md",
+      "content_sha256": "d90dd1b69e162d5e4fdaa6374864c4d2d9c3d3f9942ac91f05c35889a4852160",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以工具契约、MCP、记忆和失败分支构成可执行智能体框架，并补充 JSON 工具调用如何经白名单注册表安全分派到真实 handler。"
+    },
+    {
+      "lesson_id": "AG-003",
+      "file": "docs/zh-cn/stage-2/ag-003-multi-agent-collaboration/index.md",
+      "content_sha256": "5dc39a5a2a4e4f880f17df8da7fdf941e1bf78ca8e90599b8456655faa3cc69f",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "明确多智能体拆分、交接、冲突、成本和人工检查点，案例与练习覆盖协作系统的真实失败路径。"
+    },
+    {
+      "lesson_id": "AG-004",
+      "file": "docs/zh-cn/stage-2/ag-004-ai-coding-and-vibe-coding/index.md",
+      "content_sha256": "4f14176651a70fd3c0e7837809b0fb38dd84a4373a4abd20822c2747821f7347",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "将 Vibe Coding 限定为实践方法而非统一工程标准，以测试、版本控制和 NIST SSDF 补齐交付边界。"
+    },
+    {
+      "lesson_id": "AG-005",
+      "file": "docs/zh-cn/stage-2/ag-005-observability-evaluation-and-human-review/index.md",
+      "content_sha256": "057aa1926298ffd55e9cee23b8615005dacba2c6d735a3768c9315ba453208b0",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "用 trace、规则评测与人工复核解释可观测验收，并以 OpenTelemetry 一手定义约束术语和范围。"
+    },
+    {
+      "lesson_id": "EM-001",
+      "file": "docs/zh-cn/stage-3/em-001-embodied-ai-loop/index.md",
+      "content_sha256": "fe820ed3dc4213e0cbdb9d380b230d6865eadbea7bd70a27b02fc4ad393ea967",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以杯子任务建立具身闭环，补齐数据、本体与学习边界，并用可观察证据替代泛化能力断言。"
+    },
+    {
+      "lesson_id": "EM-002",
+      "file": "docs/zh-cn/stage-3/em-002-humanoid-and-unitree/index.md",
+      "content_sha256": "6f7fc1b54b8ed8da58a24efe8bc37642536b11b836cdf9d870c8afcf4e9f8108",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以任务和运维证据比较四足与人形平台，明确演示与可部署能力边界，并补齐日期化官方资料。"
+    },
+    {
+      "lesson_id": "EM-003",
+      "file": "docs/zh-cn/stage-3/em-003-multimodal-perception-and-environment/index.md",
+      "content_sha256": "c280e568ad198f56f6ea9e4bcc3bd4323f154bf8cd6897608435bd0bb63fc64c",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "补齐主动感知与四类感知对象，明确表达推断边界，并增加可执行的证据分类与补充观察练习。"
+    },
+    {
+      "lesson_id": "EM-004",
+      "file": "docs/zh-cn/stage-3/em-004-motion-control-rl-and-sim-to-real/index.md",
+      "content_sha256": "3af7f3c431e02a835d91dd308a86381a4b68cf69873cc5a8367d0a64e4334f1d",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "补齐模仿学习、世界模型和持续交互主线，并把机器人跳舞整理为动作重定向、仿真筛选和受控真机验证的研发案例。"
+    },
+    {
+      "lesson_id": "EM-005",
+      "file": "docs/zh-cn/stage-3/em-005-g1-go2-and-ros2-lab/index.md",
+      "content_sha256": "ae6cf6a6c62cecbeca1cef03cf6c177064667dd2543ea54fc897b7f57ee3635a",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "补齐任务规划与技能反馈机制，纠正 G1、Go2 接口表述，并用固定 trace 和官方资料约束真机边界。"
+    },
+    {
+      "lesson_id": "EM-006",
+      "file": "docs/zh-cn/stage-3/em-006-crowdverse-and-collective-embodied-ai/index.md",
+      "content_sha256": "3f8059908571aa65070ba1a43adae29fe59e8a41093e85a5dfa80cee702eed5a",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "将 Crowdverse 限定为教学案例，补齐个体策略来源和群体目标冲突，并把疏散案例改为可复现实验模板。"
+    },
+    {
+      "lesson_id": "IN-001",
+      "file": "docs/zh-cn/stage-4/in-001-industry-ai-and-roi/index.md",
+      "content_sha256": "6eff3d5397620a83cfbea764f597e7ba69968866103126ef1417dfbdfd2d26ed",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "用业务基线、受控工具链和可观察阈值构成行业 AI 试点闭环，案例、练习、复盘与来源完整。"
+    },
+    {
+      "lesson_id": "IN-002",
+      "file": "docs/zh-cn/stage-4/in-002-higher-education-and-research/index.md",
+      "content_sha256": "89bc078a95798f1f19d817825462b59a070cc501a213eb3177b519eee40c71e1",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以检索、引用、复现和人工责任组织高校教学科研场景，并补充教育部 2026 年人工智能加教育行动计划。"
+    },
+    {
+      "lesson_id": "IN-003",
+      "file": "docs/zh-cn/stage-4/in-003-government-services-and-rural-revitalization/index.md",
+      "content_sha256": "6d9b36df38b7e5524b48d9c5a9616b50d81f6019f9aaba34a71c8d82989db615",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以受控工具调用解释政务和乡村场景中的授权、证据与行政责任，练习覆盖暂停和人工复核节点。"
+    },
+    {
+      "lesson_id": "IN-004",
+      "file": "docs/zh-cn/stage-4/in-004-enterprise-office-knowledge-and-aigc/index.md",
+      "content_sha256": "76cfff6be1d949486b19971cc275667373d27197afd60c3113099b94e7977691",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以 RAG、知识有效期和审批链解释企业知识工作流，并用 ISO/IEC 27001:2022 及其 2024 修订约束治理。"
+    },
+    {
+      "lesson_id": "IN-005",
+      "file": "docs/zh-cn/stage-4/in-005-manufacturing-energy-and-supply-chain/index.md",
+      "content_sha256": "186525d227fca729be119cabbf751d1d4417c0d7e5a8891a282c32a559943f0a",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以传感、分析、决策和执行闭环解释制造能源供应链，并核对 ISO 50001、ISO 28000 与 IEC 62443 版本。"
+    },
+    {
+      "lesson_id": "IN-006",
+      "file": "docs/zh-cn/stage-4/in-006-transportation-and-smart-airport/index.md",
+      "content_sha256": "058ab3b9071a0a4be70021adfefd558024d9ac38eb5b6e6ef1350ba317defae2",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以建图、定位、规划和避障链路解释交通与智慧机场，并核对 ICAO Doc 9859、Annex 14 最新适用版次。"
+    },
+    {
+      "lesson_id": "IN-007",
+      "file": "docs/zh-cn/stage-4/in-007-emergency-and-fire-investigation/index.md",
+      "content_sha256": "bc087da5bb9e72af4d3583382bb5cf5a70691295079facf3f732155d8349d0a2",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以现场数据、假设验证和人工复核建立火灾调查证据链，并用 NFPA 921:2024 约束结论边界。"
+    },
+    {
+      "lesson_id": "IN-008",
+      "file": "docs/zh-cn/stage-4/in-008-ocean-and-geospatial-intelligence/index.md",
+      "content_sha256": "83e8d0796ec8466114bd83fcd019fac2194db5b70d96f5a96b889cb52b328d69",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以遥感、ARGO、AIS 和多模态工具链解释海洋数据智能，练习强调坐标尺度、时空不确定性与可复核证据。"
+    },
+    {
+      "lesson_id": "IN-009",
+      "file": "docs/zh-cn/stage-4/in-009-tourism-exhibition-and-smart-building/index.md",
+      "content_sha256": "bff2a7d12a1903422f0dff11b9fd958448b024aa3419dbbe3b48274840b2595e",
+      "status": "passed",
+      "checks": {
+        "learner_opening": true,
+        "concept_accuracy_and_boundaries": true,
+        "source_case_or_observation": true,
+        "practice_or_checkpoint": true,
+        "recap": true,
+        "primary_sources_and_dates": true,
+        "media_placement": true
+      },
+      "review_note": "以人员、空间和设施变化解释文旅会展与智慧建筑闭环，并核对 ISO 41001 与 ISO 19650 的修订状态。"
+    }
+  ]
+}
