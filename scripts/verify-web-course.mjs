@@ -115,6 +115,10 @@ for (const file of runtimeFiles) {
   const text = await fs.readFile(file, 'utf8')
   if (/WPS|WebOffice|Microsoft 365|pptx-viewer|LessonDeck|module-pptx/i.test(text)) failures.push(`${path.relative(root, file)}: retired office player reference remains`)
 }
+const slidesLinkComponent = await fs.readFile(path.join(root, 'docs', '.vitepress', 'theme', 'components', 'LessonSlidesLink.vue'), 'utf8')
+if (!/import\s*\{\s*withBase\s*\}\s*from\s*['"]vitepress['"]/.test(slidesLinkComponent) || !/:href="withBase\(url\)"/.test(slidesLinkComponent)) {
+  failures.push('LessonSlidesLink must apply the VitePress base path to published PPTX URLs')
+}
 const retiredRuntime = path.join(root, 'docs', 'public', 'course-assets', 'module-pptx')
 const retiredEntries = await fs.readdir(retiredRuntime).catch(() => [])
 if (retiredEntries.length) failures.push(`retired module-pptx runtime still contains: ${retiredEntries.join(', ')}`)

@@ -1,4 +1,6 @@
 <script setup>
+import { withBase } from 'vitepress'
+
 defineProps({
   url: { type: String, required: true },
   title: { type: String, default: '本节课程' }
@@ -8,7 +10,7 @@ defineProps({
 <template>
   <a
     class="ai-course-slides-link"
-    :href="url"
+    :href="withBase(url)"
     target="_blank"
     rel="noopener noreferrer"
     :aria-label="`打开《${title}》本地幻灯片`"
