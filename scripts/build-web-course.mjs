@@ -56,16 +56,13 @@ const assertCatalog = () => {
   if (lessonById.size !== lessons.length) throw new Error('Duplicate lesson id in course-catalog.json')
   const coursewareUrls = new Set()
   for (const lesson of lessons) {
-    if (!/^https:\/\/xmu-mars\.feishu\.cn\/wiki\/[A-Za-z0-9]+$/.test(lesson.slides?.url || '')) {
-      throw new Error(`${lesson.id}: missing or invalid original Feishu courseware URL`)
+    if (!/^\/course-slides\/[a-z0-9/-]+\/slides\.pptx$/.test(lesson.slides?.url || '')) {
+      throw new Error(`${lesson.id}: missing or invalid local courseware URL`)
     }
-    if (!/^https:\/\/xmu-mars\.feishu\.cn\/wiki\/[A-Za-z0-9]+$/.test(lesson.slides?.wiki_url || '')) {
-      throw new Error(`${lesson.id}: missing or invalid Feishu Wiki URL`)
+    if (!/^docs\/public\/course-slides\/[a-z0-9/-]+\/slides\.pptx$/.test(lesson.slides?.local_pptx || '')) {
+      throw new Error(`${lesson.id}: missing published local PPTX mapping`)
     }
-    if (!['file', 'slides'].includes(lesson.slides?.source_type)) throw new Error(`${lesson.id}: invalid original courseware type`)
-    if (!lesson.slides?.source_title || !/\.pptx$/i.test(lesson.slides?.local_pptx || '')) {
-      throw new Error(`${lesson.id}: missing original courseware title or local PPTX source`)
-    }
+    if (!lesson.slides?.source_pptx || !lesson.slides?.source_slides) throw new Error(`${lesson.id}: missing source PPTX or slide selection`)
     if (coursewareUrls.has(lesson.slides.url)) throw new Error(`${lesson.id}: duplicate original courseware URL`)
     coursewareUrls.add(lesson.slides.url)
   }
@@ -81,13 +78,12 @@ const cleanLearnerPage = (value) => String(value)
   .replace(/^pptx:.*(?:\r?\n|$)/gmu, '')
   .replace(/^pptx_source_(?:slides|coverage|sha256):.*(?:\r?\n|$)/gmu, '')
   .replace(/^slides_url:.*(?:\r?\n|$)/gmu, '')
-  .replace(/^slides_wiki_url:.*(?:\r?\n|$)/gmu, '')
   .replace(/<!-- pptx-derived:start[^>]*-->\s*/gmu, '')
   .replace(/\s*<!-- pptx-derived:end -->/gmu, '')
   .replace(/\n{3,}/g, '\n\n')
 const syncAuthoredLearningPage = async (file, lesson) => {
   let content = cleanLearnerPage(await fs.readFile(file, 'utf8'))
-  const frontmatterFields = `slides_url: '${lesson.slides.url}'\nslides_wiki_url: '${lesson.slides.wiki_url}'`
+  const frontmatterFields = `slides_url: '${lesson.slides.url}'`
   content = content.replace(/^(module:\s*[^\n]+)$/m, `$1\n${frontmatterFields}`)
   content = syncCourseMediaBlocks(content, lesson.id)
   content = syncCourseVisualBlock(content, lesson.id)
@@ -160,7 +156,7 @@ ${cards}
 ## 如何使用这门课
 
 - **阅读讲义：**每节先解释概念，再进入案例、实践和复盘。
-- **播放幻灯片：**点击页面右上角的“幻灯片”，直接在飞书 Web PPT 中打开本节课件；网页不内嵌或重新模拟播放器。
+- **播放幻灯片：**点击页面右上角的“幻灯片”，直接打开或下载本节 PPTX；网页不内嵌或重新模拟播放器。
 - **沿来源核对：**时效性强的模型、协议和案例均标明核对日期；关键结论请回到所附一手资料。
 - **按行业选学：**完成前三章后，可在行业应用章按教育、政务、制造、交通、应急、海洋和文旅场景组合学习。
 `
@@ -261,7 +257,7 @@ const main = async () => {
     const file = fileFor(lesson)
     if (!isAuthored(file)) throw new Error(`${lesson.id}: learner-facing authored lesson is required`)
     await syncAuthoredLearningPage(file, lesson)
-    console.log(`Synced original Feishu courseware link for ${lesson.id}`)
+    console.log(`Synced local courseware link for ${lesson.id}`)
   }
 
   for (const module of catalog.modules) {
@@ -276,7 +272,7 @@ const main = async () => {
     `---\nlayout: home\n---\n\n<script setup>\nimport { inBrowser, withBase } from 'vitepress'\nif (inBrowser) window.location.replace(withBase('/zh-cn/'))\n</script>\n\n# 人工智能公开课\n\n[进入中文课程](/zh-cn/)`
   )
 
-  console.log(`Synced ${lessons.length} authored lessons to one-Markdown/one-original-courseware pairs.`)
+  console.log(`Synced ${lessons.length} authored lessons to one-Markdown/one-local-PPTX pairs.`)
 }
 
 main().catch((error) => {

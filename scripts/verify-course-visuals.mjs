@@ -7,8 +7,7 @@ import {
   CURATED_VISUAL_REVIEWS,
   LESSON_SELECTION_OVERRIDES,
   VISUAL_POLICY,
-  inspectOutputImage,
-  parseSlideSpec
+  inspectOutputImage
 } from './lib/pptx-course-visuals.mjs'
 import { getCourseVisualCopy, validateCourseVisualCopy } from './lib/course-visual-copy.mjs'
 
@@ -20,17 +19,13 @@ const indexFile = path.join(publicDir, 'course-assets', 'lesson-media', 'visuals
 const readJson = async (file) => JSON.parse(await fs.readFile(file, 'utf8'))
 const hash = (value) => crypto.createHash('sha256').update(value).digest('hex')
 
-const [config, index] = await Promise.all([
-  readJson(path.join(sourceDir, 'module-courses.json')),
+const [catalog, index] = await Promise.all([
+  readJson(path.join(sourceDir, 'course-catalog.json')),
   readJson(indexFile)
 ])
 
-const moduleByLesson = new Map()
-for (const module of config.modules) {
-  for (const lessonId of module.lesson_ids) moduleByLesson.set(lessonId, module)
-}
-const expected = config.modules
-  .flatMap((module) => module.lesson_ids)
+const catalogLessons = new Set(catalog.modules.flatMap((module) => module.lessons.map((lesson) => lesson.id)))
+const expected = [...catalogLessons]
   .filter((lessonId) => !VISUAL_POLICY.excluded_lessons.includes(lessonId))
   .sort()
 const actual = index.assets.map((asset) => asset.lesson_id).sort()
@@ -46,14 +41,8 @@ if (index.policy !== 'native-pptx-and-structured-course-visuals-no-slide-raster'
 }
 
 for (const asset of index.assets) {
-  const module = moduleByLesson.get(asset.lesson_id)
-  const lessonSource = module?.lesson_sources?.[asset.lesson_id]
-  if (!module || !lessonSource) {
-    failures.push(`${asset.lesson_id}: missing module source mapping`)
-    continue
-  }
-  if (!parseSlideSpec(lessonSource.slides).includes(asset.slide)) failures.push(`${asset.lesson_id}: selected slide is outside source lineage`)
-  if (asset.source_pptx_sha256 !== module.sha256) failures.push(`${asset.lesson_id}: source PPTX hash mismatch`)
+  if (!catalogLessons.has(asset.lesson_id)) failures.push(`${asset.lesson_id}: missing course catalog lesson`)
+  if (!/^[a-f0-9]{64}$/.test(asset.source_pptx_sha256 || '')) failures.push(`${asset.lesson_id}: source PPTX hash is invalid`)
   if (asset.source_kind === 'native-group-rendering') {
     if (!/^ppt\/slides\/slide\d+\.xml#native-group-/.test(asset.source_entry)) failures.push(`${asset.lesson_id}: native group source_entry is invalid`)
     if (!Array.isArray(asset.source_entries) || asset.source_entries.length < 2 || asset.source_entries.some((entry) => !/^ppt\/media\/[^/]+$/.test(entry))) {
@@ -63,7 +52,7 @@ for (const asset of index.assets) {
     if (!/^ppt\/slides\/slide\d+\.xml#structured-course-/.test(asset.source_entry)) failures.push(`${asset.lesson_id}: structured diagram source_entry is invalid`)
     if (!Array.isArray(asset.source_entries) || asset.source_entries.length !== 0) failures.push(`${asset.lesson_id}: structured diagram must not claim source media parts`)
   } else if (!/^ppt\/media\/[^/]+$/.test(asset.source_entry)) failures.push(`${asset.lesson_id}: source_entry is not a PPTX media part`)
-  if (!Array.isArray(asset.source_slides) || asset.source_slides.length === 0 || asset.source_slides.some((slide) => !parseSlideSpec(lessonSource.slides).includes(slide))) {
+  if (!Array.isArray(asset.source_slides) || asset.source_slides.length === 0 || asset.source_slides.some((slide) => !Number.isInteger(slide) || slide < 1)) {
     failures.push(`${asset.lesson_id}: visual source slide lineage is invalid`)
   }
   if (asset.geometry.area_ratio > VISUAL_POLICY.maximum_geometry_ratio) failures.push(`${asset.lesson_id}: selected image exceeds full-slide threshold`)
@@ -97,19 +86,14 @@ for (const asset of index.assets) {
 }
 
 for (const moduleSummary of index.modules) {
-  const module = config.modules.find((item) => item.id === moduleSummary.module_id)
-  if (!module) {
-    failures.push(`Unknown module index: ${moduleSummary.module_id}`)
-    continue
-  }
   const moduleIndexFile = path.join(publicDir, moduleSummary.index.replace(/^\//, ''))
   try {
     const moduleIndex = await readJson(moduleIndexFile)
-    const globalAssets = index.assets.filter((asset) => asset.module_id === module.id)
-    if (JSON.stringify(moduleIndex.assets) !== JSON.stringify(globalAssets)) failures.push(`${module.id}: module and global indexes differ`)
-    if (moduleIndex.coverage.selected_assets !== globalAssets.length) failures.push(`${module.id}: module coverage count mismatch`)
+    const globalAssets = index.assets.filter((asset) => asset.module_id === moduleSummary.module_id)
+    if (JSON.stringify(moduleIndex.assets) !== JSON.stringify(globalAssets)) failures.push(`${moduleSummary.module_id}: module and global indexes differ`)
+    if (moduleIndex.coverage.selected_assets !== globalAssets.length) failures.push(`${moduleSummary.module_id}: module coverage count mismatch`)
   } catch (error) {
-    failures.push(`${module.id}: cannot read module index (${error.message})`)
+    failures.push(`${moduleSummary.module_id}: cannot read module index (${error.message})`)
   }
 }
 

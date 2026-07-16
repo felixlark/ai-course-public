@@ -4,8 +4,7 @@ description: '从索菲亚、来福机器人和 Crowdverse 等案例出发，依
 authored: true
 lesson_id: 'OV-001'
 module: '人工智能概述'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/GbicwLKGBiZsXikyCl9cFxCsnbg'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/GbicwLKGBiZsXikyCl9cFxCsnbg'
+slides_url: '/course-slides/stage-1/ov-001-what-is-ai/slides.pptx'
 ---
 
 <div class="lesson-hero">

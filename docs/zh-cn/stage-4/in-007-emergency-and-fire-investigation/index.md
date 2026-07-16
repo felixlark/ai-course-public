@@ -3,8 +3,7 @@ title: '应急管理与火灾调查'
 description: '围绕现场资料、证据链、竞争性假设和专业复核，理解 AI 在火灾调查中的辅助边界。'
 lesson_id: 'IN-007'
 module: '行业应用'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/VOsNwhgcWi2hFakpa5AcsIW3nnd'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/VOsNwhgcWi2hFakpa5AcsIW3nnd'
+slides_url: '/course-slides/stage-4/in-007-emergency-and-fire-investigation/slides.pptx'
 authored: true
 ---
 

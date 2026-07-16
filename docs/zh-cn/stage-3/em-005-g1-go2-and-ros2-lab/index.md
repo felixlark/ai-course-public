@@ -4,8 +4,7 @@ description: '用安全检查、ROS2 图谱、Twist 消息契约和固定离线 
 authored: true
 lesson_id: 'EM-005'
 module: '具身智能'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/UawjwbarhiYH1CkcnEycEOBxndg'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/UawjwbarhiYH1CkcnEycEOBxndg'
+slides_url: '/course-slides/stage-3/em-005-g1-go2-and-ros2-lab/slides.pptx'
 ---
 
 <div class="lesson-hero">

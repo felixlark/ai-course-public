@@ -3,8 +3,7 @@ title: '行业 AI 落地方法与 ROI'
 description: '从业务问题、数据基础、流程改造、风险约束和投入产出判断行业 AI 是否值得落地。'
 lesson_id: 'IN-001'
 module: '行业应用'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/Sb96wRC0Xi2GpbkiivscZ8n1nBc'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/Sb96wRC0Xi2GpbkiivscZ8n1nBc'
+slides_url: '/course-slides/stage-4/in-001-industry-ai-and-roi/slides.pptx'
 authored: true
 ---
 

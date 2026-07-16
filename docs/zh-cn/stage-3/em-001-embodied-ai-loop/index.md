@@ -4,8 +4,7 @@ description: '建立具身智能的闭环模型，理解物理世界中的不确
 authored: true
 lesson_id: 'EM-001'
 module: '具身智能'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/Jau4w6o39iGWnpk0xaJcaA24nUd'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/Jau4w6o39iGWnpk0xaJcaA24nUd'
+slides_url: '/course-slides/stage-3/em-001-embodied-ai-loop/slides.pptx'
 ---
 
 <div class="lesson-hero">

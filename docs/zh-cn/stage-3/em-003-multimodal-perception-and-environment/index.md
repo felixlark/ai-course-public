@@ -4,8 +4,7 @@ description: '讲清视觉、深度、激光雷达和状态估计如何共同形
 authored: true
 lesson_id: 'EM-003'
 module: '具身智能'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/FuyGwt2eZiiQMEkSrf8cxohdnDc'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/FuyGwt2eZiiQMEkSrf8cxohdnDc'
+slides_url: '/course-slides/stage-3/em-003-multimodal-perception-and-environment/slides.pptx'
 ---
 
 <div class="lesson-hero">

@@ -4,8 +4,7 @@ description: '用角色、交接、共享状态、冲突处理和整体验收理
 authored: true
 lesson_id: 'AG-003'
 module: 'AI 智能体'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/LcPkwRrqdiXkHOkeZPBcJ7hvnxd'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/LcPkwRrqdiXkHOkeZPBcJ7hvnxd'
+slides_url: '/course-slides/stage-2/ag-003-multi-agent-collaboration/slides.pptx'
 ---
 
 <div class="lesson-hero">

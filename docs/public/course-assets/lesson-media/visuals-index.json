@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "policy": "native-pptx-and-structured-course-visuals-no-slide-raster",
-  "source_of_truth": "课程PPT框架/source/module-courses.json",
+  "source_of_truth": "课程PPT框架/source/course-catalog.json and this curated visual index",
   "selection_policy": {
     "excluded_lessons": [
       "OV-001",

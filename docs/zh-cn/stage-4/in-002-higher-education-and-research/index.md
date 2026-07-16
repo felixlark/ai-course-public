@@ -3,8 +3,7 @@ title: '高校教学与科研'
 description: '把 AI 放进可复核的教学与科研工作流，同时守住引用、复现、隐私、诚信和作者责任。'
 lesson_id: 'IN-002'
 module: '行业应用'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/NO03w2IiVif3p1ks0JRcii5mnEc'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/NO03w2IiVif3p1ks0JRcii5mnEc'
+slides_url: '/course-slides/stage-4/in-002-higher-education-and-research/slides.pptx'
 authored: true
 ---
 

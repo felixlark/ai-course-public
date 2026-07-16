@@ -4,8 +4,7 @@ description: '把提示词、文本、图像和视频生成组织成可复用、
 authored: true
 lesson_id: 'OV-006'
 module: '人工智能概述'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/VfrOwm0NciZWjUkMcTnczWHFnWb'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/VfrOwm0NciZWjUkMcTnczWHFnWb'
+slides_url: '/course-slides/stage-1/ov-006-prompt-aigc-and-multimodal/slides.pptx'
 ---
 
 <div class="lesson-hero">

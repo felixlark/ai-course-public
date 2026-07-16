@@ -4,8 +4,7 @@ description: '从事实幻觉、提示注入、权限、偏差、隐私和责任
 authored: true
 lesson_id: 'OV-007'
 module: '人工智能概述'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/Lkiwwgg1NigbUWkml7Yc31eQnve'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/Lkiwwgg1NigbUWkml7Yc31eQnve'
+slides_url: '/course-slides/stage-1/ov-007-hallucination-safety-and-responsible-ai/slides.pptx'
 ---
 
 <div class="lesson-hero">

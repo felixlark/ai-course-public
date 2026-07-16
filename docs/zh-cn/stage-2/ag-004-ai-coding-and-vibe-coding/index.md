@@ -4,8 +4,7 @@ description: '把需求、生成、运行、观察、修复、测试和审阅组
 authored: true
 lesson_id: 'AG-004'
 module: 'AI 智能体'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/MdfHwixo1iTlHWkSFNNcrFDdn3d'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/MdfHwixo1iTlHWkSFNNcrFDdn3d'
+slides_url: '/course-slides/stage-2/ag-004-ai-coding-and-vibe-coding/slides.pptx'
 ---
 
 <div class="lesson-hero">

@@ -4,8 +4,7 @@ description: '从 trace、任务评测、权限和人工断点建立可运营、
 authored: true
 lesson_id: 'AG-005'
 module: 'AI 智能体'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/QHILwUBJaiD1Ajkqfu5cDr30nAd'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/QHILwUBJaiD1Ajkqfu5cDr30nAd'
+slides_url: '/course-slides/stage-2/ag-005-observability-evaluation-and-human-review/slides.pptx'
 ---
 
 <div class="lesson-hero">

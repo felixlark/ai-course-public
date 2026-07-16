@@ -3,7 +3,7 @@
   "rubric_id": "ppt-to-learning-document-v1",
   "hash_scope": "learner-body",
   "reviewed_at": "2026-07-16",
-  "source_contract": "Each lesson is reviewed against the original Feishu courseware and local PPTX mapped in course-catalog.json.",
+  "source_contract": "Each lesson is reviewed against the local source PPTX and published lesson PPTX mapped in course-catalog.json.",
   "lessons": [
     {
       "lesson_id": "OV-001",

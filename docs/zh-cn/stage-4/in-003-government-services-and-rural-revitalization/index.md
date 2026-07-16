@@ -3,8 +3,7 @@ title: '政务服务与乡村振兴'
 description: '用有权限、有证据、可转人工的服务流程支持政策咨询、基层治理和乡村公共服务。'
 lesson_id: 'IN-003'
 module: '行业应用'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/FLWXwP1o8i9VxGkR0J1cXFAJnge'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/FLWXwP1o8i9VxGkR0J1cXFAJnge'
+slides_url: '/course-slides/stage-4/in-003-government-services-and-rural-revitalization/slides.pptx'
 authored: true
 ---
 

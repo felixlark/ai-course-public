@@ -4,8 +4,7 @@ description: '从四足与人形机器人产品理解硬件、运动能力、应
 authored: true
 lesson_id: 'EM-002'
 module: '具身智能'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/NoGQwZyW0iQjptkYedEclAREnRz'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/NoGQwZyW0iQjptkYedEclAREnRz'
+slides_url: '/course-slides/stage-3/em-002-humanoid-and-unitree/slides.pptx'
 ---
 
 <div class="lesson-hero">

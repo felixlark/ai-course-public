@@ -3,8 +3,7 @@ title: '制造、能源与供应链'
 description: '围绕设备运维、质量、能耗和供应风险建立可监测、可审批、可回退的工业 AI 闭环。'
 lesson_id: 'IN-005'
 module: '行业应用'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/F40Vw2bNgiWNkfkrhbscvOKonZf'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/F40Vw2bNgiWNkfkrhbscvOKonZf'
+slides_url: '/course-slides/stage-4/in-005-manufacturing-energy-and-supply-chain/slides.pptx'
 authored: true
 ---
 

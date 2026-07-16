@@ -3,8 +3,7 @@ title: '企业办公、知识管理与 AIGC'
 description: '把会议和文档转化为有引用、有权限、有版本、有审批的企业知识与内容工作流。'
 lesson_id: 'IN-004'
 module: '行业应用'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/RyiMwPMuQiD7X6kXV5dczNwwnKX'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/RyiMwPMuQiD7X6kXV5dczNwwnKX'
+slides_url: '/course-slides/stage-4/in-004-enterprise-office-knowledge-and-aigc/slides.pptx'
 authored: true
 ---
 

@@ -4,8 +4,7 @@ description: '人工智能概述课程单元：机器学习与深度学习基础
 authored: true
 lesson_id: 'OV-003'
 module: '人工智能概述'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/R1oHw5SP2iTm5Gk6TjocGEyinud'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/R1oHw5SP2iTm5Gk6TjocGEyinud'
+slides_url: '/course-slides/stage-1/ov-003-machine-learning-and-deep-learning/slides.pptx'
 ---
 
 <div class="lesson-hero">

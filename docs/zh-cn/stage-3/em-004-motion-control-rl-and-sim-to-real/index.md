@@ -4,8 +4,7 @@ description: '从状态、动作和奖励进入策略训练、仿真验证与真
 authored: true
 lesson_id: 'EM-004'
 module: '具身智能'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/S4j9w0CDgiycIbk7SQEc5RrInNf'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/S4j9w0CDgiycIbk7SQEc5RrInNf'
+slides_url: '/course-slides/stage-3/em-004-motion-control-rl-and-sim-to-real/slides.pptx'
 ---
 
 <div class="lesson-hero">

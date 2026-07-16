@@ -19,30 +19,20 @@ const failures = []
 const sha256 = (value) => createHash('sha256').update(value).digest('hex')
 const catalog = JSON.parse(await fs.readFile(path.join(sourceDir, 'course-catalog.json'), 'utf8'))
 const slideUrls = new Set()
-const wikiUrls = new Set()
 
 const lessons = catalog.modules.flatMap((catalogModule) =>
   catalogModule.lessons.map((lesson) => ({ catalogModule, lesson }))
 )
 
-if (catalog.schema_version !== 3) failures.push('course catalog must use schema version 3')
+if (catalog.schema_version !== 4) failures.push('course catalog must use schema version 4')
 if (catalog.modules.length !== 4 || lessons.length !== 27) failures.push('course catalog must contain four modules and 27 lessons')
-if (!/^https:\/\/xmu-mars\.feishu\.cn\/wiki\/[A-Za-z0-9]+$/.test(catalog.feishu_wiki?.root_url || '')) {
-  failures.push('course catalog is missing the Feishu Wiki root URL')
-}
 
 for (const { lesson } of lessons) {
   const slidesUrl = lesson.slides?.url || ''
-  const wikiUrl = lesson.slides?.wiki_url || ''
-  if (!/^https:\/\/xmu-mars\.feishu\.cn\/wiki\/[A-Za-z0-9]+$/.test(slidesUrl)) failures.push(`${lesson.id}: invalid original Feishu courseware URL`)
-  if (!/^https:\/\/xmu-mars\.feishu\.cn\/wiki\/[A-Za-z0-9]+$/.test(wikiUrl)) failures.push(`${lesson.id}: invalid Feishu Wiki URL`)
-  if (slidesUrl !== wikiUrl) failures.push(`${lesson.id}: playback and maintenance must use the same original Wiki node`)
-  if (!['file', 'slides'].includes(lesson.slides?.source_type)) failures.push(`${lesson.id}: invalid original courseware type`)
-  if (!lesson.slides?.source_title || !/\.pptx$/i.test(lesson.slides?.local_pptx || '')) failures.push(`${lesson.id}: missing original local PPTX mapping`)
-  if (slideUrls.has(slidesUrl)) failures.push(`${lesson.id}: duplicate original courseware URL`)
-  if (wikiUrls.has(wikiUrl)) failures.push(`${lesson.id}: duplicate Feishu Wiki URL`)
+  if (!/^\/course-slides\/[a-z0-9/-]+\/slides\.pptx$/.test(slidesUrl)) failures.push(`${lesson.id}: invalid local PPTX URL`)
+  if (!/^docs\/public\/course-slides\/[a-z0-9/-]+\/slides\.pptx$/.test(lesson.slides?.local_pptx || '')) failures.push(`${lesson.id}: missing published PPTX mapping`)
+  if (slideUrls.has(slidesUrl)) failures.push(`${lesson.id}: duplicate local PPTX URL`)
   slideUrls.add(slidesUrl)
-  wikiUrls.add(wikiUrl)
 }
 
 const courseMediaDir = path.join(root, 'docs', 'public', COURSE_MEDIA_PUBLIC_ROOT.replace(/^\//, ''))
@@ -74,7 +64,7 @@ for (const { catalogModule, lesson } of lessons) {
     continue
   }
   if (!text.includes(`slides_url: '${lesson.slides.url}'`)) failures.push(`${lesson.id}: wrong slides_url`)
-  if (!text.includes(`slides_wiki_url: '${lesson.slides.wiki_url}'`)) failures.push(`${lesson.id}: wrong slides_wiki_url`)
+  if (/^slides_wiki_url:/m.test(text)) failures.push(`${lesson.id}: retired slides_wiki_url remains`)
   if (!/^authored:\s*true\s*$/m.test(text)) failures.push(`${lesson.id}: authored learner-facing expansion is required`)
   if (/^pptx(?:_|:)|module-pptx|<LessonDeck\b|pptx-derived:|pptx-viewer/mi.test(text)) failures.push(`${lesson.id}: retired PPTX player metadata remains`)
 
@@ -114,7 +104,7 @@ if (COURSE_VISUAL_POLICY !== 'native-pptx-and-structured-course-visuals-no-slide
 }
 
 const home = await fs.readFile(path.join(docsDir, 'index.md'), 'utf8')
-if (!home.includes('直接在飞书 Web PPT 中打开本节课件')) failures.push('course home does not explain Feishu Slides playback')
+if (!home.includes('直接打开或下载本节 PPTX')) failures.push('course home does not explain local PPTX access')
 
 const runtimeFiles = [
   path.join(root, 'docs', '.vitepress', 'theme', 'Layout.vue'),
@@ -135,4 +125,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log(`Verified ${lessons.length} Markdown/original-courseware pairs, ${COURSE_VISUAL_ASSETS.length} visuals, ${COURSE_MEDIA_ASSETS.length} videos and ${sectionCount} lesson sections.`)
+console.log(`Verified ${lessons.length} Markdown/local-PPTX pairs, ${COURSE_VISUAL_ASSETS.length} visuals, ${COURSE_MEDIA_ASSETS.length} videos and ${sectionCount} lesson sections.`)

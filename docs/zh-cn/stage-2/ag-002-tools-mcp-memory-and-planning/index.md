@@ -4,8 +4,7 @@ description: '解释智能体如何通过稳定工具契约、分层上下文和
 authored: true
 lesson_id: 'AG-002'
 module: 'AI 智能体'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/FtH0wPuomiYeNakEQeXc64BSnpg'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/FtH0wPuomiYeNakEQeXc64BSnpg'
+slides_url: '/course-slides/stage-2/ag-002-tools-mcp-memory-and-planning/slides.pptx'
 ---
 
 <div class="lesson-hero">

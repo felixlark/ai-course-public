@@ -3,8 +3,7 @@ title: '交通与智慧机场'
 description: '用数据融合、知识服务、智慧运维和应急协同理解机场 AI 的评测、影子运行与人工责任。'
 lesson_id: 'IN-006'
 module: '行业应用'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/Fk10waNJui42glkTuOAcoqNdnrc'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/Fk10waNJui42glkTuOAcoqNdnrc'
+slides_url: '/course-slides/stage-4/in-006-transportation-and-smart-airport/slides.pptx'
 authored: true
 ---
 

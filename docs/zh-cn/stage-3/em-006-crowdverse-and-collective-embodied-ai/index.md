@@ -4,8 +4,7 @@ description: '用数字孪生训练场理解多智能体任务、群体行为、
 authored: true
 lesson_id: 'EM-006'
 module: '具身智能'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/FkXcwb1voiPgAJk0SGXce5ndnrg'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/FkXcwb1voiPgAJk0SGXce5ndnrg'
+slides_url: '/course-slides/stage-3/em-006-crowdverse-and-collective-embodied-ai/slides.pptx'
 ---
 
 <div class="lesson-hero">

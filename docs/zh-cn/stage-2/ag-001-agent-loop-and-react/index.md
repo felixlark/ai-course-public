@@ -4,8 +4,7 @@ description: '理解智能体如何在观察、推理、行动和反馈之间循
 authored: true
 lesson_id: 'AG-001'
 module: 'AI 智能体'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/NdumwsOw6iROzukEAIAca3zHnlf'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/NdumwsOw6iROzukEAIAca3zHnlf'
+slides_url: '/course-slides/stage-2/ag-001-agent-loop-and-react/slides.pptx'
 ---
 
 <div class="lesson-hero">

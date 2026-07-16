@@ -3,8 +3,7 @@ title: '海洋与地理空间'
 description: '连接遥感、现场观测和时空计算，形成有来源、有尺度、有不确定性说明的海洋与空间信息服务。'
 lesson_id: 'IN-008'
 module: '行业应用'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/Z91twtKNriGUyqkmrZCcm3sTn5d'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/Z91twtKNriGUyqkmrZCcm3sTn5d'
+slides_url: '/course-slides/stage-4/in-008-ocean-and-geospatial-intelligence/slides.pptx'
 authored: true
 ---
 

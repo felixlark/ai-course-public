@@ -3,8 +3,7 @@ title: '文旅、展厅与智慧建筑'
 description: '围绕游客旅程、空间路线、内容运营、数字孪生、问答接管和长期运维设计可持续的场所服务。'
 lesson_id: 'IN-009'
 module: '行业应用'
-slides_url: 'https://xmu-mars.feishu.cn/wiki/BsJqw6vNriy2TFkvTMVcrQ6DnUg'
-slides_wiki_url: 'https://xmu-mars.feishu.cn/wiki/BsJqw6vNriy2TFkvTMVcrQ6DnUg'
+slides_url: '/course-slides/stage-4/in-009-tourism-exhibition-and-smart-building/slides.pptx'
 authored: true
 ---
 

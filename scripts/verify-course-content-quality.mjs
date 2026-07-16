@@ -44,8 +44,8 @@ if (acceptance) {
   if (acceptance.schema_version !== 3 || acceptance.rubric_id !== 'ppt-to-learning-document-v1' || acceptance.hash_scope !== 'learner-body') {
     failures.push('course content acceptance must use learner-body hash scope and schema version 3')
   }
-  if (!/original Feishu courseware/i.test(acceptance.source_contract || '')) {
-    failures.push('course content acceptance must declare the original Feishu courseware source contract')
+  if (!/local source PPTX/i.test(acceptance.source_contract || '')) {
+    failures.push('course content acceptance must declare the local source PPTX contract')
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(acceptance.reviewed_at || '')) {
     failures.push('course content acceptance reviewed_at must be an ISO date')
